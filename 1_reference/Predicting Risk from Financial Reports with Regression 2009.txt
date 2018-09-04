@@ -1,0 +1,1 @@
+O paper fala sobre a utilização de um modelo SVR para regressão de volatilidade de empresas baseado nos relatórios obrigatórios escritos ao governo estadounidense.

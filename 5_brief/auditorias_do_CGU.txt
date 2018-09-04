@@ -1,0 +1,39 @@
+O site do programa é esse:
+
+http://www.cgu.gov.br/assuntos/auditoria-e-fiscalizacao/programa-de-fiscalizacao-em-entes-federativos
+
+http://www.cgu.gov.br/assuntos/auditoria-e-fiscalizacao/programa-de-fiscalizacao-em-entes-federativos/edicoes-anteriores/municipios
+
+
+A iniciativa incorporou o antigo Programa de Fiscalização por Sorteios Públicos, sendo que, agora, o programa possui três formas de seleção de entes: Censo, Matriz de Vulnerabilidade e Sorteios. Nesse contexto, já foram fiscalizados 2.314 municípios brasileiros desde 2003, englobando recursos públicos federais superiores ao montante de R$ 26,5 bilhões. 
+
+
+Ciclo 4:
+
+Os relatórios das auditorias nas cidades não seguem um padrão perfeito, mas por se tratar de 94 municípios, pode-se realizar a extração das bases manualmente coletando as seguintes informações:
+
+- Cidade e estado
+- Indicadores socioeconômicos (pop, indice de pobreza, pib per capita, eleitores e área)
+- Informações sobre a Execução da Fiscalização (montante fiscalizado por ministério)
+- Conclusão (se as contas estão adequadas ou não)
+
+Baixar os relatórios por "Pesquisa de Relatórios" utilizando os seguintes filtros:
+
+- Linha de Atuação: Fiscalização em Entes Federativos - Municípios
+- Período de Publicação: 01/01/2017 até 31/12/2017
+- Estados: um a um
+
+E por fim selecionar arquivos com título contendo "Relatório de Fiscalização nº xpto" no título.
+
+
+Volumetrias:
+
+ciclo 1 = 45 municipios
+ciclo 2 = ? (acredito que tenha sido feito por estado)
+ciclo 3 = 70 municipios (na prática, 67)
+ciclo 4 = 94 municipios
+
+
+
+
+
