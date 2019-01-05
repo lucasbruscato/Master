@@ -1,0 +1,35 @@
+	%% ------------------------------------------------------------------------- %%
+\chapter{Conclusões}
+\label{cap:conclusoes}
+
+Neste trabalho estudamos modelos de regressão linear com erros na família de distribuição $t$-assimétrica, apresentando como obter as estimativas dos parâmetros e analisar a influência de observações discrepantes nestas estimativas sob a abordagem bayesiana. 
+
+Apresentamos os algoritmos e os programas para obtenção das estimativas dos parâmetros destes modelos. A obtenção da amostra das distribuições \textit{a posterior} dos parâmetros dos modelos normal e $t$-Student já são bem conhecidos e a obtenção para o caso normal assimétrico foi apresentada em \citet{Bayes2005:MSc}. Para o modelo $t$-assimétrico, complementamos o trabalho de \citet{Godoi2007:MSc} explicitando as condicionais completas para aplicação do algoritmo de Gibbs.
+
+Introduzimos o \textit{conditional predictive ordinate} (CPO) como uma estatística para identificação de observações discrepantes sob o modelo proposto. Tal estatística é de fácil obtenção uma vez que se tenha uma amostra da distribuição \textit{a posteriori} dos parâmetros do modelo proposto e que se conheça a função densidade de probabilidade deste modelo.
+
+Para aferir a influência das observações nas estimativas definimos inicialmente a família de divergências apresentada por \citet{Weiss1996} considerando os casos particulares norma $L_1$ e divergência de Kullback-Leibler como objetos deste estudo. Abordando tanto a influência global, quanto a marginal, generalizamos os resultados obtidos para a distribuição normal de \citet{WeissCho1998} para as distribuições $t$-Student, normal assimétrica e $t$-assimétrica.
+
+Observamos que, em geral, o modelo $t$-Student é uma alternativa robusta ao modelo normal. A melhor aplicação do modelo $t$-Student é quando os resíduos possuem uma certa simetria ou que pontos discrepantes ocorram em ambas caudas da distribuição. Contudo, nas aplicações estudadas, as estimativas dos coeficientes regressores foram pouco influenciadas em ambos modelos.
+
+O modelo $t$-assimétrico não é, em geral, uma alternativa robusta ao modelo normal. Vimos que a capacidade de robustificação do modelo $t$-assimétrico está diretamente ligada à posição do resíduo do ponto discrepante em relação a distribuição dos resíduos. Quando comparamos as versões assimétricas dos modelos normal e $t$-Student, supondo que ambos possuem assimetria positiva (sem perda de generalidade) a cauda direita da $t$-Student será mais pesada que a da normal, enquanto que a cauda esquerda da normal será mais pesada que a da $t$-Student. Posto isto, o modelo $t$-assimétrico será mais robusto que o normal assimétrico caso os pontos discrepantes estejam na cauda de maior peso.
+
+As principais conclusões deste trabalho baseiam-se na análise de influência global pois o cálculo da influência marginal mostrou-se instável. Esta instabilidade pode estar associada as sucessivas aproximações de Monte Carlo que compõe o cálculo das estimativas.
+
+A seguir apresentamos algumas possibilidades de pesquisas futuras relacionadas ao diagnóstico bayesiano em modelos de regressão linear da família $t$-Student.
+
+\begin{itemize}
+
+\item Considerar os graus de liberdade, $\nu$, da distribuição desconhecidos e obter as condicionais completas explicitamente para este caso.
+
+\item Estudar a sensibilidade do cálculo das estimativas de influência de acordo com o tamanho da amostra de Monte Carlo considerada.
+
+\item Estudar outras técnicas para calculo de integrais como quadratura gaussiana para maior precisão nas estimativas.
+
+\item Estudar outras divergências que não norma $L_1$ e divergência de Kullback-Leibler.
+
+\item Para os modelos normal e $t$-Student, obter estimativas de influência marginal para as componentes do vetor $\betabf$ e para $\sigsq$.
+
+\item Para os modelos normal assimétrico e $t$-assimétrico, obter estimativas de influência marginal para as componentes do vetor $\betabf$, para $\sigsq$ e para $\lambda$.
+
+\end{itemize}

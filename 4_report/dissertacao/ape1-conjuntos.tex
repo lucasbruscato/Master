@@ -1,0 +1,538 @@
+\chapter{Códigos em \tt{R}}
+\label{ape:codigos}
+
+\section{Estimação dos parâmetros dos modelos de regressão linear}
+
+\subsection{Pacotes utilizados}
+\begin{lstlisting}
+library(sn)
+library(truncnorm)
+library(mvtnorm)
+library(Rcpp)
+library(MCMCpack)
+library(TeachingDemos)
+library(microbenchmark)
+library(foreach)
+library(ggplot2)
+library(snow)
+library(parallel)
+library(LaplacesDemon)
+\end{lstlisting}
+
+\subsection{Modelo Normal}
+\begin{lstlisting}
+#Estimador
+modelo.Normal = function(y,x,n.sim,seed){
+	tx=Sys.time()
+	n.obs=length(y)
+	set.seed(seed)
+	X=cbind(rep(1,n.obs),x)
+	p=dim(X)[2]
+	b.hat=solve(t(X)%*%X)%*%t(X)%*%y
+	k=n.obs-p
+	s.2=as.numeric(t(y-X%*%b.hat)%*%(y-X%*%b.hat)/k)
+	sigma.2.sim=rinvgamma(n.sim,k/2,k*s.2/2)
+	beta.sim <-sapply(sigma.2.sim,function(x) mvrnorm(1,b.hat,x*solve(t(X)%*%X)))
+	b0 = beta.sim[1,]
+	b1= beta.sim[2,]
+	#print(Sys.time()-tx)
+	output = list("beta" = beta.sim, "sigma" = sqrt(sigma.2.sim))
+	return(output)
+    invisible()
+	gc()
+}
+
+# Teste
+set.seed(345)
+n.teste = 50
+x=rnorm(n.teste)
+y = 2 + 3*x + rnorm(n.teste,0,1.25)
+fit.N = modelo.Normal(y,x,500,123)
+
+b0.N = fit.N$beta[1,]
+b1.N = fit.N$beta[2,]
+sig.N = fit.N$sigma
+\end{lstlisting}
+
+
+\subsection{Modelo $t$-Student}
+\begin{lstlisting}
+#Estimador
+gibbs.T = function(y,x,n.sim,v,seed){
+  tx=Sys.time()
+  set.seed(seed)
+  b.ini = c(0,0)
+  sig.2.ini = 1
+  n.obs=length(x)
+  X=cbind(rep(1,n.obs),x)
+  B = rbind(rep(b.ini[1],n.sim),rep(b.ini[2],n.sim))
+  s=rep(sig.2.ini,n.sim)
+  L = matrix(rep(1,n.sim*n.obs),nrow=n.obs)
+  
+  for(k in 1:(n.sim-1)){
+
+    L.aux=function(x,y){rgamma(1, shape = x, rate = y)}
+    L[,k+1]=mapply(L.aux,v/2 + 1/2,(y-B[1,k]-B[2,k]*X[,2])^2/(2*s[k]) + v/2)
+    
+    Sig = diag(L[,k+1])
+    B.hat= solve(t(X)%*%Sig%*%X)%*%t(X)%*%Sig%*%y
+    V.b = s[k]*solve(t(X)%*%Sig%*%X)
+    B[,k+1] = rmvnorm(1,B.hat,V.b)
+    s[k+1] = rinvgamma(1, n.obs/2, 1/2 * t(y-X%*%B[,k+1])%*%Sig%*%(y-X%*%B[,k+1]))
+  }
+  output = list("beta" = B, "sigma" = sqrt(s),"lambda"=L)
+  #print(Sys.time()-tx)
+  return(output)
+  invisible()
+  gc()
+}
+
+# Teste
+set.seed(345)
+n.teste = 50
+x=rnorm(n.teste)
+y = 2 + 3*x + 1.25*rt(n.teste,5)
+fit.T = gibbs.T(y,x,500,5,123)
+
+b0.t = fit.T$beta[1,]
+b1.t = fit.T$beta[2,]
+sig.t = fit.T$sigma
+\end{lstlisting}
+
+\subsection{Modelo Normal Assimétrico}
+\begin{lstlisting}
+#Estimador
+gibbs.SN = function(y,x,n.sim,sig.t.2,k,seed){
+  tx=Sys.time()
+  b.ini = c(0,0)
+  sig.2.ini = 1
+  set.seed(seed)
+  n.obs=length(y)
+  X=cbind(rep(1,n.obs),x)
+  B = rbind(rep(b.ini[1],n.sim),rep(b.ini[2],n.sim))
+  eta=rep(1,n.sim)
+  tau=rep(1,n.sim)
+  w=rep(1,n.sim)
+  u=matrix(rep(1,n.sim*n.obs),ncol=n.sim)
+  
+  for(i in 2:n.sim){
+    
+    inv.Xt.X = chol2inv(chol(t(X)%*%X))
+    B.hat= inv.Xt.X %*% t(X)%*%(y-eta[i-1]*u[,i-1])
+    V.b = inv.Xt.X*tau[i-1]^2
+    B[,i] = rmvnorm(1,B.hat,V.b)
+    
+    aux.1=(t(u[,i-1])%*%u[,i-1]+w[i-1]/sig.t.2)
+    eta[i]=rnorm(1,mean=t(u[,i-1])%*%(y-X%*%B[,i])/aux.1,sd=tau[i-1]/sqrt(aux.1))
+    
+    tau[i]=1/sqrt(rgamma(1,shape=(n.obs+1)/2,rate=1/2*(t(y-X%*%B[,i]-eta[i]*u[,i-1])%*%(y-X%*%B[,i]-eta[i]*u[,i-1])+eta[i]^2*w[i-1]/sig.t.2)))
+    
+    w[i]=rgamma(1,shape=(k+1)/2,rate=1/2*(k+eta[i]^2/(tau[i]^2*sig.t.2)))
+    
+    u.aux=function(x,y){rtruncnorm(1, a=0, b=Inf, mean = x, sd = y)}
+    u[,i]=mapply(u.aux,eta[i]*(y-X%*%B[,i])/(eta[i]^2+tau[i]^2),tau[i]/sqrt(eta[i]^2+tau[i]^2))
+  }  
+  
+  sigma=sqrt(eta^2+tau^2)
+  lambda=eta/tau
+  B.correct = B
+  B.correct[1,]=B[1,]+sqrt(2/pi)*sigma*lambda/sqrt(1+lambda^2)
+  output = list(
+    "beta" = B,
+    "beta.correct" = B.correct,
+    "sigma" = sigma,
+    "tau" = tau,
+    "lambda"=lambda,
+    "eta"=eta,
+    "U"=u
+  )
+  #print(Sys.time()-tx)
+  return(output)
+  invisible()
+  gc()
+}
+
+# Teste
+set.seed(123)
+n.teste = 50
+x=rnorm(n.teste)
+y = 2 + 3*x + 1.25*rsn(n.teste, xi=0, omega=0.5, alpha=5)
+fit.SN = gibbs.SN(y,x,500,pi^2/4,1/2,123)
+
+b0.SN = fit.SN$beta[1,]
+b1.SN = fit.SN$beta[2,]
+sig.SN = fit.SN$sigma
+lambda.SN = fit.SN$lambda
+\end{lstlisting}
+
+\subsection{Modelo $t$-assimétrico}
+\begin{lstlisting}
+#Estimador
+gibbs.ST = function(y,x,n.sim,v,sig.t.2,k,seed){
+  tx=Sys.time()
+  set.seed(seed)
+  n.obs=length(y)
+  b.ini = c(0,0)
+  sig.2.ini = 1
+  X=cbind(rep(1,n.obs),x)
+  B = rbind(rep(b.ini[1],n.sim),rep(b.ini[2],n.sim))
+  eta=rep(1,n.sim)
+  tau=rep(1,n.sim)
+  w=rep(1,n.sim)
+  u=matrix(rep(1,n.sim*n.obs),ncol=n.sim)
+  t=matrix(rep(1,n.sim*n.obs),ncol=n.sim)
+  
+  for(i in 2:n.sim){
+    
+    inv.X.u.X = chol2inv(chol(t(X*u[,i-1])%*%X))
+    
+    B.hat= inv.X.u.X %*% t(X*u[,i-1])%*%(y-eta[i-1]*t[,i-1])
+    V.b = inv.X.u.X*tau[i-1]^2
+    
+    B[,i] = rmvnorm(1,B.hat,V.b)
+    
+    aux.1=(t(t[,i-1])%*%diag(u[,i-1])%*%t[,i-1]+w[i-1]/sig.t.2)
+    eta[i]=rnorm(1,mean=t(t[,i-1])%*%diag(u[,i-1])%*%(y-X%*%B[,i])/aux.1,sd=tau[i-1]/sqrt(aux.1))
+    
+    tau[i]=1/sqrt(rgamma(1,shape=n.obs/2+1/2,rate=1/2*(t(y-X%*%B[,i]-eta[i]*t[,i-1])%*%diag(u[,i-1])%*%(y-X%*%B[,i]-eta[i]*t[,i-1])+eta[i]^2*w[i-1]/sig.t.2)))
+    
+    w[i]=rgamma(1,shape=(k+1)/2,rate=1/2*(k+eta[i]^2/(tau[i]^2*sig.t.2)))
+    
+    u.aux=function(x,y){rgamma(1, shape = x, rate = y)}
+    u[,i]=mapply(u.aux,(v+1)/2,1/2*(t[,i-1]^2+v+(1/tau[i]^2)*(y-X%*%B[,i]-eta[i]*t[,i-1])^2))
+    
+    t.aux=function(x,y){rtruncnorm(1, a=0, b=Inf, mean = x, sd = y)}
+    t[,i]=mapply(t.aux,eta[i]*(y-X%*%B[,i])/(eta[i]^2+tau[i]^2),tau[i]/sqrt(u[,i]*(eta[i]^2+tau[i]^2)))
+  }  
+  
+  sigma=sqrt(eta^2+tau^2)
+  lambda=eta/tau
+  B.correct = B
+  B.correct[1,]=B[1,]+sqrt(v/pi)*sigma*lambda/sqrt(1+lambda^2)*gamma((v-1)/2)/gamma(v/2)
+  output = list(
+    "beta" = B,
+    "beta.correct" = B.correct,
+    "sigma" = sigma,
+    "tau" = tau,
+    "lambda"=lambda,
+    "eta"=eta,
+    "T"=t,
+    "U"=u
+  )
+  #print(Sys.time()-tx)
+  return(output)
+  invisible()
+  gc()
+}
+
+# Teste
+set.seed(123)
+n.teste = 50
+x=rnorm(n.teste)
+y = 2 + 3*x + 1.25*sn::rst(n.teste, xi=0, omega=0.5, alpha=5, nu=5)
+fit.ST = gibbs.ST(y,x,500,5,pi^2/4,1/2,123)
+
+b0.St = fit.ST$beta[1,]
+b1.St = fit.ST$beta[2,]
+sig.St = fit.ST$sigma
+lambda.St = fit.ST$lambda
+\end{lstlisting}
+
+
+\section{\textit{Conditional Predictive Ordinate} e LPML}
+\subsection{Modelo Normal}
+\begin{lstlisting}
+n.obs=length(y)
+CPO.N = c()
+for(i in 1:n.obs){
+  CPO.N[i]=1/mean(1/sn::dst(y[i],xi=b0.N+b1.N*x[i],omega=sig.N,alpha=0,nu=Inf))
+}
+
+LPML.N = sum(log(CPO.N))
+\end{lstlisting}
+
+\subsection{Modelo $t$-Student}
+\begin{lstlisting}
+n.obs=length(y)
+CPO.t = c()
+for(i in 1:n.obs){
+  CPO.t[i]=1/mean(1/sn::dst(y[i],xi=b0.t+b1.t*x[i],omega=sig.t,alpha=0,nu=5))
+}
+
+LPML.t = sum(log(CPO.t))
+\end{lstlisting}
+
+\subsection{Modelo Normal Assimétrico}
+\begin{lstlisting}
+n.obs=length(y)
+CPO.SN = c()
+for(i in 1:n.obs){
+  CPO.SN[i]=1/mean(mapply(function(x1,x2,x3,x4,x5) 1/sn::dst(x1,xi=x2,omega=x3,alpha=x4,nu=x5),y[i],b0.SN+b1.SN*x[i],sig.SN,lambda.SN,Inf))
+}
+
+LPML.SN = sum(log(CPO.SN))
+\end{lstlisting}
+
+\subsection{Modelo $t$-assimétrico}
+\begin{lstlisting}
+n.obs=length(y)
+CPO.St = c()
+for(i in 1:n.obs){
+  CPO.St[i]=1/mean(mapply(function(x1,x2,x3,x4,x5) 1/sn::dst(x1,xi=x2,omega=x3,alpha=x4,nu=x5),y[i],b0.St+b1.St*x[i],sig.St,lambda.St,5))
+}
+
+LPML.St = sum(log(CPO.St))
+\end{lstlisting}
+
+\section{Medidas de influência global}
+\subsection{Modelo Normal}
+\begin{lstlisting}
+h.N.global = matrix(rep(-1,length(y)*length(sig.N)),ncol=length(sig.N))
+for(i in 1:length(y)){
+  for(l in 1:length(sig.N)){
+    h.N.global[i,l] = CPO.N[i]/sn::dst(y[i],xi=b0.N[l]+b1.N[l]*x[i],omega=sig.N[l],alpha=0,nu=Inf)
+  }
+}
+
+#Norma L1
+L1.N.global = rowMeans(abs(h.N.global-1)/2)
+#Kullback-Leibler
+K1.N.global = rowMeans(h.N.global*log(h.N.global))
+\end{lstlisting}
+
+\subsection{Modelo $t$-Student}
+\begin{lstlisting}
+L.sim = length(b0.t)
+
+h.t.global = matrix(rep(-1,n.obs*L.sim),ncol=L.sim)
+for(i in 1:n.obs){
+  for(l in 1:L.sim){
+    h.t.global[i,l] = CPO.t[i]/sn::dst(y[i],xi=b0.t[l]+b1.t[l]*x[i],omega=sig.t[l],alpha=0,nu=5)
+  }
+}
+
+#Norma L1
+L1.t.global = rowMeans(abs(h.t.global -1)/2))
+#Kullback-Leibler
+K1.t.global = rowMeans(h.t.global *log(h.t.global ))
+\end{lstlisting}
+
+\subsection{Modelo Normal Assimétrico}
+\begin{lstlisting}
+L.sim = length(b0.SN)
+h.SN.global = matrix(rep(-1,n.obs*L.sim),ncol=L.sim)
+for(i in 1:n.obs){
+  for(l in 1:L.sim){
+    h.SN.global[i,l] = CPO.SN[i]/sn::dst(y[i],xi=b0.SN[l]+b1.SN[l]*x[i],omega=sig.SN[l],alpha=lambda.SN[l],nu=Inf)
+  }
+}
+
+#Norma L1
+L1.SN.global = rowMeans(abs(h.SN.global-1)/2))
+#Kullback-Leibler
+K1.SN.global=rowMeans(h.SN.global*log(h.SN.global))
+\end{lstlisting}
+
+\subsection{Modelo $t$-assimétrico}
+\begin{lstlisting}
+h.St.global = matrix(rep(-1,n.obs*L.sim),ncol=L.sim)
+for(i in 1:n.obs){
+  for(l in 1:L.sim){
+    h.St.global[i,l] = CPO.St[i]/sn::dst(y[i],xi=b0.St[l]+b1.St[l]*x[i],omega=sig.St[l],alpha=lambda.St[l],nu=5)
+  }
+}
+
+#Norma L1
+L1.St.global = rowMeans(abs(h.St.global-1)/2))
+#Kullback-Leibler
+K1.St.global=rowMeans(h.St.global*log(h.St.global))
+\end{lstlisting}
+
+\section{Medidas de influência marginal}
+\subsection{Modelo Normal}
+\begin{lstlisting}
+h.N.marg = matrix(rep(-1,n.obs*length(b0.N)),ncol=length(b0.N))
+for(i in 1:n.obs){
+  for(l in 1:length(b0.N)){
+    h.N.marg[i,l] = CPO.N[i]/sn::dst(y[i],xi=b0.N[l]+b1.N[l]*x[i],omega=sqrt((t(y-b0.N[l]-b1.N[l]*x)%*%(y-b0.N[l]-b1.N[l]*x)-(y[i]-b0.N[l]-b1.N[l]*x[i])^2)/(n.obs-1)),alpha=0,nu=n.obs-1)
+  }
+}
+
+#Norma L1
+L1.N.marg = rowMeans(abs(h.N.marg-1)/2)
+#Kullback-Leibler
+K1.N.marg = rowMeans(h.N.marg*log(h.N.marg))
+\end{lstlisting}
+
+\subsection{Modelo $t$-Student}
+\begin{lstlisting}
+f.t.inf = function(i,y,x,beta,n.sim,nu){
+  n.obs=length(y)
+  u=matrix(rgamma(n.sim*n.obs,shape=(nu+1)/2,rate=nu/2),ncol = n.sim)
+  X=cbind(rep(1,length(x)),x)
+  num=gamma(n.obs/2)*sum((apply(u,2,function(x) t(y-X%*%beta)%*%diag(x)%*%(y-X%*%beta))^-0.5)^(n.obs))
+  den=gamma((n.obs-1)/2)*sqrt(pi)*sum(1/sqrt(u[i,])*(apply(u[-i,],2, function(x) t(y[-i]-X[-i,]%*%beta)%*%diag(x)%*%(y[-i]-X[-i,]%*%beta))^-0.5)^(n.obs-1))
+  return(num/den)
+}
+
+beta.sim.t = cbind(b0.t,b1.t)
+nu=5
+L.sim=500
+n.obs=length(y)
+cl=makeCluster(4)
+clusterSetRNGStream(cl, iseed=12345)
+clusterExport(cl,c("beta.sim.t","y","f.t.inf","x","n.sim","nu"))
+tx=Sys.time()
+par.f.t=sapply(1:n.obs, function(arg2) parApply(cl,beta.sim.t,1,function(arg1) f.t.inf(arg2,y,x,arg1,L.sim,nu)))
+Sys.time()-tx
+stopCluster(cl)
+M.sim = 500
+
+h.t.marg = matrix(rep(-1,n.obs*M.sim),ncol=M.sim)
+for(i in 1:n.obs){
+  for(l in 1:M.sim){
+    h.t.marg[i,l] = CPO.t[i]/par.f.t[l,i]
+  }
+}
+
+#Norma L1
+L1.t.marg = rowMeans(abs(h.t.marg-1)/2)
+#Kullback-Leibler
+K1.t.marg = rowMeans(h.t.marg*log(h.t.marg))
+\end{lstlisting}
+
+\subsection{Modelo Normal Assimétrico}
+\begin{lstlisting}
+fi.marg.SN = function(i,y,x,beta,n.sim,sig.t.2,k){
+  n.obs=length(y)
+  X = cbind(rep(1,size=length(x)),x)
+  w = rgamma(n.sim , shape = (k+1)/2 , rate = k/2)
+  v = matrix(rtruncnorm(n.sim*n.obs, a=0, b=Inf, mean = 0, sd = 1),ncol = n.sim)
+  Omega = w/sig.t.2
+  V = colSums(v^2)
+  B = Omega + V
+  z = y - X%*%beta
+  A = sum(z^2) - colSums(apply(v,2, function(x) x*z))^2/(Omega+V)
+  D = 1 - v[i,]^2/(Omega+V)
+  K = sum(z[-i]^2)-1/(Omega+colSums(v[-i,]^2))*colSums(apply(v[-i,],2, function(x) x*z[-i]))^2
+  num = gamma((n.obs-1)/2)*sum(B^(-0.5)*(A^(-0.5))^(n.obs-1))
+  den = gamma((n.obs-2)/2)*sqrt(pi)*sum(B^(-0.5)*D^(-0.5)*(K^(-0.5))^(n.obs-2))
+  return(num/den)
+}
+
+L.sim = 500
+sig.t.2 = pi^2/4
+k = 1/2
+M.sim=500
+beta.sim.SN = cbind(b0.SN,b1.SN)
+
+cl=makeCluster(4)
+clusterSetRNGStream(cl, iseed=12345)
+clusterExport(cl,c("beta.sim.SN","y","fi.marg.SN","x","L.sim","sig.t.2","k","rtruncnorm","n.obs"))
+tx=Sys.time()
+par.f.SN=sapply(1:n.obs, function(arg2) parApply(cl,beta.sim.SN,1,function(arg1) fi.marg.SN(arg2,y,x,arg1,L.sim,sig.t.2,k)))
+Sys.time()-tx
+stopCluster(cl)
+
+
+h.SN.marg = matrix(rep(-1,n.obs*M.sim),ncol=M.sim)
+for(i in 1:n.obs){
+  for(l in 1:M.sim){
+    h.SN.marg[i,l] = CPO.SN[i]/par.f.SN[l,i]
+  }
+}
+
+#Norma L1
+L1.SN.marg = rowMeans(abs(h.SN.marg-1)/2)
+#Kullback-Leibler
+K1.SN.marg = rowMeans(h.SN.marg*log(h.SN.marg))
+\end{lstlisting}
+
+\subsection{Modelo $t$-assimétrico}
+\begin{lstlisting}
+fi.marg.St = function(i,y,x,beta,v,n.sim,sig.t.2,k){
+  n.obs=length(y)
+  X = cbind(rep(1,size=length(x)),x)
+  w = rgamma(n.sim , shape = (k+1)/2 , rate = k/2)
+  u.aux = rgamma(n.sim*n.obs, shape = v/2 , rate = v/2)
+  u = matrix(u.aux,ncol = n.sim)
+  t = matrix(sapply(u.aux,function(x) rtruncnorm(1, a=0, b=Inf, mean = 0, sd = 1/sqrt(x))),ncol = n.sim)
+  v=sqrt(u)*t
+  Omega = w/sig.t.2
+  V = colSums(v^2)
+  B = Omega + V
+  z = apply(sqrt(u),2,function(x) x*(y - X%*%beta))
+  A = colSums(z^2)- colSums(v*z)^2/(Omega+V)
+  D = 1 - v[i,]^2/(Omega+V)
+  K = colSums(z[-i,]^2)-1/(Omega+colSums(v[-i,]^2))*colSums(v[-i,]*z[-i,])^2
+  num = gamma((n.obs-1)/2)*sum(B^(-0.5)*(A^(-0.5))^(n.obs-1))
+  den = gamma((n.obs-2)/2)*sqrt(pi)*sum(B^(-0.5)*D^(-0.5)*(K^(-0.5))^(n.obs-2))
+  return(num/den)
+}
+
+L.sim = 500
+sig.t.2 = pi^2/4
+k = 1/2
+v = 5
+M.sim=500
+beta.sim.St = cbind(b0.St,b1.St)
+
+cl=makeCluster(4)
+clusterSetRNGStream(cl, iseed=12345)
+clusterExport(cl,c("beta.sim.St","y","fi.marg.St","x","L.sim","v","sig.t.2","k","rtruncnorm","n.obs"))
+tx=Sys.time()
+par.f.St=sapply(1:n.obs, function(arg2) parApply(cl,beta.sim.St,1,function(arg1) fi.marg.St(arg2,y,x,arg1,v,L.sim,sig.t.2,k)))
+Sys.time()-tx
+stopCluster(cl)
+
+
+h.St.marg = matrix(rep(-1,n.obs*M.sim),ncol=M.sim)
+for(i in 1:n.obs){
+  for(l in 1:M.sim){
+    h.St.marg[i,l] = CPO.St[i]/par.f.St[l,i]
+  }
+}
+
+#Norma L1
+L1.St.marg = rowMeans(abs(h.St.marg-1)/2)
+#Kullback-Leibler
+K1.St.marg=rowMeans(h.St.marg*log(h.St.marg))
+\end{lstlisting}
+
+\section{Tempo de Execução dos Códigos}
+
+Os códigos desenvolvidos possuem tempos de execução distintos. Para exemplificar isso, apuramos o tempo de execução dos códigos sob as seguintes condições:
+\begin{itemize}
+\item Número de observações da amostra ($n$): 50,
+\item Tamanho da amostra de Monte Carlo para estimativas dos parâmetros ($L$): 500,
+\item Tamanho da amostra de Monte Carlo para estimativas das funções $f(y_i|\theta,\yi)$ ($M$): 500,
+\item Computador utilizado: MacBook Air (13 polegadas, início de 2015)
+\begin{itemize}
+\item Processador: Intel Core i5 dual core de 1,6 GHz (Turbo Boost de até 2,7 GHz) e 3 MB de cache L3 compartilhado,
+\item Memória: 8GB de memória LPDDR3, 1600MHz,
+\item Armazenamento: 256 GB de armazenamento em flash com PCIe.
+\end{itemize}
+\end{itemize}
+A tabela \ref{tab:appendix_tempo_rodada} evidencia que o cálculo da influência marginal é o mais custoso computacionalmente.
+
+\begin{table}[h] 
+\centering
+\caption{Tempo de execução dos códigos em segundos.}
+\label{tab:appendix_tempo_rodada}
+\begin{tabular}{ccccc}
+\hline
+Código                         & Normal &t-Student &Normal assimétrico &t-assimétrico \\
+\hline
+Estimação dos parâmetros  &0.055  &   0.382  &            0.497  &       0.739 \\
+CPO e LPML                &0.005  &   0.007  &            0.732  &       0.591 \\
+Influência Global         &0.756  &   0.600  &            0.774  &       0.600 \\
+Influência Marginal       &1.092  & 489.929  &          144.263  &    3038.195 \\
+\hline
+\end{tabular}
+
+Fonte:  Elaborada pelo autor.
+\end{table}
+
+
+
+

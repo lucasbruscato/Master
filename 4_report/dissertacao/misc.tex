@@ -1,0 +1,47 @@
+Para uma caracterização geral, consideremos a estrutura de um modelo inicial, $M_0$, dada por
+\begin{equation*}
+p(\theta|Y)\propto \prod_{i=1}^n f(y_i|\theta,x_i) p(\theta)
+\end{equation*}
+onde $Y=(y_1,\ldots,y_n)$, com $y_i$ sendo a $i$-ésima resposta, $x_i$ é um vetor de variáveis explicativas, $\theta$ é o vetor de parâmetros com distribuição a priori $\theta$. As observações, $(y_i,x_i)$, são, dado $\theta$, condicionalmente independentes com distribuição amostral $f(y_i|\theta,x_i)$. Queremos estudar a influência que as hipóteses do modelo têm em $p(\theta|Y)$ através das funções de perturbação introduzidas por \citet{Kass1989} e apresentadas também em \citet{Weiss1996}.
+
+A perturbação no modelo $M_0$ é feita através de uma função de perturbação $h^*(\theta)=h^*(\theta,Y,X)$ que multiplicará $p(\theta|Y)$ gerando um novo modelo $M_1$. Estudaremos aqui a função de perturbação $h^*_i(\theta)\propto\left(f(y_i|\theta,x_i)\right)^{-1}$ que, como podemos ver abaixo, corresponde à deleção de casos, isto é, induz um modelo $M_1$ com a mesma estrutura de $M_0$ porém sem a presença da $i$-ésima observação
+
+\begin{equation}\label{eq:perturb_delet}
+p(\theta|Y)h_i(\theta)\propto \prod_{j=1}^nf(y_j|\theta,x_j) p(\theta)\frac{1}{f(y_i|\theta,x_i)}=\prod_{j\neq i}f(y_j|\theta,x_j)p(\theta)\propto p(\theta|\Yi)
+\end{equation}
+onde $\Yi=(y_1,\ldots,y_{i-1},y_{i+1},\ldots,y_n)$.
+
+O resultado de proporcionalidade apresentado na equação \ref{eq:perturb_delet} é generalizado para uma $h^*(\theta)$ qualquer através do teorema de Bayes para perturbações citado em \citet{Weiss1996}
+
+\begin{equation}\label{eq:thm_bayes_pert}
+p_1(\theta|Y)=\frac{p(\theta|Y)h^*(\theta)}{E_{\theta|Y}(h^*(\theta))}
+\end{equation}
+onde $p_1(\theta|Y)$ é perturbação do modelo $M_0$.
+
+Aplicando a relação apresentada em \ref{eq:thm_bayes_pert} no cenário já proposto em \ref{eq:perturb_delet}, vemos que 
+
+\begin{equation}
+p_1(\theta|Y) = p(\theta|\Yi)=p(\theta|Y)\frac{CPO_i}{f(y_i|\theta,x_i)}
+\end{equation}
+onde $CPO_i = E_{\theta|Y}(f(y_i|\theta,x_i)^{-1})^{-1}$.
+
+O termo $CPO_i$ é conhecido como \textit{conditional predictice ordinate} ou ordenada preditiva condicional. Sua definição é $CPO_i=p(y_i|\Yi)$ mas veja que
+
+\begin{equation*}
+\begin{split}
+p(y_i|\Yi) & = \frac{p(Y)}{p(\Yi)} = \frac{\int p(Y|\theta) p(\theta) d\theta}{\int p(\Yi|\theta) p(\theta) d\theta} = \frac{\int \frac{p(Y|\theta) p(\theta)}{p(Y)} \frac{p(\theta|Y)}{p(\theta|Y)} d\theta}{\int \frac{p(\Yi|\theta) p(\theta)}{p(Y)} \frac{p(\theta|Y)}{p(\theta|Y)} d\theta} =\\
+{}& = \frac{\int p(\theta|Y) d\theta}{\int \frac{p(\theta|\Yi)}{p(\theta|Y)} p(\theta|Y) d\theta} = \frac{1}{\int \frac{1}{f(y_i|\theta,x_i)} p(\theta|Y) d\theta} = \\
+{} & = E_{\theta|Y}(f(y_i|\theta,x_i)^{-1})^{-1}
+\end{split}
+\end{equation*}
+
+Há, assim, uma estreita relação entre a função de perturbação de deleção de casos e o $CPO_i$. 
+
+Outro surgimento natural do $CPO_i$ é na comparação entre os modelos $M_0$ e $M_1$ através do fator de Bayes. O fator de Bayes contra $M_0$ a favor de $M_1$ é
+
+\begin{equation*}
+\begin{split}
+B(M_0,M_1)&=\frac{f(Y|M_0)}{f(Y|M_1)}=\frac{\int p(Y|\theta)p(\theta) d\theta}{\int p(Y|\theta)p(\theta)h^*(\theta) d\theta}=\frac{\int p(\theta|Y) d\theta}{\int h^*(\theta)p(\theta|Y) d\theta}=\\
+{}&= E_{\theta|Y}(h^*(\theta))^{-1}
+\end{split}
+\end{equation*}

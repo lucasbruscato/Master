@@ -1,0 +1,9 @@
+
+
+Python
+
+0 ler arquivos e análise do texto (negatividade das palavras) e montar var resp
+1 montar base de var explicativas
+2 analisar var explicativas
+3 montar bases dev e teste
+4 desenvolvimento do modelo
