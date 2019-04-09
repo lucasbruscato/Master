@@ -1,0 +1,178 @@
+
+https://www.ibge.gov.br/estatisticas-novoportal/sociais/saude/9662-censo-demografico-2010.html?edicao=14881&t=downloads
+
+---------------------
+
+2000 -> 2010
+
+educacao -> educacao_e_deslocamento [education]
+
+2000
+EDUC  MMMc_0003_12_010100.xls
+Tabela 4.2.1 - Pessoas que freqüentavam creche ou escola, por nível de ensino, segundo as Mesorregiões, as Microrregiões e os Municípios - Acre
+
+2010
+tab4_2_1_3.xls
+Tabela 4.2.1.3 - Pessoas que frequentavam escola ou creche da rede pública, por curso que frequentavam, segundo as mesorregiões, microrregiões e os municípios - Acre - 2010
+
+tab4_2_1_4.xls
+Tabela 4.2.1.4 - Pessoas que frequentavam escola ou creche da rede particular, por curso que frequentavam, segundo as mesorregiões, microrregiões e os municípios - Acre - 2010
+
+
+familias -> familias_e_domicilios [family]
+
+2000
+tabdommmm4221.xls
+"Tabela 4.2.2.1 - Domicilios particulares permanentes, por adequação da moradia,
+segundo as Mesorregiões, as Microrregiões e os Municípios - Acre
+
+
+2010
+tab4_2_2_4.xls
+Tabela 4.2.2.4 - Domicílios particulares permanentes e moradores em domicílios particulares permanentes, por adequação da moradia, segundo as mesorregiões, as microrregiões e os municípios - Acre - 2010								
+
+
+nupcialidade_fecundidade -> nupcialidade_fecundidade_migracao [fertility]
+
+2000
+
+tabfecmmm4221.xls
+Tabela 4.2.2.1 - Mulheres de 10 anos ou mais de idade, total, que tiveram filhos, que tiveram filhos nascidos vivos no período de referência de 12 meses anteriores ao Censo																
+
+tabnupmmm4211.xls
+Tabela 4.2.1.1 - Pessoas de 10 anos ou mais de idade, por estado civil e condição de convivência, segundo as Mesorregiões, as Microrregiões e os Municípios - Acre                                                                  																			
+tabnupmmm4212.xls
+Tabela 4.2.1.2 - Pessoas de 10 anos ou mais de idade que viviam em companhia de cônjuge ou companheiro(a), por natureza da união,
+segundo as Mesorregiões, as Microrregiões e os Municípios - Acre				
+
+
+2010
+
+tab4_2_2_1.xls
+Tabela 4.2.2.1 - Mulheres de 10 anos ou mais de idade, total e que tiveram filhos, e filhos tidos pelas mulheres de 10 anos ou mais de idade, nascidos vivos, nascidos vivos no período de referência de 12 meses, nascidos mortos e que estavam vivos na data de referência, segundo as mesorregiões, as microrregiões e os municípios - Acre - 2010							
+
+tab4_2_1_1.xls
+Tabela 4.2.1.1 - Pessoas de 10 anos ou mais de idade, por estado conjugal e estado civil, segundo as mesorregiões, as microrregiões e os municípios - Acre - 2010						
+
+tab4_2_1_2.xls
+Tabela 4.2.1.2 - Pessoas de 10 anos ou mais de idade que viviam em união conjugal, por natureza da união conjugal, segundo as mesorregiões, as microrregiões e os municípios - Acre - 2010					
+
+
+indicadores_sociais -> indicadores_sociais_municipais [social_indicator]
+
+2000
+
+tab01.xls
+Tabela 1 - População total e sua respectiva distribuição percentual, por sexo e situação do domicílio,  proporção de pessoas naturais dos municípios - Acre - 2000						
+
+tab02.xls
+Tabela 2 - Distribuição percentual da população residente, por grupos de idade - Acre - 2000
+
+tab03.xls
+Tabela 3 - Distribuição percentual da população residente, por cor - Acre - 2000					
+
+tab04.xls
+Tabela 4 - Distribuição percentual dos domicílios particulares permanentes, por classes de rendimento médio mensal domiciliar per capita em salários mínimos - Acre - 2000							
+
+tab05.xls
+Tabela 5 - Número médio de moradores por domicílio particular permanente, segundo as classes de rendimento médio mensal domiciliar per capita em salários mínimos - Acre - 2000							
+
+tab06.xls
+Tabela 6 - Distribuição percentual dos domicílios particulares permanentes, por situação do domicílio e forma de abastecimento de água - Acre - 2000
+
+tab07.xls
+Tabela 7 - Distribuição percentual dos domicílios particulares permanentes, por situação do domicílio e tipo de esgotamento sanitário - Acre - 2000								
+
+tab08.xls
+Tabela 8 - Distribuição percentual dos domicílios particulares permanentes, por situação do domicílio e destino do lixo - Acre - 2000
+
+tab09.xls
+Tabela 9 - Proporção de pessoas de 15 anos ou mais de idade com menos de 4 anos de estudo, por sexo - Acre - 2000			
+
+tab10.xls
+Tabela 10 - Taxa de escolarização por grupos de idade - Acre - 2000						
+
+tab11.xls
+Tabela 11 -  Média de anos de estudo da população de 10 anos ou mais de idade, total e por grupos de idade - Acre - 2000							
+tab12.xls
+Tabela 12 - Proporção de pessoas de 10 anos ou mais de idade, ocupadas na semana de referência,  por grupos de idade - Acre - 2000					
+tab13.xls
+Tabela 13 - Distribuição percentual das pessoas de 10 anos ou mais de idade, ocupadas na semana de referência, por posição na ocupação - Acre - 2000                                   							
+
+tab14.xls
+Tabela 14 - Distribuição percentual das pessoas de 10 anos ou mais de idade, ocupadas na semana de referência, por contribuição para instituto de previdência e sexo - Acre - 2000						
+
+tab15.xls
+Tabela 15 - Proporção de pessoas de 60 anos ou mais de idade, aposentados ou pensionistas, por sexo - Acre - 2000						
+tab16.xls
+Tabela 16 - Distribuição percentual das pessoas de 60 anos ou mais de idade, com rendimento, por classes de contribuição no rendimento médio mensal familiar - Acre - 2000						
+
+
+
+2010
+
+tab1.xls
+Tabela 1 - População residente, total e respectiva distribuição percentual, por situação do domicílio e sexo, e razão de sexo, segundo os municípios e as classes de tamanho da população dos municípios - Acre - 2010						
+
+tab2.xls
+Tabela 2 - População residente, total e respectiva distribuição percentual, 							
+ por situação do domicílio e grupos de idade, segundo os municípios e							
+as classes de tamanho da população dos municípios - Acre - 2010							
+
+tab3.xls
+Tabela 3 - Pessoas de 15 anos ou mais de idade que não sabem ler e escrever, total e respectivas	
+taxas de analfabetismo, por cor ou raça e grupos de idade, segundo os municípios e as classes de tamanho da população dos municípios - Acre - 2010										
+
+tab7.xls
+Tabela 7 - Domicílios particulares permanentes, total e respectiva distribuição percentual, 				
+por situação do domicílio e tipo de saneamento, segundo os municípios e as 				
+classes de tamanho da população dos municípios - Acre - 2010				
+
+tab9.xls
+Tabela 9 - Valor médio e mediano do rendimento mensal total nominal das pessoas						
+de 10 anos ou mais de idade, residentes em domicílios particulares permanentes,  por sexo, 						
+e razão entre valor médio e mediano do rendimento mensal total nominal de homens e mulheres, 						
+segundo os municípios e classes de tamanho da população dos municípios - Acre - 2010						
+
+tab11.xls
+Tabela 11 - Razão entre médias do rendimento mensal total nominal, das 					
+pessoas de 10 anos ou mais de idade residentes em domicílios particulares permanentes, por cor ou raça, 					
+segundo os municípios e as classes de tamanho da população dos municípios - Acre - 2010					
+
+tab12.xls
+Tabela 12 - População residente em domicílios particulares permanentes e proporção de pessoas residentes					
+em domicílios particulares permanentes, por situação do domicílio e classes selecionadas de 					
+rendimento mensal total domiciliar per capita nominal, segundo os municípios e as classes de					
+tamanho da população dos municípios - Acre - 2010					
+
+tab13.xls
+Tabela 13 - População residente em domicílios particulares permanentes com saneamento inadequado e 					
+proporção de pessoas por classes selecionadas de rendimento mensal total domiciliar per capita nominal,					
+segundo os municípios e as classes de tamanho da população dos municípios - Acre - 2010					
+
+tab14.xls (2000 e 2010)
+Tabela 14 - Taxa de analfabetismo da população de 15 anos ou mais de idade, 								
+por grupos de idade, segundo os municípios e as classes de tamanho								
+da população dos municípios - Acre - 2000/ 2010								
+
+tab15.xls (2000 e 2010)
+Tabela 15 - Proporção de domicílios particulares permanentes, por tipo de saneamento,						
+segundo os municípios e as classes de tamanho da população						
+dos municípios - Acre - 2000/ 2010						
+
+tab16.xls (2000 e 2010)
+Tabela 16 - Proporção de crianças de 0 a 5 anos de idade residentes em domicílios particulares permanentes,						
+com responsável ou cônjuge analfabeto, com saneamento inadequado, e com responsável						
+ ou cônjuge analfabeto e saneamento inadequado, segundo os municípios  e 						
+as classes de tamanho da população dos municípios - Acre - 2000/ 2010						
+
+tab17.xls
+Tabela17 - Pessoas de 10 anos de idade que não sabem ler e escrever, total e respectiva		
+taxa de analfabetismo, segundo os municípios e as classes		
+de tamanho da população dos municípios - Acre - 2010		
+
+
+trabalho_rendimento -> trabalho_e_rendimento [work]
+
+
+
