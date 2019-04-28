@@ -65,35 +65,8 @@ indicadores_sociais -> indicadores_sociais_municipais [social_indicator]
 
 2000
 
-tab01.xls
-Tabela 1 - População total e sua respectiva distribuição percentual, por sexo e situação do domicílio,  proporção de pessoas naturais dos municípios - Acre - 2000						
-tab02.xls
-Tabela 2 - Distribuição percentual da população residente, por grupos de idade - Acre - 2000
-
-tab06.xls
-Tabela 6 - Distribuição percentual dos domicílios particulares permanentes, por situação do domicílio e forma de abastecimento de água - Acre - 2000
-tab07.xls
-Tabela 7 - Distribuição percentual dos domicílios particulares permanentes, por situação do domicílio e tipo de esgotamento sanitário - Acre - 2000
-tab08.xls
-Tabela 8 - Distribuição percentual dos domicílios particulares permanentes, por situação do domicílio e destino do lixo - Acre - 2000
-
-tab11.xls
-Tabela 11 -  Média de anos de estudo da população de 10 anos ou mais de idade, total e por grupos de idade - Acre - 2000
-
 
 2010
-
-tab1.xls
-Tabela 1 - População residente, total e respectiva distribuição percentual, por situação do domicílio e sexo, e razão de sexo, segundo os municípios e as classes de tamanho da população dos municípios - Acre - 2010						
-
-tab2.xls
-Tabela 2 - População residente, total e respectiva distribuição percentual, 							
- por situação do domicílio e grupos de idade, segundo os municípios e as classes de tamanho da população dos municípios - Acre - 2010
-
-tab7.xls
-Tabela 7 - Domicílios particulares permanentes, total e respectiva distribuição percentual, 				
-por situação do domicílio e tipo de saneamento, segundo os municípios e as 				
-classes de tamanho da população dos municípios - Acre - 2010
 
 tab14.xls (2000 e 2010)
 Tabela 14 - Taxa de analfabetismo da população de 15 anos ou mais de idade, 								
@@ -109,10 +82,6 @@ com responsável ou cônjuge analfabeto, com saneamento inadequado, e com respon
  ou cônjuge analfabeto e saneamento inadequado, segundo os municípios  e 						
 as classes de tamanho da população dos municípios - Acre - 2000/ 2010
 
-tab17.xls
-Tabela17 - Pessoas de 10 anos de idade que não sabem ler e escrever, total e respectiva		
-taxa de analfabetismo, segundo os municípios e as classes		
-de tamanho da população dos municípios - Acre - 2010		
 
 ---------------------
 

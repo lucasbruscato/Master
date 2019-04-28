@@ -2,8 +2,9 @@
 
 Python
 
-0 ler arquivos e análise do texto (negatividade das palavras) e montar var resp
 1 montar base de var explicativas
+ - add social indicator fora do padrao
+ - criar novas var explicativas e salvar dataset final apenas com elas + targets
 2 analisar var explicativas
 3 montar bases dev e teste
 4 desenvolvimento do modelo

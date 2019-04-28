@@ -1,4 +1,4 @@
-folder;filename;numberOfWords;pctPolNeg;pctPolPos;pctPolNeu
+folder;filename;number_of_words;pct_pol_neg;pct_pol_pos;pct_pol_neu
 ciclo_3;8998-Santo Antônio de Jesus-BA.pdf;45400;0.012206945178917683;0.023554556671954878;0.9645910453023092
 ciclo_3;9024-Ulianópolis-PA.pdf;17199;0.015877631731999534;0.015644992439222984;0.9687681749447481
 ciclo_3;9010-Aldeias Altas-MA.pdf;58870;0.011997213111968325;0.015922646863901303;0.9724709840773532
