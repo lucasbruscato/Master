@@ -25,10 +25,16 @@ tabdommmm4221.xls
 "Tabela 4.2.2.1 - Domicilios particulares permanentes, por adequação da moradia,
 segundo as Mesorregiões, as Microrregiões e os Municípios - Acre
 
+tabfammmm42121.xls
+"Tabela 4.2.1.2.1 - Famílias e pessoas residentes em domicílios particulares, por condição na família e sexo,
+segundo as Mesorregiões, as Microrregiões e os Municípios - Acre
 
 2010
 tab4_2_2_4.xls
 Tabela 4.2.2.4 - Domicílios particulares permanentes e moradores em domicílios particulares permanentes, por adequação da moradia, segundo as mesorregiões, as microrregiões e os municípios - Acre - 2010								
+
+tab4_2_2_1.xls
+Tabela 4.2.2.1 - Domicílios particulares permanentes e moradores em domicílios particulares permanentes, por situação do domicílio, segundo as mesorregiões, as microrregiões e os municípios - Acre - 2010
 
 ---------------------
 
@@ -42,6 +48,7 @@ Tabela 4.2.2.1 - Mulheres de 10 anos ou mais de idade, total, que tiveram filhos
 
 tabnupmmm4211.xls
 Tabela 4.2.1.1 - Pessoas de 10 anos ou mais de idade, por estado civil e condição de convivência, segundo as Mesorregiões, as Microrregiões e os Municípios - Acre                                                                  																			
+
 tabnupmmm4212.xls
 Tabela 4.2.1.2 - Pessoas de 10 anos ou mais de idade que viviam em companhia de cônjuge ou companheiro(a), por natureza da união,
 segundo as Mesorregiões, as Microrregiões e os Municípios - Acre				
