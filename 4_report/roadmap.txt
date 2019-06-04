@@ -1,19 +1,19 @@
 
-=== Roadmap ===
+=== roadmap ===
 
-chapter 1 - introduction
-	- motivation (some things about corruption and br history)
-	- objective
-	- project structure
-	- contribution
+capítulo 1 - introdução
+	- motivação
+	- objetivo
+	- contribuições
+	- estrutura do projeto
 
-chapter 2 - context
-- 
+capítulo 2 - contexto
+	- 
 
-chapter 3 - modeling
 
-chapter 4 - other attempts
+capítulo 3 - modelagem
 
-chapter 5 - conclusion
+capítulo 4 - outras tentativas
 
+capítulo 5 - conclusão
 
