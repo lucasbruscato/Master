@@ -8,8 +8,9 @@ capítulo 1 - introdução
 	- estrutura do projeto
 
 capítulo 2 - contexto
-	- 
-
+	- variavel resposta
+	- sentilex
+	- variaveis explicativas
 
 capítulo 3 - modelagem
 
