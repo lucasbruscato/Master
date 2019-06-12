@@ -1,0 +1,25 @@
+1560271610718	geckodriver	INFO	geckodriver 0.21.0
+1560271610736	geckodriver	INFO	Listening on 127.0.0.1:51156
+1560271611758	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/hg/xj9zzkvn5t1g_2zhm18v70cr0000gn/T/rust_mozprofile.ciVhiBUKydQ6"
+1560271612961	Marionette	INFO	Enabled via --marionette
+2019-06-11 18:46:54.736 plugin-container[37989:6668542] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x782b, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+1560271615621	Marionette	INFO	Listening on port 51167
+1560271615743	Marionette	WARN	TLS certificate errors will be ignored for this session
+1560271616060	Marionette	DEBUG	Register listener.js for window 2147483649
+1560271616392	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1560271635537	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1560271635538	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1560271637822	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://auditoria.cgu.gov.br/"
+1560271640770	Marionette	DEBUG	Received DOM event "pageshow" for "https://auditoria.cgu.gov.br/"
+1560271670336	Marionette	DEBUG	Register listener.js for window 2147483653
+1560271670897	Marionette	DEBUG	Register listener.js for window 4294967297
+2019-06-11 18:47:51.008 plugin-container[38018:6669103] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x7b3f, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+JavaScript error: about:newtab, line 836: TypeError: gSnippetsMap.getTotalBookmarksCount is not a function
+JavaScript error: chrome://browser/content/tabbrowser.xml, line 8112: TypeError: event.originalTarget.getAttribute is not a function
+JavaScript error: chrome://browser/content/tabbrowser.xml, line 8119: TypeError: event.originalTarget.getAttribute is not a function
+1560271717693	Marionette	DEBUG	Register listener.js for window 2147483656
+JavaScript error: about:newtab, line 836: TypeError: gSnippetsMap.getTotalBookmarksCount is not a function
+1560271718700	Marionette	DEBUG	Register listener.js for window 2147483659
+JavaScript error: about:newtab, line 836: TypeError: gSnippetsMap.getTotalBookmarksCount is not a function
