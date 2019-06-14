@@ -1,0 +1,646 @@
+city,quantity
+adamantina,9648
+adolfo,1053
+aguai,7369
+aguas da prata,1925
+aguas de lindoia,4068
+aguas de santa barbara,1593
+aguas de sao pedro,495
+agudos,10504
+alambari,1039
+alfredo marcondes,854
+altair,915
+altinopolis,4205
+alto alegre,1072
+aluminio,5193
+alvares florence,1055
+alvares machado,6171
+alvaro de carvalho,988
+alvinlandia,790
+americana,53003
+americo brasiliense,8886
+americo de campos,1403
+amparo,16709
+analandia,1063
+andradina,15136
+angatuba,5218
+anhembi,1140
+anhumas,947
+aparecida,10127
+aparecida d'oeste,1169
+apiai,7876
+aracariguama,3509
+aracatuba,48586
+aracoiaba da serra,5055
+aramina,1403
+arandu,1787
+arapei,762
+araraquara,54123
+araras,31651
+arco-iris,603
+arealva,1721
+areias,1169
+areiopolis,3081
+ariranha,1796
+artur nogueira,9252
+aruja,18658
+aspasia,604
+assis,24761
+atibaia,30707
+auriflama,3427
+avai,1216
+avanhandava,2689
+avare,20813
+bady bassitt,3157
+balbinos,406
+balsamo,1810
+bananal,2735
+barao de antonina,702
+barbosa,1730
+bariri,7182
+barra bonita,10317
+barra do chapeu,1275
+barra do turvo,2175
+barretos,29147
+barrinha,7651
+barueri,68686
+bastos,5417
+batatais,14943
+bauru,94586
+bebedouro,21445
+bento de abreu,659
+bernardino de campos,2837
+bertioga,8846
+bilac,1496
+birigui,25510
+biritiba-mirim,6435
+boa esperanca do sul,3664
+bocaina,2544
+bofete,1978
+boituva,10016
+bom jesus dos perdoes,3757
+bom sucesso de itarare,839
+bora,146
+boraceia,1052
+borborema,3067
+borebi,606
+botucatu,32449
+braganca paulista,36492
+brauna,1169
+brejo alegre,711
+brodowski,4560
+brotas,4988
+buri,4166
+buritama,3687
+buritizal,889
+cabralia paulista,1207
+cabreuva,9107
+cacapava,23085
+cachoeira paulista,7926
+caconde,5076
+cafelandia,4116
+caiabu,1288
+caieiras,22679
+caiua,1260
+cajamar,16339
+cajati,8175
+cajobi,2622
+cajuru,6002
+campina do monte alegre,1439
+campinas,283293
+campo limpo paulista,19133
+campos do jordao,12180
+campos novos paulista,880
+cananeia,3148
+canas,1069
+candido mota,8451
+candido rodrigues,625
+canitar,1118
+capao bonito,12555
+capela do alto,3924
+capivari,10737
+caraguatatuba,23900
+carapicuiba,102253
+cardoso,3430
+casa branca,7429
+cassia dos coqueiros,878
+castilho,4467
+catanduva,28619
+catigua,1593
+cedral,1526
+cerqueira cesar,4095
+cerquilho,7998
+cesario lange,2876
+charqueada,3673
+chavantes,3532
+clementina,1627
+colina,4672
+colombia,1969
+conchal,6176
+conchas,3714
+cordeiropolis,5041
+coroados,1236
+coronel macedo,1567
+corumbatai,1057
+cosmopolis,12830
+cosmorama,1751
+cotia,49052
+cravinhos,7983
+cristais paulista,2179
+cruzalia,756
+cruzeiro,22215
+cubatao,34071
+cunha,5754
+descalvado,8329
+diadema,109687
+dirce reis,470
+divinolandia,3273
+dobrada,2087
+dois corregos,5581
+dolcinopolis,657
+dourado,2165
+dracena,10610
+duartina,3419
+dumont,1967
+echapora,2137
+eldorado,4257
+elias fausto,3819
+elisiario,690
+embauba,685
+embu,63429
+embu-guacu,17872
+emilianopolis,768
+engenheiro coelho,3098
+espirito santo do pinhal,10969
+espirito santo do turvo,1097
+estiva gerbi,2830
+estrela do norte,763
+estrela d'oeste,2208
+euclides da cunha paulista,3449
+fartura,4168
+fernando prestes,1628
+fernandopolis,17308
+fernao,307
+ferraz de vasconcelos,43384
+flora rica,642
+floreal,771
+florida paulista,2883
+florinia,1021
+franca,81926
+francisco morato,41400
+franco da rocha,33145
+gabriel monteiro,789
+galia,1887
+garca,11851
+gastao vidigal,922
+gaviao peixoto,1445
+general salgado,3062
+getulina,2581
+glicerio,1232
+guaicara,2563
+guaimbe,1527
+guaira,10300
+guapiacu,3681
+guapiara,5198
+guara,4893
+guaracai,2317
+guaraci,2330
+guarani d'oeste,562
+guaranta,1714
+guararapes,8089
+guararema,6417
+guaratingueta,30562
+guarei,2273
+guariba,9140
+guaruja,79679
+guarulhos,322743
+guatapara,2007
+guzolandia,1206
+herculandia,2029
+holambra,2160
+hortolandia,45207
+iacanga,2080
+iacri,1774
+iaras,942
+ibate,7899
+ibira,2245
+ibirarema,1313
+ibitinga,11583
+ibiuna,16725
+icem,2024
+iepe,1912
+igaracu do tiete,6382
+igarapava,7292
+igarata,2293
+iguape,7462
+ilha comprida,1925
+ilha solteira,8009
+ilhabela,5525
+indaiatuba,41940
+indiana,1530
+indiapora,1135
+inubia paulista,826
+ipaussu,3321
+ipero,5183
+ipeuna,1384
+ipigua,914
+iporanga,1583
+ipua,3085
+iracemapolis,4334
+irapua,1726
+irapuru,1889
+itabera,5015
+itai,5263
+itajobi,3345
+itaju,634
+itanhaem,20729
+itaoca,1006
+itapecerica da serra,41051
+itapetininga,35042
+itapeva,22633
+itapevi,49970
+itapira,16957
+itapirapua paulista,953
+itapolis,9563
+itaporanga,4087
+itapui,2690
+itapura,1159
+itaquaquecetuba,85956
+itarare,12134
+itariri,4019
+itatiba,23386
+itatinga,4429
+itirapina,3500
+itirapua,1542
+itobi,2093
+itu,40018
+itupeva,7401
+ituverava,10463
+jaborandi,1811
+jaboticabal,19319
+jacarei,56547
+jaci,1062
+jacupiranga,5022
+jaguariuna,7974
+jales,12876
+jambeiro,1135
+jandira,30251
+jardinopolis,9011
+jarinu,4633
+jau,29648
+jeriquara,945
+joanopolis,2702
+joao ramalho,1219
+jose bonifacio,7703
+julio mesquita,1271
+jumirim,534
+jundiai,93659
+junqueiropolis,4294
+juquia,5750
+juquitiba,8122
+lagoinha,1367
+laranjal paulista,5340
+lavinia,1412
+lavrinhas,2027
+leme,23366
+lencois paulista,16338
+limeira,70812
+lindoia,1249
+lins,18303
+lorena,24272
+lourdes,673
+louveira,6978
+lucelia,5175
+lucianopolis,570
+luis antonio,2330
+luiziania,1156
+lupercio,1200
+lutecia,921
+macatuba,5022
+macaubal,1771
+macedonia,971
+magda,842
+mairinque,12414
+mairipora,17731
+manduri,2129
+maraba paulista,1107
+maracai,3598
+marapoama,532
+mariapolis,1064
+marilia,61493
+marinopolis,623
+martinopolis,5825
+matao,20689
+maua,114080
+mendonca,971
+meridiano,1068
+mesopolis,565
+miguelopolis,5228
+mineiros do tiete,2991
+mira estrela,665
+miracatu,6105
+mirandopolis,6910
+mirante do paranapanema,4381
+mirassol,12803
+mirassolandia,985
+mococa,19624
+mogi guacu,35444
+moji das cruzes,102971
+moji-mirim,23484
+mombuca,839
+moncoes,595
+mongagua,9559
+monte alegre do sul,1576
+monte alto,12435
+monte aprazivel,4666
+monte azul paulista,5302
+monte castelo,1029
+monte mor,10848
+monteiro lobato,936
+morro agudo,7178
+morungaba,2626
+motuca,1122
+murutinga do sul,892
+nantes,684
+narandiba,1144
+natividade da serra,1623
+nazare paulista,3776
+neves paulista,2381
+nhandeara,2680
+nipoa,767
+nova alianca,1161
+nova campina,2281
+nova canaa paulista,513
+nova castilho,340
+nova europa,2084
+nova granada,4341
+nova guataporanga,531
+nova independencia,552
+nova luzitania,723
+nova odessa,12158
+novais,965
+novo horizonte,8541
+nuporanga,1807
+ocaucu,1075
+oleo,769
+olimpia,12805
+onda verde,897
+oriente,1627
+orindiuva,1305
+orlandia,10804
+osasco,197658
+oscar bressane,732
+osvaldo cruz,7779
+ourinhos,26949
+ouro verde,1999
+ouroeste,2108
+pacaembu,3235
+palestina,2033
+palmares paulista,2481
+palmeira d'oeste,2474
+palmital,4998
+panorama,3730
+paraguacu paulista,11958
+paraibuna,4937
+paraiso,1387
+paranapanema,3900
+paranapua,889
+parapua,2670
+pardinho,1161
+pariquera-acu,4996
+parisi,509
+patrocinio paulista,3349
+pauliceia,1493
+paulinia,17894
+paulistania,497
+paulo de faria,2354
+pederneiras,10554
+pedra bela,1241
+pedranopolis,722
+pedregulho,4373
+pedreira,8706
+pedrinhas paulista,953
+pedro de toledo,2849
+penapolis,15718
+pereira barreto,7537
+pereiras,1499
+peruibe,14660
+piacatu,1234
+piedade,12195
+pilar do sul,7125
+pindamonhangaba,38917
+pindorama,3455
+pinhalzinho,2832
+piquerobi,916
+piquete,4530
+piracaia,6535
+piracicaba,94577
+piraju,7777
+pirajui,5122
+pirangi,2308
+pirapora do bom jesus,4113
+pirapozinho,6015
+pirassununga,18791
+piratininga,2910
+pitangueiras,9536
+planalto,912
+platina,771
+poa,30916
+poloni,1076
+pompeia,5599
+pongai,917
+pontal,8451
+pontalinda,1135
+pontes gestal,804
+populina,1254
+porangaba,1520
+porto feliz,12073
+porto ferreira,13643
+potim,3949
+potirendaba,3184
+pracinha,448
+pradopolis,4156
+praia grande,56326
+pratania,1243
+presidente alves,1251
+presidente bernardes,3806
+presidente epitacio,10880
+presidente prudente,57387
+presidente venceslau,10489
+promissao,9270
+quadra,601
+quata,3358
+queiroz,632
+queluz,2579
+quintana,1523
+rafard,2277
+rancharia,8014
+redencao da serra,897
+regente feijo,4880
+reginopolis,1268
+registro,15952
+restinga,1931
+ribeira,951
+ribeirao bonito,3192
+ribeirao branco,5221
+ribeirao corrente,1221
+ribeirao do sul,1177
+ribeirao dos indios,626
+ribeirao grande,2343
+ribeirao pires,31737
+ribeirao preto,146920
+rifaina,901
+rincao,2774
+rinopolis,2608
+rio claro,47271
+rio das pedras,7139
+rio grande da serra,11729
+riolandia,2140
+riversul,1950
+rosana,8493
+roseira,2566
+rubiacea,666
+rubineia,856
+sabino,1219
+sagres,704
+sales,1212
+sales oliveira,2694
+salesopolis,3589
+salmourao,1149
+saltinho,1618
+salto,28694
+salto de pirapora,10027
+salto grande,2216
+sandovalina,1003
+santa adelia,3203
+santa albertina,1507
+santa barbara d'oeste,50070
+santa branca,3861
+santa clara d'oeste,560
+santa cruz da conceicao,965
+santa cruz da esperanca,625
+santa cruz das palmeiras,6934
+santa cruz do rio pardo,11050
+santa ernestina,1668
+santa fe do sul,7781
+santa gertrudes,3872
+santa isabel,12653
+santa lucia,2147
+santa maria da serra,1347
+santa mercedes,835
+santa rita do passa quatro,6780
+santa rita d'oeste,746
+santa rosa de viterbo,6074
+santa salete,314
+santana da ponte pensa,510
+santana de parnaiba,25542
+santo anastacio,5587
+santo andre,188495
+santo antonio da alegria,1576
+santo antonio de posse,4673
+santo antonio do aracangua,2274
+santo antonio do jardim,1521
+santo antonio do pinhal,1748
+santo expedito,572
+santopolis do aguapei,1100
+santos,114845
+sao bento do sapucai,2597
+sao bernardo do campo,225244
+sao caetano do sul,40403
+sao carlos,59804
+sao francisco,701
+sao joao da boa vista,20474
+sao joao das duas pontes,621
+sao joao de iracema,564
+sao joao do pau d'alho,575
+sao joaquim da barra,12417
+sao jose da bela vista,2228
+sao jose do barreiro,1274
+sao jose do rio pardo,14794
+sao jose do rio preto,103118
+sao jose dos campos,174598
+sao lourenco da serra,3724
+sao luis do paraitinga,2449
+sao manuel,10318
+sao miguel arcanjo,8357
+sao paulo,2992928
+sao pedro,7164
+sao pedro do turvo,1839
+sao roque,20122
+sao sebastiao,17750
+sao sebastiao da grama,2908
+sao simao,3853
+sao vicente,89572
+sarapui,2095
+sarutaia,946
+sebastianopolis do sul,701
+serra azul,2146
+serra negra,5607
+serrana,9342
+sertaozinho,30871
+sete barras,3810
+severinia,3737
+silveiras,1390
+socorro,8012
+sorocaba,149111
+sud mennucci,2211
+sumare,56010
+suzanapolis,837
+suzano,70375
+tabapua,2636
+tabatinga,3257
+taboao da serra,60546
+taciba,1624
+taguai,2065
+taiacu,1365
+taiuva,1552
+tambau,6002
+tanabi,5497
+tapirai,2350
+tapiratiba,3823
+taquaral,846
+taquaritinga,14677
+taquarituba,5689
+taquarivai,1146
+tarabai,1593
+taruma,3641
+tatui,24970
+taubate,74667
+tejupa,1286
+teodoro sampaio,5672
+terra roxa,2042
+tiete,8237
+timburi,696
+torre de pedra,769
+torrinha,2212
+trabiju,472
+tremembe,10481
+tres fronteiras,1247
+tuiuti,1069
+tupa,16562
+tupi paulista,3495
+turiuba,469
+turmalina,652
+ubarana,1304
+ubatuba,19533
+ubirajara,1146
+uchoa,2303
+uniao paulista,325
+urania,2149
+uru,403
+urupes,2922
+valentim gentil,2029
+valinhos,23717
+valparaiso,5712
+vargem,1761
+vargem grande do sul,8767
+vargem grande paulista,10772
+varzea paulista,28077
+vera cruz,3009
+vinhedo,13935
+viradouro,4750
+vista alegre do alto,1255
+vitoria brasil,478
+votorantim,31017
+votuporanga,20814
+zacarias,489

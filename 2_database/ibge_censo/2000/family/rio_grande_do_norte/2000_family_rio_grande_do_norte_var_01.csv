@@ -1,0 +1,167 @@
+city,total,adequada,semi_adequada,inadequada
+acari,2786,1270,1396,120
+acu,11364,2270,8471,623
+afonso bezerra,2649,627,1795,228
+agua nova,618,0,529,89
+alexandria,3382,914,2033,435
+almino afonso,1286,395,798,93
+alto do rodrigues,2409,129,2218,62
+angicos,2770,151,2451,168
+antonio martins,1711,341,1066,304
+apodi,8400,7,7558,836
+areia branca,5628,791,4692,145
+ares,2534,923,1542,69
+augusto severo,2187,0,1816,371
+baia formosa,1746,22,1676,49
+barauna,4511,27,4082,403
+barcelona,928,0,789,139
+bento fernandes,932,0,759,173
+bodo,633,0,475,158
+bom jesus,2088,9,1857,222
+brejinho,2490,28,2240,223
+caicara do norte,1309,0,1274,35
+caicara do rio do vento,691,11,564,116
+caico,14472,7737,6400,335
+campo redondo,2296,594,1267,435
+canguaretama,5800,325,5220,255
+caraubas,4703,70,4173,460
+carnauba dos dantas,1664,68,1529,67
+carnaubais,2031,207,1593,231
+ceara-mirim,13339,2295,9986,1059
+cerro cora,2426,39,1790,597
+coronel ezequiel,1334,28,995,311
+coronel joao pessoa,1083,6,1042,35
+cruzeta,2071,774,1186,111
+currais novos,10169,6081,3743,345
+doutor severiano,1481,6,1245,230
+encanto,1159,17,980,162
+equador,1404,432,875,97
+espirito santo,2424,207,1788,428
+extremoz,4577,720,3698,160
+felipe guerra,1432,4,1311,117
+fernando pedroza,644,43,558,43
+florania,2213,926,1031,256
+francisco dantas,764,0,652,112
+frutuoso gomes,1158,417,726,14
+galinhos,390,0,347,43
+goianinha,3724,344,3089,292
+governador dix-sept rosado,2890,7,2400,483
+grossos,2057,27,1941,89
+guamare,2080,147,1805,128
+ielmo marinho,2309,0,1607,702
+ipanguacu,2716,55,2305,357
+ipueira,479,0,462,17
+itaja,1419,12,1326,81
+itau,1323,0,1311,12
+jacana,1952,91,1620,241
+jandaira,1452,0,1372,80
+janduis,1274,0,1157,117
+januario cicco,1829,5,1413,411
+japi,1505,3,1246,256
+jardim de angicos,637,91,516,31
+jardim de piranhas,2917,12,2643,262
+jardim do serido,3213,1622,1412,180
+joao camara,6702,46,5974,683
+joao dias,662,136,374,152
+jose da penha,1489,67,1155,267
+jucurutu,4231,1812,2213,207
+lagoa d'anta,1229,17,1008,204
+lagoa de pedras,1495,4,1197,295
+lagoa de velhos,611,0,518,92
+lagoa nova,2749,0,2242,507
+lagoa salgada,1624,10,1380,235
+lajes,2386,234,2011,141
+lajes pintadas,1090,204,630,255
+lucrecia,783,299,460,24
+luis gomes,2104,20,1716,369
+macaiba,13106,815,11366,925
+macau,6770,650,5989,131
+major sales,705,8,645,52
+marcelino vieira,2058,291,1470,297
+martins,1938,635,1229,74
+maxaranguape,1678,8,1523,147
+messias targino,870,0,826,44
+montanhas,2570,16,2375,179
+monte alegre,4339,191,3504,644
+monte das gameleiras,604,0,480,124
+mossoro,52043,18612,32328,1103
+natal,177665,95673,81550,442
+nisia floresta,4311,150,3832,329
+nova cruz,7962,500,6517,945
+olho-d'agua do borges,1139,0,1007,132
+ouro branco,1204,22,1096,86
+parana,807,0,679,128
+parau,990,35,851,104
+parazinho,963,3,845,115
+parelhas,4864,2266,2354,244
+parnamirim,31742,15659,15988,95
+passa e fica,1985,33,1682,269
+passagem,675,2,573,100
+patu,2866,0,2654,213
+pau dos ferros,6301,2674,3422,205
+pedra grande,876,14,732,129
+pedra preta,639,38,400,201
+pedro avelino,1825,269,1394,162
+pedro velho,3139,57,2886,197
+pendencias,2924,324,2567,33
+piloes,720,9,644,68
+poco branco,2569,352,2159,58
+portalegre,1676,10,1314,352
+porto do mangue,1010,8,850,152
+presidente juscelino,1611,5,1382,225
+pureza,1583,20,1494,69
+rafael fernandes,1085,5,924,156
+rafael godeiro,792,5,698,89
+riacho da cruz,672,41,617,14
+riacho de santana,1008,9,892,108
+riachuelo,1325,349,803,173
+rio do fogo,1996,33,1846,117
+rodolfo fernandes,1043,306,687,49
+ruy barbosa,837,7,651,179
+santa cruz,7443,3325,3339,779
+santa maria,923,0,833,90
+santana do matos,3724,617,2414,693
+santana do serido,564,162,321,81
+santo antonio,4940,95,4293,552
+sao bento do norte,760,11,627,121
+sao bento do trairi,764,88,495,181
+sao fernando,800,360,367,73
+sao francisco do oeste,930,529,385,16
+sao goncalo do amarante,16576,4234,11613,729
+sao joao do sabugi,1449,6,1333,109
+sao jose de mipibu,8085,235,7186,664
+sao jose do campestre,2859,87,2527,245
+sao jose do serido,896,363,488,45
+sao miguel,4965,28,4283,654
+sao miguel de touros,1562,32,1243,287
+sao paulo do potengi,3275,1268,1775,232
+sao pedro,1554,0,1266,288
+sao rafael,2115,953,1018,144
+sao tome,2726,498,1785,443
+sao vicente,1415,130,1047,238
+senador eloi de souza,1187,0,948,239
+senador georgino avelino,705,11,683,12
+serra de sao bento,1330,0,1029,301
+serra do mel,1809,5,1710,94
+serra negra do norte,1817,437,1187,192
+serrinha,1729,5,1269,455
+serrinha dos pintos,1104,0,881,223
+severiano melo,2302,0,1970,332
+sitio novo,1029,0,763,266
+taboleiro grande,517,0,489,28
+taipu,2440,7,1945,488
+tangara,2883,995,1629,260
+tenente ananias,2004,133,1570,301
+tenente laurentino cruz,1023,0,847,176
+tibau,714,15,652,47
+tibau do sul,1714,25,1618,71
+timbauba dos batistas,540,5,526,10
+touros,5893,147,5103,643
+triunfo potiguar,851,0,633,217
+umarizal,2898,17,2708,173
+upanema,2599,0,2171,428
+varzea,2003,5,1836,163
+venha-ver,700,4,468,227
+vera cruz,2050,0,1882,168
+vicosa,363,174,189,0
+vila flor,548,0,533,15
