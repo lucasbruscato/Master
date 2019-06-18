@@ -27,7 +27,9 @@ No âmbito deste trabalho serão utilizadas os relatórios de auditorias realiza
 
 A coleta de tais relatórios foi realizada de forma automatizada (para as edições com respeito aos sorteios 34 ao 40) e manual (para as edições com respeito ao ciclo 3, ciclo 4 e ciclo 5). As decisões sobre as formas como os relatórios foram coletados teve embasamento na estrutura da página web do governo.
 
-As edições com respeito aos sorteios 34 ao 40 estão disponíveis no site da Controladoria-Geral da União e podem ser encontrados por meio de um mecanismo de busca de relatórios. Contudo, a página do mecanismo de busca frequentemente se encontra indisponível (ref. - print da pág. indisponível) e a consulta em si é onerosa de um ponto de vista de trabalho humano, dado que devem ser preenchidos diversos campos para se realizar a pesquisa. Portanto, foi desenvolvido um robô utilizando a biblioteca Selenium (ref.) da linguagem de programação Python que auxilia na manipulação de páginas web, no caso, possibilita que de uma forma automática - utilizando códigos em Python - inicie uma instância do navegador Firefox, acesse o mecanismo de busca de relatórios da Controladoria-Geral da União e realize a consulta, um a um, dos relatórios de todos os municípios em questão. O código citado anteriormente escrito na linguagem de programação Python utilizando a ferramenta Notebook Jupyter se encontra no anexo (ref. - 99_import_reports).
+As edições com respeito aos sorteios 34 ao 40 estão disponíveis no site da Controladoria-Geral da União e podem ser encontrados por meio de um mecanismo de busca de relatórios. Contudo, a página do mecanismo de busca frequentemente se encontra indisponível (ref. - print da pág. indisponível) e a consulta em si é onerosa de um ponto de vista de trabalho humano, dado que devem ser preenchidos diversos campos para se realizar a pesquisa. Portanto, foi desenvolvido um robô utilizando a biblioteca Selenium (ref.) da linguagem de programação Python que auxilia na manipulação de páginas web, no caso, possibilita que de uma forma automática - utilizando códigos em Python - inicie uma instância do navegador Firefox, acesse o mecanismo de busca de relatórios da Controladoria-Geral da União e realize a consulta, um a um, dos relatórios de todos os municípios em questão.
+
+O código citado no parágrafo anterior foi escrito na linguagem de programação Python utilizando a ferramenta Notebook Jupyter e se encontra no anexo (ref. - 99_import_reports).
 
 As edições com respeito aos ciclos 3, 4 e 5 foram coletadas diretamente na página web por estarem disponíveis diretamente na página do programa.
 
@@ -36,19 +38,34 @@ Os nomes dos arquivos de todos os relatórios de auditoria explicados nesta seç
 \section{SentiLex}
 \label{sec:sentilex}
 
-A base de dados SentiLex-PT02 é considerada, ao menos no idioma português, a mais importante fonte de informação no aspecto léxico de sentimento \citep{BeckerTumitan2014}. Especificamente concebido para a análise de sentimento e opinião sobre entidades humanas em textos redigidos em português, é constituído atualmente por 7.014 lemas e 82.347 formas flexionadas.
+A base de dados SentiLex-PT02 é considerada, ao menos no idioma português na atualidade, a mais importante fonte de informação no aspecto léxico de sentimento \citep{BeckerTumitan2014}. Especificamente concebido para a análise de sentimento e opinião sobre entidades humanas em textos redigidos em português, é constituído atualmente por 7.014 lemas e 82.347 formas flexionadas.
 
-Os adjetivos presentes na base possuem uma polaridade que foi atribuída com base num cálculo sobre as distâncias das palavras, com polaridade conhecida a priori, ligadas aos adjetivos por uma relação de sinonímia num grafo, inferido a partir de dicionários de sinônimos disponíveis para o português. Os detalhes da criação de tal trabalho podem ser encontrados em (ref. Tumitan, Diego \& Krin Becker. 2014).
+Os adjetivos presentes na base possuem uma polaridade que foi atribuída com base num cálculo sobre as distâncias das palavras, com polaridade conhecida a priori, ligadas aos adjetivos por uma relação de sinonímia num grafo, inferido a partir de dicionários de sinônimos disponíveis para o português. Os detalhes da criação de tal trabalho podem ser encontrados em \citep{BeckerTumitan2014}.
 
-Cada palavra na base de dados possui sua respectiva polaridade sendo que os valores que as polaridades podem assumir são -1, 0 e 1, representando polaridade negativa, polaridade neutra e polaridade positiva, respectivamente.
+Cada palavra presente na base de dados possui sua respectiva polaridade, sendo que os valores que as polaridades podem assumir são -1, 0 e 1, representando polaridade negativa, polaridade neutra e polaridade positiva, respectivamente.
 
 \section{Variável Resposta}
 \label{sec:variavel_resposta}
 
-Para realizar uma interpretação quantitativa sobre os relatórios coletados que foram apresentados na seção do "Programa de Fiscalização de Entes Federativos", este trabalho utiliza a base da dados SentiLex para definição de polaridade de cada uma das palavras presentes no relatório.
+Para realizar uma interpretação quantitativa sobre os relatórios coletados que foram apresentados na seção do "Programa de Fiscalização de Entes Federativos", este trabalho utiliza a base da dados SentiLex para definição de polaridade de cada uma das palavras presentes no relatório e, assim, criação de uma métrica para modelagem.
+
+Foi criado um código que realiza o reconhecimento de caracteres do documento pdf onde, iterativamente utilizando regras para separadores de palavras, se concatenou caracter a caracter formando as palavras do relatório pdf. Devido a problemas enfrentados com respeito à diferentes tipos de codificação (encoding, e.g., UTF-8) dos relatórios utilizados, foi necessário a utilização da biblioteca externa em python (ref. - link). Assim, a criação de tal métrica se deu pela criação de um código em python que realiza o reconhecimento das palavras presentes em documentos pdf, pode-se sumarizar as etapas do processo pelos seguintes passos:
+
+* Iterativamente executa o código da biblioteca externa para cada relatório de auditoria listado na seção de "Programas de Entes Federativos" (ref. - link para seção)
+* Sobre o texto de cada relatório remove acentuação, caracteres de parada e transforma todo os caracteres em minúsculo
+* Calcula a frequência das palavras dentro de seu respectivo documento
+* Utilizando a base de dados SentiLex, apresentada na seção (ref. - link para seção sentilex), define a polaridade da palavra
+* Realiza um agrupamento sobre o produto dos passos anteriores sumarizando a frequência relativa calculada sob as polaridades definidas, i.e., o resultado é um arquivo em formato CSV com as seguintes colunas: nome do relatório, percentual de polaridade negativa, percentual de polaridade positiva e percentual de polaridade neutra
+
+O código citado no parágrafo anterior foi escrito na linguagem de programação Python utilizando a ferramenta Notebook Jupyter e se encontra no anexo (ref. - 01_create_target_feature).
 
 \section{Variáveis Explicativas}
 \label{sec:variaveis_explicativas}
+
+
+
+\section{?}
+\label{sec:?}
 
 
 
