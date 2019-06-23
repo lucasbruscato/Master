@@ -33,7 +33,7 @@ O código citado no parágrafo anterior foi escrito na linguagem de programaçã
 
 As edições com respeito aos ciclos 3, 4 e 5 foram coletadas diretamente na página web por estarem disponíveis diretamente na página do programa.
 
-Os nomes dos arquivos de todos os relatórios de auditoria explicados nesta seção e utilizados neste trabalho se encontram no anexo (ref.).
+Os nomes dos arquivos de todos os relatórios de auditoria explicados nesta seção e utilizados neste trabalho se encontram na tabela (ref.).
 
 \section{SentiLex}
 \label{sec:sentilex}
@@ -58,6 +58,23 @@ Foi criado um código que realiza o reconhecimento de caracteres do documento pd
 * Realiza um agrupamento sobre o produto dos passos anteriores sumarizando a frequência relativa calculada sob as polaridades definidas, i.e., o resultado é um arquivo em formato CSV com as seguintes colunas: nome do relatório, percentual de polaridade negativa, percentual de polaridade positiva e percentual de polaridade neutra
 
 O código citado no parágrafo anterior foi escrito na linguagem de programação Python utilizando a ferramenta Notebook Jupyter e se encontra no anexo (ref. - 01_create_target_feature).
+
+\section{Censo do IBGE}
+\label{sec:censo_do_ibge}
+
+O censo demográfico no Brasil é uma operação censitária realizada a nível nacional a partir do ano de 1872, constitui a principal fonte de referência para o conhecimento das condições de vida da população em todos os municípios do País e em seus recortes territoriais internos, tendo como unidade de coleta a pessoa residente, na data de referência, em domicílio do Território Nacional.
+
+O Instituto Brasileiro de Geografia e Estatística (IBGE) é o órgão responsável por realizar o censo demográfico brasileiro a partir do ano de 1940, sendo o último censo tendo sido realizado no ano de 2010 e o próximo previsto para acontecer em 2020.
+
+O Questionário Básico da pesquisa investiga informações sobre características dos domicílios (condição de ocupação, número de banheiros, existência de sanitário, escoadouro do banheiro ou do sanitário, abastecimento de água, destino do lixo, existência de energia elétrica etc.); emigração internacional; composição dos domicílios (número de moradores, responsabilidade compartilhada, lista de moradores, identificação do responsável, relação de parentesco com o responsável pelo domicílio etc.); características do morador (sexo e idade, cor ou raça, etnia e língua falada, no caso dos indígenas, posse de registro de nascimento, alfabetização, rendimento mensal etc.); e mortalidade. A investigação nos domicílios selecionados, efetuada por meio do Questionário da Amostra, inclui, além dos quesitos presentes no Questionário Básico, outros mais detalhados sobre características do domicílio e das pessoas moradoras, bem como quesitos sobre temas específicos, como deficiência, nupcialidade e fecundidade.
+
+A periodicidade da pesquisa é decenal, excetuando-se os anos de 1910 e 1930, em que o levantamento foi suspenso, e 1990, quando a operação foi adiada para 1991. Sua abrangência geográfica é nacional, com resultados divulgados para Brasil, Grandes Regiões, Unidades da Federação, Mesorregiões, Microrregiões, Regiões Metropolitanas, Municípios, Distritos, Subdistritos e Setores Censitários.
+
+As informações utilizadas neste trabalho são as disponibilizadas pelos censos realizados nos anos 2000 e nos anos 2010 sob a perspectiva de comparação das informações de ambos censos. Devido à mudança na informação ou segmentação realizada em cada censo, foi realizado um mapeamento de todas as informações disponíveis por censo para definição de quais informações seriam utilizadas no trabalho (a estatística levantada no censo de 2000 pode não existir no censo de 2010, e vice-versa, ou uma segmentação diferente foi realizada em cada censo impossibilitando a comparação da informação entre ambos). As informações que serão utilizadas estão descritas na tabela (ref. - tab com nome de todas as variáveis).
+
+Os relatórios contendo as estatísticas do censo do IBGE de 2000 e 2010 foram coletados manualmente no site do IBGE (ref. - link para download), contudo, foram criados dois códigos para extração estruturada da informação. O primeiro foi para organização dos diretórios dos relatórios baseado na sigla do estado, e o segundo para extração das informações das planilhas em extensão XLS (eXceL Spreadsheet) para o formato CSV. A motivação para o segundo código se deve ao fato de que as planilhas originais da fonte contém formatação com layout disforme, de forma que se tornava impossível a extração direta da informação de forma simplificada.
+
+Os códigos citados no parágrafo anterior foram escritos na linguagem de programação Python utilizando a ferramenta Notebook Jupyter e se encontram nos anexos (ref. - 99_rename_folders) e (ref. - 99_extract_explanatory_features), respectivamente.
 
 \section{Variáveis Explicativas}
 \label{sec:variaveis_explicativas}
