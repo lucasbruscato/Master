@@ -4,7 +4,7 @@
 
 Este trabalho se insere no contexto de coleta de dados estruturados e não estruturados, processamento de linguagem natural (NLP), previsão de polaridade e utilização de informações socioeconômicas.
 
-Serão utilizados os relatórios de auditoria produzidos pelo "Programa de Fiscalização de Entes Federativos", as informações do censo do IBGE de 2000 e 2010, abordagens de NLP e aprendizado de máquina aplicadas às informações supracitadas.
+Serão utilizados os relatórios de auditoria produzidos pelo "Programa de Fiscalização de Entes Federativos" que correspondem ao período de 2011 à 2018, as informações do censo do IBGE de 2000 e 2010, abordagens de NLP e aprendizado de máquina aplicadas às informações supracitadas.
 
 Tendo como intuito garantir a total replicabilidade do trabalho, as fontes de informações foram coletadas da internet, quase em sua completude, por meio de códigos desenvolvidos tornando o processo altamente automatizado. O projeto foi construído utilizando o sistema de controle de versionamento distribuído GitHub e está disponível publicamente (ref. - link git).
 
@@ -72,19 +72,36 @@ A periodicidade da pesquisa é decenal, excetuando-se os anos de 1910 e 1930, em
 
 As informações utilizadas neste trabalho são as disponibilizadas pelos censos realizados nos anos 2000 e nos anos 2010 sob a perspectiva de comparação das informações de ambos censos. Devido à mudança na informação ou segmentação realizada em cada censo, foi realizado um mapeamento de todas as informações disponíveis por censo para definição de quais informações seriam utilizadas no trabalho (a estatística levantada no censo de 2000 pode não existir no censo de 2010, e vice-versa, ou uma segmentação diferente foi realizada em cada censo impossibilitando a comparação da informação entre ambos). As informações que serão utilizadas estão descritas na tabela (ref. - tab com nome de todas as variáveis).
 
-Os relatórios contendo as estatísticas do censo do IBGE de 2000 e 2010 foram coletados manualmente no site do IBGE (ref. - link para download), contudo, foram criados dois códigos para extração estruturada da informação. O primeiro foi para organização dos diretórios dos relatórios baseado na sigla do estado, e o segundo para extração das informações das planilhas em extensão XLS (eXceL Spreadsheet) para o formato CSV. A motivação para o segundo código se deve ao fato de que as planilhas originais da fonte contém formatação com layout disforme, de forma que se tornava impossível a extração direta da informação de forma simplificada.
+Os relatórios contendo as estatísticas do censo do IBGE de 2000 e 2010 foram coletados manualmente no site do IBGE (ref. - link para download), contudo, foram criados dois códigos para extração estruturada da informação. O primeiro foi para organização dos diretórios dos relatórios baseado na sigla do estado, e o segundo para extração das informações das planilhas em extensão XLS (eXceL Spreadsheet) para o formato de arquivos CSV. A motivação para o segundo código se deve ao fato de que as planilhas originais da fonte contém formatação com layout disforme, de forma que se tornava impossível a extração direta da informação de forma simplificada.
 
 Os códigos citados no parágrafo anterior foram escritos na linguagem de programação Python utilizando a ferramenta Notebook Jupyter e se encontram nos anexos (ref. - 99_rename_folders) e (ref. - 99_extract_explanatory_features), respectivamente.
 
 \section{Variáveis Explicativas}
 \label{sec:variaveis_explicativas}
 
+As variáveis utilizadas como explicativas para modelagem do problema proposto foram extraídas do censo demográfico do IBGE dos anos 2000 e 2010. Foram feitas três abordagens distintas sobre as variáveis explicativas, essas são:
+
+1) Utilizar as informações de modo comparativo
+
+As variáveis do censo do IBGE que não são representadas como porcentagens foram divididas numericamente pelo tamanho populacional do município em questão, assim, se tornando porcentagens com respeito ao tamanho populacional.
+
+Após a criação das novas variáveis conforme descrito no parágrafo anterior, todas as variáveis (tanto as variáveis criadas conforme descrição do parágrafo anterior quanto as variáveis do censo do IBGE que são representadas como porcentagens) correspondentes ao censo de 2000 foram divididas numericamente pelas variáveis de mesmo conceito correspondentes ao censo de 2010.
+
+O código para criação das variáveis citadas no parágrafo anterior foi escrito na linguagem de programação Python utilizando a ferramenta Notebook Jupyter e se encontra no anexo (ref. - 02_data_processing).
+
+2) (?)
+3) (?)
+
+\section{Criação da base para modelagem}
+\label{sec:criacao_da_base_para_modelagem}
+
+Utilizando como chave estrangeira a informação de munício e estado, realizou-se a união das informações citadas nas seções (ref. - variável resposta) e (ref. - variáveis explicativas) e, assim, foram obtidas as bases para modelagem do problema proposto neste trabalho. Assim, por meio do método de amostragem aleatória, selecionou-se setenta e cinco por cento da base gerada para desenvolvimento do modelo e vinte e cinco por cento para validação (ref. - cross validation).
+
+O código desenvolvido para criação da base citada no parágrafo anterior foi escrito na linguagem de programação Python utilizando a ferramenta Notebook Jupyter e se encontra no anexo (ref. - 02_data_processing).
 
 
-\section{?}
-\label{sec:?}
 
-
+<<< ARRUMAR CÖDIGO 02_data_processing >>>
 
 
 
