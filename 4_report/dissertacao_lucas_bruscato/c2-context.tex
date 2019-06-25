@@ -54,10 +54,10 @@ Foi criado um código que realiza o reconhecimento de caracteres do documento pd
 * Iterativamente executa o código da biblioteca externa para cada relatório de auditoria listado na seção de "Programas de Entes Federativos" (ref. - link para seção)
 * Sobre o texto de cada relatório remove acentuação, caracteres de parada e transforma todo os caracteres em minúsculo
 * Calcula a frequência das palavras dentro de seu respectivo documento
-* Utilizando a base de dados SentiLex, apresentada na seção (ref. - link para seção sentilex), define a polaridade da palavra
+* Utilizando a base de dados SentiLex (extraída por meio da criação de um código em python), apresentada na seção (ref. - link para seção sentilex), define a polaridade da palavra
 * Realiza um agrupamento sobre o produto dos passos anteriores sumarizando a frequência relativa calculada sob as polaridades definidas, i.e., o resultado é um arquivo em formato CSV com as seguintes colunas: nome do relatório, percentual de polaridade negativa, percentual de polaridade positiva e percentual de polaridade neutra
 
-O código citado no parágrafo anterior foi escrito na linguagem de programação Python utilizando a ferramenta Notebook Jupyter e se encontra no anexo (ref. - 01_create_target_feature).
+Os códigos citados no parágrafo anterior foram escritos na linguagem de programação Python utilizando a ferramenta Notebook Jupyter e se encontram nos anexos (ref. - 99_01_sentilex_database) e (ref. - 01_create_target_feature), respectivamente.
 
 \section{Censo do IBGE}
 \label{sec:censo_do_ibge}
@@ -79,7 +79,9 @@ Os códigos citados no parágrafo anterior foram escritos na linguagem de progra
 \section{Variáveis Explicativas}
 \label{sec:variaveis_explicativas}
 
-As variáveis utilizadas como explicativas para modelagem do problema proposto foram extraídas do censo demográfico do IBGE dos anos 2000 e 2010. Foram feitas três abordagens distintas sobre as variáveis explicativas, essas são:
+A variável que define o estado do município foi utilizada como variável explicativa, contudo, foi-se necessário uma binarização da mesma utilizando um método conhecido como one-hot-encoding. O método realiza a transformação de uma variável categórica em várias variáveis numéricas, sendo que para cada categoria de tal variável é criado uma nova variável contendo o valor zero ou um, sendo que zero indica a não ocorrência de tal categoria na observação em questão e um indica a ocorrência de tal categoria na observação em questão. Tal transformação se fez necessária uma vez que os modelos de aprendizado de máquina implementados na biblioteca scikit-learn em Python não aceitam como entrada bases de dados contendo variáveis categóricas.
+
+As variáveis extraídas do censo demográfico do IBGE dos anos 2000 e 2010 também foram utilizadas como explicativas para modelagem do problema proposto. Foram feitas três (?) abordagens distintas sobre tais variáveis explicativas, essas são:
 
 1) Utilizar as informações de modo comparativo
 
@@ -87,7 +89,7 @@ As variáveis do censo do IBGE que não são representadas como porcentagens for
 
 Após a criação das novas variáveis conforme descrito no parágrafo anterior, todas as variáveis (tanto as variáveis criadas conforme descrição do parágrafo anterior quanto as variáveis do censo do IBGE que são representadas como porcentagens) correspondentes ao censo de 2000 foram divididas numericamente pelas variáveis de mesmo conceito correspondentes ao censo de 2010.
 
-O código para criação das variáveis citadas no parágrafo anterior foi escrito na linguagem de programação Python utilizando a ferramenta Notebook Jupyter e se encontra no anexo (ref. - 02_data_processing).
+O código para criação das variáveis citadas nesta seção foi escrito na linguagem de programação Python utilizando a ferramenta Notebook Jupyter e se encontra no anexo (ref. - 02_02_modeling_dataset).
 
 2) (?)
 3) (?)
@@ -95,16 +97,8 @@ O código para criação das variáveis citadas no parágrafo anterior foi escri
 \section{Criação da base para modelagem}
 \label{sec:criacao_da_base_para_modelagem}
 
-Utilizando como chave estrangeira a informação de munício e estado, realizou-se a união das informações citadas nas seções (ref. - variável resposta) e (ref. - variáveis explicativas) e, assim, foram obtidas as bases para modelagem do problema proposto neste trabalho. Assim, por meio do método de amostragem aleatória, selecionou-se setenta e cinco por cento da base gerada para desenvolvimento do modelo e vinte e cinco por cento para validação (ref. - cross validation).
+Utilizando como chave estrangeira a informação de munício e estado, realizou-se - por meio do código em python no anexo (ref. - 02_01_raw_dataset) - a união das informações citadas nas seções (ref. - variável resposta) e (ref. - variáveis explicativas) e, assim, foram obtidas as bases para modelagem do problema proposto neste trabalho. Assim, por meio do método de amostragem aleatória, selecionou-se setenta e cinco por cento da base gerada para desenvolvimento do modelo e vinte e cinco por cento para validação (ref. - cross validation).
 
-O código desenvolvido para criação da base citada no parágrafo anterior foi escrito na linguagem de programação Python utilizando a ferramenta Notebook Jupyter e se encontra no anexo (ref. - 02_data_processing).
-
-
-
-<<< ARRUMAR CÖDIGO 02_data_processing >>>
-
-
-
-
+O código desenvolvido para criação das bases de desenvolvimento e validação citadas no parágrafo anterior foi escrito na linguagem de programação Python utilizando a ferramenta Notebook Jupyter e se encontra no anexo (ref. - 02_03_training_validation_dataset.ipynb).
 
 %% ------------------------------------------------------------------------- %%
