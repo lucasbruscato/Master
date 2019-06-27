@@ -18,3 +18,14 @@ capítulo 4 - outras tentativas
 
 capítulo 5 - conclusão
 
+
+
+
+@misc{bworld,
+  author = {Ingo Lütkebohle},
+  title = {{BWorld Robot Control Software}},
+  howpublished = "\url{http://aiweb.techfak.uni-bielefeld.de/content/bworld-robot-control-software/}",
+  year = {2008}, 
+  note = "[Online; accessed 19-July-2008]"
+}
+

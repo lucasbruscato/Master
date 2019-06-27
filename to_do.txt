@@ -4,7 +4,7 @@ Sugestoes Minhas:
 	Ibge (saude e educação)
 	Censo escolar (por escola) (educação)
 	Prova brasil (educação)
-	Data SUS (saude), informações de hospitalizações por hospital
+	Data SUS (saude), informações de hospitalizações por hospital www.datasus.gov.br
 
 Sugestoes Rachel:
 
