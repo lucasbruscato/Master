@@ -19,6 +19,8 @@ capítulo 4 - outras tentativas
 capítulo 5 - conclusão
 
 
+jupyter nbconvert --to markdown test.ipynb
+pandoc --listings -f markdown -t latex test.md -o test.tex
 
 
 @misc{bworld,
