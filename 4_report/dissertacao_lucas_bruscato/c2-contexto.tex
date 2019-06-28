@@ -29,7 +29,7 @@ A coleta de tais relatórios foi realizada de forma automatizada (para as ediç�
 
 As edições com respeito aos sorteios 34 ao 40 estão disponíveis no site da Controladoria-Geral da União e podem ser encontrados por meio de um mecanismo de busca de relatórios. Contudo, a página do mecanismo de busca frequentemente se encontra indisponível e a consulta em si é onerosa de um ponto de vista de trabalho humano, dado que devem ser preenchidos diversos campos para se realizar a pesquisa. Portanto, foi desenvolvido um robô utilizando a biblioteca Selenium \cite{Selenium} da linguagem de programação Python que auxilia na manipulação de páginas web, no caso, possibilita que de uma forma automática - utilizando códigos em Python - inicie uma instância do navegador Firefox, acesse o mecanismo de busca de relatórios da Controladoria-Geral da União e realize a consulta, um a um, dos relatórios de todos os municípios em questão.
 
-O código citado no parágrafo anterior foi escrito na linguagem de programação Python utilizando a ferramenta Notebook Jupyter e se encontra no anexo (ref. - 99_import_reports).
+O código citado no parágrafo anterior foi escrito na linguagem de programação Python utilizando a ferramenta Notebook Jupyter e se encontra no anexo (\ref{ape:import_reports}).
 
 As edições com respeito aos ciclos 3, 4 e 5 foram coletadas diretamente na página web por estarem disponíveis diretamente na página do programa.
 
@@ -51,13 +51,13 @@ Para realizar uma interpretação quantitativa sobre os relatórios coletados qu
 
 Foi criado um código que realiza o reconhecimento de caracteres do documento pdf onde, iterativamente utilizando regras para separadores de palavras, se concatenou caracter a caracter formando as palavras do relatório pdf. Devido a problemas enfrentados com respeito à diferentes tipos de codificação (encoding, e.g., UTF-8) dos relatórios utilizados, foi necessário a utilização da biblioteca externa em python \cite{PDFMiner}. Assim, a criação de tal métrica se deu pela criação de um código em python que realiza o reconhecimento das palavras presentes em documentos pdf, pode-se sumarizar as etapas do processo pelos seguintes passos:
 
-* Iterativamente executa o código da biblioteca externa para cada relatório de auditoria listado na seção de "Programas de Entes Federativos" (ref. - link para seção)
+* Iterativamente executa o código da biblioteca externa para cada relatório de auditoria listado na seção de "Programas de Entes Federativos" (\ref{sec:programa_de_fiscalizacao_em_entes_federativos})
 * Sobre o texto de cada relatório remove acentuação, caracteres de parada e transforma todo os caracteres em minúsculo
 * Calcula a frequência das palavras dentro de seu respectivo documento
-* Utilizando a base de dados SentiLex (extraída por meio da criação de um código em python), apresentada na seção (ref. - link para seção sentilex), define a polaridade da palavra
+* Utilizando a base de dados SentiLex (extraída por meio da criação de um código em python), apresentada na seção (\ref{sec:sentilex}), define a polaridade da palavra
 * Realiza um agrupamento sobre o produto dos passos anteriores sumarizando a frequência relativa calculada sob as polaridades definidas, i.e., o resultado é um arquivo em formato CSV com as seguintes colunas: nome do relatório, percentual de polaridade negativa, percentual de polaridade positiva e percentual de polaridade neutra
 
-Os códigos citados no parágrafo anterior foram escritos na linguagem de programação Python utilizando a ferramenta Notebook Jupyter e se encontram nos anexos (ref. - 99_01_sentilex_database) e (ref. - 01_create_target_feature), respectivamente.
+Os códigos citados no parágrafo anterior foram escritos na linguagem de programação Python utilizando a ferramenta Notebook Jupyter e se encontram nos anexos (\ref{ape:sentilex_database}) e (\ref{ape:create_target_feature}), respectivamente.
 
 \section{Censo do IBGE}
 \label{sec:censo_do_ibge}
@@ -74,7 +74,7 @@ As informações utilizadas neste trabalho são as disponibilizadas pelos censos
 
 Os relatórios contendo as estatísticas do censo do IBGE de 2000 e 2010 foram coletados manualmente no site do IBGE \cite{IBGE}, contudo, foram criados dois códigos para extração estruturada da informação. O primeiro foi para organização dos diretórios dos relatórios baseado na sigla do estado, e o segundo para extração das informações das planilhas em extensão XLS (eXceL Spreadsheet) para o formato de arquivos CSV. A motivação para o segundo código se deve ao fato de que as planilhas originais da fonte contém formatação com layout disforme, de forma que se tornava impossível a extração direta da informação de forma simplificada.
 
-Os códigos citados no parágrafo anterior foram escritos na linguagem de programação Python utilizando a ferramenta Notebook Jupyter e se encontram nos anexos (ref. - 99_rename_folders) e (ref. - 99_extract_explanatory_features), respectivamente.
+Os códigos citados no parágrafo anterior foram escritos na linguagem de programação Python utilizando a ferramenta Notebook Jupyter e se encontram nos anexos (\ref{ape:rename_folders}) e (\ref{ape:extract_explanatory_features}), respectivamente.
 
 \section{Variáveis Explicativas}
 \label{sec:variaveis_explicativas}
@@ -89,7 +89,7 @@ As variáveis do censo do IBGE que não são representadas como porcentagens for
 
 Após a criação das novas variáveis conforme descrito no parágrafo anterior, todas as variáveis (tanto as variáveis criadas conforme descrição do parágrafo anterior quanto as variáveis do censo do IBGE que são representadas como porcentagens) correspondentes ao censo de 2000 foram divididas numericamente pelas variáveis de mesmo conceito correspondentes ao censo de 2010. As variáveis criadas estão descritas na tabela (ref. - tab com nome de todas as variáveis).
 
-O código para criação das variáveis citadas nesta seção foi escrito na linguagem de programação Python utilizando a ferramenta Notebook Jupyter e se encontra no anexo (ref. - 02_02_modeling_dataset).
+O código para criação das variáveis citadas nesta seção foi escrito na linguagem de programação Python utilizando a ferramenta Notebook Jupyter e se encontra no anexo (\ref{ape:data_processing_modeling_dataset}).
 
 2) (?)
 3) (?)
@@ -97,8 +97,8 @@ O código para criação das variáveis citadas nesta seção foi escrito na lin
 \section{Criação da base para modelagem}
 \label{sec:criacao_da_base_para_modelagem}
 
-Utilizando como chave estrangeira a informação de munício e estado, realizou-se - por meio do código em python no anexo (ref. - 02_01_raw_dataset) - a união das informações citadas nas seções (ref. - variável resposta) e (ref. - variáveis explicativas) e, assim, foram obtidas as bases para modelagem do problema proposto neste trabalho. Assim, por meio do método de amostragem aleatória, selecionou-se setenta e cinco por cento da base gerada para desenvolvimento do modelo e vinte e cinco por cento para validação do desempenho do modelo, assim, foi-se utilizado o método de validação validação cruzada \citet{Wesllen2017:MSc}.
+Utilizando como chave estrangeira a informação de munício e estado, realizou-se - por meio do código em python no anexo (\ref{ape:data_processing_raw_dataset}) - a união das informações citadas nas seções (\ref{sec:variavel_resposta}) e (\ref{sec:variaveis_explicativas}) e, assim, foram obtidas as bases para modelagem do problema proposto neste trabalho. Assim, por meio do método de amostragem aleatória, selecionou-se setenta e cinco por cento da base gerada para desenvolvimento do modelo e vinte e cinco por cento para validação do desempenho do modelo, assim, foi-se utilizado o método de validação validação cruzada \citet{Wesllen2017:MSc}.
 
-O código desenvolvido para criação das bases de desenvolvimento e validação citadas no parágrafo anterior foi escrito na linguagem de programação Python utilizando a ferramenta Notebook Jupyter e se encontra no anexo (ref. - 02_03_training_validation_dataset.ipynb).
+O código desenvolvido para criação das bases de desenvolvimento e validação citadas no parágrafo anterior foi escrito na linguagem de programação Python utilizando a ferramenta Notebook Jupyter e se encontra no anexo (\ref{ape:data_processing_training_validation_dataset}).
 
 %% ------------------------------------------------------------------------- %%

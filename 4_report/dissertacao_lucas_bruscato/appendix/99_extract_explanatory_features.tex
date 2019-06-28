@@ -1,5 +1,4 @@
-\section{Extract Explanatory
-Features}\label{extract-explanatory-features}
+\section{Extract Explanatory Features}\label{ape:extract_explanatory_features}
 
 \begin{lstlisting}[language=Python]
 import os
@@ -113,20 +112,9 @@ else:
     print('-*-' + name_str_identification_suffix)
 \end{lstlisting}
 
-\begin{lstlisting}
-2010/family/
-02
-tab4_-*-2_1.xls
-\end{lstlisting}
-
 \begin{lstlisting}[language=Python]
 create_feature_files(year, subject, feature_identification, columns_index, 
                      name_str_identification_prefix, name_str_identification_suffix,
                      number_of_character_prefix, number_of_character_suffix,
                      col_names, path, states, is_to_copy, initial_row)
 \end{lstlisting}
-
-\begin{lstlisting}
-Quantity of features created: 0
-\end{lstlisting}
-

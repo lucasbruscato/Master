@@ -1,4 +1,4 @@
-\section{Import reports}\label{import-reports}
+\section{Import reports}\label{ape:import_reports}
 
 \begin{lstlisting}[language=Python]
 from selenium import webdriver
@@ -49,12 +49,6 @@ print("final_date = " + final_date)
 print(cities)
 \end{lstlisting}
 
-\begin{lstlisting}
-initialDate = 01/01/2015
-finalDate = 31/12/2015
-['Rio Branco do Ivaí', 'Nossa Senhora das Graças', 'Pinhalão', 'Antônio Cardoso', 'Itamari', 'Curaçá', 'Boninau', 'Vereda', 'Formigueiro', 'Lagoa Bonita do Sul', 'São João do Polêsine', 'Vera Cruz', 'Nuporanga', 'Guaraci', 'Paranapuã', 'Lupércio', 'Juquitiba', 'Itajobi', 'Tiros', 'Josenópolis', 'Biquinhas', 'Jenipapo de Minas', 'Itambacuri', 'Canaã', 'Matias Barbosa', 'Pedra Branca do Amapari', 'Uiramutã', 'Humaitá', 'Miracema', 'Cristinápolis', 'General Maynard', 'Pancas', 'Sete Quedas', 'Paripueira – AL', 'Goianésia do Pará', 'Medicilândia', 'Porto dos Gaúchos', 'Nazaré', 'Caicó', 'Nova Cruz', 'Severiano Melo', 'Itapagé', 'Chaval', 'Martinópole', 'Ararendá', 'Afogados da Ingazeira', 'Ferreiros', 'Cachoeirinha', 'Presidente Médici', 'Maranhãozinho', 'Imaculada', 'Riachão do Bacamarte', 'Capitão de Campos', 'Simplício Mendes', 'Itajá', 'Americano do Brasil', 'Jaraguá', 'Nova América', 'Trombudo Central', 'Mondaí']
-\end{lstlisting}
-
 \subsubsection{Open browser and download all cities'
 report}\label{open-browser-and-download-all-cities-report}
 
@@ -98,4 +92,3 @@ for j in range(0, len(cities), 5):
     browser.find_element_by_id("btnBaixar").click()
     time.sleep(1)
 \end{lstlisting}
-

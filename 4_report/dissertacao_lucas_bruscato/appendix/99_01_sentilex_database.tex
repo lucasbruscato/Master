@@ -1,5 +1,4 @@
-\section{Create Initial SentiLex Database and Improve
-it}\label{create-initial-sentilex-database-and-improve-it}
+\section{SentiLex Database}\label{ape:sentilex_database}
 
 \begin{lstlisting}[language=Python]
 import csv
@@ -37,42 +36,6 @@ sentilex_database = sentilex_database[sentilex_database.polarity.isin(polarities
 
 \begin{lstlisting}[language=Python]
 sentilex_database.head()
-\end{lstlisting}
-
-\begin{lstlisting}
-<tr style="text-align: right;">
-  <th></th>
-  <th>adjective</th>
-  <th>polarity</th>
-</tr>
-\end{lstlisting}
-
-\begin{lstlisting}
-<tr>
-  <th>0</th>
-  <td>à-vontade</td>
-  <td>1</td>
-</tr>
-<tr>
-  <th>1</th>
-  <td>abafada</td>
-  <td>-1</td>
-</tr>
-<tr>
-  <th>2</th>
-  <td>abafadas</td>
-  <td>-1</td>
-</tr>
-<tr>
-  <th>3</th>
-  <td>abafado</td>
-  <td>-1</td>
-</tr>
-<tr>
-  <th>4</th>
-  <td>abafados</td>
-  <td>-1</td>
-</tr>
 \end{lstlisting}
 
 \subsubsection{Save initial sentilex
@@ -113,19 +76,6 @@ for folder in folders:
     file_names_and_paths.append(file_name_and_path)
     
 file_names_and_paths
-\end{lstlisting}
-
-\begin{lstlisting}
-['../programa_de_fiscalizacao_em_entes_federativos/ciclo_3/9044-Putinga-RS.pdf',
- '../programa_de_fiscalizacao_em_entes_federativos/ciclo_4/10321-Uruguaiana-RS.pdf',
- '../programa_de_fiscalizacao_em_entes_federativos/ciclo_5/12311-Teresópolis-RJ.pdf',
- '../programa_de_fiscalizacao_em_entes_federativos/edicoes_anteriores/sorteio_34/1837-São Mateus-ES.pdf',
- '../programa_de_fiscalizacao_em_entes_federativos/edicoes_anteriores/sorteio_35/1906-Patrocínio-MG.pdf',
- '../programa_de_fiscalizacao_em_entes_federativos/edicoes_anteriores/sorteio_36/2483-Pontal do Paraná-PR.pdf',
- '../programa_de_fiscalizacao_em_entes_federativos/edicoes_anteriores/sorteio_37/2871-São José do Sul-RS.pdf',
- '../programa_de_fiscalizacao_em_entes_federativos/edicoes_anteriores/sorteio_38/2975-Presidente Kennedy-ES.pdf',
- '../programa_de_fiscalizacao_em_entes_federativos/edicoes_anteriores/sorteio_39/3179-São Domingos do Araguaia-PA.pdf',
- '../programa_de_fiscalizacao_em_entes_federativos/edicoes_anteriores/sorteio_40/3390-Goianésia do Pará-PA.pdf']
 \end{lstlisting}
 
 \subsubsection{Import reports, collect unique words and save words not
@@ -191,18 +141,3 @@ words_without_polarity_full.to_csv("improving_sentilex/99_create_improving_senti
                                    encoding='utf-8',
                                    index=False)
 \end{lstlisting}
-
-\begin{lstlisting}
-List of reports read to improve SentiLex database
-../programa_de_fiscalizacao_em_entes_federativos/ciclo_3/9044-Putinga-RS.pdf
-../programa_de_fiscalizacao_em_entes_federativos/ciclo_4/10321-Uruguaiana-RS.pdf
-../programa_de_fiscalizacao_em_entes_federativos/ciclo_5/12311-Teresópolis-RJ.pdf
-../programa_de_fiscalizacao_em_entes_federativos/edicoes_anteriores/sorteio_34/1837-São Mateus-ES.pdf
-../programa_de_fiscalizacao_em_entes_federativos/edicoes_anteriores/sorteio_35/1906-Patrocínio-MG.pdf
-../programa_de_fiscalizacao_em_entes_federativos/edicoes_anteriores/sorteio_36/2483-Pontal do Paraná-PR.pdf
-../programa_de_fiscalizacao_em_entes_federativos/edicoes_anteriores/sorteio_37/2871-São José do Sul-RS.pdf
-../programa_de_fiscalizacao_em_entes_federativos/edicoes_anteriores/sorteio_38/2975-Presidente Kennedy-ES.pdf
-../programa_de_fiscalizacao_em_entes_federativos/edicoes_anteriores/sorteio_39/3179-São Domingos do Araguaia-PA.pdf
-../programa_de_fiscalizacao_em_entes_federativos/edicoes_anteriores/sorteio_40/3390-Goianésia do Pará-PA.pdf
-\end{lstlisting}
-

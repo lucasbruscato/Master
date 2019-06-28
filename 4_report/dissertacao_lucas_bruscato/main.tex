@@ -213,11 +213,11 @@
 \singlespacing              % espaçamento simples
 %\onehalfspacing            % espaçamento um e meio
 
-\input c1-introduction % associado ao arquivo: 'c1-introduction.tex'
-\input c2-context % associado ao arquivo: 'c2-context.tex'
-\input c3-modeling % associado ao arquivo: 'c3-modeling.tex'
-\input c4-other_approaches % associado ao arquivo: 'c4-other_approaches.tex'
-\input c5-conclusion % associado ao arquivo: 'c5-conclusion.tex'
+\input c1-introducao % associado ao arquivo: 'c1-introducao.tex'
+\input c2-contexto % associado ao arquivo: 'c2-contexto.tex'
+\input c3-modelagem % associado ao arquivo: 'c3-modelagem.tex'
+\input c4-outras_abordagens % associado ao arquivo: 'c4-outras_abordagens.tex'
+\input c5-conclusao % associado ao arquivo: 'c5-conclusao.tex'
 
 % cabeçalho para os apêndices
 \renewcommand{\chaptermark}[1]{\markboth{\MakeUppercase{\appendixname\ \thechapter}} {\MakeUppercase{#1}} }
@@ -227,18 +227,19 @@
 \chapter{Códigos em \tt{Python}}
 \label{ape:codigos}
 
-\input{appendix/02_01_raw_dataset.tex}
-\input{appendix/02_02_modeling_dataset.tex}
-\input{appendix/02_03_training_validation_dataset.tex}
-\input{appendix/01_target_feature.tex}
-\input{appendix/99_01_sentilex_database.tex}
-\input{appendix/99_extract_explanatory_features.tex}
-\input{appendix/99_import_reports.tex}
+\input{apendice/99_import_reports.tex}
+\input{apendice/99_rename_folders.tex}
+\input{apendice/99_extract_explanatory_features.tex}
+\input{apendice/99_01_sentilex_database.tex}
+\input{apendice/01_target_feature.tex}
+\input{apendice/02_01_raw_dataset.tex}
+\input{apendice/02_02_modeling_dataset.tex}
+\input{apendice/02_03_training_validation_dataset.tex}
 
 % ------------------------------------------------------------------- %
 % Bibliografia
 \backmatter \singlespacing   % espaçamento simples
 \bibliographystyle{plainnat-ime} % citação bibliográfica textual
-\bibliography{bibliography}  % associado ao arquivo: 'bibliography.bib'
+\bibliography{bibliografia}  % associado ao arquivo: 'bibliografia.bib'
 
 \end{document}
