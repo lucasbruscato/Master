@@ -6,11 +6,11 @@ Este trabalho se insere no contexto de coleta de dados estruturados e não estru
 
 Serão utilizados os relatórios de auditoria produzidos pelo "Programa de Fiscalização de Entes Federativos" que correspondem ao período de 2011 à 2018, as informações do censo do IBGE de 2000 e 2010, abordagens de NLP e aprendizado de máquina aplicadas às informações supracitadas.
 
-Tendo como intuito garantir a total replicabilidade do trabalho, as fontes de informações foram coletadas da internet, quase em sua completude, por meio de códigos desenvolvidos tornando o processo altamente automatizado. O projeto foi construído utilizando o sistema de controle de versionamento distribuído GitHub e está disponível publicamente \cite{GitHubLucas}.
+Tendo como intuito garantir a total replicabilidade do trabalho, as fontes de informações foram coletadas da internet, quase em sua completude, por meio de códigos desenvolvidos tornando o processo altamente automatizado. O projeto foi construído utilizando o sistema de controle de versionamento distribuído GitHub e está disponível publicamente em \citet{GitHubLucas}.
 
-Os códigos construídos durante o desenvolvimento deste trabalho utilizaram a linguagem de programação Python \cite{Python}, tendo como ferramenta o Notebook Jupyter \cite{JupyterNotebook} e norma-padrão em Python o PEP8 \cite{PEP8} para uma melhor leitura e compreensão dos mesmos. Os códigos desenvolvidos neste trabalho foram escritos em inglês, tanto nomenclatura de variáveis quanto comentários no código.
+Os códigos construídos durante o desenvolvimento deste trabalho utilizaram a linguagem de programação Python (\citet{Python}), tendo como ferramenta o Notebook Jupyter (\citet{JupyterNotebook}) e norma-padrão em Python o PEP8 (\citet{PEP8}) para uma melhor leitura e compreensão dos mesmos. Os códigos desenvolvidos neste trabalho foram escritos em inglês, tanto nomenclatura de variáveis quanto comentários no código.
 
-Foi utilizada a metodologia CRISP-DM \cite{CRISPDM} para entendimento, exploração, modelagem e avaliação do modelo na parte do trabalho que trata de ciência de dados, assim como sua proposta para estrutura de diretórios e nomenclatura de arquivos.
+Foi utilizada a metodologia CRISP-DM (\citet{CRISPDM}) para entendimento, exploração, modelagem e avaliação do modelo na parte do trabalho que trata de ciência de dados, assim como sua proposta para estrutura de diretórios e nomenclatura de arquivos.
 
 \section{Programa de Fiscalização em Entes Federativos}
 \label{sec:programa_de_fiscalizacao_em_entes_federativos}
@@ -23,24 +23,24 @@ O programa agora possui três formas de seleção de entes: censo, matriz de vul
 
 Quando é utilizado o censo, a fiscalização verifica a regularidade da aplicação dos recursos em todos os entes da amostragem. Já a matriz agrega inteligência da informação, por meio da análise de indicadores, para identificar vulnerabilidades (situações locais críticas) e selecionar de forma analítica os entes a serem fiscalizados em determinada região. A metodologia de sorteios permanece aleatória, ao incorporar as ações do antigo "Programa de Fiscalização por Sorteios Públicos".
 
-No âmbito deste trabalho serão utilizadas os relatórios de auditorias realizadas no período de agosto de 2011 até junho de 2018, os quais dizem respeito aos sorteios realizados dos números 34 ao 40, que correspondem ao "Programa de Fiscalização por Sorteios Públicos", e os ciclos 3, 4 e o 5, que dizem respeito ao "Programa de Fiscalização em Entes Federativos". Os relatórios gerados pelo programa descrito nesta seção são utilizados na criação da variável resposta do problema proposto deste trabalho, tais relatórios já foram utilizados anteriormente em \citep{FerrazFinan2008}, sendo que neste trabalho foi feita uma interpretação manual dos relatórios, i.e., um a um os relatórios foram interpretados por humanos e classificados caso tenha sido encontrado sinais de corrupção ou não no município em questão.
+No âmbito deste trabalho serão utilizadas os relatórios de auditorias realizadas no período de agosto de 2011 até junho de 2018, os quais dizem respeito aos sorteios realizados dos números 34 ao 40, que correspondem ao "Programa de Fiscalização por Sorteios Públicos", e os ciclos 3, 4 e o 5, que dizem respeito ao "Programa de Fiscalização em Entes Federativos". Os relatórios gerados pelo programa descrito nesta seção são utilizados na criação da variável resposta do problema proposto deste trabalho, tais relatórios já foram utilizados anteriormente em \citet{FerrazFinan2008}, sendo que neste trabalho foi feita uma interpretação manual dos relatórios, i.e., um a um os relatórios foram interpretados por humanos e classificados caso tenha sido encontrado sinais de corrupção ou não no município em questão.
 
 A coleta de tais relatórios foi realizada de forma automatizada (para as edições com respeito aos sorteios 34 ao 40) e manual (para as edições com respeito ao ciclo 3, ciclo 4 e ciclo 5). As decisões sobre as formas como os relatórios foram coletados teve embasamento na estrutura da página web do governo.
 
-As edições com respeito aos sorteios 34 ao 40 estão disponíveis no site da Controladoria-Geral da União e podem ser encontrados por meio de um mecanismo de busca de relatórios. Contudo, a página do mecanismo de busca frequentemente se encontra indisponível e a consulta em si é onerosa de um ponto de vista de trabalho humano, dado que devem ser preenchidos diversos campos para se realizar a pesquisa. Portanto, foi desenvolvido um robô utilizando a biblioteca Selenium \cite{Selenium} da linguagem de programação Python que auxilia na manipulação de páginas web, no caso, possibilita que de uma forma automática - utilizando códigos em Python - inicie uma instância do navegador Firefox, acesse o mecanismo de busca de relatórios da Controladoria-Geral da União e realize a consulta, um a um, dos relatórios de todos os municípios em questão.
+As edições com respeito aos sorteios 34 ao 40 estão disponíveis no site da Controladoria-Geral da União e podem ser encontrados por meio de um mecanismo de busca de relatórios. Contudo, a página do mecanismo de busca frequentemente se encontra indisponível e a consulta em si é onerosa de um ponto de vista de trabalho humano, dado que devem ser preenchidos diversos campos para se realizar a pesquisa. Portanto, foi desenvolvido um robô utilizando a biblioteca Selenium (\citet{Selenium}) da linguagem de programação Python que auxilia na manipulação de páginas web, no caso, possibilita que de uma forma automática - utilizando códigos em Python - inicie uma instância do navegador Firefox, acesse o mecanismo de busca de relatórios da Controladoria-Geral da União e realize a consulta, um a um, dos relatórios de todos os municípios em questão.
 
 O código citado no parágrafo anterior foi escrito na linguagem de programação Python utilizando a ferramenta Notebook Jupyter e se encontra no anexo (\ref{ape:import_reports}).
 
-As edições com respeito aos ciclos 3, 4 e 5 foram coletadas diretamente na página web por estarem disponíveis diretamente na página do programa.
+As edições com respeito aos ciclos 3, 4 e 5 foram coletadas diretamente na página web por estarem disponíveis na página do programa mais facilmente.
 
 Os nomes dos arquivos de todos os relatórios de auditoria explicados nesta seção e utilizados neste trabalho se encontram na tabela (ref.).
 
 \section{SentiLex}
 \label{sec:sentilex}
 
-A base de dados SentiLex-PT02 é considerada, ao menos no idioma português na atualidade, a mais importante fonte de informação no aspecto léxico de sentimento \citep{BeckerTumitan2014}. Especificamente concebido para a análise de sentimento e opinião sobre entidades humanas em textos redigidos em português, é constituído atualmente por 7.014 lemas e 82.347 formas flexionadas.
+A base de dados SentiLex-PT02 é considerada, ao menos no idioma português na atualidade, a mais importante fonte de informação no aspecto léxico de sentimento (ver \citet{BeckerTumitan2014}). Especificamente concebido para a análise de sentimento e opinião sobre entidades humanas em textos redigidos em português, é constituído atualmente por 7.014 lemas e 82.347 formas flexionadas.
 
-Os adjetivos presentes na base possuem uma polaridade que foi atribuída com base num cálculo sobre as distâncias das palavras, com polaridade conhecida a priori, ligadas aos adjetivos por uma relação de sinonímia num grafo, inferido a partir de dicionários de sinônimos disponíveis para o português. Os detalhes da criação de tal trabalho podem ser encontrados em \citep{BeckerTumitan2014}.
+Os adjetivos presentes na base possuem uma polaridade que foi atribuída com base num cálculo sobre as distâncias das palavras, com polaridade conhecida a priori, ligadas aos adjetivos por uma relação de sinonímia num grafo, inferido a partir de dicionários de sinônimos disponíveis para o português. Os detalhes da criação de tal trabalho podem ser encontrados em \citet{BeckerTumitan2014}.
 
 Cada palavra presente na base de dados possui sua respectiva polaridade, sendo que os valores que as polaridades podem assumir são -1, 0 e 1, representando polaridade negativa, polaridade neutra e polaridade positiva, respectivamente.
 
@@ -49,15 +49,17 @@ Cada palavra presente na base de dados possui sua respectiva polaridade, sendo q
 
 Para realizar uma interpretação quantitativa sobre os relatórios coletados que foram apresentados na seção do "Programa de Fiscalização de Entes Federativos", este trabalho utiliza a base da dados SentiLex para definição de polaridade de cada uma das palavras presentes no relatório e, assim, criação de uma métrica para modelagem.
 
-Foi criado um código que realiza o reconhecimento de caracteres do documento pdf onde, iterativamente utilizando regras para separadores de palavras, se concatenou caracter a caracter formando as palavras do relatório pdf. Devido a problemas enfrentados com respeito à diferentes tipos de codificação (encoding, e.g., UTF-8) dos relatórios utilizados, foi necessário a utilização da biblioteca externa em python \cite{PDFMiner}. Assim, a criação de tal métrica se deu pela criação de um código em python que realiza o reconhecimento das palavras presentes em documentos pdf, pode-se sumarizar as etapas do processo pelos seguintes passos:
+Foi criado um código que realiza o reconhecimento de caracteres do documento pdf onde, iterativamente utilizando regras para separadores de palavras, se concatenou caracter a caracter formando as palavras do relatório pdf. Devido a problemas enfrentados com respeito à diferentes tipos de codificação (encoding, e.g., UTF-8) dos relatórios utilizados, foi necessário a utilização da biblioteca externa em python PDF Miner (\citet{PDFMiner}). Assim, a criação de tal métrica se deu pela criação de um código em python que realiza o reconhecimento das palavras presentes em documentos pdf, pode-se sumarizar as etapas do processo pelos seguintes passos:
 
-* Iterativamente executa o código da biblioteca externa para cada relatório de auditoria listado na seção de "Programas de Entes Federativos" (\ref{sec:programa_de_fiscalizacao_em_entes_federativos})
-* Sobre o texto de cada relatório remove acentuação, caracteres de parada e transforma todo os caracteres em minúsculo
-* Calcula a frequência das palavras dentro de seu respectivo documento
-* Utilizando a base de dados SentiLex (extraída por meio da criação de um código em python), apresentada na seção (\ref{sec:sentilex}), define a polaridade da palavra
-* Realiza um agrupamento sobre o produto dos passos anteriores sumarizando a frequência relativa calculada sob as polaridades definidas, i.e., o resultado é um arquivo em formato CSV com as seguintes colunas: nome do relatório, percentual de polaridade negativa, percentual de polaridade positiva e percentual de polaridade neutra
+\begin{itemize}
+	\item Iterativamente executa o código da biblioteca externa para cada relatório de auditoria listado na seção "Programas de Entes Federativos" (\ref{sec:programa_de_fiscalizacao_em_entes_federativos})
+	\item Sobre o texto de cada relatório remove acentuação, caracteres de parada e transforma todos os caracteres em minúsculo
+	\item Calcula a frequência das palavras dentro de seu respectivo documento
+	\item Utilizando a base de dados SentiLex (extraída por meio da criação de um código em python), apresentada na seção "SentiLex" (\ref{sec:sentilex}), define a polaridade da palavra
+	\item Realiza um agrupamento sobre o produto dos passos anteriores sumarizando a frequência relativa calculada sob as polaridades definidas, i.e., o resultado é um arquivo em formato CSV com as seguintes colunas: nome do relatório, percentual de polaridade negativa, percentual de polaridade positiva e percentual de polaridade neutra
+\end{itemize}
 
-Os códigos citados no parágrafo anterior foram escritos na linguagem de programação Python utilizando a ferramenta Notebook Jupyter e se encontram nos anexos (\ref{ape:sentilex_database}) e (\ref{ape:create_target_feature}), respectivamente.
+Os códigos citados no parágrafo anterior foram escritos na linguagem de programação Python utilizando a ferramenta Notebook Jupyter e se encontram nos anexos \ref{ape:sentilex_database} e \ref{ape:create_target_feature}, respectivamente.
 
 \section{Censo do IBGE}
 \label{sec:censo_do_ibge}
@@ -72,9 +74,9 @@ A periodicidade da pesquisa é decenal, excetuando-se os anos de 1910 e 1930, em
 
 As informações utilizadas neste trabalho são as disponibilizadas pelos censos realizados nos anos 2000 e nos anos 2010 sob a perspectiva de comparação das informações de ambos censos. Devido à mudança na informação ou segmentação realizada em cada censo, foi realizado um mapeamento de todas as informações disponíveis por censo para definição de quais informações seriam utilizadas no trabalho (a estatística levantada no censo de 2000 pode não existir no censo de 2010, e vice-versa, ou uma segmentação diferente foi realizada em cada censo impossibilitando a comparação da informação entre ambos). As informações que serão utilizadas estão descritas na tabela (ref. - tab com nome de todas as variáveis).
 
-Os relatórios contendo as estatísticas do censo do IBGE de 2000 e 2010 foram coletados manualmente no site do IBGE \cite{IBGE}, contudo, foram criados dois códigos para extração estruturada da informação. O primeiro foi para organização dos diretórios dos relatórios baseado na sigla do estado, e o segundo para extração das informações das planilhas em extensão XLS (eXceL Spreadsheet) para o formato de arquivos CSV. A motivação para o segundo código se deve ao fato de que as planilhas originais da fonte contém formatação com layout disforme, de forma que se tornava impossível a extração direta da informação de forma simplificada.
+Os relatórios contendo as estatísticas do censo do IBGE de 2000 e 2010 foram coletados manualmente no site do IBGE (\citet{IBGE}), contudo, foram criados dois códigos para extração estruturada da informação. O primeiro foi para organização dos diretórios dos relatórios baseado na sigla do estado, e o segundo para extração das informações das planilhas em extensão XLS (eXceL Spreadsheet) para o formato de arquivos CSV. A motivação para o segundo código se deve ao fato de que as planilhas originais da fonte contém formatação com layout disforme, de forma que se tornava impossível a extração direta da informação de forma simplificada.
 
-Os códigos citados no parágrafo anterior foram escritos na linguagem de programação Python utilizando a ferramenta Notebook Jupyter e se encontram nos anexos (\ref{ape:rename_folders}) e (\ref{ape:extract_explanatory_features}), respectivamente.
+Os códigos citados no parágrafo anterior foram escritos na linguagem de programação Python utilizando a ferramenta Notebook Jupyter e se encontram nos anexos \ref{ape:rename_folders} e \ref{ape:extract_explanatory_features}, respectivamente.
 
 \section{Variáveis Explicativas}
 \label{sec:variaveis_explicativas}
@@ -83,22 +85,25 @@ A variável que define o estado do município foi utilizada como variável expli
 
 As variáveis extraídas do censo demográfico do IBGE dos anos 2000 e 2010 também foram utilizadas como explicativas para modelagem do problema proposto. Foram feitas três (?) abordagens distintas sobre tais variáveis explicativas, essas são:
 
-1) Utilizar as informações de modo comparativo
+\begin{itemize}
+\item Utilizar as informações de modo comparativo
 
 As variáveis do censo do IBGE que não são representadas como porcentagens foram divididas numericamente pelo tamanho populacional do município em questão, assim, se tornando porcentagens com respeito ao tamanho populacional.
 
 Após a criação das novas variáveis conforme descrito no parágrafo anterior, todas as variáveis (tanto as variáveis criadas conforme descrição do parágrafo anterior quanto as variáveis do censo do IBGE que são representadas como porcentagens) correspondentes ao censo de 2000 foram divididas numericamente pelas variáveis de mesmo conceito correspondentes ao censo de 2010. As variáveis criadas estão descritas na tabela (ref. - tab com nome de todas as variáveis).
 
-O código para criação das variáveis citadas nesta seção foi escrito na linguagem de programação Python utilizando a ferramenta Notebook Jupyter e se encontra no anexo (\ref{ape:data_processing_modeling_dataset}).
+O código para criação das variáveis citadas nesta seção foi escrito na linguagem de programação Python utilizando a ferramenta Notebook Jupyter e se encontra no anexo \ref{ape:data_processing_modeling_dataset}.
 
-2) (?)
-3) (?)
+\item (?)
+\item (?)
+
+\end{itemize}
 
 \section{Criação da base para modelagem}
 \label{sec:criacao_da_base_para_modelagem}
 
-Utilizando como chave estrangeira a informação de munício e estado, realizou-se - por meio do código em python no anexo (\ref{ape:data_processing_raw_dataset}) - a união das informações citadas nas seções (\ref{sec:variavel_resposta}) e (\ref{sec:variaveis_explicativas}) e, assim, foram obtidas as bases para modelagem do problema proposto neste trabalho. Assim, por meio do método de amostragem aleatória, selecionou-se setenta e cinco por cento da base gerada para desenvolvimento do modelo e vinte e cinco por cento para validação do desempenho do modelo, assim, foi-se utilizado o método de validação validação cruzada \citet{Wesllen2017:MSc}.
+Utilizando como chave estrangeira a informação de munício e estado, realizou-se - por meio do código em python no anexo \ref{ape:data_processing_raw_dataset} - a união das informações citadas nas seções "Variável Resposta" (\ref{sec:variavel_resposta}) e "Variáveis Explicativas" (\ref{sec:variaveis_explicativas}) e, assim, foram obtidas as bases para modelagem do problema proposto neste trabalho. Assim, por meio do método de amostragem aleatória, selecionou-se setenta e cinco por cento da base gerada para desenvolvimento do modelo e vinte e cinco por cento para validação do desempenho do modelo, assim, foi-se utilizado o método de validação validação cruzada descrita em \citet{Wesllen2017:MSc}.
 
-O código desenvolvido para criação das bases de desenvolvimento e validação citadas no parágrafo anterior foi escrito na linguagem de programação Python utilizando a ferramenta Notebook Jupyter e se encontra no anexo (\ref{ape:data_processing_training_validation_dataset}).
+O código desenvolvido para criação das bases de desenvolvimento e validação citadas no parágrafo anterior foi escrito na linguagem de programação Python utilizando a ferramenta Notebook Jupyter e se encontra no anexo \ref{ape:data_processing_training_validation_dataset}.
 
 %% ------------------------------------------------------------------------- %%
