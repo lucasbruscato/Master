@@ -1,24 +1,16 @@
 
-Sugestoes Minhas:
-
-	Ibge (saude e educação)
-	Censo escolar (por escola) (educação)
-	Prova brasil (educação)
-	Data SUS (saude), informações de hospitalizações por hospital www.datasus.gov.br
-
-Sugestoes Rachel:
-
-	Base de dados para explicativas Ipeadata (bastante coisa por municipio ate 2010 e mais ainda por estado ate atualidade (sic))
-	analisar distribuicao das polaridades base sentilex
-	talvez dividir var explicativa por quantidade por faixa etaria ao inves de total populacao (pode ter alteracao da distribuicao)
-	na variavel resposta usar percentual de polaridade apenas entre positivo e negativo
-	estudar dados em painel (rachel acredita em possível aplicação)
-
-Sugestoes Wesllen:
-
-olhar como fazem sentimento de analise na literatura
-
-https://scholar.google.com.br/scholar?q=survey+sentiment+analysis&hl=pt-BR&as_sdt=0&as_vis=1&oi=scholart#d=gs_qabs&u=%23p%3DCEE7xsbkW6cJ
-
-https://arxiv.org/abs/1801.07883
+* verificar argumentos contra e a favor tf-idf [FEITO]
+* verificar dados do prova brasil
+* verificar dados do data sus (informações de hospitalizações por hospital www.datasus.gov.br)
+* verificar dados do ipeadata
+* verificar forma de estudo de dados em painel
+* criar análise descritiva (graficos duas a duas da var explicativa com resposta)
+* alterar gráficos de comparação de modelos para mesma escala
+* arrumar no relatório:
+	comentários adicionados por Florência
+	adicionar explicação tf-idf
+	deixar claro quantidade de relatórios utilizados
+	apresentar porcentagem de palavras encontradas no sentilex e polaridades por relatório
+	adicionar capitulo com análise descritiva
+* apresentar para Florência novamente e depois seguir para modelagem
 
