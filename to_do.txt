@@ -1,9 +1,11 @@
 
-* verificar argumentos contra e a favor tf-idf [FEITO]
-* verificar dados do prova brasil
-* verificar dados do data sus (informações de hospitalizações por hospital www.datasus.gov.br)
-* verificar dados do ipeadata
-* verificar forma de estudo de dados em painel
+* verificar argumentos contra e a favor tf-idf (boa metodologia mas nao vou usar e explicarei na dissertacao) [FEITO]
+* verificar dados do prova brasil (acredito ser possível capturar a de nota do enem por município) [FEITO]
+* verificar dados do data sus (quase todas as páginas fora do ar) [FEITO]
+* verificar dados do ipeadata (excelente fonte de dados, mas nao para municipios) [FEITO]
+* verificar forma de estudo de dados em painel (dados longitudinais) [FEITO]
+* agregar dados encontrados nas verificações de dados acima [EM ANDAMENTO]
+* renomear variaveis meio em ingles e meio em portugues
 * criar análise descritiva (graficos duas a duas da var explicativa com resposta)
 * alterar gráficos de comparação de modelos para mesma escala
 * arrumar no relatório:
@@ -12,5 +14,6 @@
 	deixar claro quantidade de relatórios utilizados
 	apresentar porcentagem de palavras encontradas no sentilex e polaridades por relatório
 	adicionar capitulo com análise descritiva
-* apresentar para Florência novamente e depois seguir para modelagem
+* apresentar para Florência novamente e depois seguir para modelagem (ATÉ FINAL DE AGOSTO!)
+ - em modelagem, na medição da assertividade do modelo adicionar banda de acerto
 
