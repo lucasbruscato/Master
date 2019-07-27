@@ -1,4 +1,4 @@
-city,qt
+city,quantity
 abaetetuba,140156.38444919
 abel figueiredo,6760.30936164
 acara,53325.63928261
@@ -8,7 +8,7 @@ alenquer,52478.87563429
 almeirim,33417.91696341
 altamira,98425.00815738
 anajas,24667.81478204
-ananindeua,471441.6075876
+ananindeua,471441.60758759995
 anapu,20391.65131326
 augusto correa,40451.97956109
 aurora do para,26512.13427338
@@ -21,58 +21,58 @@ belem,1391924.65982192
 belterra,16137.13830112
 benevides,51335.74252738
 bom jesus do tocantins,15190.83108542
-bonito,13612
+bonito,13612.0
 braganca,112920.76444832
 brasil novo,15647.93806916
 brejo grande do araguaia,7304.97206056
 breu branco,52378.77284789
 breves,92110.99589955
 bujaru,25614.14596923
-cachoeira do arari,20356
+cachoeira do arari,20356.0
 cachoeira do piria,26346.56605696
-cameta,120870
+cameta,120870.0
 canaa dos carajas,26579.70331897
 capanema,63466.44701491
 capitao poco,51697.69150618
 castanhal,172662.85666167
-chaves,20991
+chaves,20991.0
 colares,11332.43039064
 conceicao do araguaia,45400.15544192
 concordia do para,27939.94989411
-cumaru do norte,10009.4761813
+cumaru do norte,10009.476181299999
 curionopolis,18260.16154195
 curralinho,28024.94421363
-curua,12248
+curua,12248.0
 curuca,34267.68360213
 dom eliseu,50841.11926599
 eldorado dos carajas,30815.12627221
 faro,8135.94519547
-floresta do araguaia,17761
+floresta do araguaia,17761.0
 garrafao do norte,24911.01788739
 goianesia do para,30346.88134287
 gurupa,29026.47967441
-igarape-acu,35867
+igarape-acu,35867.0
 igarape-miri,57920.09806747
-inhangapi,10033
-ipixuna do para,51309
+inhangapi,10033.0
+ipixuna do para,51309.0
 irituia,31227.15835289
 itaituba,95967.83888714
 itupiranga,50862.26812253
 jacareacanga,12634.90630533
 jacunda,51197.05924768
 juruti,46106.58174875
-limoeiro do ajuru,25021
-mae do rio,27845.4322103
+limoeiro do ajuru,25021.0
+mae do rio,27845.432210299998
 magalhaes barata,8061.79881071
 maraba,232419.81697931
 maracana,28303.56912859
 marapanim,26530.37261626
 marituba,107705.64616824
 medicilandia,27083.50027731
-melgaco,24725.6330798
+melgaco,24725.633079799998
 mocajuba,26640.33462537
 moju,69485.25142601
-monte alegre,55401.1160198
+monte alegre,55401.11601980001
 muana,34058.97610579
 nova esperanca do piria,20097.51524539
 nova ipixuna,14545.87581585
@@ -80,13 +80,13 @@ nova timboteua,13635.61021393
 novo progresso,24960.48893129
 novo repartimento,61777.01990232
 obidos,48986.17862169
-oeiras do para,28595
+oeiras do para,28595.0
 oriximina,62746.43780941
 ourem,16260.44606605
 ourilandia do norte,27143.95334872
 pacaja,39579.86567488
 palestina do para,7422.05065097
-paragominas,97333.5519733
+paragominas,97333.55197330001
 parauapebas,153647.89762562
 pau d'arco,6011.6853544
 peixe-boi,7816.52711464
@@ -102,23 +102,23 @@ redencao,73819.12803151
 rio maria,17681.39782533
 rondon do para,46897.3919035
 ruropolis,39163.98588386
-salinopolis,37098.3288076
+salinopolis,37098.328807599995
 salvaterra,20082.83663609
 santa barbara do para,17128.02823334
-santa cruz do arari,8155
+santa cruz do arari,8155.0
 santa isabel do para,56595.94484998
 santa luzia do para,19304.24409605
 santa maria das barreiras,17073.73253052
-santa maria do para,23013
+santa maria do para,23013.0
 santana do araguaia,55157.10894262
 santarem,293609.23561201
-santarem novo,6141
+santarem novo,6141.0
 santo antonio do taua,26622.40357706
 sao caetano de odivelas,16796.47795258
-sao domingos do araguaia,23130
+sao domingos do araguaia,23130.0
 sao domingos do capim,29798.10696442
 sao felix do xingu,90368.3304008
-sao francisco do para,14984.0815292
+sao francisco do para,14984.081529199999
 sao geraldo do araguaia,25438.32678627
 sao joao da ponta,5261.4621766
 sao joao de pirabas,20553.61454178
@@ -133,7 +133,7 @@ terra alta,10250.15678201
 terra santa,16877.45041989
 tome-acu,56199.70706375
 tracuateua,27373.98889998
-trairao,16719.453998
+trairao,16719.453997999994
 tucuma,33604.89237578
 tucurui,96900.89476616
 ulianopolis,43149.93211242

@@ -1,16 +1,16 @@
-city,qt
+city,quantity
 acailandia,103824.79799381
 afonso cunha,5892.67059514
-agua doce do maranhao,11581
-alcantara,21851
-aldeias altas,23952
+agua doce do maranhao,11581.0
+alcantara,21851.0
+aldeias altas,23952.0
 altamira do maranhao,11045.18146454
 alto alegre do maranhao,24573.32077048
-alto alegre do pindare,31057
+alto alegre do pindare,31057.0
 alto parnaiba,10739.26688135
 amapa do maranhao,6393.34924971
 amarante do maranhao,37803.31790184
-anajatuba,25291
+anajatuba,25291.0
 anapurus,13919.50409261
 apicum-acu,14873.18302022
 araguana,13961.59218398
@@ -21,41 +21,41 @@ axixa,11369.26166928
 bacabal,99884.90854662
 bacabeira,14907.07429981
 bacuri,16560.12634187
-bacurituba,5293
-balsas,83427.8350946
-barao de grajau,17841
+bacurituba,5293.0
+balsas,83427.83509460001
+barao de grajau,17841.0
 barra do corda,82522.40480671
 barreirinhas,54534.53577428
-bela vista do maranhao,12035.9897336
+bela vista do maranhao,12035.989733600001
 belagua,6459.17294501
-benedito leite,5466
-bequimao,20340
+benedito leite,5466.0
+bequimao,20340.0
 bernardo do mearim,5940.62591946
 boa vista do gurupi,7882.19482576
 bom jardim,38988.88642058
 bom jesus das selvas,28229.0267158
 bom lugar,14771.74169509
-brejo,33359
+brejo,33359.0
 brejo de areia,5569.8271617
 buriti,26929.99606535
 buriti bravo,22855.73770506
 buriticupu,65019.35561674
 buritirana,14741.18230662
 cachoeira grande,8404.36555976
-cajapio,10593
+cajapio,10593.0
 cajari,18288.47136845
 campestre do maranhao,13344.10097082
 candido mendes,18481.79230984
-cantanhede,20448
-capinzal do norte,10698
+cantanhede,20448.0
+capinzal do norte,10698.0
 carolina,23892.81569664
 carutapera,22001.17598857
 caxias,154822.98792965
 cedral,10270.01281327
 central do maranhao,7883.65150309
-centro do guilherme,12544
+centro do guilherme,12544.0
 centro novo do maranhao,17613.96431238
-chapadinha,73326
+chapadinha,73326.0
 cidelandia,13637.76562051
 codo,117976.58015097
 coelho neto,46712.27998283
@@ -63,135 +63,135 @@ colinas,38993.3608876
 conceicao do lago-acu,14376.92124759
 coroata,61664.52409121
 cururupu,32507.88542137
-davinopolis,12579
+davinopolis,12579.0
 dom pedro,22638.68295491
-duque bacelar,10649
+duque bacelar,10649.0
 esperantinopolis,18417.34533745
 estreito,34623.71448036
 feira nova do maranhao,8103.19736665
-fernando falcao,9241
-formosa da serra negra,17757
-fortaleza dos nogueiras,11646
+fernando falcao,9241.0
+formosa da serra negra,17757.0
+fortaleza dos nogueiras,11646.0
 fortuna,15063.63583528
 godofredo viana,10433.50517645
 goncalves dias,17447.64033189
-governador archer,10204
+governador archer,10204.0
 governador edison lobao,15829.77728821
 governador eugenio barros,15957.36891483
 governador luiz rocha,7317.76010781
 governador newton bello,11909.94022108
-governador nunes freire,25401
+governador nunes freire,25401.0
 graca aranha,6120.16370265
 grajau,61953.42458011
-guimaraes,12066
-humberto de campos,26189
-icatu,25141
-igarape do meio,12550
+guimaraes,12066.0
+humberto de campos,26189.0
+icatu,25141.0
+igarape do meio,12550.0
 igarape grande,11031.08128361
 imperatriz,246893.48434765
-itaipava do grajau,14297
+itaipava do grajau,14297.0
 itapecuru mirim,62081.10810523
 itinga do maranhao,24768.52838361
-jatoba,8526
+jatoba,8526.0
 jenipapo dos vieiras,15434.47290282
 joao lisboa,20368.39764206
 joselandia,15415.39552398
-junco do maranhao,4020
-lago da pedra,46059
-lago do junco,10729
+junco do maranhao,4020.0
+lago da pedra,46059.0
+lago do junco,10729.0
 lago dos rodrigues,7780.36894584
-lago verde,15411
-lagoa do mato,10934
+lago verde,15411.0
+lagoa do mato,10934.0
 lagoa grande do maranhao,10487.31205303
 lajeado novo,6884.85975437
 lima campos,11379.77862584
-loreto,11372.9716043
+loreto,11372.971604299999
 luis domingues,6462.2150077
 magalhaes de almeida,17484.91721051
 maracacume,19112.16533562
-maraja do sena,8051
+maraja do sena,8051.0
 maranhaozinho,14058.29365499
 mata roma,15125.73630719
 matinha,21836.50855245
 matoes,31004.99999998
 matoes do norte,13661.30689638
-milagres do maranhao,8118
+milagres do maranhao,8118.0
 mirador,20442.71980237
-miranda do norte,24427
+miranda do norte,24427.0
 mirinzal,14161.48150381
 moncao,31668.94326898
 montes altos,9344.46594178
 morros,17756.44343777
-nina rodrigues,12464
+nina rodrigues,12464.0
 nova colinas,4871.0250012
 nova iorque,4556.87940476
 nova olinda do maranhao,19112.55607141
-olho d'agua das cunhas,18601
-olinda nova do maranhao,13181
+olho d'agua das cunhas,18601.0
+olinda nova do maranhao,13181.0
 paco do lumiar,104946.32870681
-palmeirandia,18764
+palmeirandia,18764.0
 paraibano,20092.77277354
-parnarama,34571
-passagem franca,17474.356361
-pastos bons,18058
-paulino neves,14519
+parnarama,34571.0
+passagem franca,17474.356361000002
+pastos bons,18058.0
+paulino neves,14519.0
 paulo ramos,20020.48207761
 pedreiras,39307.96275613
-pedro do rosario,22619.6338654
+pedro do rosario,22619.63386540001
 penalva,34239.37041395
-peri mirim,13803
-peritoro,21195
+peri mirim,13803.0
+peritoro,21195.0
 pindare-mirim,31031.95990575
 pinheiro,77922.02698946
-pio xii,22016
+pio xii,22016.0
 pirapemas,17174.07112569
-pocao de pedras,19708
+pocao de pedras,19708.0
 porto franco,21417.79030965
-porto rico do maranhao,6030
+porto rico do maranhao,6030.0
 presidente dutra,44652.94084749
-presidente juscelino,11541
+presidente juscelino,11541.0
 presidente medici,6364.33448987
 presidente sarney,17098.50263854
-presidente vargas,10717
-primeira cruz,13951
-raposa,26327
-riachao,20200
+presidente vargas,10717.0
+primeira cruz,13951.0
+raposa,26327.0
+riachao,20200.0
 ribamar fiquene,7295.61240693
 rosario,39519.79201073
-sambaiba,5487
-santa filomena do maranhao,7061
+sambaiba,5487.0
+santa filomena do maranhao,7061.0
 santa helena,39101.18788421
 santa ines,77185.78646671
 santa luzia,73893.67696242
-santa luzia do parua,22644
-santa quiteria do maranhao,29191
+santa luzia do parua,22644.0
+santa quiteria do maranhao,29191.0
 santa rita,32230.90316887
-santana do maranhao,11661
+santana do maranhao,11661.0
 santo amaro do maranhao,13787.56331252
 santo antonio dos lopes,14256.70357132
 sao benedito do rio preto,17793.26086794
 sao bento,40639.98193341
-sao bernardo,26476
-sao domingos do azeitao,6976
+sao bernardo,26476.0
+sao domingos do azeitao,6976.0
 sao domingos do maranhao,33574.65201953
-sao felix de balsas,4702
+sao felix de balsas,4702.0
 sao francisco do brejao,10240.65298289
-sao francisco do maranhao,12146
-sao joao batista,19908.1620452
+sao francisco do maranhao,12146.0
+sao joao batista,19908.162045200002
 sao joao do caru,12279.67883115
-sao joao do paraiso,10814
-sao joao do soter,17238
+sao joao do paraiso,10814.0
+sao joao do soter,17238.0
 sao joao dos patos,24857.90871683
 sao jose de ribamar,162975.06408278
 sao jose dos basilios,7474.22143024
 sao luis,1011982.90677509
-sao luis gonzaga do maranhao,20153
+sao luis gonzaga do maranhao,20153.0
 sao mateus do maranhao,39071.65460939
-sao pedro da agua branca,12028
+sao pedro da agua branca,12028.0
 sao pedro dos crentes,4409.85052196
-sao raimundo das mangabeiras,17449
-sao raimundo do doca bezerra,6083
-sao roberto,5957
+sao raimundo das mangabeiras,17449.0
+sao raimundo do doca bezerra,6083.0
+sao roberto,5957.0
 sao vicente ferrer,20814.14094803
 satubinha,11894.26107069
 senador alexandre costa,10238.12596502
@@ -199,18 +199,18 @@ senador la rocque,17819.29326132
 serrano do maranhao,10934.06559513
 sitio novo,16960.99135106
 sucupira do norte,10438.58198086
-sucupira do riachao,4613
+sucupira do riachao,4613.0
 tasso fragoso,7775.18769993
-timbiras,27997
+timbiras,27997.0
 timon,155148.07309492
 trizidela do vale,18914.18815682
-tufilandia,5596
-tuntum,39166
+tufilandia,5596.0
+tuntum,39166.0
 turiacu,33799.04383397
 turilandia,22751.25131809
 tutoia,52740.95527809
 urbano santos,24538.35828614
-vargem grande,49318
+vargem grande,49318.0
 viana,49426.50162491
 vila nova dos martirios,11222.69127607
 vitoria do mearim,31096.80004195

@@ -1,11 +1,11 @@
-city,qt
+city,quantity
 agua clara,14263.39486198
-alcinopolis,4560
+alcinopolis,4560.0
 amambai,34366.2744373
 anastacio,23736.80490057
-anaurilandia,8487
+anaurilandia,8487.0
 angelica,9059.00478462
-antonio joao,8197
+antonio joao,8197.0
 aparecida do taboado,22235.8344745
 aquidauana,45224.65704464
 aral moreira,10198.2508568
@@ -26,26 +26,26 @@ corguinho,4713.89851795
 coronel sapucaia,14010.46558765
 corumba,102803.63907253
 costa rica,19535.00440067
-coxim,32040.9880238
+coxim,32040.988023799997
 deodapolis,12094.37416503
 dois irmaos do buriti,9837.9955491
 douradina,5347.46704283
 dourados,194317.27650351
 eldorado,11615.0452186
 fatima do sul,18972.9245776
-figueirao,2924
+figueirao,2924.0
 gloria de dourados,9875.84314097
 guia lopes da laguna,10243.61323468
 iguatemi,14753.23034786
-inocencia,7621
+inocencia,7621.0
 itapora,20844.31643982
 itaquirai,15039.77837272
 ivinhema,22212.43052887
 japora,7621.83069289
 jaraguari,5996.72010756
 jardim,24197.8609788
-jatei,3972
-juti,5880
+jatei,3972.0
+juti,5880.0
 ladario,19585.9969605
 laguna carapa,6450.61757461
 maracaju,37196.41549676
@@ -55,12 +55,12 @@ navirai,45999.66123937
 nioaque,14353.58414045
 nova alvorada do sul,16064.43816115
 nova andradina,45037.32809911
-novo horizonte do sul,4939
+novo horizonte do sul,4939.0
 paranaiba,39941.16179122
 paranhos,12105.78919201
-pedro gomes,7900
+pedro gomes,7900.0
 ponta pora,77525.86361446
-porto murtinho,15335
+porto murtinho,15335.0
 ribas do rio pardo,20451.08349188
 rio brilhante,30210.97505192
 rio negro,5016.42033625

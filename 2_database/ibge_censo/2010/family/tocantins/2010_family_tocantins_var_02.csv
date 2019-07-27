@@ -1,50 +1,50 @@
-city,qt
-abreulandia,2391
-aguiarnopolis,5137
+city,quantity
+abreulandia,2391.0
+aguiarnopolis,5137.0
 alianca do tocantins,5656.18638998
 almas,7497.69975808
 alvorada,8316.46280238
 ananas,9826.32256812
 angico,3162.58197159
 aparecida do rio negro,4210.29394504
-aragominas,5876
+aragominas,5876.0
 araguacema,6264.07392918
 araguacu,8721.05109412
 araguaina,149656.30885551
 araguana,5026.17961982
-araguatins,31286
-arapoema,6709
+araguatins,31286.0
+arapoema,6709.0
 arraias,10549.87505675
-augustinopolis,15906
+augustinopolis,15906.0
 aurora do tocantins,3379.83041135
-axixa do tocantins,9275
+axixa do tocantins,9275.0
 babaculandia,10362.95506897
 bandeirantes do tocantins,3119.56792916
-barra do ouro,4123
+barra do ouro,4123.0
 barrolandia,5258.6779266
 bernardo sayao,4430.02709213
 bom jesus do tocantins,3752.88314556
-brasilandia do tocantins,2061
+brasilandia do tocantins,2061.0
 brejinho de nazare,5178.52998688
 buriti do tocantins,9752.36000598
 cachoeirinha,2132.70865556
 campos lindos,8066.77418767
-cariri do tocantins,3383
-carmolandia,2316
-carrasco bonito,3688
+cariri do tocantins,3383.0
+carmolandia,2316.0
+carrasco bonito,3688.0
 caseara,4561.06774554
-centenario,2566
-chapada da natividade,3277
-chapada de areia,1334
+centenario,2566.0
+chapada da natividade,3277.0
+chapada de areia,1334.0
 colinas do tocantins,30651.45214572
 colmeia,8545.32613794
 combinado,4636.2763774
-conceicao do tocantins,4182
+conceicao do tocantins,4182.0
 couto magalhaes,4989.42250417
 cristalandia,7196.19121746
-crixas do tocantins,1561
+crixas do tocantins,1561.0
 darcinopolis,5237.57164692
-dianopolis,19062
+dianopolis,19062.0
 divinopolis do tocantins,6297.37429963
 dois irmaos do tocantins,7148.85511272
 duere,4548.24271228
@@ -53,88 +53,88 @@ fatima,3785.05687461
 figueiropolis,5288.83550144
 filadelfia,8487.12386739
 formoso do araguaia,18370.00682885
-fortaleza do tabocao,2412
-goianorte,4956
+fortaleza do tabocao,2412.0
+goianorte,4956.0
 goiatins,12007.02934225
 guarai,23152.24937732
 gurupi,76398.37165386
-ipueiras,1635
-itacaja,7088
-itaguatins,6018
+ipueiras,1635.0
+itacaja,7088.0
+itaguatins,6018.0
 itapiratins,3488.69633424
 itapora do tocantins,2442.43747299
 jau do tocantins,3493.3002129
-juarina,2230
+juarina,2230.0
 lagoa da confusao,9951.15252293
 lagoa do tocantins,3518.49075999
 lajeado,2759.83262281
 lavandeira,1593.2038893
-lizarda,3721
-luzinopolis,2621
-marianopolis do tocantins,4344.7768204
+lizarda,3721.0
+luzinopolis,2621.0
+marianopolis do tocantins,4344.7768203999985
 mateiros,2194.74585926
-maurilandia do tocantins,3154
+maurilandia do tocantins,3154.0
 miracema do tocantins,20610.40944429
-miranorte,12623
+miranorte,12623.0
 monte do carmo,6697.92184794
 monte santo do tocantins,2083.17696786
 muricilandia,3079.74988354
 natividade,8963.78497626
 nazare,4383.46059648
 nova olinda,10620.43200854
-nova rosalandia,3770
+nova rosalandia,3770.0
 novo acordo,3751.09884107
-novo alegre,2286
+novo alegre,2286.0
 novo jardim,2424.4264147
-oliveira de fatima,1037
+oliveira de fatima,1037.0
 palmas,226539.25171777
 palmeirante,4934.6845405
-palmeiras do tocantins,5735
-palmeiropolis,7308
+palmeiras do tocantins,5735.0
+palmeiropolis,7308.0
 paraiso do tocantins,44300.53314071
 parana,10262.93559422
-pau d'arco,4563
-pedro afonso,11484
-peixe,10354
+pau d'arco,4563.0
+pedro afonso,11484.0
+peixe,10354.0
 pequizeiro,5045.31366554
 pindorama do tocantins,4441.49166732
-piraque,2920
+piraque,2920.0
 pium,6663.27872446
-ponte alta do bom jesus,4544
+ponte alta do bom jesus,4544.0
 ponte alta do tocantins,7140.35322238
 porto alegre do tocantins,2766.070452
-porto nacional,48969
-praia norte,7659
-presidente kennedy,3673
+porto nacional,48969.0
+praia norte,7659.0
+presidente kennedy,3673.0
 pugmil,2364.49505661
-recursolandia,3768
-riachinho,4191
+recursolandia,3768.0
+riachinho,4191.0
 rio da conceicao,1709.41108055
-rio dos bois,2570
+rio dos bois,2570.0
 rio sono,6214.52937681
-sampaio,3864
+sampaio,3864.0
 sandolandia,3310.97304262
-santa fe do araguaia,6583
-santa maria do tocantins,2894
+santa fe do araguaia,6583.0
+santa maria do tocantins,2894.0
 santa rita do tocantins,2110.72358818
 santa rosa do tocantins,4541.92821261
 santa tereza do tocantins,2513.79761052
-santa terezinha do tocantins,2474
+santa terezinha do tocantins,2474.0
 sao bento do tocantins,4515.92535579
-sao felix do tocantins,1437
+sao felix do tocantins,1437.0
 sao miguel do tocantins,10465.54643243
 sao salvador do tocantins,2893.26279444
-sao sebastiao do tocantins,4283
+sao sebastiao do tocantins,4283.0
 sao valerio,4374.95029492
 silvanopolis,5065.31304939
-sitio novo do tocantins,9148
-sucupira,1742
-taguatinga,15002.5736064
+sitio novo do tocantins,9148.0
+sucupira,1742.0
+taguatinga,15002.573606400001
 taipas do tocantins,1931.90695529
 talisma,2558.59277411
 tocantinia,6727.16308012
-tocantinopolis,22590
-tupirama,1574
-tupiratins,2097
-wanderlandia,10966
-xambioa,11476
+tocantinopolis,22590.0
+tupirama,1574.0
+tupiratins,2097.0
+wanderlandia,10966.0
+xambioa,11476.0

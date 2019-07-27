@@ -1,127 +1,127 @@
-city,qt
+city,quantity
 abdon batista,2636.99883851
 abelardo luz,17023.72047801
 agrolandia,9314.75842683
 agronomica,4877.70391507
 agua doce,6942.69758245
 aguas de chapeco,5965.99788528
-aguas frias,2424
+aguas frias,2424.0
 aguas mornas,5494.49840099
-alfredo wagner,9389
-alto bela vista,2005
+alfredo wagner,9389.0
+alto bela vista,2005.0
 anchieta,6371.1219505
 angelina,5185.54894164
-anita garibaldi,8603
-anitapolis,3214
+anita garibaldi,8603.0
+anitapolis,3214.0
 antonio carlos,7435.50409868
-apiuna,9593
+apiuna,9593.0
 arabuta,4190.34360789
 araquari,24750.99513827
 ararangua,60813.28622793
 armazem,7740.37241897
-arroio trinta,3502
+arroio trinta,3502.0
 arvoredo,2250.3085516
-ascurra,7412
+ascurra,7412.0
 atalanta,3288.0445581
-aurora,5547
+aurora,5547.0
 balneario arroio do silva,9557.14373734
-balneario barra do sul,8424
+balneario barra do sul,8424.0
 balneario camboriu,107454.12989564
 balneario gaivota,8184.16738969
-balneario picarras,17034
+balneario picarras,17034.0
 bandeirante,2900.67059594
 barra bonita,1872.22731359
-barra velha,22339
+barra velha,22339.0
 bela vista do toldo,5982.28566744
 belmonte,2612.50755701
-benedito novo,10321
+benedito novo,10321.0
 biguacu,58048.75538643
 blumenau,307186.98964836
-bocaina do sul,3280
+bocaina do sul,3280.0
 bom jardim da serra,4374.12283084
-bom jesus,2526
+bom jesus,2526.0
 bom jesus do oeste,2130.12321469
 bom retiro,8888.05529603
 bombinhas,14029.26541539
-botuvera,4466
-braco do norte,28981
+botuvera,4466.0
+braco do norte,28981.0
 braco do trombudo,3371.12971634
-brunopolis,2850
+brunopolis,2850.0
 brusque,105082.33835644
-cacador,70439
+cacador,70439.0
 caibi,6158.26900659
-calmon,3387
+calmon,3387.0
 camboriu,62210.31846326
 campo alegre,11683.19107573
 campo belo do sul,7423.95281362
 campo ere,9318.72552983
 campos novos,32703.73970685
-canelinha,10603
+canelinha,10603.0
 canoinhas,52437.36956678
-capao alto,2753
+capao alto,2753.0
 capinzal,20722.78079317
 capivari de baixo,21663.63968056
 catanduvas,9532.92984456
-caxambu do sul,4411
+caxambu do sul,4411.0
 celso ramos,2767.47113879
 cerro negro,3573.09292939
 chapadao do lageado,2754.43012752
 chapeco,182204.24411672
-cocal do sul,15159
-concordia,68500.2728229
-cordilheira alta,3767
-coronel freitas,10201
-coronel martins,2458
-correia pinto,14566.0441642
-corupa,13823
+cocal do sul,15159.0
+concordia,68500.27282289999
+cordilheira alta,3767.0
+coronel freitas,10201.0
+coronel martins,2458.0
+correia pinto,14566.044164200002
+corupa,13823.0
 criciuma,190744.32664929
 cunha pora,10580.57475849
 cunhatai,1876.40662244
 curitibanos,37467.060777
-descanso,8626
+descanso,8626.0
 dionisio cerqueira,14760.43333453
 dona emma,3704.74205553
-doutor pedrinho,3604
-entre rios,3018
+doutor pedrinho,3604.0
+entre rios,3018.0
 ermo,2024.48348319
-erval velho,4348
-faxinal dos guedes,10661
+erval velho,4348.0
+faxinal dos guedes,10661.0
 flor do sertao,1584.88172251
 florianopolis,418652.35345749
-formosa do sul,2601
+formosa do sul,2601.0
 forquilhinha,22502.68637777
-fraiburgo,34553
-frei rogerio,2474
-galvao,3472
+fraiburgo,34553.0
+frei rogerio,2474.0
+galvao,3472.0
 garopaba,18025.05340345
 garuva,14678.03430139
 gaspar,57725.00137089
 governador celso ramos,12972.99626553
-grao para,6223
-gravatal,10616.0988872
+grao para,6223.0
+gravatal,10616.098887200002
 guabiruba,18424.96921647
 guaraciaba,10431.76580214
-guaramirim,35172
+guaramirim,35172.0
 guaruja do sul,4897.62717836
-guatambu,4679
+guatambu,4679.0
 herval d'oeste,21178.78218465
-ibiam,1945
-ibicare,3373
-ibirama,17318
+ibiam,1945.0
+ibicare,3373.0
+ibirama,17318.0
 icara,58734.51354975
-ilhota,12355
+ilhota,12355.0
 imarui,11654.25152818
 imbituba,39731.31822624
 imbuia,5657.43933647
-indaial,54782
-iomere,2729
+indaial,54782.0
+iomere,2729.0
 ipira,4734.77425312
-ipora do oeste,8409
+ipora do oeste,8409.0
 ipuacu,6791.62853042
-ipumirim,7216
+ipumirim,7216.0
 iraceminha,4245.11615954
 irani,9496.48694533
-irati,2096
+irati,2096.0
 irineopolis,10364.24192574
 ita,6399.29190206
 itaiopolis,20289.69030815
@@ -129,166 +129,166 @@ itajai,182760.80835082
 itapema,45659.98069993
 itapiranga,15394.66895337
 itapoa,14695.9568429
-ituporanga,22168
-jabora,4041
-jacinto machado,10609
-jaguaruna,17290
+ituporanga,22168.0
+jabora,4041.0
+jacinto machado,10609.0
+jaguaruna,17290.0
 jaragua do sul,142649.81936942
-jardinopolis,1766
+jardinopolis,1766.0
 joacaba,26861.12531205
 joinville,513157.42023693
 jose boiteux,4718.30248647
 jupia,2143.82389223
-lacerdopolis,2199
+lacerdopolis,2199.0
 lages,156255.7514889
-laguna,51494
-lajeado grande,1490
+laguna,51494.0
+lajeado grande,1490.0
 laurentino,5955.9590056
 lauro muller,14323.32493119
 lebon regis,11827.99491005
 leoberto leal,3333.32375048
-lindoia do sul,4635
-lontras,10244
+lindoia do sul,4635.0
+lontras,10244.0
 luiz alves,10396.72254485
-luzerna,5593
+luzerna,5593.0
 macieira,1820.36719712
 mafra,52705.1320536
-major gercino,3279
+major gercino,3279.0
 major vieira,7438.30221697
 maracaja,6330.03147028
 maravilha,22012.91999452
-marema,2203
+marema,2203.0
 massaranduba,14638.87060796
-matos costa,2839
-meleiro,6984
-mirim doce,2513
+matos costa,2839.0
+meleiro,6984.0
+mirim doce,2513.0
 modelo,4035.13184432
 mondai,10221.24538582
 monte carlo,9304.98187308
 monte castelo,8340.90017444
 morro da fumaca,16121.7910768
-morro grande,2890
+morro grande,2890.0
 navegantes,60430.30229237
-nova erechim,4275
+nova erechim,4275.0
 nova itaberaba,4258.35531672
-nova trento,12161
+nova trento,12161.0
 nova veneza,13196.14075128
 novo horizonte,2731.59798259
 orleans,21373.43104119
-otacilio costa,16334
+otacilio costa,16334.0
 ouro,7332.25939663
-ouro verde,2271
+ouro verde,2271.0
 paial,1751.82966429
-painel,2353
+painel,2353.0
 palhoca,136829.98997386
 palma sola,7710.55413321
-palmeira,2373
+palmeira,2373.0
 palmitos,16000.31282991
-papanduva,17903.6775369
+papanduva,17903.677536900002
 paraiso,4059.49022634
 passo de torres,6578.5622937
 passos maia,4400.21263251
 paulo lopes,6685.57742892
 pedras grandes,4090.32667115
 penha,25045.64608328
-peritiba,2988
-petrolandia,6131
+peritiba,2988.0
+petrolandia,6131.0
 pinhalzinho,16265.42526772
 pinheiro preto,3120.99500443
 piratuba,4775.45619954
-planalto alegre,2642.2049073
-pomerode,27628
-ponte alta,4894
-ponte alta do norte,3303
+planalto alegre,2642.2049073000007
+pomerode,27628.0
+ponte alta,4894.0
+ponte alta do norte,3303.0
 ponte serrada,10924.26718506
 porto belo,16055.75350653
 porto uniao,33362.70781805
 pouso redondo,14772.77347077
 praia grande,7231.77776761
-presidente castello branco,1725
+presidente castello branco,1725.0
 presidente getulio,14841.26975182
 presidente nereu,2269.22916764
 princesa,2750.58975079
 quilombo,10201.21193447
 rancho queimado,2723.87529146
-rio das antas,6143
-rio do campo,6192
+rio das antas,6143.0
+rio do campo,6192.0
 rio do oeste,6995.00015306
 rio do sul,60839.55330073
-rio dos cedros,10284
+rio dos cedros,10284.0
 rio fortuna,4439.90850115
 rio negrinho,39800.97660322
 rio rufino,2391.47945184
-riqueza,4838
-rodeio,10883
+riqueza,4838.0
+rodeio,10883.0
 romelandia,5519.023543
 salete,7333.86172636
 saltinho,3947.66408235
 salto veloso,4291.79731049
 sangao,10353.1807039
 santa cecilia,15728.13026157
-santa helena,2382
+santa helena,2382.0
 santa rosa de lima,2053.83120171
 santa rosa do sul,7988.62042906
-santa terezinha,8756
+santa terezinha,8756.0
 santa terezinha do progresso,2892.99787247
-santiago do sul,1465
-santo amaro da imperatriz,19726
-sao bento do sul,74704
+santiago do sul,1465.0
+santo amaro da imperatriz,19726.0
+sao bento do sul,74704.0
 sao bernardino,2670.68600738
 sao bonifacio,2989.38765046
 sao carlos,10251.83854273
 sao cristovao do sul,4315.87935903
 sao domingos,9430.91573018
-sao francisco do sul,42338
+sao francisco do sul,42338.0
 sao joao batista,26154.78776568
 sao joao do itaperiu,3412.44748094
-sao joao do oeste,6036
+sao joao do oeste,6036.0
 sao joao do sul,6989.26906346
 sao joaquim,24800.89427866
 sao jose,208900.60158971
 sao jose do cedro,13643.07540892
 sao jose do cerrito,9215.57017073
-sao lourenco do oeste,21744
+sao lourenco do oeste,21744.0
 sao ludgero,10938.83667509
-sao martinho,3209
+sao martinho,3209.0
 sao miguel da boa vista,1890.76896818
 sao miguel do oeste,36237.62160413
 sao pedro de alcantara,3389.37997192
 saudades,9001.77682898
 schroeder,15275.68858535
-seara,16926
+seara,16926.0
 serra alta,3259.00637987
 sideropolis,12975.49639408
-sombrio,26609
-sul brasil,2766
+sombrio,26609.0
+sul brasil,2766.0
 taio,17080.29915821
 tangara,8659.1583454
 tigrinhos,1751.76068527
 tijucas,30730.02258341
 timbe do sul,5301.90234995
-timbo,36735
+timbo,36735.0
 timbo grande,7146.15812561
 tres barras,18100.95679276
-treviso,3527
+treviso,3527.0
 treze de maio,6865.65556452
 treze tilias,6334.18797973
-trombudo central,6506
+trombudo central,6506.0
 tubarao,96895.33558301
-tunapolis,4633
+tunapolis,4633.0
 turvo,11812.80638693
-uniao do oeste,2910
-urubici,10689
-urupema,2482
-urussanga,20206
-vargeao,3532
+uniao do oeste,2910.0
+urubici,10689.0
+urupema,2482.0
+urussanga,20206.0
+vargeao,3532.0
 vargem,2804.72845984
 vargem bonita,4775.65238732
 vidal ramos,6205.37598326
 videira,46883.19367333
-vitor meireles,5207
+vitor meireles,5207.0
 witmarsum,3579.2838206
 xanxere,43716.02086735
-xavantina,4142
-xaxim,25713
+xavantina,4142.0
+xaxim,25713.0
 zortea,2984.23640475

@@ -1,4 +1,4 @@
-city,qt
+city,quantity
 agua branca,19336.08699953
 anadia,17357.27031618
 arapiraca,213353.30710039
@@ -7,21 +7,21 @@ barra de santo antonio,14189.38518763
 barra de sao miguel,7368.87598063
 batalha,16749.59125601
 belem,4531.69136091
-belo monte,7030
+belo monte,7030.0
 boca da mata,25767.60003085
 branquinha,9887.87803197
 cacimbinhas,10168.97186715
 cajueiro,20099.62220678
 campestre,6465.31365483
 campo alegre,50734.78937009
-campo grande,9032
+campo grande,9032.0
 canapi,17244.51844404
 capela,16511.92211648
 carneiros,8069.26198702
 cha preta,7079.86012714
 coite do noia,10885.6639981
 colonia leopoldina,19967.04125349
-coqueiro seco,5526
+coqueiro seco,5526.0
 coruripe,51700.60768782
 craibas,22449.62221347
 delmiro gouveia,47922.47194023
@@ -31,11 +31,11 @@ feira grande,21117.62839896
 feliz deserto,4328.08073185
 flexeiras,12302.16267315
 girau do ponciano,36336.26163461
-ibateguara,15149
-igaci,25163.9150014
+ibateguara,15149.0
+igaci,25163.915001400004
 igreja nova,23218.14311845
 inhapi,17329.32733997
-jacare dos homens,5327.0885109499995
+jacare dos homens,5327.08851095
 jacuipe,6973.49305793
 japaratinga,7657.21193714
 jaramataia,5461.28430967
@@ -49,25 +49,25 @@ maceio,928739.06752141
 major isidoro,18792.42225561
 mar vermelho,3630.80706665
 maragogi,28633.42831401
-maravilha,10284
+maravilha,10284.0
 marechal deodoro,45795.78296799
-maribondo,13619
+maribondo,13619.0
 mata grande,24664.97294347
 matriz de camaragibe,23688.97600809
 messias,15441.26031748
-minador do negrao,5275
-monteiropolis,6935
+minador do negrao,5275.0
+monteiropolis,6935.0
 murici,24955.09332345
-novo lino,12059
+novo lino,12059.0
 olho d'agua das flores,20205.99619377
 olho d'agua do casado,8386.83362678
-olho d'agua grande,4957
+olho d'agua grande,4957.0
 olivenca,11028.5825388
 ouro branco,10869.63766231
 palestina,5103.71168489
 palmeira dos indios,70051.21384814
 pao de acucar,23740.62035059
-pariconha,10264
+pariconha,10264.0
 paripueira,11291.15875552
 passo de camaragibe,14737.18630796
 paulo jacinto,7393.7560677
@@ -83,21 +83,21 @@ porto real do colegio,19324.05931863
 quebrangulo,11409.72151469
 rio largo,67600.85890184
 roteiro,6633.77500145
-santa luzia do norte,6866.8495739
+santa luzia do norte,6866.849573899999
 santana do ipanema,44792.99990929
 santana do mundau,10770.37236512
 sao bras,6694.35637896
 sao jose da laje,22437.14961222
 sao jose da tapera,30005.45014163
-sao luis do quitunde,32412
+sao luis do quitunde,32412.0
 sao miguel dos campos,54065.99334368
 sao miguel dos milagres,7054.91835957
 sao sebastiao,31885.26285182
-satuba,14603
+satuba,14603.0
 senador rui palmeira,12926.10526725
 tanque d'arca,6105.08508743
-taquarana,18876.5208559
+taquarana,18876.520855900002
 teotonio vilela,40941.76294292
 traipu,25494.61238765
-uniao dos palmares,59540.5838026
+uniao dos palmares,59540.58380260001
 vicosa,24984.07419534

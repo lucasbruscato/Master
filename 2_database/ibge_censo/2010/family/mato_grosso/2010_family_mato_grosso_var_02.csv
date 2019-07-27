@@ -1,15 +1,15 @@
-city,qt
+city,quantity
 acorizal,5512.66579838
-agua boa,20412
+agua boa,20412.0
 alta floresta,48660.32048788
 alto araguaia,15490.44423579
 alto boa vista,5204.64823555
 alto garcas,10203.08569678
-alto paraguai,10066
+alto paraguai,10066.0
 alto taquari,7927.26272431
 apiacas,8198.15945673
-araguaiana,3190
-araguainha,1096
+araguaiana,3190.0
+araguainha,1096.0
 araputanga,15279.26451966
 arenapolis,10165.05971491
 aripuana,18418.28167119
@@ -19,8 +19,8 @@ barra do garcas,56442.09375883
 bom jesus do araguaia,4875.13080097
 brasnorte,15062.88668633
 caceres,87324.89785394
-campinapolis,14296
-campo novo do parecis,27246
+campinapolis,14296.0
+campo novo do parecis,27246.0
 campo verde,30598.7189797
 campos de julio,5118.94845662
 canabrava do norte,4779.23375037
@@ -28,81 +28,81 @@ canarana,18610.56033204
 carlinda,10974.07138099
 castanheira,8191.45501003
 chapada dos guimaraes,17714.4672997
-claudia,10989.5157867
-cocalinho,5307
+claudia,10989.515786700002
+cocalinho,5307.0
 colider,30553.50499352
 colniza,25950.24230972
 comodoro,17996.15822923
 confresa,25113.00000001
 conquista d'oeste,3382.00987034
-cotriguacu,14974
-cuiaba,547914.0776492
-curvelandia,4866
-denise,8523
+cotriguacu,14974.0
+cuiaba,547914.0776492001
+curvelandia,4866.0
+denise,8523.0
 diamantino,20172.18810401
 dom aquino,8008.92773391
-feliz natal,10916
+feliz natal,10916.0
 figueiropolis d'oeste,3769.68551837
 gaucha do norte,6228.58594295
 general carneiro,5003.71321831
-gloria d'oeste,3135
+gloria d'oeste,3135.0
 guaranta do norte,32132.63519436
-guiratinga,13819
+guiratinga,13819.0
 indiavai,2378.66922365
-ipiranga do norte,5082
+ipiranga do norte,5082.0
 itanhanga,5208.4101464
 itauba,4534.73763146
 itiquira,11254.75505671
 jaciara,25478.55465593
 jangada,7468.20425547
-jauru,10405
+jauru,10405.0
 juara,32658.09304107
 juina,38976.36522921
 juruena,11189.89836842
 juscimeira,11326.36772011
-lambari d'oeste,5417
+lambari d'oeste,5417.0
 lucas do rio verde,45372.54564749
 luciara,2213.54628234
 marcelandia,11969.80323093
 matupa,14158.94734213
 mirassol d'oeste,24989.06748815
 nobres,14911.61366598
-nortelandia,6412
-nossa senhora do livramento,11609
-nova bandeirantes,11636
+nortelandia,6412.0
+nossa senhora do livramento,11609.0
+nova bandeirantes,11636.0
 nova brasilandia,4560.34620389
 nova canaa do norte,12045.07483874
 nova guarita,4882.10669121
 nova lacerda,5384.50077497
-nova marilandia,2943.7088074
+nova marilandia,2943.708807400001
 nova maringa,6489.72584788
 nova monte verde,8028.26465272
 nova mutum,31138.01568193
-nova nazare,3028
+nova nazare,3028.0
 nova olimpia,17297.13573412
 nova santa helena,3461.14420866
 nova ubirata,8755.96976481
 nova xavantina,19549.40626001
-novo horizonte do norte,3746
+novo horizonte do norte,3746.0
 novo mundo,7277.45127926
 novo santo antonio,1975.68052628
 novo sao joaquim,6016.54484225
 paranaita,10604.64247738
 paranatinga,19145.75854172
 pedra preta,15614.56152009
-peixoto de azevedo,30635
-planalto da serra,2723
+peixoto de azevedo,30635.0
+planalto da serra,2723.0
 pocone,31568.56051953
 pontal do araguaia,5380.24309121
 ponte branca,1761.17272166
 pontes e lacerda,41156.44151386
-porto alegre do norte,10698
-porto dos gauchos,5431
-porto esperidiao,11011.6336275
-porto estrela,3648
+porto alegre do norte,10698.0
+porto dos gauchos,5431.0
+porto esperidiao,11011.633627500001
+porto estrela,3648.0
 poxoreo,17437.54694439
 primavera do leste,51650.49530568
-querencia,12906
+querencia,12906.0
 reserva do cabacal,2548.59940317
 ribeirao cascalheira,8788.49327514
 ribeiraozinho,2197.199001
@@ -112,30 +112,30 @@ rondonopolis,193532.266917
 rosario oeste,17575.72477947
 salto do ceu,3894.33218464
 santa carmem,4079.53075288
-santa cruz do xingu,1900
-santa rita do trivelato,2354
+santa cruz do xingu,1900.0
+santa rita do trivelato,2354.0
 santa terezinha,7366.41545762
 santo afonso,2984.69832599
 santo antonio do leste,3657.07908462
 santo antonio do leverger,18162.50168908
-sao felix do araguaia,10591
+sao felix do araguaia,10591.0
 sao jose do povo,3586.67656083
 sao jose do rio claro,16565.49063461
 sao jose do xingu,5109.7573195
-sao jose dos quatro marcos,18953
+sao jose dos quatro marcos,18953.0
 sao pedro da cipa,4123.66235693
 sapezal,17678.34722997
-serra nova dourada,1365
+serra nova dourada,1365.0
 sinop,112245.23164805
-sorriso,66246.5337832
+sorriso,66246.53378320001
 tabapora,9859.09799395
 tangara da serra,82802.4089853
 tapurah,9553.6372071
 terra nova do norte,11241.19706415
-tesouro,3375
+tesouro,3375.0
 torixoreu,4065.14515173
-uniao do sul,3728
-vale de sao domingos,3049
+uniao do sul,3728.0
+vale de sao domingos,3049.0
 varzea grande,251943.24717444
 vera,10205.51993937
 vila bela da santissima trindade,14302.73894792

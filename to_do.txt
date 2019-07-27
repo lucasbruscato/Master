@@ -4,9 +4,9 @@
 * verificar dados do data sus (quase todas as páginas fora do ar) [FEITO]
 * verificar dados do ipeadata (excelente fonte de dados, mas nao para municipios) [FEITO]
 * verificar forma de estudo de dados em painel (dados longitudinais) [FEITO]
-* agregar dados encontrados nas verificações de dados acima [EM ANDAMENTO]
-* renomear variaveis meio em ingles e meio em portugues
-* criar análise descritiva (graficos duas a duas da var explicativa com resposta)
+* agregar dados encontrados nas verificações de dados acima [FEITO]
+* renomear variaveis que estavam parcialmente em português para inglês [FEITO]
+* criar análise descritiva (graficos duas a duas da var explicativa com resposta) [EM ANDAMENTO]
 * alterar gráficos de comparação de modelos para mesma escala
 * arrumar no relatório:
 	comentários adicionados por Florência

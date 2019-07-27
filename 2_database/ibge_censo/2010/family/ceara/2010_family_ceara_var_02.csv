@@ -1,15 +1,15 @@
-city,qt
+city,quantity
 abaiara,10444.6781505
-acarape,15338
+acarape,15338.0
 acarau,57339.71096601
-acopiara,51117
+acopiara,51117.0
 aiuaba,16160.21699654
-alcantaras,10771
+alcantaras,10771.0
 altaneira,6852.50241608
-alto santo,16359
-amontada,39220
+alto santo,16359.0
+amontada,39220.0
 antonina do norte,6966.83879211
-apuiares,13920
+apuiares,13920.0
 aquiraz,71319.38382468
 aracati,68881.18273455
 aracoiaba,25361.29040449
@@ -18,25 +18,25 @@ araripe,20637.73116549
 aratuba,11520.06982577
 arneiroz,7611.09776884
 assare,22436.94315828
-aurora,24544
+aurora,24544.0
 baixio,6016.40453831
 banabuiu,17261.75306266
-barbalha,55311
+barbalha,55311.0
 barreira,19561.63025829
-barro,21514
-barroquinha,14476
+barro,21514.0
+barroquinha,14476.0
 baturite,33245.81363239
 beberibe,49239.03303526
 bela cruz,30758.2349551
 boa viagem,52263.11169466
 brejo santo,45139.28736031
 camocim,60024.96799763
-campos sales,26484
+campos sales,26484.0
 caninde,74308.10173489
 capistrano,17015.6944656
 caridade,19996.50334137
 carire,18341.82524227
-caririacu,26393
+caririacu,26393.0
 carius,18482.77198594
 carnaubal,16721.67810016
 cascavel,65981.52950924
@@ -47,10 +47,10 @@ cedro,24490.15863838
 chaval,12602.6420191
 choro,12799.25963486
 chorozinho,18851.24802616
-coreau,21954
+coreau,21954.0
 crateus,72686.66756591
 crato,121233.71512948
-croata,17054
+croata,17054.0
 cruz,22407.10044312
 deputado irapuan pinheiro,9081.80055092
 erere,6832.0492759
@@ -61,17 +61,17 @@ fortaleza,2444994.73114421
 fortim,14734.82809007
 frecheirinha,12981.55500098
 general sampaio,6141.71881688
-graca,15029
+graca,15029.0
 granja,52571.89439581
-granjeiro,4629
+granjeiro,4629.0
 groairas,10218.28647069
 guaiuba,24068.69890413
-guaraciaba do norte,37762
+guaraciaba do norte,37762.0
 guaramiranga,4103.55185664
 hidrolandia,19304.24436753
 horizonte,55093.63440185
 ibaretama,12911.01034216
-ibiapina,23793
+ibiapina,23793.0
 ibicuitinga,11288.31542451
 icapui,18277.04638448
 ico,65404.50546434
@@ -79,9 +79,9 @@ iguatu,96431.92642012
 independencia,25526.80452647
 ipaporanga,11327.49591566
 ipaumirim,11968.38977358
-ipu,40260
-ipueiras,37846
-iracema,13716
+ipu,40260.0
+ipueiras,37846.0
+iracema,13716.0
 iraucuba,22269.06367638
 itaicaba,7267.94344488
 itaitinga,34414.23622405
@@ -94,13 +94,13 @@ jaguaretama,17808.48290674
 jaguaribara,10141.70558936
 jaguaribe,34391.28268141
 jaguaruana,32070.09174839
-jardim,26688
+jardim,26688.0
 jati,7637.10273443
 jijoca de jericoacoara,16619.13940347
 juazeiro do norte,248865.38055729
 jucas,23716.89544328
 lavras da mangabeira,31037.52137016
-limoeiro do norte,56166
+limoeiro do norte,56166.0
 madalena,18000.94763162
 maracanau,208759.92101429
 maranguape,113253.11276795
@@ -108,29 +108,29 @@ marco,24461.65789412
 martinopole,10209.48533496
 massape,35134.31139882
 mauriti,44210.27190029
-meruoca,13638
+meruoca,13638.0
 milagres,28278.90339393
-milha,13086
+milha,13086.0
 miraima,12794.92070609
 missao velha,34222.5185389
 mombaca,42584.08583879
 monsenhor tabosa,16686.2705212
-morada nova,61941.3533657
+morada nova,61941.35336569999
 moraujo,8054.31024816
-morrinhos,20700
+morrinhos,20700.0
 mucambo,14096.91086802
 mulungu,11462.65346907
-nova olinda,14256
+nova olinda,14256.0
 nova russas,30889.48904244
 novo oriente,27393.04810183
 ocara,23939.88002925
 oros,21364.63936959
-pacajus,61835
-pacatuba,72230.9398713
+pacajus,61835.0
+pacatuba,72230.93987130001
 pacoti,11589.16923862
 pacuja,5976.98385174
 palhano,8861.80409481
-palmacia,11994
+palmacia,11994.0
 paracuru,31459.66289331
 paraipaba,29919.77344397
 parambu,31274.51218562
@@ -141,29 +141,29 @@ pentecoste,35305.366147
 pereiro,15737.87570083
 pindoretama,18665.47633558
 piquet carneiro,15439.00597461
-pires ferreira,10216
+pires ferreira,10216.0
 poranga,11987.50561506
-porteiras,15061
+porteiras,15061.0
 potengi,10255.21950763
 potiretama,6109.66400791
-quiterianopolis,19921
+quiterianopolis,19921.0
 quixada,80270.39362108
-quixelo,14969.0078711
+quixelo,14969.007871099999
 quixeramobim,71499.86936939
 quixere,19385.36208965
 redencao,26337.07426014
 reriutaba,19431.22556748
 russas,69591.57896037
-saboeiro,15736.1889315
+saboeiro,15736.188931499999
 salitre,15446.34822315
 santa quiteria,42720.76642376
 santana do acarau,29935.32524425
 santana do cariri,17116.51590554
-sao benedito,44146
+sao benedito,44146.0
 sao goncalo do amarante,43820.95544831
 sao joao do jaguaribe,7891.82093228
 sao luis do curu,12292.61918501
-senador pompeu,26469
+senador pompeu,26469.0
 senador sa,6843.07539668
 sobral,187368.55697462
 solonopole,17634.95727794
@@ -175,7 +175,7 @@ tejucuoca,16811.64183182
 tiangua,68687.54927682
 trairi,51232.64962787
 tururu,14386.408226
-ubajara,31724
+ubajara,31724.0
 umari,7528.35260134
 umirim,18754.39662985
 uruburetama,19697.02627358

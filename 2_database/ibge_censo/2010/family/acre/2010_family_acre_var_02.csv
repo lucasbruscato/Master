@@ -1,9 +1,9 @@
-city,qt
+city,quantity
 acrelandia,12519.42766687
-assis brasil,6023
+assis brasil,6023.0
 brasileia,21276.00058955
 bujari,8451.42644861
-capixaba,8798
+capixaba,8798.0
 cruzeiro do sul,78128.01088133
 epitaciolandia,15083.47654002
 feijo,32328.28112029
@@ -12,7 +12,7 @@ mancio lima,15151.84372573
 manoel urbano,7952.93108389
 marechal thaumaturgo,14130.37496014
 placido de castro,17154.45463523
-porto acre,14862
+porto acre,14862.0
 porto walter,9066.39450525
 rio branco,333573.01691133
 rodrigues alves,14371.98002059

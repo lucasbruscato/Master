@@ -1,8 +1,8 @@
-city,qt
+city,quantity
 amparo de sao francisco,2268.12972063
 aquidaba,19967.99160057
 aracaju,569860.03989166
-araua,10878
+araua,10878.0
 areia branca,16417.27467638
 barra dos coqueiros,24884.2740323
 boquim,25468.58653047
@@ -14,14 +14,14 @@ capela,30565.31359053
 carira,19892.05785843
 carmopolis,13355.69952232
 cedro de sao joao,5609.13604719
-cristinapolis,16505
+cristinapolis,16505.0
 cumbe,3809.87094637
 divina pastora,4273.32340661
 estancia,64251.1041423
 feira nova,5297.68859357
 frei paulo,13795.15871726
 gararu,11253.84217683
-general maynard,2929
+general maynard,2929.0
 gracho cardoso,5596.34384471
 ilha das flores,8342.07051959
 indiaroba,15800.48159134
@@ -33,9 +33,9 @@ japaratuba,16294.1169867
 japoata,12927.06780571
 lagarto,94616.41698178
 laranjeiras,26886.23343193
-macambira,6401
+macambira,6401.0
 malhada dos bois,3443.12783562
-malhador,12042
+malhador,12042.0
 maruim,16332.94266334
 moita bonita,10933.2903355
 monte alegre de sergipe,13605.54091666
@@ -43,34 +43,34 @@ muribeca,7337.32401548
 neopolis,18463.65802667
 nossa senhora aparecida,8504.20905883
 nossa senhora da gloria,32187.00748581
-nossa senhora das dores,24573
-nossa senhora de lourdes,6238
+nossa senhora das dores,24573.0
+nossa senhora de lourdes,6238.0
 nossa senhora do socorro,160540.69354273
 pacatuba,13114.883353
-pedra mole,2974
+pedra mole,2974.0
 pedrinhas,8816.67351704
-pinhao,5973
+pinhao,5973.0
 pirambu,8364.30937052
 poco redondo,30687.8909862
 poco verde,21972.79810058
 porto da folha,27031.95481149
-propria,28345
+propria,28345.0
 riachao do dantas,19354.28768167
 riachuelo,9247.03056277
 ribeiropolis,17076.10488466
 rosario do catete,9192.05255939
 salgado,19348.87537021
 santa luzia do itanhy,12940.42448239
-santa rosa de lima,3746
+santa rosa de lima,3746.0
 santana do sao francisco,6989.89558842
 santo amaro das brotas,11332.49733467
-sao cristovao,78610.6154574
+sao cristovao,78610.61545739997
 sao domingos,10182.39147845
 sao francisco,3389.87534173
 sao miguel do aleixo,3675.83637288
 simao dias,38628.27272382
-siriri,7994.0999024
+siriri,7994.0999023999975
 telha,2939.43965719
 tobias barreto,47809.23310783
-tomar do geru,12855
-umbauba,22408
+tomar do geru,12855.0
+umbauba,22408.0
