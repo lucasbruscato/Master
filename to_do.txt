@@ -1,6 +1,7 @@
 
 * verificar argumentos contra e a favor tf-idf (boa metodologia mas nao vou usar e explicarei na dissertacao) [FEITO]
 * verificar dados do prova brasil (acredito ser possível capturar a de nota do enem por município) [FEITO]
+	ref: http://provabrasil.inep.gov.br/microdados
 * verificar dados do data sus (quase todas as páginas fora do ar) [FEITO]
 * verificar dados do ipeadata (excelente fonte de dados, mas nao para municipios) [FEITO]
 * verificar forma de estudo de dados em painel (dados longitudinais) [FEITO]
