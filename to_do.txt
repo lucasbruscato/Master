@@ -7,8 +7,8 @@
 * verificar forma de estudo de dados em painel (dados longitudinais) [FEITO]
 * agregar dados encontrados nas verificações de dados acima [FEITO]
 * renomear variaveis que estavam parcialmente em português para inglês [FEITO]
-* criar análise descritiva (graficos duas a duas da var explicativa com resposta) [EM ANDAMENTO]
-* alterar gráficos de comparação de modelos para mesma escala
+* criar análise descritiva (graficos duas a duas da var explicativa com resposta) [FEITO]
+* alterar gráficos de comparação de modelos para mesma escala (realizar posteriormente quando terminar modelagem) [FEITO]
 * arrumar no relatório:
 	comentários adicionados por Florência
 	adicionar explicação tf-idf
