@@ -10,11 +10,12 @@
 * criar análise descritiva (graficos duas a duas da var explicativa com resposta) [FEITO]
 * alterar gráficos de comparação de modelos para mesma escala (realizar posteriormente quando terminar modelagem) [FEITO]
 * arrumar no relatório:
-	comentários adicionados por Florência
+	comentários adicionados por Florência [FEITO]
 	adicionar explicação tf-idf
 	deixar claro quantidade de relatórios utilizados
 	apresentar porcentagem de palavras encontradas no sentilex e polaridades por relatório
 	adicionar capitulo com análise descritiva
+* revisar tudo realizado anteriormente
 * apresentar para Florência novamente e depois seguir para modelagem (ATÉ FINAL DE AGOSTO!)
  - em modelagem, na medição da assertividade do modelo adicionar banda de acerto
 
