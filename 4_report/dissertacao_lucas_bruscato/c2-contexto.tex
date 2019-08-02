@@ -49,17 +49,21 @@ Cada palavra presente na base de dados possui sua respectiva polaridade, sendo q
 
 Para realizar uma interpretação quantitativa sobre os relatórios coletados que foram apresentados na seção do "Programa de Fiscalização de Entes Federativos", este trabalho utiliza a base da dados SentiLex para definição de polaridade de cada uma das palavras presentes no relatório e, assim, criação de uma métrica para modelagem.
 
-Foi criado um código que realiza o reconhecimento de caracteres do documento pdf onde, iterativamente utilizando regras para separadores de palavras, se concatenou caracter a caracter formando as palavras do relatório pdf. Devido a problemas enfrentados com respeito à diferentes tipos de codificação (encoding, e.g., UTF-8) dos relatórios utilizados, foi necessário a utilização da biblioteca externa em python PDF Miner (\citet{PDFMiner}). Assim, a criação de tal métrica se deu pela criação de um código em python que realiza o reconhecimento das palavras presentes em documentos pdf, pode-se sumarizar as etapas do processo pelos seguintes passos:
+Foi criado um código que realiza o reconhecimento de caracteres do documento pdf onde, iterativamente utilizando regras para separadores de palavras, se concatenou caracter a caracter formando as palavras do relatório pdf. Devido a problemas enfrentados com respeito à diferentes tipos de codificação (encoding, e.g., UTF-8) dos relatórios utilizados, foi necessário a utilização da biblioteca externa em python PDF Miner (\citet{PDFMiner}) para extração das palavras. Assim, a construção de tal métrica se deu pela criação de um código em python que realiza o reconhecimento das palavras presentes em documentos pdf, pode-se sumarizar as etapas do processo pelos seguintes passos:
 
-\begin{itemize}
+\begin{enumerate}
 	\item Iterativamente executa o código da biblioteca externa para cada relatório de auditoria listado na seção "Programas de Entes Federativos" (\ref{sec:programa_de_fiscalizacao_em_entes_federativos})
 	\item Sobre o texto de cada relatório remove acentuação, caracteres de parada e transforma todos os caracteres em minúsculo
 	\item Calcula a frequência das palavras dentro de seu respectivo documento
-	\item Utilizando a base de dados SentiLex (extraída por meio da criação de um código em python), apresentada na seção "SentiLex" (\ref{sec:sentilex}), define a polaridade da palavra
-	\item Realiza um agrupamento sobre o produto dos passos anteriores sumarizando a frequência relativa calculada sob as polaridades definidas, i.e., o resultado é um arquivo em formato CSV com as seguintes colunas: nome do relatório, percentual de polaridade negativa, percentual de polaridade positiva e percentual de polaridade neutra
-\end{itemize}
+	\item Utilizando a base de dados SentiLex (extraída por meio da criação de um código em python), apresentada na seção "SentiLex" (\ref{sec:sentilex}), define a polaridade da palavra em positiva, negativa ou neutra
+	\item Realiza um agrupamento sobre o produto dos passos anteriores sumarizando a frequência relativa calculada sob as polaridades definidas, i.e., o resultado é um arquivo em formato CSV com as seguintes colunas: nome do relatório, percentual de polaridade negativa, percentual de polaridade positiva, percentual de polaridade neutra e percentual de polaridade não encontrada
+\end{enumerate}
 
 Os códigos citados no parágrafo anterior foram escritos na linguagem de programação Python utilizando a ferramenta Notebook Jupyter e se encontram nos anexos \ref{ape:sentilex_database} e \ref{ape:create_target_feature}, respectivamente.
+
+O resultado da execução dos itens enumerados acima proporciona a criação da variável resposta, que é dada como sendo o percentual de palavras negativas encontradas em um relatório dividido pela soma do valor do percentual de palavras negativas e do valor do percentual de palavras positivas, ou seja, se relativiza o percentual de palavras negativas pela soma do percentual de palavras negativas e percentual de palavras positivas para, assim, facilitar a interpretação dos resultados e desconsiderar o percentual de palavras neutras e o percentual de palavras não encontradas.
+
+O agrupamento realizado no item 5 do processo descrito para extração das métricas se assemelha à medida estatística tf-idf (term frequency–inverse document frequency, ver \citet{Jones1972}), que tem o intuito de indicar a importância de uma palavra de um documento em relação a uma coleção de documentos ou em um corpus linguístico. O valor tf–idf de uma palavra aumenta proporcionalmente à medida que aumenta o número de ocorrências dela em um documento, no entanto, esse valor é equilibrado pela frequência da palavra no corpus. Isso auxilia a distinguir o fato da ocorrência de algumas palavras serem geralmente mais comuns que outras. Contudo, devido aos relatórios terem sido coletados em diferentes anos por diferentes auditores que utilizaram-se de vocabulários e termos distintos, tal técnica não foi utilizada e a métrica calculada foi apenas a frequência dentro do próprio documento e não ponderado pelo conjunto de documentos tal como a medida estatística tf-idf.
 
 \section{Censo do IBGE}
 \label{sec:censo_do_ibge}
