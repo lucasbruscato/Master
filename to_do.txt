@@ -1,4 +1,14 @@
 
+
+banca:
+	- Florencia Leonardi
+	- Marcos Yamada Nakaguma (ex professor FEA-USP, se não me engano agora está na PUC/Mackenzie), posso pedir que ele seja parte da banca?
+	- ?
+
+data para indicação da banca: pode ser a mesma data do depósito? qual a regra ou como usualmente é feito?
+data para depósito: segunda-feira, 16 de Dezembro de 2019, pode ser ou qual a regra ou como usualmente é feito?
+data para defesa: terça-feira, 18 de Fevereiro de 2020 (lembrete: na sexta-feira da referida semana será a sexta-feira de Carnaval)
+
 * verificar argumentos contra e a favor tf-idf (boa metodologia mas nao vou usar e explicarei na dissertacao) [FEITO]
 * verificar dados do prova brasil (acredito ser possível capturar a de nota do enem por município) [FEITO]
 	ref: http://provabrasil.inep.gov.br/microdados
@@ -12,10 +22,19 @@
 * arrumar no relatório:
 	comentários adicionados por Florência [FEITO]
 	adicionar explicação tf-idf [FEITO]
-	deixar claro quantidade de relatórios utilizados
-	adicionar capitulo com análise descritiva
-	apresentar porcentagem de palavras encontradas no sentilex e polaridades por relatório
-* revisar tudo realizado anteriormente
-* apresentar para Florência novamente e depois seguir para modelagem (ATÉ FINAL DE AGOSTO!)
- - em modelagem, na medição da assertividade do modelo adicionar banda de acerto
+	deixar claro quantidade de relatórios utilizados [FEITO]
+	adicionar seção com informação prova brasil [FEITO]
+	apresentar porcentagem de palavras encontradas no sentilex e polaridades por relatório [FEITO]
+* voltando das férias, revisar tudo realizado anteriormente e enviar para Florencia [EM ANDAMENTO]
+* apresentar para Florência novamente e depois seguir para modelagem
+* adicionar análise descritiva das variáveis explicativas com relação à variável resposta
+* em modelagem, na medição da assertividade do modelo adicionar banda de acerto
+
+FAZER EM NOVEMBRO/2019:
+* extrair todos os códigos python de novo e atualizar os arquivos dos apendices
+* adicionar agradecimentos
+* adicionar resumo e abstract
+* arrumar pontuação (algum problema no LATEX)
+
+
 

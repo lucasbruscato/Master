@@ -23,7 +23,7 @@ O programa agora possui três formas de seleção de entes: censo, matriz de vul
 
 Quando é utilizado o censo, a fiscalização verifica a regularidade da aplicação dos recursos em todos os entes da amostragem. Já a matriz agrega inteligência da informação, por meio da análise de indicadores, para identificar vulnerabilidades (situações locais críticas) e selecionar de forma analítica os entes a serem fiscalizados em determinada região. A metodologia de sorteios permanece aleatória, ao incorporar as ações do antigo "Programa de Fiscalização por Sorteios Públicos".
 
-No âmbito deste trabalho serão utilizados os relatórios de auditoria realizadas no período de agosto de 2011 até junho de 2018, os quais dizem respeito aos sorteios realizados dos números 34 ao 40, que correspondem ao "Programa de Fiscalização por Sorteios Públicos", e os ciclos 3, 4 e o 5, que dizem respeito ao "Programa de Fiscalização em Entes Federativos". Os relatórios gerados pelo programa descrito nesta seção são utilizados na criação da variável resposta do problema proposto deste trabalho. Tais relatórios já foram utilizados anteriormente em \citet{FerrazFinan2008}, contudo, em tal trabalho foi feita uma interpretação manual dos relatórios, i.e., um a um os relatórios foram interpretados por humanos e classificados caso tenha sido encontrado sinais de corrupção ou não no município em questão.
+No âmbito deste trabalho serão utilizados os relatórios de auditoria realizadas no período de agosto de 2011 até junho de 2018, os quais dizem respeito aos sorteios realizados dos números 34 ao 40, que correspondem ao "Programa de Fiscalização por Sorteios Públicos", e os ciclos 3, 4 e o 5, que dizem respeito ao "Programa de Fiscalização em Entes Federativos", correspondente à 598 relatórios. Os relatórios gerados pelo programa descrito nesta seção são utilizados na criação da variável resposta do problema proposto deste trabalho. Tais relatórios já foram utilizados anteriormente em \citet{FerrazFinan2008}, contudo, em tal trabalho foi feita uma interpretação manual dos relatórios, i.e., um a um os relatórios foram interpretados por humanos e classificados caso tenha sido encontrado sinais de corrupção ou não no município em questão.
 
 A coleta de tais relatórios foi realizada de forma automatizada (para as edições com respeito aos sorteios 34 ao 40) e manual (para as edições com respeito ao ciclo 3, ciclo 4 e ciclo 5). As decisões sobre as formas como os relatórios foram coletados teve embasamento na estrutura da página web do governo.
 
@@ -56,8 +56,10 @@ Foi criado um código que realiza o reconhecimento de caracteres do documento pd
 	\item Sobre o texto de cada relatório remove acentuação, caracteres de parada e transforma todos os caracteres em minúsculo
 	\item Calcula a frequência das palavras dentro de seu respectivo documento
 	\item Utilizando a base de dados SentiLex (extraída por meio da criação de um código em python), apresentada na seção "SentiLex" (\ref{sec:sentilex}), define a polaridade da palavra em positiva, negativa ou neutra
-	\item Realiza um agrupamento sobre o produto dos passos anteriores sumarizando a frequência relativa calculada sob as polaridades definidas, i.e., o resultado é um arquivo em formato CSV com as seguintes colunas: nome do relatório, percentual de polaridade negativa, percentual de polaridade positiva, percentual de polaridade neutra e percentual de polaridade não encontrada
+	\item Realiza um agrupamento sobre o produto dos passos anteriores sumarizando a frequência relativa calculada sob as polaridades definidas, i.e., o resultado é um arquivo em formato CSV com as seguintes colunas: nome do relatório, quantidade de palavras, percentual de polaridade negativa, percentual de polaridade positiva, percentual de polaridade neutra e percentual de polaridade (e palavra) não encontrada
 \end{enumerate}
+
+Para o item 5 do processo acima, foram calculados a mediana, o mínimo, o máximo e o desvio-padrão dos percentuais de polaridade e estão exibidos em \ref{tab:cap2_analise_descritiva}.
 
 Os códigos citados no parágrafo anterior foram escritos na linguagem de programação Python utilizando a ferramenta Notebook Jupyter e se encontram nos anexos \ref{ape:sentilex_database} e \ref{ape:create_target_feature}, respectivamente.
 
@@ -79,10 +81,10 @@ A periodicidade da pesquisa é decenal, excetuando-se os anos de 1910 e 1930, em
 As informações utilizadas neste trabalho são as disponibilizadas pelos censos realizados nos anos 2000 e nos anos 2010 sob a perspectiva de comparação das informações de ambos censos. Devido à mudança na informação ou segmentação realizada em cada censo, foi realizado um mapeamento de todas as informações disponíveis por censo para definição de quais informações seriam utilizadas no trabalho (a estatística levantada no censo de 2000 pode não existir no censo de 2010, e vice-versa, ou uma segmentação diferente foi realizada em cada censo impossibilitando a comparação da informação entre ambos). Os dados coletados do IBGE são números absolutos, portanto, tais números foram divididos pelo número de habitantes do município em questão obtendo-se assim o percentual relativo pelo ano em questão. As informações que serão utilizadas estão descritas abaixo.
 
 \begin{itemize}
-	\item \verb|education_var_01_qt_pct|: Percentual de pessoas que frequentavam creche ou escola por município em 2000 dividido pela mesma informação em 2010
-	\item \verb|family_var_01_adequada_pct|: Percentual de domicílios particulares permanentes em situação adequada por município em 2000 dividido pela mesma informação em 2010
-	\item \verb|family_var_01_semi_adequada_pct|: Percentual de domicílios particulares permanentes em situação semi-adequada por município em 2000 dividido pela mesma informação em 2010
-	\item \verb|family_var_01_inadequada_pct|: Percentual de domicílios particulares permanentes em situação inadequada por município em 2000 dividido pela mesma informação em 2010
+	\item \verb|education_var_01_quantity_pct|: Percentual de pessoas que frequentavam creche ou escola por município em 2000 dividido pela mesma informação em 2010
+	\item \verb|family_var_01_suitable_pct|: Percentual de domicílios particulares permanentes em situação adequada por município em 2000 dividido pela mesma informação em 2010
+	\item \verb|family_var_01_semi_suitable_pct|: Percentual de domicílios particulares permanentes em situação semi-adequada por município em 2000 dividido pela mesma informação em 2010
+	\item \verb|family_var_01_inappropriate_pct|: Percentual de domicílios particulares permanentes em situação inadequada por município em 2000 dividido pela mesma informação em 2010
 	\item \verb|fertility_var_01_has_children_pct|: Percentual de mulheres de 10 anos ou mais de idade total no período de referência de 12 meses anteriores ao Censo por município em 2000 dividido pela mesma informação em 2010
 	\item \verb|fertility_var_01_children_born_pct|: Percentual de mulheres de 10 anos ou mais de idade que tiveram filhos nascidos no período de referência de 12 meses anteriores ao Censo por município em 2000 dividido pela mesma informação em 2010
 	\item \verb|fertility_var_01_children_borned_live_pct|: Percentual de mulheres de 10 anos ou mais de idade que tiveram filhos nascidos vivos no período de referência de 12 meses anteriores ao Censo por município em 2000 dividido pela mesma informação em 2010
@@ -110,31 +112,42 @@ Os relatórios contendo as estatísticas do censo do IBGE de 2000 e 2010 foram c
 
 Os códigos citados no parágrafo anterior foram escritos na linguagem de programação Python utilizando a ferramenta Notebook Jupyter e se encontram nos anexos \ref{ape:rename_folders} e \ref{ape:extract_explanatory_features}, respectivamente.
 
+\section{Enem (INEP)}
+\label{sec:enem_inep}
+
+O Exame Nacional do Ensino Médio (Enem) é uma prova realizada pelo Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira (INEP), autarquia vinculada ao Ministério da Educação do Brasil, e foi criada em 1998. Ela é utilizada para avaliar a qualidade do ensino médio no país. Seu resultado serve para acesso ao ensino superior em universidades públicas brasileiras, através do Sistema de Seleção Unificada (SiSU), assim como em algumas universidades no exterior.
+
+A prova também é feita por pessoas com interesse em ganhar bolsa integral ou parcial em universidade particular através do Programa Universidade para Todos (ProUni) ou para obtenção de financiamento através do Fundo de Financiamento ao Estudante do Ensino Superior (Fies). Entre 2009 e 2016 o exame serviu também como certificação de conclusão do ensino médio em cursos de Educação de Jovens e Adultos (EJA), antigo supletivo, substituindo o Exame Nacional para Certificação de Competências de Jovens e Adultos (Encceja), que voltou a ser realizado a partir de 2017. Em algumas universidades, substituiu o tradicional vestibular.
+
+A prova foi criada em 1998, sendo usada inicialmente para avaliar a qualidade da educação nacional e já na segunda edição do exame, foi utilizada como modalidade de acesso ao ensino superior. Teve sua segunda versão iniciada em 2009, com aumento do número de questões e utilização da prova em substituição ao antigo vestibular. O exame é realizado anualmente e tem duração de dois dias, contém 180 questões objetivas (divididas em quatro grandes áreas) e uma questão de redação.
+
+As informações utilizadas neste trabalho são as disponibilizadas pela plataforma do INEP na seção de "Microdados" (\citet{IBGE}), e foram selecionados os dados dos exames realizados em 2000 e em 2010 sob a perspectiva de comparação das informações de ambos anos. As estatísticas extraídas foram:
+
+\begin{itemize}
+	\item \verb|enem_var_01_enem_score_mean_pct|: Média da nota final do enem em 2000 dividido pela mesma informação em 2010
+	\item \verb|enem_var_01_enem_score_std_pct|: Desvio-padrão da nota final do enem em 2000 dividido pela mesma informação em 2010
+	\item \verb|enem_var_01_enem_score_median_pct|: Mediana da nota final do enem em 2000 dividido pela mesma informação em 2010
+\end{itemize}
+
+O código citado no parágrafo anterior foi escrito na linguagem de programação Python utilizando a ferramenta Notebook Jupyter e se encontra no anexo \ref{ape:extract_explanatory_features_enem}.
+
 \section{Variáveis Explicativas}
 \label{sec:variaveis_explicativas}
 
-A variável que define o estado do município foi utilizada como variável explicativa, contudo, foi-se necessário uma binarização da mesma utilizando um método conhecido como one-hot-encoding. O método realiza a transformação de uma variável categórica em várias variáveis numéricas, sendo que para cada categoria de tal variável é criado uma nova variável contendo o valor zero ou um, sendo que zero indica a não ocorrência de tal categoria na observação em questão e um indica a ocorrência de tal categoria na observação em questão. Tal transformação se fez necessária uma vez que os modelos de aprendizado de máquina implementados na biblioteca scikit-learn em Python não aceitam como entrada bases de dados contendo variáveis categóricas.
+A variável que define o estado do município em questão foi utilizada como variável explicativa, contudo, foi-se necessário uma binarização da mesma utilizando um método conhecido como one-hot-encoding. O método realiza a transformação de uma variável categórica em várias variáveis numéricas, sendo que para cada categoria de tal variável é criado uma nova variável contendo o valor zero ou um, sendo que zero indica a não ocorrência de tal categoria na observação em questão e um indica a ocorrência de tal categoria na observação em questão. Tal transformação se fez necessária uma vez que os modelos de aprendizado de máquina implementados na biblioteca scikit-learn em Python não aceitam como entrada bases de dados contendo variáveis categóricas.
 
-As variáveis extraídas do censo demográfico do IBGE dos anos 2000 e 2010 também foram utilizadas como explicativas para modelagem do problema proposto. Foram feitas três (?) abordagens distintas sobre tais variáveis explicativas, essas são:
+As variáveis extraídas do censo demográfico do IBGE dos anos 2000 e 2010 também foram utilizadas como explicativas para modelagem do problema proposto. A abordagem utilizada para tais variáveis foi utilizar as informações de modo comparativo. As variáveis do censo do IBGE que não são representadas como porcentagens foram divididas numericamente pelo tamanho populacional do município em questão, assim, se tornando porcentagens com respeito ao tamanho populacional.
 
-\begin{itemize}
-\item Utilizar as informações de modo comparativo
+Após a criação das novas variáveis conforme descrito no parágrafo anterior, todas as variáveis (tanto as variáveis criadas conforme descrição do parágrafo anterior quanto as variáveis do censo do IBGE que são representadas como porcentagens) correspondentes ao censo de 2000 foram divididas numericamente pelas variáveis de mesmo conceito correspondentes ao censo de 2010. As variáveis criadas estão na tabela \ref{tab:cap2_todas_variaveis} e as variáveis de origem utilizadas foram descritas no capítulo \ref{sec:censo_do_ibge}.
 
-As variáveis do censo do IBGE que não são representadas como porcentagens foram divididas numericamente pelo tamanho populacional do município em questão, assim, se tornando porcentagens com respeito ao tamanho populacional.
-
-Após a criação das novas variáveis conforme descrito no parágrafo anterior, todas as variáveis (tanto as variáveis criadas conforme descrição do parágrafo anterior quanto as variáveis do censo do IBGE que são representadas como porcentagens) correspondentes ao censo de 2000 foram divididas numericamente pelas variáveis de mesmo conceito correspondentes ao censo de 2010. As variáveis criadas estão na tabela \ref{tab:cap2_todas_variaveis} e descritas no capítulo \ref{sec:censo_do_ibge}.
+As variáveis extraídas do enem do INEP nos anos 2000 e 2010 também foram utilizadas como explicativas para modelagem do problema proposto. A abordagem utilizada para tais variáveis foi utilizar as informações de modo comparativo. As variáveis correspondentes ao exame aplicado em 2000 foram divididas numericamente pelas variáveis de mesmo conceito correspondentes ao exame aplicado em 2010. As variáveis criadas estão na tabela \ref{tab:cap2_todas_variaveis} e as variáveis brutas foram descritas no capítulo \ref{sec:enem_inep}.
 
 O código para criação das variáveis citadas nesta seção foi escrito na linguagem de programação Python utilizando a ferramenta Notebook Jupyter e se encontra no anexo \ref{ape:data_processing_modeling_dataset}.
-
-\item (?)
-\item (?)
-
-\end{itemize}
 
 \section{Criação da base para modelagem}
 \label{sec:criacao_da_base_para_modelagem}
 
-Utilizando como chave estrangeira a informação de munício e estado, realizou-se - por meio do código em python no anexo \ref{ape:data_processing_raw_dataset} - a união das informações citadas nas seções "Variável Resposta" (\ref{sec:variavel_resposta}) e "Variáveis Explicativas" (\ref{sec:variaveis_explicativas}) e, assim, foram obtidas as bases para modelagem do problema proposto neste trabalho. Por meio do método de amostragem aleatória selecionou-se setenta e cinco por cento da base gerada para desenvolvimento do modelo e vinte e cinco por cento para validação do desempenho do modelo, foi-se utilizado o método de validação validação cruzada descrita em \citet{Kohavi1995} (amplamente aplicado em diversos trabalhos como \citet{Wesllen2017:MSc}).
+Utilizando como chave estrangeira a informação de munício e estado, realizou-se - por meio do código em python no anexo \ref{ape:data_processing_raw_dataset} - a união das informações citadas nas seções "Variável Resposta" (\ref{sec:variavel_resposta}) e "Variáveis Explicativas" (\ref{sec:variaveis_explicativas}) e, assim, foram obtidas as bases para modelagem do problema proposto neste trabalho. Por meio do método de amostragem aleatória selecionou-se setenta e cinco por cento da base gerada para desenvolvimento do modelo e vinte e cinco por cento para validação do desempenho do modelo, foi-se utilizado o método de validação validação cruzada descrita em \citet{Kohavi1995} (amplamente aplicado em diversos trabalhos, tais como em \citet{Wesllen2017:MSc}).
 
 O código desenvolvido para criação das bases de desenvolvimento e validação citadas no parágrafo anterior foi escrito na linguagem de programação Python utilizando a ferramenta Notebook Jupyter e se encontra no anexo \ref{ape:data_processing_training_validation_dataset}.
 

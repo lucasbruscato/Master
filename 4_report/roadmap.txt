@@ -8,9 +8,13 @@ capítulo 1 - introdução
 	- estrutura do projeto
 
 capítulo 2 - contexto
-	- variavel resposta
+	- programa entes federativos
 	- sentilex
+	- variavel resposta
+	- censo ibge
+	- enem (inep)
 	- variaveis explicativas
+	- criacao base para modelagem
 
 capítulo 3 - modelagem
 	- 1 modo comparativo
@@ -19,6 +23,12 @@ capítulo 3 - modelagem
 capítulo 4 - outras tentativas
 
 capítulo 5 - conclusão
+
+
+
+
+
+
 
 
 jupyter nbconvert --to markdown test.ipynb
