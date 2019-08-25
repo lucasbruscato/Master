@@ -4,9 +4,9 @@
 
 Este trabalho se insere no contexto de coleta de dados estruturados e não estruturados, processamento de linguagem natural (NLP), previsão de polaridade e utilização de informações socioeconômicas.
 
-Serão utilizados os relatórios de auditoria produzidos pelo "Programa de Fiscalização de Entes Federativos" que correspondem ao período de 2011 à 2018, as informações do censo do IBGE de 2000 e 2010, abordagens de NLP e aprendizado de máquina aplicadas às informações supracitadas.
+Serão utilizados os relatórios de auditoria produzidos pelo "Programa de Fiscalização de Entes Federativos" que correspondem ao período de 2011 à 2018, as informações do censo do IBGE de 2000 e 2010, as informações do Enem (INEP) de 2000 e 2010, abordagens de NLP e aprendizado de máquina aplicadas às informações supracitadas.
 
-Tendo como intuito garantir a total replicabilidade do trabalho, as fontes de informações foram coletadas da internet, quase em sua completude, por meio de códigos desenvolvidos tornando o processo altamente automatizado. O projeto foi construído utilizando o sistema de controle de versionamento distribuído GitHub e está disponível publicamente em \citet{GitHubLucas}.
+Tendo como intuito garantir a total replicabilidade do trabalho, as fontes de informações foram, quase em sua completude, coletadas da internet por meio de códigos desenvolvidos neste trabalho, tornando o processo altamente automatizado. O trabalho foi construído utilizando o sistema de controle de versionamento distribuído GitHub e está disponível publicamente em \citet{GitHubLucas}, que contém os códigos criados e as informações utilizadas.
 
 Os códigos construídos durante o desenvolvimento deste trabalho utilizaram a linguagem de programação Python (\citet{Python}), tendo como ferramenta o Notebook Jupyter (\citet{JupyterNotebook}) e norma-padrão em Python o PEP8 (\citet{PEP8}) para uma melhor leitura e compreensão dos mesmos. Os códigos desenvolvidos neste trabalho foram escritos em inglês, tanto nomenclatura de variáveis quanto comentários no código.
 
@@ -33,8 +33,6 @@ O código citado no parágrafo anterior foi escrito na linguagem de programaçã
 
 As edições com respeito aos ciclos 3, 4 e 5 foram coletadas diretamente na página web por estarem disponíveis na página do programa mais facilmente.
 
-Os nomes dos arquivos de todos os relatórios de auditoria explicados nesta seção e utilizados neste trabalho se encontram na tabela (ref.).
-
 \section{SentiLex}
 \label{sec:sentilex}
 
@@ -47,19 +45,19 @@ Cada palavra presente na base de dados possui sua respectiva polaridade, sendo q
 \section{Variável Resposta}
 \label{sec:variavel_resposta}
 
-Para realizar uma interpretação quantitativa sobre os relatórios coletados que foram apresentados na seção do "Programa de Fiscalização de Entes Federativos", este trabalho utiliza a base da dados SentiLex para definição de polaridade de cada uma das palavras presentes no relatório e, assim, criação de uma métrica para modelagem.
+Para realizar uma interpretação quantitativa sobre os relatórios coletados que foram apresentados na seção do "Programa de Fiscalização de Entes Federativos", este trabalho utiliza a base da dados SentiLex para definição de polaridade de cada uma das palavras presentes nos relatórios e, assim, criação de uma métrica para modelagem.
 
 Foi criado um código que realiza o reconhecimento de caracteres do documento pdf onde, iterativamente utilizando regras para separadores de palavras, se concatenou caracter a caracter formando as palavras do relatório pdf. Devido a problemas enfrentados com respeito à diferentes tipos de codificação (encoding, e.g., UTF-8) dos relatórios utilizados, foi necessário a utilização da biblioteca externa em python PDF Miner (\citet{PDFMiner}) para extração das palavras. Assim, a construção de tal métrica se deu pela criação de um código em python que realiza o reconhecimento das palavras presentes em documentos pdf, pode-se sumarizar as etapas do processo pelos seguintes passos:
 
 \begin{enumerate}
-	\item Iterativamente executa o código da biblioteca externa para cada relatório de auditoria listado na seção "Programas de Entes Federativos" (\ref{sec:programa_de_fiscalizacao_em_entes_federativos})
-	\item Sobre o texto de cada relatório remove acentuação, caracteres de parada e transforma todos os caracteres em minúsculo
+	\item Iterativamente executa o código da biblioteca externa (PDF Miner) para cada relatório de auditoria listado na seção "Programas de Entes Federativos" (\ref{sec:programa_de_fiscalizacao_em_entes_federativos})
+	\item Sobre o texto de cada relatório remove acentuação e transforma todos os caracteres em minúsculo
 	\item Calcula a frequência das palavras dentro de seu respectivo documento
 	\item Utilizando a base de dados SentiLex (extraída por meio da criação de um código em python), apresentada na seção "SentiLex" (\ref{sec:sentilex}), define a polaridade da palavra em positiva, negativa ou neutra
-	\item Realiza um agrupamento sobre o produto dos passos anteriores sumarizando a frequência relativa calculada sob as polaridades definidas, i.e., o resultado é um arquivo em formato CSV com as seguintes colunas: nome do relatório, quantidade de palavras, percentual de polaridade negativa, percentual de polaridade positiva, percentual de polaridade neutra e percentual de polaridade (e palavra) não encontrada
+	\item Realiza um agrupamento sobre o produto dos passos anteriores sumarizando a frequência relativa calculada sob as polaridades definidas, i.e., o resultado é um arquivo em formato CSV com as seguintes colunas: nome do relatório, quantidade de palavras, percentual de polaridade negativa, percentual de polaridade positiva, percentual de polaridade neutra e percentual de polaridade (ou, nesse sentido, palavra) não encontrada
 \end{enumerate}
 
-Para o item 5 do processo acima, foram calculados a mediana, o mínimo, o máximo e o desvio-padrão dos percentuais de polaridade e estão exibidos em \ref{tab:cap2_analise_descritiva}.
+Para o item 5 do processo acima, foram calculados a mediana, o mínimo, o máximo e o desvio-padrão dos percentuais de polaridade e se encontram em \ref{tab:cap2_analise_descritiva}.
 
 Os códigos citados no parágrafo anterior foram escritos na linguagem de programação Python utilizando a ferramenta Notebook Jupyter e se encontram nos anexos \ref{ape:sentilex_database} e \ref{ape:create_target_feature}, respectivamente.
 
@@ -147,7 +145,7 @@ O código para criação das variáveis citadas nesta seção foi escrito na lin
 \section{Criação da base para modelagem}
 \label{sec:criacao_da_base_para_modelagem}
 
-Utilizando como chave estrangeira a informação de munício e estado, realizou-se - por meio do código em python no anexo \ref{ape:data_processing_raw_dataset} - a união das informações citadas nas seções "Variável Resposta" (\ref{sec:variavel_resposta}) e "Variáveis Explicativas" (\ref{sec:variaveis_explicativas}) e, assim, foram obtidas as bases para modelagem do problema proposto neste trabalho. Por meio do método de amostragem aleatória selecionou-se setenta e cinco por cento da base gerada para desenvolvimento do modelo e vinte e cinco por cento para validação do desempenho do modelo, foi-se utilizado o método de validação validação cruzada descrita em \citet{Kohavi1995} (amplamente aplicado em diversos trabalhos, tais como em \citet{Wesllen2017:MSc}).
+Utilizando como chave estrangeira a informação de munício e estado, realizou-se - por meio do código em python no anexo \ref{ape:data_processing_raw_dataset} - a união das informações citadas nas seções "Variável Resposta" (\ref{sec:variavel_resposta}) e "Variáveis Explicativas" (\ref{sec:variaveis_explicativas}) e, assim, foram obtidas as bases para modelagem do problema proposto neste trabalho. Por meio do método de amostragem aleatória selecionou-se setenta e cinco por cento da base gerada para desenvolvimento do modelo e vinte e cinco por cento para validação do desempenho do modelo, foi-se utilizado o método de validação cruzada descrita em \citet{Kohavi1995} (amplamente aplicado em diversos trabalhos, tais como em \citet{Wesllen2017:MSc}).
 
 O código desenvolvido para criação das bases de desenvolvimento e validação citadas no parágrafo anterior foi escrito na linguagem de programação Python utilizando a ferramenta Notebook Jupyter e se encontra no anexo \ref{ape:data_processing_training_validation_dataset}.
 

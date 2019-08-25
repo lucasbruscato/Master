@@ -1,12 +1,11 @@
 
-
 banca:
 	- Florencia Leonardi
-	- Marcos Yamada Nakaguma (ex professor FEA-USP, se não me engano agora está na PUC/Mackenzie), posso pedir que ele seja parte da banca?
-	- ?
+	- Marcos Yamada Nakaguma (ex professor FEA-USP, se não me engano agora está na PUC/Mackenzie) * definir em Novembro de 2019
+	- * definir em Novembro de 2019
 
-data para indicação da banca: pode ser a mesma data do depósito? qual a regra ou como usualmente é feito?
-data para depósito: segunda-feira, 16 de Dezembro de 2019, pode ser ou qual a regra ou como usualmente é feito?
+data para indicação da banca: * definir em Novembro de 2019
+data para depósito: segunda-feira, 16 de Dezembro de 2019
 data para defesa: terça-feira, 18 de Fevereiro de 2020 (lembrete: na sexta-feira da referida semana será a sexta-feira de Carnaval)
 
 * verificar argumentos contra e a favor tf-idf (boa metodologia mas nao vou usar e explicarei na dissertacao) [FEITO]
@@ -25,9 +24,10 @@ data para defesa: terça-feira, 18 de Fevereiro de 2020 (lembrete: na sexta-feir
 	deixar claro quantidade de relatórios utilizados [FEITO]
 	adicionar seção com informação prova brasil [FEITO]
 	apresentar porcentagem de palavras encontradas no sentilex e polaridades por relatório [FEITO]
-* voltando das férias, revisar tudo realizado anteriormente e enviar para Florencia [EM ANDAMENTO]
-* apresentar para Florência novamente e depois seguir para modelagem
+* voltando das férias, revisar tudo realizado anteriormente e enviar para Florencia [FEITO]
+* apresentar para Florência novamente e depois seguir para modelagem [EM ANDAMENTO]
 * adicionar análise descritiva das variáveis explicativas com relação à variável resposta
+* realizar modelagem com regressao linear, xgboost e random forest
 * em modelagem, na medição da assertividade do modelo adicionar banda de acerto
 
 FAZER EM NOVEMBRO/2019:
@@ -35,6 +35,7 @@ FAZER EM NOVEMBRO/2019:
 * adicionar agradecimentos
 * adicionar resumo e abstract
 * arrumar pontuação (algum problema no LATEX)
+* arrumar qualquer outro problema de layout
 
 
 
