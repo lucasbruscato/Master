@@ -32,7 +32,15 @@ Além do Randomized Search ser a melhor opção por sua eficiência, existe a mo
 \section{Shapley Value}
 \label{sec:shapley_value}
 
-(?).
+O Shapley Value é um conceito de solução na teoria dos jogos cooperativos, foi nomeado em homenagem a Lloyd Shapley que o definiu inicialmente (ref.). 
+
+Em um cenário de jogos cooperativos onde, para cada jogo cooperativo, atribui-se uma distribuição única (entre os jogadores) de um excedente total gerado pelo grupo de todos os jogadores, o Shapley Value é caracterizado como uma coleção de propriedades para explicação da proveniência de cada parte desse excedente total.
+
+A configuração é da seguinte forma: um grupo de jogadores coopera e obtém um certo ganho geral com essa cooperação. Como alguns jogadores podem contribuir mais para o grupo do que outros, ou podem ter um poder de barganha diferente, qual a importância de cada jogador para a cooperação geral e que recompensa ele pode razoavelmente esperar? Esta pergunta é uma das motivações para criação do Shapley Value, i.e., explicar essa importância individual e a recompensa esperada.
+
+O paralelo da explicação acima à explicação do algoritmo em aprendizado de máquina (ref.) seria de que os jogadores são as variáveis explicativas, o ganho geral obtido por cada jogador é o impacto na predição do modelo e a importância individual seria a importância da variável explicativa no modelo. A importância das variáveis explicativas em modelos de aprendizado de máquina é uma informação amplamente discutida (ref.), uma vez que existem diferentes formas de serem calculadas, sendo que a ordenação da importância das variáveis podem ser diferentes de um método para outro gerando discussão sobre a escolha do melhor método a ser utilizado (ref.).
+
+O Shapley Value vem sendo considerado uma das formas mais robustas e consistentes de se avaliar a importância das variáveis explicativas (ref.), ele será utilizado neste trabalho tanto para ordenação da importância das variáveis quanto para interpretação do valor das variáveis explicativas. Foi-se utilizada a implementação deste método proveniente do pacote em Python SHAP (ref.).
 
 \section{Regressão Linear}
 \label{sec:regressao_linear}
