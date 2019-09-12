@@ -8,27 +8,20 @@ data para indicação da banca: * definir em Novembro de 2019
 data para depósito: segunda-feira, 16 de Dezembro de 2019
 data para defesa: terça-feira, 18 de Fevereiro de 2020 (lembrete: na sexta-feira da referida semana será a sexta-feira de Carnaval)
 
-* verificar argumentos contra e a favor tf-idf (boa metodologia mas nao vou usar e explicarei na dissertacao) [FEITO]
-* verificar dados do prova brasil (acredito ser possível capturar a de nota do enem por município) [FEITO]
-	ref: http://provabrasil.inep.gov.br/microdados
-* verificar dados do data sus (quase todas as páginas fora do ar) [FEITO]
-* verificar dados do ipeadata (excelente fonte de dados, mas nao para municipios) [FEITO]
-* verificar forma de estudo de dados em painel (dados longitudinais) [FEITO]
-* agregar dados encontrados nas verificações de dados acima [FEITO]
-* renomear variaveis que estavam parcialmente em português para inglês [FEITO]
-* criar análise descritiva (graficos duas a duas da var explicativa com resposta) [FEITO]
-* alterar gráficos de comparação de modelos para mesma escala (realizar posteriormente quando terminar modelagem) [FEITO]
-* arrumar no relatório:
-	comentários adicionados por Florência [FEITO]
-	adicionar explicação tf-idf [FEITO]
-	deixar claro quantidade de relatórios utilizados [FEITO]
-	adicionar seção com informação prova brasil [FEITO]
-	apresentar porcentagem de palavras encontradas no sentilex e polaridades por relatório [FEITO]
-* voltando das férias, revisar tudo realizado anteriormente e enviar para Florencia [FEITO]
-* apresentar para Florência novamente e depois seguir para modelagem [EM ANDAMENTO]
-* adicionar análise descritiva das variáveis explicativas com relação à variável resposta
-* realizar modelagem com regressao linear, xgboost e random forest
-* em modelagem, na medição da assertividade do modelo adicionar banda de acerto
+* apresentar para Florência novamente e depois seguir para modelagem [FEITO]
+* adicionar análise descritiva das variáveis explicativas com relação à variável resposta [FEITO]
+* realizar modelagem com regressao linear, xgboost e random forest [FEITO]
+* em modelagem, na medição da assertividade do modelo adicionar banda de acerto [FEITO]
+* escrever introducao modelagem [FEITO]
+* escrever analise descritiva [FEITO]
+* escrever sobre randomized search [FEITO]
+* escrever shapley values [FEITO]
+* escrever metricas de avaliacao de desempenho [FEITO]
+* escrever regressao linear [FEITO]
+* escrever random forest [EM ANDAMENTO]
+* escrever xgboost
+* revisar tudo e enviar para Florencia
+* conversar novamente com Florência e seguir para próximos passos
 
 FAZER EM NOVEMBRO/2019:
 * extrair todos os códigos python de novo e atualizar os arquivos dos apendices
@@ -36,6 +29,60 @@ FAZER EM NOVEMBRO/2019:
 * adicionar resumo e abstract
 * arrumar pontuação (algum problema no LATEX)
 * arrumar qualquer outro problema de layout
+
+
+
+=== lembretes ===
+
+botar todo o código pra dentro do overleaf
+fazer mapa no python com médias de polaridade por estado e adicionar em analise descritiva
+
+
+
+
+
+
+
+
+
+=== roadmap ===
+
+capítulo 1 - introdução
+	- motivação
+	- objetivo
+	- contribuições
+	- estrutura do projeto
+
+capítulo 2 - contexto
+	- programa entes federativos
+	- sentilex
+	- variavel resposta
+	- censo ibge
+	- enem (inep)
+	- variaveis explicativas
+	- criacao base para modelagem
+
+capítulo 3 - modelagem
+	- 1 modo comparativo
+	- outras formas
+
+capítulo 4 - outras tentativas
+
+capítulo 5 - conclusão
+
+
+
+jupyter nbconvert --to markdown test.ipynb
+pandoc --listings -f markdown -t latex test.md -o test.tex
+
+
+@misc{bworld,
+  author = {Ingo Lütkebohle},
+  title = {{BWorld Robot Control Software}},
+  howpublished = "\url{http://aiweb.techfak.uni-bielefeld.de/content/bworld-robot-control-software/}",
+  year = {2008}, 
+  note = "[Online; accessed 19-July-2008]"
+}
 
 
 

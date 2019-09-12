@@ -45,7 +45,7 @@ O Shapley Value vem sendo considerado uma das formas mais robustas e consistente
 \section{Métricas para avaliação de desempenho}
 \label{sec:metricas_avaliacao}
 
-Neste trabalho serão utilizadas duas métricas para avaliação de desempenho, a raiz do erro quadrático médio e as bandas de acerto.
+Neste trabalho serão utilizadas duas métricas para avaliação de desempenho, a raiz do erro quadrático médio e a banda de acerto.
 
 A raiz do erro quadrático médio (do inglês root mean squared error, RMSE) é uma medida frequentemente usada das diferenças entre os valores previstos por um modelo ou estimador e os valores observados. O RMSE representa a raiz quadrada da média quadrática das diferenças entre os valores previstos e os valores observados. Esses desvios são chamados de resíduos quando os cálculos são realizados sobre a amostra de dados usada para estimativa e são chamados de erros (ou erros de previsão) quando calculados fora da amostra. O RMSE é uma medida de precisão, para comparar erros de previsão de diferentes modelos para um conjunto de dados específico e não entre conjuntos de dados, pois depende da escala.
 
@@ -122,15 +122,11 @@ O modelo de regressão linear é relativamente simples e de fácil interpretabil
 
 As estimativas para os parâmetros deste modelo podem ser encontradas em \ref{tab:cap3_estimativa_reg_lin}. Em alguns casos nota-se que houve inversão de estimativas com relação ao esperado, como exemplo de tal inversão temos os gráficos de dispersão das variáveis explicativas "enem_var_01_enem_score_mean_pct" e "enem_var_01_enem_score_median_pct" (presentes em \ref{ape:cap2_scatter_plot}). Tais gráficos mostram uma dispersão de valores muito próxima entre das duas variáveis, conceitualmente espera-se que a relação com a variável resposta seja semelhante, porém as estimativas são estritamente opostas assumindo os valores 0.33489 e -0.34682, respectivamente.
 
-RMSE training: 0.0484
-RMSE validation: 0.0628
-RMSE validation random model: 0.1868
+O desempenho do modelo será avaliado, conforme mencionado anteriormente, utilizando-se as medidas RMSE e bandas de acerto. Na tabela \ref{tab:cap3_rmse_reg_lin} apresenta-se o RMSE sobre a base de treinamento ("Treino"), sobre a base de validação ("Validação") e o RMSE calculado sobre a base de validação utilizando-se um modelo aleatório ("Validação (modelo aleatório)"). O modelo aleatório apresenta um número aleatório que esteja entre o mínimo e o máximo observado na validação, foi criado apenas para critério de comparação com o modelo de regressão linear. Nota-se um erro estritamente superior do modelo aleatório sobre o erro da regressão linear, o que implica na possibilidade da previsão da variável resposta utilizando-se das variáveis explicativas existentes.
 
-BANDS training (underestimate | well | overestimate): 0.0643 | 0.8095 | 0.1262
-BANDS validation (underestimate | well | overestimate): 0.1286 | 0.6928 | 0.1786
-BANDS validation random model (underestimate | well | overestimate): 0.4357 | 0.1857 | 0.3786
+Na tabela \ref{tab:cap3_band_reg_lin} apresenta-se a banda de acerto sobre a base de treinamento ("Treino"), sobre a base de validação ("Validação") e a banda de acerto calculada sobre a base de validação utilizando-se um modelo aleatório ("Validação (modelo aleatório)"). Nota-se que a regressão linear teve a maior concentração em "Bem Estimado" com quase 70\% na validação, e 80\% no treino.
 
-< img aqui >
+No gráfico \ref{ape:cap3_01_scatter_reg_lin} nota-se, apesar de suave, uma relação de linearidade entre os valores preditos (eixo das ordenadas) e os valores observados (eixo das abscissas) em ambas bases de dados (treino e validação).
 
 \section{Random Forest}
 \label{sec:random_forest}
