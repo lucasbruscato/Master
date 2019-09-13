@@ -34,7 +34,8 @@ FAZER EM NOVEMBRO/2019:
 
 === lembretes ===
 
-botar todo o código pra dentro do overleaf
+escrever random forest
+escrever xgboost
 fazer mapa no python com médias de polaridade por estado e adicionar em analise descritiva
 
 
@@ -45,31 +46,7 @@ fazer mapa no python com médias de polaridade por estado e adicionar em analise
 
 
 
-=== roadmap ===
-
-capítulo 1 - introdução
-	- motivação
-	- objetivo
-	- contribuições
-	- estrutura do projeto
-
-capítulo 2 - contexto
-	- programa entes federativos
-	- sentilex
-	- variavel resposta
-	- censo ibge
-	- enem (inep)
-	- variaveis explicativas
-	- criacao base para modelagem
-
-capítulo 3 - modelagem
-	- 1 modo comparativo
-	- outras formas
-
-capítulo 4 - outras tentativas
-
-capítulo 5 - conclusão
-
+=== aux ===
 
 
 jupyter nbconvert --to markdown test.ipynb
@@ -83,6 +60,3 @@ pandoc --listings -f markdown -t latex test.md -o test.tex
   year = {2008}, 
   note = "[Online; accessed 19-July-2008]"
 }
-
-
-
