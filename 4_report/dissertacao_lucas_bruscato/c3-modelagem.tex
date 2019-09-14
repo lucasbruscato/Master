@@ -82,7 +82,7 @@ A regressão linear foi o primeiro tipo de análise de regressão a ser estudada
 
 A regressão linear tem muitos usos práticos, o utilizado neste trabalho é o de previsão. A regressão linear pode ser usada para ajustar um modelo preditivo a um conjunto de dados observado de valores da resposta e variáveis ​​explicativas. Depois de desenvolver esse modelo, se valores adicionais das variáveis ​​explicativas forem coletados sem um valor de resposta definido, o modelo ajustado pode ser usado para fazer uma previsão da resposta.
 
-Os modelos de regressão linear geralmente são ajustados usando a abordagem de mínimos quadrados, mas também podem ser ajustados de outras maneiras como minimizando uma versão penalizada da função custo de mínimos quadrados como na regressão de Ridge (penalidade de norma L2) e LASSO (penalidade de norma L1), mais informações de como funcionam tais técnicas de penalidade em (ref.) e (ref.), respectivamente.
+Os modelos de regressão linear geralmente são ajustados usando a abordagem de mínimos quadrados, mas também podem ser ajustados de outras maneiras como minimizando uma versão penalizada da função custo de mínimos quadrados como na regressão de Ridge (penalidade de norma L2) e LASSO (penalidade de norma L1), mais informações de como funcionam tais técnicas de penalidade ver \citet{SantosaAndSymes1986} e \citet{Tibshirani1996}.
 
 Dado um conjunto de dados $ {\displaystyle \{y_{i},\,x_{i1},\ldots ,x_{ip}\}_{i=1}^{n}} $ de dimensão n, um modelo de regressão linear pressupõe que a relação entre a variável dependente $ y $ e o vetor de regressores $ x $ é linear. Essa relação é modelada através de uma variável de erro $ \varepsilon $ - uma variável aleatória não observada que adiciona "ruído" à relação linear entre a variável dependente e os regressores. Assim, o modelo assume a forma:
 
@@ -114,7 +114,7 @@ Sendo que as terminologias são:
 	\item $ \varepsilon $ é um vetor de valores $ \varepsilon_{i} $. Essa parte do modelo é chamada de termo de erro ou, as vezes, ruído. Essa variável captura todos os outros fatores que influenciam a variável dependente $ y $, exceto os regressores $ x $. A relação entre o termo de erro e os regressores, por exemplo, sua correlação, é uma consideração crucial na formulação de um modelo de regressão linear, pois determinará o método de estimativa apropriado.
 \end{itemize}
 
-Uma explicação mais detalhada sobre como a regressão linear estima seus parâmetros pode ser encontrada em (ref.).
+Uma explicação mais detalhada sobre como a regressão linear estima seus parâmetros pode ser encontrada em \citet{Freedman2009}.
 
 Neste trabalho, o treinamento da regressão linear foi feito utilizando-se a biblioteca em Python scikit-learn (\citet{Sklearn}) que é uma das bibliotecas mais utilizadas para treinamento de modelos de aprendizado de máquina na linguagem de programação Python.
 
