@@ -74,7 +74,7 @@ A banda de acerto é uma medida para avaliar a distribuição dos erros de predi
 \section{Regressão Linear}
 \label{sec:regressao_linear}
 
-A regressão linear é uma abordagem para modelar a relação entre uma variável resposta (ou variável dependente) e uma ou mais variáveis ​​explicativas (ou variáveis ​​independentes). É chamado de regressão linear simples quando se usa apenas uma variável explicativa, e regressão linear múltipla quando se usa mais de uma variável explicativa. Neste trabalho utilizaremos a regressão linear múltipla.
+A regressão linear é uma abordagem para modelar a relação entre uma variável resposta (ou variável dependente) contínua e uma ou mais variáveis ​​explicativas (ou variáveis ​​independentes). É chamado de regressão linear simples quando se usa apenas uma variável explicativa, e regressão linear múltipla quando se usa mais de uma variável explicativa. Neste trabalho utilizaremos a regressão linear múltipla.
 
 Os relacionamentos são modelados usando funções preditivas lineares cujos parâmetros desconhecidos do modelo são estimados a partir dos dados. Mais comumente, assume-se que a média condicional da resposta, dados os valores das variáveis ​​explicativas (ou preditores), seja uma função afim desses valores (função afim também é conhecida como transformação linear ($ Ax $) seguida por uma translação ($ +b $)). Como todas as formas de análise de regressão, a regressão linear se concentra na distribuição de probabilidade condicional da resposta, dados os valores dos preditores, e não na distribuição de probabilidade conjunta de todas essas variáveis.
 
@@ -131,7 +131,65 @@ No gráfico \ref{ape:cap3_scatter_reg_lin} nota-se, apesar de suave, uma relaç�
 \section{Random Forest}
 \label{sec:random_forest}
 
-(?).
+O Random Forest é um método de aprendizado de máquina para classificação e regressão que opera construindo várias árvores de decisão (classificação) ou árvores de regressão (regressão), sendo que a predição de tal método é dada pela moda dos valores preditos em cada árvore, no caso da classificação, ou é dada pela média dos valores preditos em cada árvore, no caso de regressão. A forma de seleção aleatória das árvores reduz a incidência de overfitting no treino sobre a base de treinamento.
+
+O Random Forest foi criado por Tin Kam Ho em (ref.) usando o método do subespaço aleatório, que, na formulação de Ho, é uma maneira de implementar a abordagem de "discriminação estocástica" à classificação proposta por Eugene Kleinberg (ver ref.).
+
+O algoritmo é primordialmente baseado em árvores de decisão que é um método popular para várias tarefas de aprendizado de máquina. A árvore de decisão atende aos requisitos para servir como um procedimento de prateleira para mineração de dados, porque é invariável à escala e transformações em variáveis explicativas, é robusto para inclusão de variáveis irrelevantes e seu resultado, na maioria das vezes, é interpretável.
+
+Em particular, árvores muito profundas tendem a aprender padrões altamente irregulares: elas superestimam seus conjuntos de treinamento, ou seja, têm um viés baixo, mas uma variação muito alta (comumente conhecido como bias-variance tradeoff). O Random Forest é uma maneira de calcular a média de várias árvores de decisão, treinadas em diferentes partes do mesmo conjunto de treinamento, com o objetivo de reduzir a variação. Isso ocorre às custas de um pequeno aumento no viés e perda de interpretabilidade - uma vez que são criadas diversas árvores -, mas geralmente se aumenta muito o desempenho no modelo final.
+
+O algoritmo de treinamento para o Random Forest aplica a técnica geral de agregação de bootstrap conhecido como Bagging. Dado um conjunto de treinamento $ {\displaystyle X = x_{1},\ldots ,x_{n}} $ com respostas $ {\displaystyle Y = y_{1},\ldots ,y_{n}} $, selecionados repetidamente $ B $ vezes, seleciona-se uma amostra aleatória com repetição do conjunto de treinamento e se realiza o treinamento das árvores a essas amostras:
+
+
+
+
+
+For b = 1, ..., B:
+
+Sample, with replacement, n training examples from X, Y; call these Xb, Yb.
+Train a classification or regression tree fb on Xb, Yb.
+After training, predictions for unseen samples x' can be made by averaging the predictions from all the individual regression trees on x':
+
+{\displaystyle {\hat {f}}={\frac {1}{B}}\sum _{b=1}^{B}f_{b}(x')}
+
+or by taking the majority vote in the case of classification trees.
+
+This bootstrapping procedure leads to better model performance because it decreases the variance of the model, without increasing the bias. This means that while the predictions of a single tree are highly sensitive to noise in its training set, the average of many trees is not, as long as the trees are not correlated. Simply training many trees on a single training set would give strongly correlated trees (or even the same tree many times, if the training algorithm is deterministic); bootstrap sampling is a way of de-correlating the trees by showing them different training sets.
+
+The above procedure describes the original bagging algorithm for trees. Random forests differ in only one way from this general scheme: they use a modified tree learning algorithm that selects, at each candidate split in the learning process, a random subset of the features. This process is sometimes called "feature bagging". The reason for doing this is the correlation of the trees in an ordinary bootstrap sample: if one or a few features are very strong predictors for the response variable (target output), these features will be selected in many of the B trees, causing them to become correlated. An analysis of how bagging and random subspace projection contribute to accuracy gains under different conditions is given by Ho.[14]
+
+Typically, for a classification problem with p features, √p (rounded down) features are used in each split.[3]:592 For regression problems the inventors recommend p/3 (rounded down) with a minimum node size of 5 as the default.[3]:592. In practice the best values for these parameters will depend on the problem, and they should be treated as tuning parameters[3]:592.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 \section{XGBoost}
 \label{sec:xgboost}
