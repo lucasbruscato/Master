@@ -11,10 +11,7 @@ Os métodos de aprendizado de máquina utilizados foram a Regressão Linear, o R
 
 A análise descritiva consiste em explorar dados utilizados para a modelagem com o intuito de encontrar a existência, ou não, de uma relação causal entre as variáveis explicativas e a variável resposta. Neste trabalho já foram apresentadas algumas análises descritivas no capítulo \ref{cap:contexto}, como, por exemplo, as estatísticas dos percentuais de polaridade obtidos da variável resposta.
 
-Foram utilizadas 52 variáveis explicativas neste trabalho, assim, foi realizado uma verificação em cada uma das variáveis utilizando-se gráficos de dispersão. Nestes gráficos de dispersão, os valores observados para a variável explicativa estão dispostos no eixo das ordenadas e os valores observados para a variável resposta estão dispostos no eixo das abscissas. Como exemplo, abaixo está o gráfico de dispersão da variável \verb|'family_var_01_inappropriate_pct'| (que se trata do percentual de domicílios particulares permanentes em situação inadequada por município em 2000 dividido pela mesma informação em 2010), nota-se uma relação linear positiva média entre a variável explicativa e a variável resposta. Os gráficos de dispersão de todas as variáveis explicativas se encontram no anexo \ref{ape:cap3_scatter_plot}.
-
-\graphicspath{ {./figuras/two_by_two_scatter_plot/} }
-\includegraphics{04_family_var_01_inappropriate_pct}
+Foram utilizadas 52 variáveis explicativas neste trabalho, assim, foi realizado uma verificação em cada uma das variáveis utilizando-se gráficos de dispersão. Nestes gráficos de dispersão, os valores observados para a variável explicativa estão dispostos no eixo das ordenadas e os valores observados para a variável resposta estão dispostos no eixo das abscissas. Como exemplo, o gráfico de dispersão - que se encontra no anexo \ref{ape:cap3_scatter_plot} - da variável \verb|'family_var_01_inappropriate_pct'| (que se trata do percentual de domicílios particulares permanentes em situação inadequada por município em 2000 dividido pela mesma informação em 2010), nota-se uma relação linear positiva média entre a variável explicativa e a variável resposta. Os gráficos de dispersão de todas as variáveis explicativas se encontram no anexo \ref{ape:cap3_scatter_plot}.
 
 O código citado no parágrafo anterior foi escrito na linguagem de programação Python utilizando a ferramenta Notebook Jupyter e se encontra no anexo \ref{ape:model_visualization}.
 
@@ -32,7 +29,7 @@ Além do Randomized Search ser a melhor opção por sua eficiência, existe a mo
 \section{Shapley Value}
 \label{sec:shapley_value}
 
-O Shapley Value é um conceito de solução na teoria dos jogos cooperativos, foi nomeado em homenagem a Lloyd Shapley que o definiu inicialmente (ver \citet{Shapley1953}).
+O Shapley Value é uma proposta de solução na teoria dos jogos cooperativos, foi nomeado em homenagem a Lloyd Shapley que o definiu inicialmente (ver \citet{Shapley1953}).
 
 Em um cenário de jogos cooperativos onde, para cada jogo cooperativo, atribui-se uma distribuição única (entre os jogadores) de um excedente total gerado pelo grupo de todos os jogadores, o Shapley Value é caracterizado como uma coleção de propriedades para explicação da proveniência de cada parte desse excedente total.
 
@@ -133,7 +130,7 @@ No gráfico \ref{ape:cap3_scatter_reg_lin} nota-se, apesar de suave, uma relaç�
 
 O Random Forest é um método de aprendizado de máquina para classificação e regressão que opera construindo várias árvores de decisão (classificação) ou árvores de regressão (regressão), sendo que a predição de tal método é dada pela moda dos valores preditos em cada árvore, no caso da classificação, ou é dada pela média dos valores preditos em cada árvore, no caso de regressão. A forma de seleção aleatória das árvores reduz a incidência de overfitting no treino sobre a base de treinamento.
 
-O Random Forest foi criado por Tin Kam Ho em (ref.) usando o método do subespaço aleatório, que, na formulação de Ho, é uma maneira de implementar a abordagem de "discriminação estocástica" à classificação proposta por Eugene Kleinberg (ver ref.).
+O Random Forest foi criado por Tin Kam Ho em \citet{Ho1995} usando o método do subespaço aleatório, que, na formulação de Ho, é uma maneira de implementar a abordagem de "discriminação estocástica" à classificação proposta por Eugene Kleinberg (ver \citet{Kleinberg1990}).
 
 O algoritmo é primordialmente baseado em árvores de decisão que é um método popular para várias tarefas de aprendizado de máquina. A árvore de decisão atende aos requisitos para servir como um procedimento de prateleira para mineração de dados, porque é invariável à escala e transformações em variáveis explicativas, é robusto para inclusão de variáveis irrelevantes e seu resultado, na maioria das vezes, é interpretável.
 
@@ -150,7 +147,9 @@ Para $ b = 1, ..., B $ :
 
 Após o treinamento, predições para amostras não vistas $ x' $ podem ser feitas calculando a média das predições de todas as árvores de regressão individuais em $ x' $:
 
+\begin{equation}
 {\displaystyle {\hat {f}}={\frac {1}{B}}\sum _{b=1}^{B}f_{b}(x')}
+\end{equation}
 
 Ou, no caso de árvores de classificação, utilizando-se o voto da maioria.
 
@@ -163,16 +162,18 @@ Geralmente utiliza-se, para um problema de classificação com $ p $ variáveis 
 Neste trabalho, o treinamento do random forest foi feito utilizando-se a biblioteca em Python scikit-learn (\citet{Sklearn}) na linguagem de programação Python. O treinamento utilizou-se da metodologia explicada na seção \ref{sec:randomized_search} e os hiperparâmetros testados foram:
 
 \begin{itemize}
-	\item \verb|max_depth|: 
-	\item \verb|max_features|: 
-	\item \verb|min_samples_split|: 
-	\item \verb|min_samples_leaf|: 
-	\item \verb|n_estimators|: 
-	\item \verb|bootstrap|: 
-	\item \verb|criterion|: 
+	\item \verb|max_depth|: A profundidade máxima da árvore.
+	\item \verb|max_features|: O número de variáveis explicativas a serem consideradas ao procurar a melhor divisão da árvore.
+	\item \verb|min_samples_split|: O número mínimo de amostras necessárias para se dividir um nó da árvore.
+	\item \verb|min_samples_leaf|: O número mínimo de amostras necessárias para se deixar em uma folha da árvore.
+	\item \verb|n_estimators|: O número de árvores na floresta.
+	\item \verb|bootstrap|: Se amostras de bootstrap são usadas na construção das árvores.
+	\item \verb|criterion|: A função a ser usada para medir a qualidade da divisão da árvore (erro quadrático médio, erro absoluto médio, etc.).
 \end{itemize}
 
-Sendo que o número de árvores (ou iterações) a serem testadas foi de 300 (na explicação acima seria o parâmetro $ B $) com um método de validação cruzada 5-fold (\citet{Kohavi1995}). Por fim, o modelo final após a otimização do Randomized Search possui os hiperparâmetros apresentados na tabela \ref{tab:cap3_parametros_random_forest}. 
+Sendo que o número de árvores (ou iterações) a serem testadas foi de 300 (na explicação acima seria o parâmetro $ B $) com um método de validação cruzada 5-fold (\citet{Kohavi1995}). Por fim, o modelo final após a otimização do Randomized Search possui os hiperparâmetros apresentados na tabela \ref{tab:cap3_parametros_random_forest}.
+
+O modelo Random Forest não é de fácil interpretabilidade, apesar de ser possível ver e analisar a estrutura de cada uma das árvores separadamente que compõem o mesmo, não é direta a interpretação de como foi feita a predição dos valores por tal algoritmo. Assim, uma forma de interpretar como cada variável afeta o modelo e avaliar a importância de cada uma delas, utilizamos o método de Shapley Values (descrito na seção \ref{sec:shapley_value}) e o gráfico com cada uma das variáveis pode ser encontrado no apêndice \ref{ape:cap3_shap_random_forest}. Sobre o gráfico, as variáveis apresentadas à esquerda estão ordenadas de forma decrescente em nível de importância no modelo, no eixo das ordenadas se apresentam os valores de Shapley Values - que pode ser lido como a influência no valor de predição do modelo, tanto positivo quanto negativo -, e as cores como o valor da variável explicativa propriamente dita, sendo vermelho o maior valor possível e azul o menor valor possível para a variável em questão. Então, no caso da variável \verb|fertility_var_01_children_born_pct| - que se trata do percentual de crianças nascidas por município em 2000 dividido pela mesma informação em 2010 -, a interpretação se dá na forma de que quanto menor o valor de tal variável, mais positiva será a influência sobre a predição de polaridade negativa no relatório do município em questão.
 
 Assim como a regressão linear, o desempenho do modelo foi avaliado utilizando-se as medidas RMSE e bandas de acerto. Na tabela \ref{tab:cap3_rmse_random_forest} apresenta-se o RMSE sobre a base de treinamento ("Treino"), sobre a base de validação ("Validação") e o RMSE calculado sobre a base de validação utilizando-se um modelo aleatório ("Validação (modelo aleatório)"). O modelo aleatório apresenta um número aleatório que esteja entre o mínimo e o máximo observado na validação, foi criado apenas para critério de comparação com o modelo Random Forest. Nota-se um erro estritamente superior do modelo aleatório sobre o erro do Random Forest.
 
@@ -180,39 +181,21 @@ Na tabela \ref{tab:cap3_band_random_forest} apresenta-se a banda de acerto sobre
 
 No gráfico \ref{ape:cap3_scatter_random_forest} nota-se, apesar de suave, uma relação de linearidade entre os valores preditos (eixo das ordenadas) e os valores observados (eixo das abscissas) em ambas bases de dados (treino e validação).
 
-
-
-
-
-
-O modelo Random Forest não possui uma fácil interpretabilidade, apesar de ser possível ver e analisar a estrutura de cada uma das árvores que compõe o mesmo, não é direta a interpretação de como foi feita a predição dos valores por tal algoritmo. Assim, uma forma 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 \section{XGBoost}
 \label{sec:xgboost}
 
 (?).
+
+
+
+
+
+
+
+
+
+
+
+
 
 %% ------------------------------------------------------------------------- %%
