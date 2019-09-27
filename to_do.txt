@@ -18,24 +18,22 @@ data para defesa: terça-feira, 18 de Fevereiro de 2020 (lembrete: na sexta-feir
 * escrever shapley values [FEITO]
 * escrever metricas de avaliacao de desempenho [FEITO]
 * escrever regressao linear [FEITO]
-* escrever random forest [EM ANDAMENTO]
-* escrever xgboost
-* revisar tudo e enviar para Florencia
+* escrever random forest [FEITO]
+* escrever xgboost [FEITO]
+* revisar tudo e enviar para Florencia [EM ANDAMENTO]
 * conversar novamente com Florência e seguir para próximos passos
 
 FAZER EM NOVEMBRO/2019:
-* extrair todos os códigos python de novo e atualizar os arquivos dos apendices
 * adicionar agradecimentos
 * adicionar resumo e abstract
 * arrumar pontuação (algum problema no LATEX)
 * arrumar qualquer outro problema de layout
+* extrair todos os códigos python de novo e atualizar os arquivos dos apendices
 
 
 
 === lembretes ===
 
-escrever random forest
-escrever xgboost
 fazer mapa no python com médias de polaridade por estado e adicionar em analise descritiva
 
 
