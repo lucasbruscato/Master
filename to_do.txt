@@ -24,7 +24,6 @@ data para defesa: terça-feira, 18 de Fevereiro de 2020 (lembrete: na sexta-feir
 * conversar novamente com Florência e seguir para próximos passos
 
 FAZER EM NOVEMBRO/2019:
-* adicionar conclusao
 * arrumar pontuação, arrumar qualquer outro problema de layout e remover seção de figuras?!
 * extrair todos os códigos python de novo e atualizar os arquivos dos apendices
 * adicionar abstract
