@@ -1,0 +1,73 @@
+\section{Rename Folders}\label{ape:rename_folders}
+
+\begin{lstlisting}[language=Python]
+import os
+import os.path
+import random
+\end{lstlisting}
+
+\subsubsection{Create list of folders to access and rename
+files}\label{create-list-of-folders-to-access-and-rename-files}
+
+\begin{lstlisting}[language=Python]
+folders = ["2000/education",
+           "2000/family",
+           "2000/fertility",
+           "2000/social_indicator",
+           "2000/work",
+           "2010/education",
+           "2010/family",
+           "2010/fertility",
+           "2010/social_indicator",
+           "2010/work"]
+
+state_acronym_and_name_list = [
+    ["ac", "acre"],
+    ["al", "alagoas"],
+    ["ap", "amapa"],
+    ["am", "amazonas"],
+    ["ba", "bahia"],
+    ["ce", "ceara"],
+    ["df", "distrito_federal"],
+    ["es", "espirito_santo"],
+    ["go", "goias"],
+    ["ma", "maranhao"],
+    ["mt", "mato_grosso"],
+    ["ms", "mato_grosso_do_sul"],
+    ["mg", "minas_gerais"],
+    ["pa", "para"],
+    ["pb", "paraiba"],
+    ["pr", "parana"],
+    ["pe", "pernambuco"],
+    ["pi", "piaui"],
+    ["rj", "rio_de_janeiro"],
+    ["rn", "rio_grande_do_norte"],
+    ["rs", "rio_grande_do_sul"],
+    ["ro", "rondonia"],
+    ["rr", "roraima"],
+    ["sc", "santa_catarina"],
+    ["sp", "sao_paulo"],
+    ["se", "sergipe"],
+    ["to", "tocantins"]]
+\end{lstlisting}
+
+\subsubsection{Rename files based on
+pattern}\label{rename-files-based-on-pattern}
+
+\begin{lstlisting}[language=Python]
+for folder in folders:
+    print(folder)
+    for inner_folder in os.listdir(folder):
+        new_folder_name = inner_folder
+        for acronym in state_acronym_and_name_list:
+            if inner_folder == acronym[0]:
+                new_folder_name = acronym[1]
+                break
+        new_folder_name = str.replace(new_folder_name, "_munic_xls", "")
+        new_folder_name = str.replace(new_folder_name, "_xls", "")
+        
+        print(folder + "/" + inner_folder + " -> " + folder + "/" + new_folder_name)
+        
+        os.rename(folder + "/" + inner_folder,
+                  folder + "/" + new_folder_name)
+\end{lstlisting}
