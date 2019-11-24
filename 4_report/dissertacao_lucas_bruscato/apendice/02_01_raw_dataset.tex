@@ -1,12 +1,15 @@
-\section{Data Processing - Raw dataset}\label{ape:data_processing_raw_dataset}
+\hypertarget{data-processing-raw-dataset}{%
+\section{Data Processing (raw
+dataset)}\label{data-processing-raw-dataset}}
 
 \begin{lstlisting}[language=Python]
 import pandas as pd
 import os
 \end{lstlisting}
 
+\hypertarget{read-and-handle-target-feature}{%
 \subsubsection{Read and handle target
-feature}\label{read-and-handle-target-feature}
+feature}\label{read-and-handle-target-feature}}
 
 \begin{lstlisting}[language=Python]
 target_feature = pd.read_csv('../target_feature/01_target_feature.csv',
@@ -28,9 +31,10 @@ target_feature = target_feature.drop("temp", axis=1)
 target_feature.head()
 \end{lstlisting}
 
+\hypertarget{read-explanatory-features-education-family-fertility-and-work-2000-and-2010}{%
 \subsubsection{Read explanatory features: education, family, fertility
 and work (2000 and
-2010)}\label{read-explanatory-features-education-family-fertility-and-work-2000-and-2010}
+2010)}\label{read-explanatory-features-education-family-fertility-and-work-2000-and-2010}}
 
 \begin{lstlisting}[language=Python]
 raw_dataset = target_feature
@@ -144,17 +148,18 @@ for path in paths:
         
 \end{lstlisting}
 
-\subsubsection{Read explanatory feature: social indicator (not in same
-pattern as
-others)}\label{read-explanatory-feature-social-indicator-not-in-same-pattern-as-others}
+\hypertarget{read-explanatory-feature-social-indicator-different-pattern}{%
+\subsubsection{Read explanatory feature: social indicator (different
+pattern)}\label{read-explanatory-feature-social-indicator-different-pattern}}
 
 \begin{lstlisting}[language=Python]
 paths = ['../ibge_censo/2010/social_indicator']
 \end{lstlisting}
 
+\hypertarget{changing-city-name-due-to-city-being-known-by-two-different-names}{%
 \subsubsection{Changing city name due to city being known by two
 different
-names}\label{changing-city-name-due-to-city-being-known-by-two-different-names}
+names}\label{changing-city-name-due-to-city-being-known-by-two-different-names}}
 
 \begin{lstlisting}[language=Python]
 raw_dataset.loc[raw_dataset.file_name=='3238-São Valério da Natividade-TO.pdf', 'city_state'] = 'sao valerio_to'
@@ -192,12 +197,38 @@ for path in paths:
             raw_dataset = raw_dataset.drop(column_to_join, axis=1)
             
             print(path + ' [' + var_name + '] ')
-        
+\end{lstlisting}
+
+\hypertarget{read-explanatory-feature-enem-score-different-pattern}{%
+\subsubsection{Read explanatory feature: enem score (different
+pattern)}\label{read-explanatory-feature-enem-score-different-pattern}}
+
+\begin{lstlisting}[language=Python]
+paths = ['../enem/2000/2000_enem_score_var_01.csv',
+         '../enem/2010/2010_enem_score_var_01.csv']
 \end{lstlisting}
 
 \begin{lstlisting}[language=Python]
-for c in raw_dataset.columns:
-    print(c)
+for path in paths:
+    temp = pd.read_csv(path, sep=';')
+    temp = temp.iloc[1:,:]
+    temp = temp.add_prefix(path.split("/")[2] + '_enem_var_01_')
+    column_to_join = path.split("/")[2] + '_enem_var_01_city_state'
+
+    raw_dataset = pd.merge(raw_dataset,
+                           temp,
+                           left_on="city_state",
+                           right_on=column_to_join,
+                           how="left")
+    
+    raw_dataset = raw_dataset.drop(column_to_join, axis=1)
+    
+raw_dataset.iloc[:, 88:95] = raw_dataset.iloc[:, 88:95].fillna(0)
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python]
+for column in raw_dataset.columns:
+    print(column)
 \end{lstlisting}
 
 \begin{lstlisting}[language=Python]

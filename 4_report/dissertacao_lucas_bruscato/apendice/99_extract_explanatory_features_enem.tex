@@ -1,127 +1,94 @@
-\section{Extract Explanatory Features Enem}\label{ape:extract_explanatory_features_enem}
+\hypertarget{extract-explanatory-features}{%
+\section{Extract Explanatory
+Features Enem}\label{extract-explanatory-features}}
 
 \begin{lstlisting}[language=Python]
-import PyPDF2
-import unidecode
-import pandas as pd
-from collections import Counter
-import csv
 import os
-import os.path
-import random
-import re
-import datetime
+import shutil
+import pandas as pd
 \end{lstlisting}
 
-\subsubsection{Create lists with all paths to all
-files}\label{create-lists-with-all-paths-to-all-files}
+\hypertarget{extract-features-from-enem-2000}{%
+\subsubsection{Extract features from enem
+2000}\label{extract-features-from-enem-2000}}
 
 \begin{lstlisting}[language=Python]
-folders = ["ciclo_3",
-           "ciclo_4",
-           "ciclo_5",
-           "edicoes_anteriores/sorteio_34",
-           "edicoes_anteriores/sorteio_35",
-           "edicoes_anteriores/sorteio_36",
-           "edicoes_anteriores/sorteio_37",
-           "edicoes_anteriores/sorteio_38",
-           "edicoes_anteriores/sorteio_39",
-           "edicoes_anteriores/sorteio_40"]
-
-seq_folders = []
-file_names = []
-file_names_and_paths = []
-
-for folder in folders:
-    directory = '../programa_de_fiscalizacao_em_entes_federativos/' + folder
-    
-    number_of_files = len([name for name in os.listdir(directory) if os.path.isfile(os.path.join(directory, name))])
-    
-    for i in range(0, number_of_files):
-        file_name_and_path = directory + "/" + os.listdir(directory)[i]
-        if (".pdf" in file_name_and_path):
-            seq_folders.append(folder)
-            file_names.append(os.listdir(directory)[i])
-            file_names_and_paths.append(file_name_and_path)
-
-print('Example: \n' + file_names_and_paths[0:1][0])
-\end{lstlisting}
-
-\subsubsection{\texorpdfstring{Generate target feature for each report
-(`read' and summarised the
-polarity)}{Generate target feature for each report (read and summarised the polarity)}}\label{generate-target-feature-for-each-report-read-and-summarised-the-polarity}
-
-\begin{lstlisting}[language=Python]
-sentilex_database = pd.read_csv("../sentilex/99_01_sentilex_database.csv",
-                                sep = ";")
-
-sentilex_database.adjective = sentilex_database.adjective.str.normalize('NFKD').\
-                                str.encode('ascii', errors='ignore').str.decode('utf-8')
+columns_to_select = ['NO_MUNICIPIO_RESIDENCIA',
+                     'SG_UF_RESIDENCIA',
+                     'TP_PRESENCA',
+                     'TP_STATUS_REDACAO',
+                     'NU_NOTA_OBJETIVA',
+                     'NU_NOTA_REDACAO']
 \end{lstlisting}
 
 \begin{lstlisting}[language=Python]
-cities = pd.DataFrame()
+df = pd.read_csv('2000/Dados/MICRODADOS_ENEM_2000.csv',
+                 sep=';',
+                 usecols=columns_to_select)
 
-print("List of reports read and summarised")
-
-for file_number in range(0, len(file_names_and_paths)):
-    folder = seq_folders[file_number]
-    file_name = file_names[file_number]
-    file_name_and_path = file_names_and_paths[file_number]
-    print(str(datetime.datetime.now()) + ' ' + file_name_and_path)
-    
-    # read report using external library pdf miner and save in 'temp_report.txt'
-    command_to_cmd = 'pdf2txt.py "' + file_name_and_path + '" > temp_report.txt'
-    os.system(command_to_cmd)
-    
-    # read temporary file
-    temporary_file = open('temp_report.txt', 'r')
-    
-    whole_text = ''
-    
-    for line in temporary_file:
-        whole_text += line
-    
-    words = re.findall(r"[\w']+", unidecode.unidecode(re.sub('\d', ' ', whole_text).lower()))
-
-    # create the frequencies
-    words_freq = pd.DataFrame.from_dict(Counter(words), orient = 'index').reset_index()
-    words_freq.columns = ['word', 'freq']
-    words_freq['pct'] = words_freq['freq']/sum(words_freq.freq)
-
-    # aggregate polarity
-    words_freq_polarity = words_freq.merge(sentilex_database,
-                                           left_on = "word",
-                                           right_on = "adjective",
-                                           how = "left").iloc[:, [0, 1, 2, 4]]
-    
-    words_freq_polarity_fill = words_freq_polarity.fillna(0)
-    
-    # summarise
-    number_of_words = words_freq_polarity_fill.freq.sum()
-    pct_pol_neg = words_freq_polarity_fill[words_freq_polarity_fill.polarity == -1].pct.sum()
-    pct_pol_pos = words_freq_polarity_fill[words_freq_polarity_fill.polarity == 1].pct.sum()
-    pct_pol_neu = words_freq_polarity_fill[words_freq_polarity_fill.polarity == 0].pct.sum()
-    
-    current_city = pd.DataFrame({"folder": folder,
-                                 "file_name": file_name,
-                                 "number_of_words": number_of_words,
-                                 "pct_pol_neg": pct_pol_neg,
-                                 "pct_pol_pos": pct_pol_pos,
-                                 "pct_pol_neu": pct_pol_neu},
-                                index = [0])
-    
-    cities = cities.append(current_city)
+df = df.query('TP_PRESENCA == 1 and TP_STATUS_REDACAO == "P"')
 \end{lstlisting}
 
 \begin{lstlisting}[language=Python]
-os.remove("temp_report.txt")
+df['city_state'] = (df.NO_MUNICIPIO_RESIDENCIA + '_' + df.SG_UF_RESIDENCIA).str.normalize('NFKD')\
+                    .str.encode('ascii', errors='ignore')\
+                    .str.decode('utf-8').str.lower()
+
+df['enem_score'] = (df['NU_NOTA_OBJETIVA']+df['NU_NOTA_REDACAO'])/2
 \end{lstlisting}
 
 \begin{lstlisting}[language=Python]
-cities.to_csv("../target_feature/01_target_feature.csv",
-              sep=';',
-              encoding='utf-8',
-              index=False)
+df_grouped = df[['city_state', 'enem_score']].groupby('city_state').agg(['mean', 'std', 'median'])
+
+df_grouped.columns = ['enem_score_mean', 'enem_score_std', 'enem_score_median']
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python]
+df_grouped.to_csv('2000/2000_enem_score_var_01.csv', sep=';')
+\end{lstlisting}
+
+\hypertarget{extract-features-from-enem-2010}{%
+\subsubsection{Extract features from enem
+2010}\label{extract-features-from-enem-2010}}
+
+\begin{lstlisting}[language=Python]
+columns_to_select = ['NO_MUNICIPIO_RESIDENCIA',
+                     'SG_UF_RESIDENCIA',
+                     'TP_PRESENCA_CN',
+                     'TP_PRESENCA_CH',
+                     'TP_PRESENCA_LC',
+                     'TP_PRESENCA_MT',
+                     'NU_NOTA_CN',
+                     'NU_NOTA_CH',
+                     'NU_NOTA_LC',
+                     'NU_NOTA_MT',
+                     'TP_STATUS_REDACAO',
+                     'NU_NOTA_REDACAO']
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python]
+df = pd.read_csv('2010/Dados/MICRODADOS_ENEM_2010.csv',
+                 sep=';',
+                 usecols=columns_to_select)
+
+df = df.query('TP_PRESENCA_CN == 1 and TP_PRESENCA_CH == 1 and TP_PRESENCA_LC == 1 and TP_PRESENCA_MT == 1 and TP_STATUS_REDACAO == "P"')
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python]
+df['city_state'] = (df.NO_MUNICIPIO_RESIDENCIA + '_' + df.SG_UF_RESIDENCIA).str.normalize('NFKD')\
+                    .str.encode('ascii', errors='ignore')\
+                    .str.decode('utf-8').str.lower()
+
+df['enem_score'] = (df['NU_NOTA_CN']+df['NU_NOTA_CH']+df['NU_NOTA_LC']+df['NU_NOTA_MT']+df['NU_NOTA_REDACAO'])/5
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python]
+df_grouped = df[['city_state', 'enem_score']].groupby('city_state').agg(['mean', 'std', 'median'])
+
+df_grouped.columns = ['enem_score_mean', 'enem_score_std', 'enem_score_median']
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python]
+df_grouped.to_csv('2010/2010_enem_score_var_01.csv', sep=';')
 \end{lstlisting}
 

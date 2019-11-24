@@ -1,4 +1,5 @@
-\section{Import reports}\label{ape:import_reports}
+\hypertarget{import-reports}{%
+\section{Import reports}\label{import-reports}}
 
 \begin{lstlisting}[language=Python]
 from selenium import webdriver
@@ -11,9 +12,10 @@ import time
 import codecs
 \end{lstlisting}
 
-\subsubsection{\texorpdfstring{Set configurations (only for
-`edicoes\_anteriores', others are
-manually)}{Set configurations (only for edicoes\_anteriores, others are manually)}}\label{set-configurations-only-for-edicoes_anteriores-others-are-manually}
+\hypertarget{set-configurations-only-for-edicoes_anteriores-others-are-manually}{%
+\subsubsection{Set configurations (only for `edicoes\_anteriores',
+others are
+manually)}\label{set-configurations-only-for-edicoes_anteriores-others-are-manually}}
 
 \begin{lstlisting}[language=Python]
 # set driver for browser connection
@@ -24,8 +26,9 @@ DRIVER_BIN = "/Users/lucas.bruscato/Google Drive/Github-Lucas/master/0_drivers/g
 folder = 'edicoes_anteriores/<folder name here>'
 \end{lstlisting}
 
+\hypertarget{capture-search-dates-and-cities-names}{%
 \subsubsection{Capture search dates and cities'
-names}\label{capture-search-dates-and-cities-names}
+names}\label{capture-search-dates-and-cities-names}}
 
 \begin{lstlisting}[language=Python]
 # open link file for the chosen folder
@@ -49,8 +52,9 @@ print("final_date = " + final_date)
 print(cities)
 \end{lstlisting}
 
+\hypertarget{open-browser-and-download-all-cities-report}{%
 \subsubsection{Open browser and download all cities'
-report}\label{open-browser-and-download-all-cities-report}
+report}\label{open-browser-and-download-all-cities-report}}
 
 \begin{lstlisting}[language=Python]
 # set browser preferences and profile (auto download)
@@ -92,3 +96,4 @@ for j in range(0, len(cities), 5):
     browser.find_element_by_id("btnBaixar").click()
     time.sleep(1)
 \end{lstlisting}
+

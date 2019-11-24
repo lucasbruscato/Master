@@ -1,4 +1,5 @@
-\section{Create Target Feature}\label{ape:create_target_feature}
+\hypertarget{create-target-feature}{%
+\section{Create Target Feature}\label{create-target-feature}}
 
 \begin{lstlisting}[language=Python]
 import PyPDF2
@@ -13,8 +14,9 @@ import re
 import datetime
 \end{lstlisting}
 
+\hypertarget{create-lists-with-all-paths-to-all-files}{%
 \subsubsection{Create lists with all paths to all
-files}\label{create-lists-with-all-paths-to-all-files}
+files}\label{create-lists-with-all-paths-to-all-files}}
 
 \begin{lstlisting}[language=Python]
 folders = ["ciclo_3",
@@ -47,9 +49,10 @@ for folder in folders:
 print('Example: \n' + file_names_and_paths[0:1][0])
 \end{lstlisting}
 
-\subsubsection{\texorpdfstring{Generate target feature for each report
-(`read' and summarised the
-polarity)}{Generate target feature for each report (read and summarised the polarity)}}\label{generate-target-feature-for-each-report-read-and-summarised-the-polarity}
+\hypertarget{generate-target-feature-for-each-report-read-and-summarised-the-polarity}{%
+\subsubsection{Generate target feature for each report (`read' and
+summarised the
+polarity)}\label{generate-target-feature-for-each-report-read-and-summarised-the-polarity}}
 
 \begin{lstlisting}[language=Python]
 sentilex_database = pd.read_csv("../sentilex/99_01_sentilex_database.csv",
@@ -95,23 +98,34 @@ for file_number in range(0, len(file_names_and_paths)):
                                            right_on = "adjective",
                                            how = "left").iloc[:, [0, 1, 2, 4]]
     
-    words_freq_polarity_fill = words_freq_polarity.fillna(0)
-    
     # summarise
-    number_of_words = words_freq_polarity_fill.freq.sum()
-    pct_pol_neg = words_freq_polarity_fill[words_freq_polarity_fill.polarity == -1].pct.sum()
-    pct_pol_pos = words_freq_polarity_fill[words_freq_polarity_fill.polarity == 1].pct.sum()
-    pct_pol_neu = words_freq_polarity_fill[words_freq_polarity_fill.polarity == 0].pct.sum()
-    
+    number_of_words = words_freq_polarity.freq.sum()
+    pct_pol_neg = words_freq_polarity[words_freq_polarity.polarity == -1].pct.sum()
+    pct_pol_pos = words_freq_polarity[words_freq_polarity.polarity == 1].pct.sum()
+    pct_pol_neu = words_freq_polarity[words_freq_polarity.polarity == 0].pct.sum()
+    pct_pol_missing = words_freq_polarity[words_freq_polarity.polarity.isna()].pct.sum()
+
     current_city = pd.DataFrame({"folder": folder,
                                  "file_name": file_name,
                                  "number_of_words": number_of_words,
                                  "pct_pol_neg": pct_pol_neg,
                                  "pct_pol_pos": pct_pol_pos,
-                                 "pct_pol_neu": pct_pol_neu},
+                                 "pct_pol_neu": pct_pol_neu,
+                                 "pct_pol_missing": pct_pol_missing},
                                 index = [0])
     
     cities = cities.append(current_city)
+    
+    # save last words_freq_polarity dataframe as an example
+    if file_number + 1 == len(file_names_and_paths):
+        words_freq_polarity.to_csv('temp_words_freq_polarity.csv',
+                                   sep=';',
+                                   encoding='utf-8',
+                                   index=False)
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python]
+len(file_names_and_paths)
 \end{lstlisting}
 
 \begin{lstlisting}[language=Python]

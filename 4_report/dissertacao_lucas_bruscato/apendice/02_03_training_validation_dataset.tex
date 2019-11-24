@@ -1,11 +1,14 @@
-\section{Data Processing - Training and validation dataset}\label{ape:data_processing_training_validation_dataset}
+\hypertarget{data-processing-training-and-validation-dataset}{%
+\section{Data Processing (training and validation
+dataset)}\label{data-processing-training-and-validation-dataset}}
 
 \begin{lstlisting}[language=Python]
 import pandas as pd
 \end{lstlisting}
 
+\hypertarget{splitting-the-datasets-training-and-validation}{%
 \subsubsection{Splitting the datasets (training and
-validation)}\label{splitting-the-datasets-training-and-validation}
+validation)}\label{splitting-the-datasets-training-and-validation}}
 
 \begin{lstlisting}[language=Python]
 modeling_dataset = pd.read_csv('02_02_modeling_dataset.csv',
@@ -39,3 +42,4 @@ validation_dataset.to_csv('02_03_validation_dataset.csv',
                           sep=';',
                           index=False)
 \end{lstlisting}
+

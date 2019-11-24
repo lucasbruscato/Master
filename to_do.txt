@@ -10,24 +10,19 @@ data para depósito: 15 de Novembro de 2019
 data para defesa: terça-feira, 14h, 18 de Fevereiro de 2020 (lembrete: na sexta-feira da referida semana será a sexta-feira de Carnaval)
 
 * conversa marcada para 13/Nov/2019 [FEITO]
-* realizar o depósito dia 15/Nov/2019 [EM ANDAMENTO]
-* adicionar reta gráficos de dispersão
+* realizar o depósito dia 15/Nov/2019 [FEITO]
+* adicionar reta gráficos de dispersão [FEITO]
 * shapley values: adicionar mais teoria
-* regressão linear: separar teoria de resultados
+* regressão linear: separar teoria de resultados [FEITO]
 * random forest: separar teoria de resultados
 * xgboost: separar teoria de resultados + adicionar mais teoria
-* tabela B.10: adicionar fonte
-* extrair todos os códigos python de novo e atualizar os arquivos dos apendices
-* adicionar futuros comentários de Florência
-* enviar versão final da dissertação 16 de Janeiro de 2020
-
+* tabela B.10: adicionar fonte [FEITO]
+* extrair todos os códigos python de novo e atualizar os arquivos dos apendices [FEITO]
+* enviar versão final da dissertação 16 de Janeiro de 2020 [EM ANDAMENTO]
 
 === aux ===
 
 jupyter nbconvert --to markdown test.ipynb
 pandoc --listings -f markdown -t latex test.md -o test.tex
 
-Predição de polaridade negativa em relatórios de auditoria utilizando dados socioeconômicos
-
 https://www.ime.usp.br/mae/pos/deposito
-

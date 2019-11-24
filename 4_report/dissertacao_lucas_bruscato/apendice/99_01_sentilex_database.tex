@@ -1,4 +1,6 @@
-\section{SentiLex Database}\label{ape:sentilex_database}
+\hypertarget{create-initial-sentilex-database-and-improve-it}{%
+\section{Create Initial SentiLex Database and Improve
+it}\label{create-initial-sentilex-database-and-improve-it}}
 
 \begin{lstlisting}[language=Python]
 import csv
@@ -13,8 +15,9 @@ from collections import Counter
 import csv
 \end{lstlisting}
 
+\hypertarget{read-sentilex-pt02-and-extract-polarity}{%
 \subsubsection{Read SentiLex-PT02 and extract
-polarity}\label{read-sentilex-pt02-and-extract-polarity}
+polarity}\label{read-sentilex-pt02-and-extract-polarity}}
 
 \begin{lstlisting}[language=Python]
 # read csv file
@@ -38,8 +41,9 @@ sentilex_database = sentilex_database[sentilex_database.polarity.isin(polarities
 sentilex_database.head()
 \end{lstlisting}
 
+\hypertarget{save-initial-sentilex-database}{%
 \subsubsection{Save initial sentilex
-database}\label{save-initial-sentilex-database}
+database}\label{save-initial-sentilex-database}}
 
 \begin{lstlisting}[language=Python]
 sentilex_database.to_csv("99_01_sentilex_database.csv",
@@ -48,8 +52,9 @@ sentilex_database.to_csv("99_01_sentilex_database.csv",
                          index = False)
 \end{lstlisting}
 
+\hypertarget{define-randomly-reports-for-improving-sentilex-pt02}{%
 \subsubsection{Define randomly reports for improving
-SentiLex-PT02}\label{define-randomly-reports-for-improving-sentilex-pt02}
+SentiLex-PT02}\label{define-randomly-reports-for-improving-sentilex-pt02}}
 
 \begin{lstlisting}[language=Python]
 folders = ["ciclo_3",
@@ -78,9 +83,10 @@ for folder in folders:
 file_names_and_paths
 \end{lstlisting}
 
+\hypertarget{import-reports-collect-unique-words-and-save-words-not-in-sentilex-pt02}{%
 \subsubsection{Import reports, collect unique words and save words not
 in
-SentiLex-PT02}\label{import-reports-collect-unique-words-and-save-words-not-in-sentilex-pt02}
+SentiLex-PT02}\label{import-reports-collect-unique-words-and-save-words-not-in-sentilex-pt02}}
 
 \begin{lstlisting}[language=Python]
 print("List of reports read to improve SentiLex database")
