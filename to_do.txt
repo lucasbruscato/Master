@@ -12,10 +12,10 @@ data para defesa: terça-feira, 14h, 18 de Fevereiro de 2020 (lembrete: na sexta
 * conversa marcada para 13/Nov/2019 [FEITO]
 * realizar o depósito dia 15/Nov/2019 [FEITO]
 * adicionar reta gráficos de dispersão [FEITO]
-* shapley values: adicionar mais teoria
+* shapley values: adicionar mais teoria [FEITO]
 * regressão linear: separar teoria de resultados [FEITO]
-* random forest: separar teoria de resultados
-* xgboost: separar teoria de resultados + adicionar mais teoria
+* random forest: separar teoria de resultados [FEITO]
+* xgboost: separar teoria de resultados + adicionar mais teoria [FEITO]
 * tabela B.10: adicionar fonte [FEITO]
 * extrair todos os códigos python de novo e atualizar os arquivos dos apendices [FEITO]
 * enviar versão final da dissertação 16 de Janeiro de 2020 [EM ANDAMENTO]

@@ -39,6 +39,38 @@ O paralelo da explicação acima à explicação do algoritmo em aprendizado de 
 
 O Shapley Value vem sendo considerado a forma mais robusta e consistente de se avaliar a importância das variáveis explicativas em um modelo (ver \citet{Lundberg2017}), ele será utilizado neste trabalho tanto para ordenação da importância das variáveis quanto para interpretação das variáveis explicativas utilizadas no modelo. Foi-se utilizada a implementação deste método proveniente da biblioteca em Python SHAP (\citet{Shap}).
 
+Uma simplificação de como o Shapley Value pode ser calculado para uma determinada variável explicativa pode ser dada pela fórmula abaixo (considere f o modelo que se deseja avaliar o impacto das variáveis explicativas).
+
+\begin{equation}
+\hat{\phi}_j = \frac{1}{M} \sum^{M}_{m=1}(\hat{f}(x^m_{+j}) - \hat{f}(x^m_{-j}))
+\end{equation}
+
+Onde,
+
+\begin{itemize}
+	\item $ \hat{f}(x^m_{+j}) $ é a predição para x, mas com um número aleatório de valores das variáveis explicativas substituídos por valores de variáveis explicativas de uma observação aleatória z, exceto pelo valor da variável explicativa que corresponde à j.
+	\item o vetor $ x^m_{-j} $ é quase idêntico ao vetor $ x^m_{+j} $ com a diferença de que o valor $ x^m_j $ é tomado da observação aleatória z.
+\end{itemize}
+
+Assim, o algoritmo para se calcular o Shapley Value é dado por:
+
+\begin{itemize}
+	\item Para $ m=1,...,M $, onde M é o total de iterações e p é o total de variáveis explicativas:
+	\begin{itemize}
+		\item Selecione uma observação aleatória z de todas observações disponíveis
+		\item Selecione uma permutação aleatória dos valores das variáveis explicativas
+		\item Obtenha $ x_0 = (x_{(1)},...,x_{(j)},...,x_{(p)}) $
+		\item Obtenha $ z_0 = (z_{(1)},...,z_{(j)},...,z_{(p)}) $
+		\item Construa dois vetores:
+		\begin{itemize}
+			\item Com a variável j: $ x_{+j} = (x_{(1)},...,x_{(j-1)},x_{(j)},z_{(j+1)},...,z_{(p)}) $
+			\item Sem a variável j: $ x_{-j} = (x_{(1)},...,x_{(j-1)},z_{(j)},z_{(j+1)},...,z_{(p)}) $
+		\end{itemize}
+		\item Calcule a contribuição marginal: $ \phi_j^m = \hat{f}(x^m_{+j}) - \hat{f}(x^m_{-j}) $
+	\end{itemize}
+	\item Calcule o Shapley Value como a média: $ \hat{\phi}_j = \frac{1}{M} \sum^{M}_{m=1}(\phi_j^m) $
+\end{itemize}
+
 \section{Métricas para avaliação de desempenho}
 \label{sec:metricas_avaliacao}
 
@@ -115,6 +147,9 @@ Uma explicação mais detalhada sobre como a regressão linear estima seus parâ
 
 Neste trabalho, o treinamento da regressão linear foi feito utilizando-se a biblioteca em Python scikit-learn (\citet{Sklearn}) que é uma das bibliotecas mais utilizadas para treinamento de modelos de aprendizado de máquina na linguagem de programação Python.
 
+\section{Resultados da Regressão Linear}
+\label{sec:resultados_regressao_linear}
+
 O modelo de regressão linear é relativamente simples e de fácil interpretabilidade, uma boa estratégia de modelagem é no início do processo de modelagem realizar o treinamento do mesmo e utilizar seu desempenho como base para comparação futura com outros experimentos utilizando-se de outros modelos de aprendizado de máquina. Assim, tal modelo foi utilizado apenas para obter um desempenho base.
 
 As estimativas para os parâmetros deste modelo podem ser encontradas no apêndice \ref{tab:cap3_estimativa_reg_lin}. Em alguns casos nota-se que houve inversão de estimativas com relação ao esperado, como exemplo de tal inversão temos os gráficos de dispersão da variáveis explicativas \verb|"enem_var_01_enem_score_mean_pct"| e \verb|"enem_var_01_enem_score_media| \\ \verb|n_pct"| (presentes no apêndice \ref{ape:cap3_scatter_plot}). Tais gráficos mostram uma dispersão de valores muito próxima entre as duas variáveis, conceitualmente também é esperado que a relação com a variável resposta seja semelhante, porém as estimativas são estritamente opostas assumindo os valores 0.33489 e -0.34682, respectivamente.
@@ -159,7 +194,12 @@ O procedimento descrito acima trata do algoritmo original de bagging para árvor
 
 Geralmente utiliza-se, para um problema de classificação com $ p $ variáveis explicativas, $ \sqrt{p} $ (arredondado para baixo) variáveis explicativas ​​em cada divisão. Para problemas de regressão, recomenda-se $ p/3 $ (arredondado para baixo). Contudo, na prática, os melhores valores para esses parâmetros dependerão do problema e devem ser tratados na otimização dos hiperparâmetros.
 
-Neste trabalho, o treinamento do random forest foi feito utilizando-se a biblioteca em Python scikit-learn (\citet{Sklearn}) na linguagem de programação Python. O treinamento utilizou-se da metodologia explicada na seção \ref{sec:randomized_search} e os hiperparâmetros testados foram:
+Neste trabalho, o treinamento do random forest foi feito utilizando-se a biblioteca em Python scikit-learn (\citet{Sklearn}) na linguagem de programação Python.
+
+\section{Resultados do Random Forest}
+\label{sec:resultados_random_forest}
+
+O treinamento do modelo Random Forest utilizou-se da metodologia explicada na seção \ref{sec:randomized_search} e os hiperparâmetros testados foram:
 
 \begin{itemize}
 	\item \verb|max_depth|: Profundidade máxima da árvore.
@@ -184,13 +224,15 @@ No gráfico \ref{ape:cap3_scatter_random_forest} nota-se, apesar de suave, uma r
 \section{XGBoost}
 \label{sec:xgboost}
 
-O XGBoost (eXtreme Gradient Boosting) é uma implementação do algoritmo Gradient Boosting que é considerado, muitas vezes, melhor que o Gradient Boosting por sua capacidade em reduzir a chance de overfitting.
+O XGBoost (eXtreme Gradient Boosting) é uma implementação do algoritmo Gradient Boosting que é considerado, muitas vezes, melhor que o Gradient Boosting por sua capacidade em reduzir a chance de overfitting. A principal diferença consiste que o XGBoost utiliza uma formalização de modelo mais regularizada, que resulta muitas vezes na redução de overfitting e melhor desempenho.
+
+O nome XGBoost se refere ao objetivo de aumentar o limite de recursos de computação para algoritmos de árvore aprimorada, que é o motivo pelo qual muitas pessoas usam o XGBoost.
 
 O Gradient Boosting é uma técnica de aprendizado de máquina para problemas de regressão e classificação, o algoritmo produz um modelo de previsão na forma de um conjunto de modelos de preditores fracos que são árvores de decisão. A construção do modelo é feita em etapas, como outros métodos de reforço, e os generaliza permitindo a otimização de uma função de perda diferenciável arbitrária. O Gradient Boosting teve origem quando Leo Breiman (ver \citet{Breiman1997}) observou que boosting pode ser interpretado como um algoritmo de otimização em uma função de custo. Sendo que o algoritmo em si foi desenvolvido posteriormente por Jerome H. Friedman (ver \citet{Friedman199902} e \citet{Friedman199903}).
 
-O Gradient Boosting combina preditores fracos em um único preditor forte de maneira iterativa. No exemplo de regressão, na otimização de mínimos quadrados, onde o objetivo é encontrar um modelo $ F $ para prever valores da forma $ \hat{y} = F(x) $ minimizando o erro quadrático médio $ \tfrac{1}{n} \sum_{i} ({\hat{y}}_{i}-y_{i})^{2} $, onde $ i $ é o índice sobre algum conjunto de treinamento de tamanho $ n $ dos valores reais da variável de saída $ y $.
+O Gradient Boosting combina preditores fracos em um único preditor forte de maneira iterativa. No exemplo de regressão, na otimização de mínimos quadrados, onde o objetivo é encontrar um modelo $ F $ para prever valores da forma $ \hat{y} = F(x) $ minimizando o erro quadrático médio $ \tfrac{1}{n} \sum_{i} ({\hat{y}}_{i}-y_{i})^{2} $, onde $ i $ é o índice sobre algum conjunto de treinamento de tamanho $ n $ dos valores reais da variável resposta $ y $.
 
-Em cada etapa $ m $, $ 1 \leq m \leq M $ - onde $ M $ é a quantidade de iterações -, do Gradient Boosting, supõe-se que exista algum modelo imperfeito $ F_{m} $ (no início, pode ser usado um modelo muito fraco que prevê apenas a média $ y $ no conjunto de treinamento). O Gradient Boosting aprimora o $ F_{m} $ construindo um novo modelo que adiciona um estimador $ h $ para fornecer um modelo melhor: $ F_{m + 1}(x) = F_{m}(x) + h(x) $. Para estimar $ h $, o algoritmo começa com a premissa de que um $ h $ perfeito implicaria em
+Em cada etapa $ m $, $ 1 \leq m \leq M $ - onde $ M $ é a quantidade de iterações -, do Gradient Boosting, supõe-se que exista algum modelo imperfeito $ F_{m} $ (no início, pode ser usado um modelo muito fraco que prevê apenas a média de $ y $ no conjunto de treinamento). O Gradient Boosting aprimora o $ F_{m} $ construindo um novo modelo que adiciona um estimador $ h $ para fornecer um modelo melhor: $ F_{m + 1}(x) = F_{m}(x) + h(x) $. Para estimar $ h $, o algoritmo começa com a premissa de que um $ h $ perfeito implicaria em
 
 \begin{equation}
 F_{m + 1}(x) = F_{m}(x) + h(x) = y
@@ -204,9 +246,46 @@ h(x) = y - F_{m}(x)
 
 Portanto, o Gradient Boosting ajustará $ h $ ao $ y - F_{m}(x) $ e cada $ F_{m + 1} $ tenta corrigir os erros de seu predecessor $ F_{m} $. Uma generalização dessa idéia para funções de perda que não sejam erros quadráticos e para problemas de classificação, resulta da observação de que os resíduos $ y - F(x) $ para um determinado modelo são os gradientes negativos (em relação à $ F(x) $) da função de perda de erro ao quadrado $ \frac{1}{2} (y - F(x))^{2} $.
 
+Para uma melhor exemplificação, a seguir foi extraído do livro \citet{Hastie2001} o algoritmo do Gradient Boosting e explicado detalhadamente cada passo do mesmo.
+
+\begin{enumerate}
+	\item Inicialize $ f_0(x) = \arg \min_{\gamma} \sum^{N}_{i=1} L(y_i, \gamma) $
+	\item Para m = 1 até M:
+	\begin{enumerate}
+    	\item Para $ i = 1,2,...,N $ calcule:
+        	\begin{equation}
+        	    r_{im} = -\left[\frac{\partial L(y_i, f(x_i))}{\partial f(x_i)}\right]_{f=f_{m-1}} \quad
+        	\end{equation}
+    	\item Treine uma árvore de regressão sobre a variável resposta resíduo $ r_{im} $ resultando nas regiões $ R_{jm} $, $ j = 1,2,...,J_m $.
+    	\item Para $ j = 1,2,...,J_m $ calcule:
+    	    \begin{equation}
+    	        \gamma_{jm} = \arg \min_{\gamma} \sum_{x_i \in R_{jm}} L(y_i, f_{m-1}(x_i) + \gamma)
+    	    \end{equation}
+    	\item Atualize $ f_{m}(x) = f_{{m-1}}(x)+ \sum_{j=1}^{J_m} \gamma_{jm} I(x \in R_{jm}) $
+	\end{enumerate}
+	\item Resultado é $ \hat{f}(x) = f_M(x) $
+\end{enumerate}
+
+Sendo que,
+
+\begin{itemize}
+	\item Em 1., inicializa-se a primeira iteração ou árvore ($ f_0 $, ou seja, $ m=0 $).
+	\item Em 2., o valor M representa o total de iterações (ou árvores).
+	\item Em 2.(a), para cada observação i - de um total de N - se calcula o resíduo dado pelo negativo do gradiente da função perda avaliado em $ f_{m-1} $, por exemplo, no caso de regressão o resultante do gradiente poderia ser $ y_i - f(x_i) $ resultante da função perda $ \frac{1}{2} (y - F(x))^{2} $.
+	\item Em 2.(b), treina-se uma árvore de regressão sobre a variável resposta resíduo, sendo que $ J_m $ seria o número total de folhas da referida iteração.
+	\item Em 2.(c), calcula-se o argumento que minimiza a função perda para cada folha da referida iteração sobre a predição de $ f_{m-1} $.
+	\item Em 2.(d), atualiza-se a função $ f_m(x) $ utilizando-se a função resultante da iteração anterior ($ f_{m-1}(x) $) e o argumento calculado no item anterior ($ \gamma_{jm} $) aplicado apenas aos casos em que o registro pertence à folha em questão ($ x \in R_{jm} $).
+	\item O resultado final se dá pela função da última iteração (M).
+\end{itemize}
+
 No algoritmo XGBoost, o tamanho da árvore e a magnitude dos pesos são controlados por parâmetros com regularização padrão. Uma infinidade de parâmetros é usada ainda para controlar o tamanho e a forma das árvores. A regularização de tais parâmetros, no entanto, provou ser muito poderosa e fez o algoritmo se tornar muito robusto, sendo que, atualmente, é um dos mais utilizados em competições de aprendizado de máquina.
 
-Neste trabalho, o treinamento do XGBoost foi feito utilizando-se a biblioteca em Python xgboost (\citet{Xgboost}) na linguagem de programação Python. O treinamento utilizou-se da metodologia explicada na seção \ref{sec:randomized_search} e os hiperparâmetros testados foram:
+Neste trabalho, o treinamento do XGBoost foi feito utilizando-se a biblioteca em Python xgboost (\citet{Xgboost}) na linguagem de programação Python.
+
+\section{Resultados do XGBoost}
+\label{sec:resultados_xgboost}
+
+O treinamento do modelo XGBoost utilizou-se da metodologia explicada na seção \ref{sec:randomized_search} e os hiperparâmetros testados foram:
 
 \begin{itemize}
 	\item \verb|max_depth|: Profundidade máxima de uma árvore. Aumentar esse valor tornará o modelo mais complexo e mais propenso à overfitting.

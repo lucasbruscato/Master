@@ -127,13 +127,15 @@ for file_number in range(0, len(file_names_and_paths)):
     words_unique = pd.DataFrame(pd.DataFrame(words).iloc[:, 0].unique())
     words_unique.columns = ["adjective"]
     
-    words_with_polarity = words_unique.merge(sentilex_database,
-                                             left_on="adjective",
-                                             right_on="adjective",
-                                             how="left")
+    words_with_polarity = words_unique.merge(
+        sentilex_database,
+        left_on="adjective",
+        right_on="adjective",
+        how="left")
     
-    words_without_polarity_full = pd.concat([words_without_polarity_full,
-                                             words_with_polarity[words_with_polarity.polarity.isnull()]])
+    words_without_polarity_full = pd.concat(
+        [words_without_polarity_full, words_with_polarity[words_with_polarity.polarity.isnull()]]
+    )
 
 
 words_without_polarity_full = pd.DataFrame(words_without_polarity_full.adjective.unique())
