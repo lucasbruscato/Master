@@ -39,7 +39,7 @@ O paralelo da explicação acima à explicação do algoritmo em aprendizado de 
 
 O Shapley Value vem sendo considerado a forma mais robusta e consistente de se avaliar a importância das variáveis explicativas em um modelo (ver \citet{Lundberg2017}), ele será utilizado neste trabalho tanto para ordenação da importância das variáveis quanto para interpretação das variáveis explicativas utilizadas no modelo. Foi-se utilizada a implementação deste método proveniente da biblioteca em Python SHAP (\citet{Shap}).
 
-Uma simplificação de como o Shapley Value pode ser calculado para uma determinada variável explicativa pode ser dada pela fórmula abaixo (considere f o modelo que se deseja avaliar o impacto das variáveis explicativas).
+Uma simplificação de como o Shapley Value pode ser calculado para uma determinada variável explicativa $j$ ($ \hat{\phi}_j $) pode ser dada pela fórmula abaixo (considere f o modelo que se deseja avaliar o impacto das variáveis explicativas).
 
 \begin{equation}
 \hat{\phi}_j = \frac{1}{M} \sum^{M}_{m=1}(\hat{f}(x^m_{+j}) - \hat{f}(x^m_{-j}))
@@ -271,7 +271,7 @@ Sendo que,
 \begin{itemize}
 	\item Em 1., inicializa-se a primeira iteração ou árvore ($ f_0 $, ou seja, $ m=0 $).
 	\item Em 2., o valor M representa o total de iterações (ou árvores).
-	\item Em 2.(a), para cada observação i - de um total de N - se calcula o resíduo dado pelo negativo do gradiente da função perda avaliado em $ f_{m-1} $, por exemplo, no caso de regressão o resultante do gradiente poderia ser $ y_i - f(x_i) $ resultante da função perda $ \frac{1}{2} (y - F(x))^{2} $.
+	\item Em 2.(a), para cada observação i - de um total de N - calcula-se o resíduo dado pelo negativo do gradiente da função perda avaliado em $ f_{m-1} $, por exemplo, no caso de regressão o resultante do gradiente poderia ser $ y_i - f(x_i) $ resultante da função perda $ \frac{1}{2} (y - F(x))^{2} $.
 	\item Em 2.(b), treina-se uma árvore de regressão sobre a variável resposta resíduo, sendo que $ J_m $ seria o número total de folhas da referida iteração.
 	\item Em 2.(c), calcula-se o argumento que minimiza a função perda para cada folha da referida iteração sobre a predição de $ f_{m-1} $.
 	\item Em 2.(d), atualiza-se a função $ f_m(x) $ utilizando-se a função resultante da iteração anterior ($ f_{m-1}(x) $) e o argumento calculado no item anterior ($ \gamma_{jm} $) aplicado apenas aos casos em que o registro pertence à folha em questão ($ x \in R_{jm} $).
