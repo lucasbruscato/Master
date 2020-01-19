@@ -23,3 +23,909 @@ JavaScript error: chrome://browser/content/tabbrowser.xml, line 8119: TypeError:
 JavaScript error: about:newtab, line 836: TypeError: gSnippetsMap.getTotalBookmarksCount is not a function
 1560271718700	Marionette	DEBUG	Register listener.js for window 2147483659
 JavaScript error: about:newtab, line 836: TypeError: gSnippetsMap.getTotalBookmarksCount is not a function
+1579453291311	geckodriver	INFO	geckodriver 0.21.0
+1579453291326	geckodriver	INFO	Listening on 127.0.0.1:59454
+1579453292346	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/hg/xj9zzkvn5t1g_2zhm18v70cr0000gn/T/rust_mozprofile.zqP6svyMMU29"
+1579453302272	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1579453302273	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1579453302273	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1579453302417	Marionette	TRACE	Received observer notification profile-after-change
+1579453302711	Marionette	TRACE	Received observer notification command-line-startup
+1579453302711	Marionette	TRACE	Received observer notification nsPref:changed
+1579453302711	Marionette	DEBUG	Init aborted (running=false, enabled=true, finalUIStartup=false)
+1579453302939	Marionette	TRACE	Received observer notification toplevel-window-ready
+1579453304680	Marionette	TRACE	Received observer notification marionette-startup-requested
+1579453304680	Marionette	TRACE	Waiting until startup recorder finished recording startup scripts...
+1579453304690	Marionette	TRACE	All scripts recorded.
+1579453304690	Marionette	DEBUG	Setting recommended pref app.update.disabledForTesting to true
+1579453304690	Marionette	DEBUG	Setting recommended pref apz.content_response_timeout to 60000
+1579453304691	Marionette	DEBUG	Setting recommended pref browser.contentblocking.introCount to 99
+1579453304691	Marionette	DEBUG	Setting recommended pref browser.download.panel.shown to true
+1579453304691	Marionette	DEBUG	Setting recommended pref browser.pagethumbnails.capturing_disabled to true
+1579453304692	Marionette	DEBUG	Setting recommended pref browser.tabs.disableBackgroundZombification to false
+1579453304692	Marionette	DEBUG	Setting recommended pref browser.tabs.warnOnCloseOtherTabs to false
+1579453304692	Marionette	DEBUG	Setting recommended pref browser.urlbar.suggest.searches to false
+1579453304693	Marionette	DEBUG	Setting recommended pref datareporting.policy.dataSubmissionPolicyAccepted to false
+1579453304694	Marionette	DEBUG	Setting recommended pref dom.disable_beforeunload to true
+1579453304694	Marionette	DEBUG	Setting recommended pref dom.file.createInChild to true
+1579453304694	Marionette	DEBUG	Setting recommended pref extensions.getAddons.cache.enabled to false
+1579453304694	Marionette	DEBUG	Setting recommended pref extensions.webservice.discoverURL to http://%(server)s/dummy/discoveryURL
+1579453304695	Marionette	DEBUG	Setting recommended pref network.http.prompt-temp-redirect to false
+1579453304695	Marionette	DEBUG	Setting recommended pref network.http.speculative-parallel-limit to 0
+1579453304695	Marionette	DEBUG	Setting recommended pref security.certerrors.mitm.priming.enabled to false
+1579453304695	Marionette	DEBUG	Setting recommended pref security.notification_enable_delay to 0
+1579453304695	Marionette	DEBUG	Setting recommended pref signon.autofillForms to false
+1579453304696	Marionette	DEBUG	Setting recommended pref toolkit.cosmeticAnimations.enabled to false
+1579453304749	Marionette	INFO	Listening on port 59466
+1579453304750	Marionette	DEBUG	Remote service is active
+1579453319483	Marionette	TRACE	Received observer notification xpcom-will-shutdown
+1579453319483	Marionette	DEBUG	Resetting recommended pref app.update.disabledForTesting
+1579453319483	Marionette	DEBUG	Resetting recommended pref apz.content_response_timeout
+1579453319483	Marionette	DEBUG	Resetting recommended pref browser.contentblocking.introCount
+1579453319483	Marionette	DEBUG	Resetting recommended pref browser.download.panel.shown
+1579453319483	Marionette	DEBUG	Resetting recommended pref browser.pagethumbnails.capturing_disabled
+1579453319484	Marionette	DEBUG	Resetting recommended pref browser.tabs.disableBackgroundZombification
+1579453319484	Marionette	DEBUG	Resetting recommended pref browser.tabs.warnOnCloseOtherTabs
+1579453319484	Marionette	DEBUG	Resetting recommended pref browser.urlbar.suggest.searches
+1579453319485	Marionette	DEBUG	Resetting recommended pref datareporting.policy.dataSubmissionPolicyAccepted
+1579453319485	Marionette	DEBUG	Resetting recommended pref dom.disable_beforeunload
+1579453319485	Marionette	DEBUG	Resetting recommended pref dom.file.createInChild
+1579453319485	Marionette	DEBUG	Resetting recommended pref extensions.getAddons.cache.enabled
+1579453319485	Marionette	DEBUG	Resetting recommended pref extensions.webservice.discoverURL
+1579453319486	Marionette	DEBUG	Resetting recommended pref network.http.prompt-temp-redirect
+1579453319486	Marionette	DEBUG	Resetting recommended pref network.http.speculative-parallel-limit
+1579453319486	Marionette	DEBUG	Resetting recommended pref security.certerrors.mitm.priming.enabled
+1579453319486	Marionette	DEBUG	Resetting recommended pref security.notification_enable_delay
+1579453319486	Marionette	DEBUG	Resetting recommended pref signon.autofillForms
+1579453319486	Marionette	DEBUG	Resetting recommended pref toolkit.cosmeticAnimations.enabled
+1579453319487	Marionette	INFO	Stopped listening on port 59466
+1579453319487	Marionette	DEBUG	Remote service is inactive
+1579453322022	geckodriver	INFO	geckodriver 0.21.0
+1579453322032	geckodriver	INFO	Listening on 127.0.0.1:59491
+1579453323047	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/hg/xj9zzkvn5t1g_2zhm18v70cr0000gn/T/rust_mozprofile.O5cZLEbGN2te"
+1579453323654	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1579453323655	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1579453323655	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1579453323779	Marionette	TRACE	Received observer notification profile-after-change
+1579453323883	Marionette	TRACE	Received observer notification command-line-startup
+1579453323883	Marionette	TRACE	Received observer notification nsPref:changed
+1579453323883	Marionette	DEBUG	Init aborted (running=false, enabled=true, finalUIStartup=false)
+1579453324072	Marionette	TRACE	Received observer notification toplevel-window-ready
+1579453325699	Marionette	TRACE	Received observer notification marionette-startup-requested
+1579453325699	Marionette	TRACE	Waiting until startup recorder finished recording startup scripts...
+1579453325712	Marionette	TRACE	All scripts recorded.
+1579453325712	Marionette	DEBUG	Setting recommended pref app.update.disabledForTesting to true
+1579453325713	Marionette	DEBUG	Setting recommended pref apz.content_response_timeout to 60000
+1579453325713	Marionette	DEBUG	Setting recommended pref browser.contentblocking.introCount to 99
+1579453325714	Marionette	DEBUG	Setting recommended pref browser.download.panel.shown to true
+1579453325714	Marionette	DEBUG	Setting recommended pref browser.pagethumbnails.capturing_disabled to true
+1579453325715	Marionette	DEBUG	Setting recommended pref browser.tabs.disableBackgroundZombification to false
+1579453325715	Marionette	DEBUG	Setting recommended pref browser.tabs.warnOnCloseOtherTabs to false
+1579453325715	Marionette	DEBUG	Setting recommended pref browser.urlbar.suggest.searches to false
+1579453325716	Marionette	DEBUG	Setting recommended pref datareporting.policy.dataSubmissionPolicyAccepted to false
+1579453325717	Marionette	DEBUG	Setting recommended pref dom.disable_beforeunload to true
+1579453325717	Marionette	DEBUG	Setting recommended pref dom.file.createInChild to true
+1579453325718	Marionette	DEBUG	Setting recommended pref extensions.getAddons.cache.enabled to false
+1579453325718	Marionette	DEBUG	Setting recommended pref extensions.webservice.discoverURL to http://%(server)s/dummy/discoveryURL
+1579453325718	Marionette	DEBUG	Setting recommended pref network.http.prompt-temp-redirect to false
+1579453325718	Marionette	DEBUG	Setting recommended pref network.http.speculative-parallel-limit to 0
+1579453325718	Marionette	DEBUG	Setting recommended pref security.certerrors.mitm.priming.enabled to false
+1579453325719	Marionette	DEBUG	Setting recommended pref security.notification_enable_delay to 0
+1579453325719	Marionette	DEBUG	Setting recommended pref signon.autofillForms to false
+1579453325719	Marionette	DEBUG	Setting recommended pref toolkit.cosmeticAnimations.enabled to false
+1579453325775	Marionette	INFO	Listening on port 59502
+1579453325776	Marionette	DEBUG	Remote service is active
+1579453325806	Marionette	DEBUG	Accepted connection 0 from 127.0.0.1:59539
+1579453325808	Marionette	DEBUG	0 -> [0,1,"WebDriver:NewSession",{"acceptInsecureCerts":true,"browserName":"firefox","capabilities":{"desiredCapabilities":{"acceptInsecureCerts":true,"browserName":"firefox"}}}]
+1579453325809	Marionette	WARN	TLS certificate errors will be ignored for this session
+1579453325841	Marionette	TRACE	[4294967297] Frame script loaded
+1579453325843	Marionette	TRACE	[4294967297] Frame script registered
+1579453325849	Marionette	DEBUG	0 <- [1,1,null,{"sessionId":"16fa1312-ed64-8f4f-ad7b-18ab3275bc95","capabilities":{"browserName":"firefox","browserVersion":"67.0. ... alse,"moz:webdriverClick":true,"capabilities":{"desiredCapabilities":{"acceptInsecureCerts":true,"browserName":"firefox"}}}}]
+1579453325857	Marionette	DEBUG	0 -> [0,2,"WebDriver:MaximizeWindow",{}]
+1579453326348	Marionette	DEBUG	0 <- [1,2,null,{"x":0,"y":23,"width":1440,"height":877}]
+1579453326353	Marionette	DEBUG	0 -> [0,3,"WebDriver:Navigate",{"url":"https://auditoria.cgu.gov.br/"}]
+1579453326368	Marionette	TRACE	[4294967297] Received DOM event beforeunload for about:blank
+1579453328418	Marionette	TRACE	[4294967297] Received DOM event pagehide for about:blank
+1579453334259	Marionette	TRACE	[4294967297] Received DOM event DOMContentLoaded for https://auditoria.cgu.gov.br/
+JavaScript warning: https://vlibras.gov.br/app/vlibras-plugin.js, line 81: unreachable code after return statement
+1579453336123	Marionette	TRACE	[4294967297] Received DOM event pageshow for https://auditoria.cgu.gov.br/
+1579453336125	Marionette	DEBUG	0 <- [1,3,null,{"value":null}]
+1579453336137	Marionette	DEBUG	0 -> [0,4,"WebDriver:FindElement",{"using":"css selector","value":"[id=\"linhaAtuacao\"]"}]
+1579453336144	Marionette	DEBUG	0 <- [1,4,null,{"value":{"element-6066-11e4-a52e-4f735466cecf":"0760ff36-863d-9b4e-9a6e-7bfbef3c418f"}}]
+1579453336147	Marionette	DEBUG	0 -> [0,5,"WebDriver:GetElementTagName",{"id":"0760ff36-863d-9b4e-9a6e-7bfbef3c418f"}]
+1579453336151	Marionette	DEBUG	0 <- [1,5,null,{"value":"select"}]
+1579453336154	Marionette	DEBUG	0 -> [0,6,"WebDriver:ExecuteScript",{"args":[{"ELEMENT":"0760ff36-863d-9b4e-9a6e-7bfbef3c418f","element-6066-11e4-a52e-4f735466cec ... dow!='undefined'?window.document:null}, arguments);}\n).apply(null, arguments);","scriptTimeout":null,"specialPowers":false}]
+1579453336163	Marionette	DEBUG	0 <- [1,6,null,{"value":null}]
+1579453336167	Marionette	DEBUG	0 -> [0,7,"WebDriver:FindElements",{"element":"0760ff36-863d-9b4e-9a6e-7bfbef3c418f","using":"xpath","value":".//option[normalize-space(.) = \"Fiscalização em Entes Federativos - Municípios\"]"}]
+1579453336176	Marionette	DEBUG	0 <- [1,7,null,[{"element-6066-11e4-a52e-4f735466cecf":"78fb4204-1090-4046-8c71-d5bbaff18958"}]]
+1579453336179	Marionette	DEBUG	0 -> [0,8,"WebDriver:IsElementSelected",{"id":"78fb4204-1090-4046-8c71-d5bbaff18958"}]
+1579453336184	Marionette	DEBUG	0 <- [1,8,null,{"value":false}]
+1579453336187	Marionette	DEBUG	0 -> [0,9,"WebDriver:ElementClick",{"id":"78fb4204-1090-4046-8c71-d5bbaff18958"}]
+1579453336422	Marionette	DEBUG	[4294967297] Canceled page load listener because no navigation has been detected
+1579453336423	Marionette	DEBUG	0 <- [1,9,null,{"value":null}]
+1579453336428	Marionette	DEBUG	0 -> [0,10,"WebDriver:FindElement",{"using":"css selector","value":"[id=\"de\"]"}]
+1579453336434	Marionette	DEBUG	0 <- [1,10,null,{"value":{"element-6066-11e4-a52e-4f735466cecf":"d6cacd4c-2a2e-144a-80ac-3a64488204fe"}}]
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: http://%(server)s/dummy/blocklist//buckets/monitor/collections/changes/records?_expected=%221579250265716%22 is not a valid URL..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:203:13
+
+1579453386345	Marionette	DEBUG	Closed connection 0
+1579453386435	Marionette	TRACE	Received observer notification xpcom-will-shutdown
+1579453386435	Marionette	DEBUG	Resetting recommended pref app.update.disabledForTesting
+1579453386435	Marionette	DEBUG	Resetting recommended pref apz.content_response_timeout
+1579453386435	Marionette	DEBUG	Resetting recommended pref browser.contentblocking.introCount
+1579453386435	Marionette	DEBUG	Resetting recommended pref browser.download.panel.shown
+1579453386436	Marionette	DEBUG	Resetting recommended pref browser.pagethumbnails.capturing_disabled
+1579453386436	Marionette	DEBUG	Resetting recommended pref browser.tabs.disableBackgroundZombification
+1579453386436	Marionette	DEBUG	Resetting recommended pref browser.tabs.warnOnCloseOtherTabs
+1579453386436	Marionette	DEBUG	Resetting recommended pref browser.urlbar.suggest.searches
+1579453386437	Marionette	DEBUG	Resetting recommended pref datareporting.policy.dataSubmissionPolicyAccepted
+1579453386437	Marionette	DEBUG	Resetting recommended pref dom.disable_beforeunload
+1579453386437	Marionette	DEBUG	Resetting recommended pref dom.file.createInChild
+1579453386437	Marionette	DEBUG	Resetting recommended pref extensions.getAddons.cache.enabled
+1579453386437	Marionette	DEBUG	Resetting recommended pref extensions.webservice.discoverURL
+1579453386437	Marionette	DEBUG	Resetting recommended pref network.http.prompt-temp-redirect
+1579453386437	Marionette	DEBUG	Resetting recommended pref network.http.speculative-parallel-limit
+1579453386437	Marionette	DEBUG	Resetting recommended pref security.certerrors.mitm.priming.enabled
+1579453386437	Marionette	DEBUG	Resetting recommended pref security.notification_enable_delay
+1579453386438	Marionette	DEBUG	Resetting recommended pref signon.autofillForms
+1579453386438	Marionette	DEBUG	Resetting recommended pref toolkit.cosmeticAnimations.enabled
+1579453386438	Marionette	INFO	Stopped listening on port 59502
+1579453386438	Marionette	DEBUG	Remote service is inactive
+1579453388704	geckodriver	INFO	geckodriver 0.21.0
+1579453388713	geckodriver	INFO	Listening on 127.0.0.1:59578
+1579453389734	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/hg/xj9zzkvn5t1g_2zhm18v70cr0000gn/T/rust_mozprofile.HXMY2BLkcC5D"
+1579453391008	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
+1579453391047	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1579453391047	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1579453391047	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1579453391047	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1579453391182	Marionette	TRACE	Received observer notification profile-after-change
+1579453391335	Marionette	TRACE	Received observer notification command-line-startup
+1579453391335	Marionette	DEBUG	Init aborted (running=false, enabled=true, finalUIStartup=false)
+1579453391473	Marionette	TRACE	Received observer notification toplevel-window-ready
+1579453393471	Marionette	TRACE	Received observer notification marionette-startup-requested
+1579453393471	Marionette	TRACE	Waiting until startup recorder finished recording startup scripts...
+1579453393537	Marionette	TRACE	All scripts recorded.
+1579453393538	Marionette	DEBUG	Setting recommended pref app.update.disabledForTesting to true
+1579453393538	Marionette	DEBUG	Setting recommended pref apz.content_response_timeout to 60000
+1579453393539	Marionette	DEBUG	Setting recommended pref browser.contentblocking.introCount to 99
+1579453393539	Marionette	DEBUG	Setting recommended pref browser.download.panel.shown to true
+1579453393539	Marionette	DEBUG	Setting recommended pref browser.pagethumbnails.capturing_disabled to true
+1579453393540	Marionette	DEBUG	Setting recommended pref browser.tabs.disableBackgroundZombification to false
+1579453393540	Marionette	DEBUG	Setting recommended pref browser.tabs.remote.separatePrivilegedContentProcess to false
+1579453393540	Marionette	DEBUG	Setting recommended pref browser.tabs.unloadOnLowMemory to false
+1579453393541	Marionette	DEBUG	Setting recommended pref browser.tabs.warnOnCloseOtherTabs to false
+1579453393541	Marionette	DEBUG	Setting recommended pref browser.urlbar.suggest.searches to false
+1579453393543	Marionette	DEBUG	Setting recommended pref datareporting.policy.dataSubmissionPolicyAccepted to false
+1579453393543	Marionette	DEBUG	Setting recommended pref dom.disable_beforeunload to true
+1579453393544	Marionette	DEBUG	Setting recommended pref dom.file.createInChild to true
+1579453393544	Marionette	DEBUG	Setting recommended pref dom.push.connection.enabled to false
+1579453393544	Marionette	DEBUG	Setting recommended pref extensions.getAddons.cache.enabled to false
+1579453393544	Marionette	DEBUG	Setting recommended pref extensions.webservice.discoverURL to http://%(server)s/dummy/discoveryURL
+1579453393545	Marionette	DEBUG	Setting recommended pref network.http.prompt-temp-redirect to false
+1579453393545	Marionette	DEBUG	Setting recommended pref network.http.speculative-parallel-limit to 0
+1579453393545	Marionette	DEBUG	Setting recommended pref privacy.trackingprotection.enabled to false
+1579453393545	Marionette	DEBUG	Setting recommended pref security.certerrors.mitm.priming.enabled to false
+1579453393545	Marionette	DEBUG	Setting recommended pref security.notification_enable_delay to 0
+1579453393545	Marionette	DEBUG	Setting recommended pref signon.autofillForms to false
+1579453393546	Marionette	DEBUG	Setting recommended pref toolkit.cosmeticAnimations.enabled to false
+1579453393619	Marionette	INFO	Listening on port 59589
+1579453393620	Marionette	DEBUG	Marionette is listening
+1579453395658	Marionette	TRACE	Received observer notification xpcom-will-shutdown
+1579453395658	Marionette	DEBUG	Resetting recommended pref app.update.disabledForTesting
+1579453395659	Marionette	DEBUG	Resetting recommended pref apz.content_response_timeout
+1579453395659	Marionette	DEBUG	Resetting recommended pref browser.contentblocking.introCount
+1579453395659	Marionette	DEBUG	Resetting recommended pref browser.download.panel.shown
+1579453395659	Marionette	DEBUG	Resetting recommended pref browser.pagethumbnails.capturing_disabled
+1579453395659	Marionette	DEBUG	Resetting recommended pref browser.tabs.disableBackgroundZombification
+1579453395659	Marionette	DEBUG	Resetting recommended pref browser.tabs.remote.separatePrivilegedContentProcess
+1579453395659	Marionette	DEBUG	Resetting recommended pref browser.tabs.unloadOnLowMemory
+1579453395659	Marionette	DEBUG	Resetting recommended pref browser.tabs.warnOnCloseOtherTabs
+1579453395659	Marionette	DEBUG	Resetting recommended pref browser.urlbar.suggest.searches
+1579453395660	Marionette	DEBUG	Resetting recommended pref datareporting.policy.dataSubmissionPolicyAccepted
+1579453395660	Marionette	DEBUG	Resetting recommended pref dom.disable_beforeunload
+1579453395660	Marionette	DEBUG	Resetting recommended pref dom.file.createInChild
+1579453395660	Marionette	DEBUG	Resetting recommended pref dom.push.connection.enabled
+1579453395660	Marionette	DEBUG	Resetting recommended pref extensions.getAddons.cache.enabled
+1579453395661	Marionette	DEBUG	Resetting recommended pref extensions.webservice.discoverURL
+1579453395661	Marionette	DEBUG	Resetting recommended pref network.http.prompt-temp-redirect
+1579453395661	Marionette	DEBUG	Resetting recommended pref network.http.speculative-parallel-limit
+1579453395661	Marionette	DEBUG	Resetting recommended pref privacy.trackingprotection.enabled
+1579453395661	Marionette	DEBUG	Resetting recommended pref security.certerrors.mitm.priming.enabled
+1579453395661	Marionette	DEBUG	Resetting recommended pref security.notification_enable_delay
+1579453395661	Marionette	DEBUG	Resetting recommended pref signon.autofillForms
+1579453395661	Marionette	DEBUG	Resetting recommended pref toolkit.cosmeticAnimations.enabled
+1579453395662	Marionette	INFO	Stopped listening on port 59589
+1579453395662	Marionette	DEBUG	Marionette stopped listening
+1579453396771	geckodriver	INFO	geckodriver 0.21.0
+1579453396785	geckodriver	INFO	Listening on 127.0.0.1:59605
+1579453397809	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/hg/xj9zzkvn5t1g_2zhm18v70cr0000gn/T/rust_mozprofile.qIQVvy8W0WdL"
+1579453398331	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
+1579453398364	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1579453398364	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1579453398365	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1579453398365	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1579453398482	Marionette	TRACE	Received observer notification profile-after-change
+1579453398597	Marionette	TRACE	Received observer notification command-line-startup
+1579453398598	Marionette	DEBUG	Init aborted (running=false, enabled=true, finalUIStartup=false)
+1579453398783	Marionette	TRACE	Received observer notification toplevel-window-ready
+1579453400389	Marionette	TRACE	Received observer notification marionette-startup-requested
+1579453400390	Marionette	TRACE	Waiting until startup recorder finished recording startup scripts...
+1579453400443	Marionette	TRACE	All scripts recorded.
+1579453400443	Marionette	DEBUG	Setting recommended pref app.update.disabledForTesting to true
+1579453400444	Marionette	DEBUG	Setting recommended pref apz.content_response_timeout to 60000
+1579453400444	Marionette	DEBUG	Setting recommended pref browser.contentblocking.introCount to 99
+1579453400444	Marionette	DEBUG	Setting recommended pref browser.download.panel.shown to true
+1579453400444	Marionette	DEBUG	Setting recommended pref browser.pagethumbnails.capturing_disabled to true
+1579453400445	Marionette	DEBUG	Setting recommended pref browser.tabs.disableBackgroundZombification to false
+1579453400445	Marionette	DEBUG	Setting recommended pref browser.tabs.remote.separatePrivilegedContentProcess to false
+1579453400445	Marionette	DEBUG	Setting recommended pref browser.tabs.unloadOnLowMemory to false
+1579453400445	Marionette	DEBUG	Setting recommended pref browser.tabs.warnOnCloseOtherTabs to false
+1579453400445	Marionette	DEBUG	Setting recommended pref browser.urlbar.suggest.searches to false
+1579453400446	Marionette	DEBUG	Setting recommended pref datareporting.policy.dataSubmissionPolicyAccepted to false
+1579453400447	Marionette	DEBUG	Setting recommended pref dom.disable_beforeunload to true
+1579453400447	Marionette	DEBUG	Setting recommended pref dom.file.createInChild to true
+1579453400447	Marionette	DEBUG	Setting recommended pref dom.push.connection.enabled to false
+1579453400447	Marionette	DEBUG	Setting recommended pref extensions.getAddons.cache.enabled to false
+1579453400447	Marionette	DEBUG	Setting recommended pref extensions.webservice.discoverURL to http://%(server)s/dummy/discoveryURL
+1579453400447	Marionette	DEBUG	Setting recommended pref network.http.prompt-temp-redirect to false
+1579453400448	Marionette	DEBUG	Setting recommended pref network.http.speculative-parallel-limit to 0
+1579453400448	Marionette	DEBUG	Setting recommended pref privacy.trackingprotection.enabled to false
+1579453400448	Marionette	DEBUG	Setting recommended pref security.certerrors.mitm.priming.enabled to false
+1579453400448	Marionette	DEBUG	Setting recommended pref security.notification_enable_delay to 0
+1579453400448	Marionette	DEBUG	Setting recommended pref signon.autofillForms to false
+1579453400449	Marionette	DEBUG	Setting recommended pref toolkit.cosmeticAnimations.enabled to false
+1579453400515	Marionette	INFO	Listening on port 59616
+1579453400515	Marionette	DEBUG	Marionette is listening
+1579453400572	Marionette	DEBUG	Accepted connection 0 from 127.0.0.1:59653
+1579453400575	Marionette	DEBUG	0 -> [0,1,"WebDriver:NewSession",{"acceptInsecureCerts":true,"browserName":"firefox","capabilities":{"desiredCapabilities":{"acceptInsecureCerts":true,"browserName":"firefox"}}}]
+1579453400575	Marionette	WARN	TLS certificate errors will be ignored for this session
+1579453400605	Marionette	TRACE	[17] Frame script loaded
+1579453400607	Marionette	TRACE	[17] Frame script registered
+1579453400613	Marionette	DEBUG	0 <- [1,1,null,{"sessionId":"0b754f35-2bf9-1f47-8a30-e652ba034d3c","capabilities":{"browserName":"firefox","browserVersion":"72.0. ... alse,"moz:webdriverClick":true,"capabilities":{"desiredCapabilities":{"acceptInsecureCerts":true,"browserName":"firefox"}}}}]
+1579453400618	Marionette	DEBUG	0 -> [0,2,"WebDriver:MaximizeWindow",{}]
+1579453401105	Marionette	DEBUG	0 <- [1,2,null,{"x":0,"y":23,"width":1440,"height":877}]
+1579453401110	Marionette	DEBUG	0 -> [0,3,"WebDriver:Navigate",{"url":"https://auditoria.cgu.gov.br/"}]
+1579453401122	Marionette	TRACE	[17] Received DOM event beforeunload for about:blank
+1579453402318	Marionette	TRACE	[17] Received DOM event pagehide for about:blank
+1579453405261	Marionette	TRACE	[17] Received DOM event DOMContentLoaded for https://auditoria.cgu.gov.br/
+JavaScript warning: https://vlibras.gov.br/app/vlibras-plugin.js, line 81: unreachable code after return statement
+1579453407113	Marionette	TRACE	[17] Received DOM event pageshow for https://auditoria.cgu.gov.br/
+1579453407116	Marionette	DEBUG	0 <- [1,3,null,{"value":null}]
+1579453407132	Marionette	DEBUG	0 -> [0,4,"WebDriver:FindElement",{"using":"css selector","value":"[id=\"linhaAtuacao\"]"}]
+1579453407136	Marionette	DEBUG	0 <- [1,4,null,{"value":{"element-6066-11e4-a52e-4f735466cecf":"1019c368-0f63-414d-bbd6-b520f47aca29"}}]
+1579453407140	Marionette	DEBUG	0 -> [0,5,"WebDriver:GetElementTagName",{"id":"1019c368-0f63-414d-bbd6-b520f47aca29"}]
+1579453407144	Marionette	DEBUG	0 <- [1,5,null,{"value":"select"}]
+1579453407148	Marionette	DEBUG	0 -> [0,6,"WebDriver:ExecuteScript",{"args":[{"ELEMENT":"1019c368-0f63-414d-bbd6-b520f47aca29","element-6066-11e4-a52e-4f735466cec ... dow!='undefined'?window.document:null}, arguments);}\n).apply(null, arguments);","scriptTimeout":null,"specialPowers":false}]
+1579453407159	Marionette	DEBUG	0 <- [1,6,null,{"value":null}]
+1579453407162	Marionette	DEBUG	0 -> [0,7,"WebDriver:FindElements",{"element":"1019c368-0f63-414d-bbd6-b520f47aca29","using":"xpath","value":".//option[normalize-space(.) = \"Fiscalização em Entes Federativos - Municípios\"]"}]
+1579453407166	Marionette	DEBUG	0 <- [1,7,null,[{"element-6066-11e4-a52e-4f735466cecf":"6c008506-c509-e14b-a432-133c10681ab3"}]]
+1579453407169	Marionette	DEBUG	0 -> [0,8,"WebDriver:IsElementSelected",{"id":"6c008506-c509-e14b-a432-133c10681ab3"}]
+1579453407174	Marionette	DEBUG	0 <- [1,8,null,{"value":false}]
+1579453407176	Marionette	DEBUG	0 -> [0,9,"WebDriver:ElementClick",{"id":"6c008506-c509-e14b-a432-133c10681ab3"}]
+1579453407406	Marionette	DEBUG	[17] Canceled page load listener because no navigation has been detected
+1579453407407	Marionette	DEBUG	0 <- [1,9,null,{"value":null}]
+1579453407411	Marionette	DEBUG	0 -> [0,10,"WebDriver:FindElement",{"using":"css selector","value":"[id=\"de\"]"}]
+1579453407414	Marionette	DEBUG	0 <- [1,10,null,{"value":{"element-6066-11e4-a52e-4f735466cecf":"3dfef802-8bee-e54f-a23f-cbe5437277a1"}}]
+1579453407419	Marionette	DEBUG	0 -> [0,11,"WebDriver:ElementSendKeys",{"id":"3dfef802-8bee-e54f-a23f-cbe5437277a1","text":"01/01/2011","value":["0","1","/","0","1","/","2","0","1","1",""]}]
+1579453407636	Marionette	DEBUG	0 <- [1,11,null,{"value":null}]
+1579453407640	Marionette	DEBUG	0 -> [0,12,"WebDriver:FindElement",{"using":"css selector","value":"[id=\"ate\"]"}]
+1579453407645	Marionette	DEBUG	0 <- [1,12,null,{"value":{"element-6066-11e4-a52e-4f735466cecf":"71688818-a681-9d4b-adf1-d130a9aae2dd"}}]
+1579453407652	Marionette	DEBUG	0 -> [0,13,"WebDriver:ElementSendKeys",{"id":"71688818-a681-9d4b-adf1-d130a9aae2dd","text":"31/12/2012\r","value":["3","1","/","1","2","/","2","0","1","2","\r",""]}]
+1579453407880	Marionette	DEBUG	0 <- [1,13,null,{"value":null}]
+1579453407886	Marionette	DEBUG	0 -> [0,14,"WebDriver:FindElement",{"using":"css selector","value":"[id=\"palavraChave\"]"}]
+1579453407891	Marionette	DEBUG	0 <- [1,14,null,{"value":{"element-6066-11e4-a52e-4f735466cecf":"263a202a-d84c-5f43-a750-5a9d0b278597"}}]
+1579453407895	Marionette	DEBUG	0 -> [0,15,"WebDriver:ElementSendKeys",{"id":"263a202a-d84c-5f43-a750-5a9d0b278597","text":"Araucáriaa","value":["A","r","a","u","c","á","r","i","a","","a"]}]
+1579453407934	Marionette	DEBUG	0 <- [1,15,null,{"value":null}]
+1579453407959	Marionette	DEBUG	0 -> [0,16,"WebDriver:FindElement",{"using":"css selector","value":"[id=\"palavraChave\"]"}]
+1579453407962	Marionette	DEBUG	0 <- [1,16,null,{"value":{"element-6066-11e4-a52e-4f735466cecf":"263a202a-d84c-5f43-a750-5a9d0b278597"}}]
+1579453407966	Marionette	DEBUG	0 -> [0,17,"WebDriver:ElementSendKeys",{"id":"263a202a-d84c-5f43-a750-5a9d0b278597","text":"x","value":["","x"]}]
+1579453407988	Marionette	DEBUG	0 <- [1,17,null,{"value":null}]
+1579453407991	Marionette	DEBUG	0 -> [0,18,"WebDriver:FindElement",{"using":"css selector","value":"[id=\"token-input-municipios\"]"}]
+1579453408000	Marionette	DEBUG	0 <- [1,18,null,{"value":{"element-6066-11e4-a52e-4f735466cecf":"3769b7cd-62af-3940-b773-412025cd3182"}}]
+1579453408003	Marionette	DEBUG	0 -> [0,19,"WebDriver:ElementSendKeys",{"id":"3769b7cd-62af-3940-b773-412025cd3182","text":"v","value":["","v"]}]
+1579453408032	Marionette	DEBUG	0 <- [1,19,null,{"value":null}]
+1579453410041	Marionette	DEBUG	0 -> [0,20,"WebDriver:FindElement",{"using":"css selector","value":"[id=\"token-input-municipios\"]"}]
+1579453410044	Marionette	DEBUG	0 <- [1,20,null,{"value":{"element-6066-11e4-a52e-4f735466cecf":"3769b7cd-62af-3940-b773-412025cd3182"}}]
+1579453410048	Marionette	DEBUG	0 -> [0,21,"WebDriver:ElementSendKeys",{"id":"3769b7cd-62af-3940-b773-412025cd3182","text":"","value":[""]}]
+1579453410069	Marionette	DEBUG	0 <- [1,21,null,{"value":null}]
+1579453411075	Marionette	DEBUG	0 -> [0,22,"WebDriver:FindElement",{"using":"css selector","value":"[id=\"palavraChave\"]"}]
+1579453411078	Marionette	DEBUG	0 <- [1,22,null,{"value":{"element-6066-11e4-a52e-4f735466cecf":"263a202a-d84c-5f43-a750-5a9d0b278597"}}]
+1579453411082	Marionette	DEBUG	0 -> [0,23,"WebDriver:ElementSendKeys",{"id":"263a202a-d84c-5f43-a750-5a9d0b278597","text":"Roncadora","value":["R","o","n","c","a","d","o","r","","a"]}]
+1579453411118	Marionette	DEBUG	0 <- [1,23,null,{"value":null}]
+1579453411120	Marionette	DEBUG	0 -> [0,24,"WebDriver:FindElement",{"using":"css selector","value":"[id=\"palavraChave\"]"}]
+1579453411124	Marionette	DEBUG	0 <- [1,24,null,{"value":{"element-6066-11e4-a52e-4f735466cecf":"263a202a-d84c-5f43-a750-5a9d0b278597"}}]
+1579453411127	Marionette	DEBUG	0 -> [0,25,"WebDriver:ElementSendKeys",{"id":"263a202a-d84c-5f43-a750-5a9d0b278597","text":"x","value":["","x"]}]
+1579453411136	Marionette	DEBUG	0 <- [1,25,null,{"value":null}]
+1579453411138	Marionette	DEBUG	0 -> [0,26,"WebDriver:FindElement",{"using":"css selector","value":"[id=\"token-input-municipios\"]"}]
+1579453411141	Marionette	DEBUG	0 <- [1,26,null,{"value":{"element-6066-11e4-a52e-4f735466cecf":"3769b7cd-62af-3940-b773-412025cd3182"}}]
+1579453411143	Marionette	DEBUG	0 -> [0,27,"WebDriver:ElementSendKeys",{"id":"3769b7cd-62af-3940-b773-412025cd3182","text":"v","value":["","v"]}]
+1579453411159	Marionette	DEBUG	0 <- [1,27,null,{"value":null}]
+1579453413168	Marionette	DEBUG	0 -> [0,28,"WebDriver:FindElement",{"using":"css selector","value":"[id=\"token-input-municipios\"]"}]
+1579453413174	Marionette	DEBUG	0 <- [1,28,null,{"value":{"element-6066-11e4-a52e-4f735466cecf":"3769b7cd-62af-3940-b773-412025cd3182"}}]
+1579453413179	Marionette	DEBUG	0 -> [0,29,"WebDriver:ElementSendKeys",{"id":"3769b7cd-62af-3940-b773-412025cd3182","text":"","value":[""]}]
+1579453413208	Marionette	DEBUG	0 <- [1,29,null,{"value":null}]
+1579453414214	Marionette	DEBUG	0 -> [0,30,"WebDriver:FindElement",{"using":"css selector","value":"[id=\"palavraChave\"]"}]
+1579453414220	Marionette	DEBUG	0 <- [1,30,null,{"value":{"element-6066-11e4-a52e-4f735466cecf":"263a202a-d84c-5f43-a750-5a9d0b278597"}}]
+1579453414226	Marionette	DEBUG	0 -> [0,31,"WebDriver:ElementSendKeys",{"id":"263a202a-d84c-5f43-a750-5a9d0b278597","text":"Paranaguáa","value":["P","a","r","a","n","a","g","u","á","","a"]}]
+1579453414258	Marionette	DEBUG	0 <- [1,31,null,{"value":null}]
+1579453414263	Marionette	DEBUG	0 -> [0,32,"WebDriver:FindElement",{"using":"css selector","value":"[id=\"palavraChave\"]"}]
+1579453414266	Marionette	DEBUG	0 <- [1,32,null,{"value":{"element-6066-11e4-a52e-4f735466cecf":"263a202a-d84c-5f43-a750-5a9d0b278597"}}]
+1579453414270	Marionette	DEBUG	0 -> [0,33,"WebDriver:ElementSendKeys",{"id":"263a202a-d84c-5f43-a750-5a9d0b278597","text":"x","value":["","x"]}]
+1579453414279	Marionette	DEBUG	0 <- [1,33,null,{"value":null}]
+1579453414282	Marionette	DEBUG	0 -> [0,34,"WebDriver:FindElement",{"using":"css selector","value":"[id=\"token-input-municipios\"]"}]
+1579453414286	Marionette	DEBUG	0 <- [1,34,null,{"value":{"element-6066-11e4-a52e-4f735466cecf":"3769b7cd-62af-3940-b773-412025cd3182"}}]
+1579453414288	Marionette	DEBUG	0 -> [0,35,"WebDriver:ElementSendKeys",{"id":"3769b7cd-62af-3940-b773-412025cd3182","text":"v","value":["","v"]}]
+1579453414311	Marionette	DEBUG	0 <- [1,35,null,{"value":null}]
+1579453416320	Marionette	DEBUG	0 -> [0,36,"WebDriver:FindElement",{"using":"css selector","value":"[id=\"token-input-municipios\"]"}]
+1579453416323	Marionette	DEBUG	0 <- [1,36,null,{"value":{"element-6066-11e4-a52e-4f735466cecf":"3769b7cd-62af-3940-b773-412025cd3182"}}]
+1579453416327	Marionette	DEBUG	0 -> [0,37,"WebDriver:ElementSendKeys",{"id":"3769b7cd-62af-3940-b773-412025cd3182","text":"","value":[""]}]
+1579453416344	Marionette	DEBUG	0 <- [1,37,null,{"value":null}]
+1579453417350	Marionette	DEBUG	0 -> [0,38,"WebDriver:FindElement",{"using":"css selector","value":"[id=\"palavraChave\"]"}]
+1579453417357	Marionette	DEBUG	0 <- [1,38,null,{"value":{"element-6066-11e4-a52e-4f735466cecf":"263a202a-d84c-5f43-a750-5a9d0b278597"}}]
+1579453417361	Marionette	DEBUG	0 -> [0,39,"WebDriver:ElementSendKeys",{"id":"263a202a-d84c-5f43-a750-5a9d0b278597","text":"Aurelino Leala","value":["A","u","r","e","l","i","n","o"," ","L","e","a","l","","a"]}]
+1579453417407	Marionette	DEBUG	0 <- [1,39,null,{"value":null}]
+1579453417410	Marionette	DEBUG	0 -> [0,40,"WebDriver:FindElement",{"using":"css selector","value":"[id=\"palavraChave\"]"}]
+1579453417415	Marionette	DEBUG	0 <- [1,40,null,{"value":{"element-6066-11e4-a52e-4f735466cecf":"263a202a-d84c-5f43-a750-5a9d0b278597"}}]
+1579453417418	Marionette	DEBUG	0 -> [0,41,"WebDriver:ElementSendKeys",{"id":"263a202a-d84c-5f43-a750-5a9d0b278597","text":"x","value":["","x"]}]
+1579453417428	Marionette	DEBUG	0 <- [1,41,null,{"value":null}]
+1579453417430	Marionette	DEBUG	0 -> [0,42,"WebDriver:FindElement",{"using":"css selector","value":"[id=\"token-input-municipios\"]"}]
+1579453417433	Marionette	DEBUG	0 <- [1,42,null,{"value":{"element-6066-11e4-a52e-4f735466cecf":"3769b7cd-62af-3940-b773-412025cd3182"}}]
+1579453417436	Marionette	DEBUG	0 -> [0,43,"WebDriver:ElementSendKeys",{"id":"3769b7cd-62af-3940-b773-412025cd3182","text":"v","value":["","v"]}]
+1579453417459	Marionette	DEBUG	0 <- [1,43,null,{"value":null}]
+1579453419469	Marionette	DEBUG	0 -> [0,44,"WebDriver:FindElement",{"using":"css selector","value":"[id=\"token-input-municipios\"]"}]
+1579453419472	Marionette	DEBUG	0 <- [1,44,null,{"value":{"element-6066-11e4-a52e-4f735466cecf":"3769b7cd-62af-3940-b773-412025cd3182"}}]
+1579453419476	Marionette	DEBUG	0 -> [0,45,"WebDriver:ElementSendKeys",{"id":"3769b7cd-62af-3940-b773-412025cd3182","text":"","value":[""]}]
+1579453419493	Marionette	DEBUG	0 <- [1,45,null,{"value":null}]
+1579453420499	Marionette	DEBUG	0 -> [0,46,"WebDriver:FindElement",{"using":"css selector","value":"[id=\"palavraChave\"]"}]
+1579453420502	Marionette	DEBUG	0 <- [1,46,null,{"value":{"element-6066-11e4-a52e-4f735466cecf":"263a202a-d84c-5f43-a750-5a9d0b278597"}}]
+1579453420507	Marionette	DEBUG	0 -> [0,47,"WebDriver:ElementSendKeys",{"id":"263a202a-d84c-5f43-a750-5a9d0b278597","text":"América Douradaa","value":["A","m","é","r","i","c","a"," ","D","o","u","r","a","d","a","","a"]}]
+1579453420545	Marionette	DEBUG	0 <- [1,47,null,{"value":null}]
+1579453420548	Marionette	DEBUG	0 -> [0,48,"WebDriver:FindElement",{"using":"css selector","value":"[id=\"palavraChave\"]"}]
+1579453420553	Marionette	DEBUG	0 <- [1,48,null,{"value":{"element-6066-11e4-a52e-4f735466cecf":"263a202a-d84c-5f43-a750-5a9d0b278597"}}]
+1579453420556	Marionette	DEBUG	0 -> [0,49,"WebDriver:ElementSendKeys",{"id":"263a202a-d84c-5f43-a750-5a9d0b278597","text":"x","value":["","x"]}]
+1579453420563	Marionette	DEBUG	0 <- [1,49,null,{"value":null}]
+1579453420565	Marionette	DEBUG	0 -> [0,50,"WebDriver:FindElement",{"using":"css selector","value":"[id=\"token-input-municipios\"]"}]
+1579453420568	Marionette	DEBUG	0 <- [1,50,null,{"value":{"element-6066-11e4-a52e-4f735466cecf":"3769b7cd-62af-3940-b773-412025cd3182"}}]
+1579453420570	Marionette	DEBUG	0 -> [0,51,"WebDriver:ElementSendKeys",{"id":"3769b7cd-62af-3940-b773-412025cd3182","text":"v","value":["","v"]}]
+1579453420585	Marionette	DEBUG	0 <- [1,51,null,{"value":null}]
+1579453422591	Marionette	DEBUG	0 -> [0,52,"WebDriver:FindElement",{"using":"css selector","value":"[id=\"token-input-municipios\"]"}]
+1579453422594	Marionette	DEBUG	0 <- [1,52,null,{"value":{"element-6066-11e4-a52e-4f735466cecf":"3769b7cd-62af-3940-b773-412025cd3182"}}]
+1579453422599	Marionette	DEBUG	0 -> [0,53,"WebDriver:ElementSendKeys",{"id":"3769b7cd-62af-3940-b773-412025cd3182","text":"","value":[""]}]
+1579453422613	Marionette	DEBUG	0 <- [1,53,null,{"value":null}]
+1579453423618	Marionette	DEBUG	0 -> [0,54,"WebDriver:FindElement",{"using":"css selector","value":"[id=\"btnPesquisar\"]"}]
+1579453423621	Marionette	DEBUG	0 <- [1,54,null,{"value":{"element-6066-11e4-a52e-4f735466cecf":"274082ef-4c3a-464a-aa7b-29de8e1ce23d"}}]
+1579453423625	Marionette	DEBUG	0 -> [0,55,"WebDriver:ElementClick",{"id":"274082ef-4c3a-464a-aa7b-29de8e1ce23d"}]
+1579453423658	Marionette	TRACE	[17] Received DOM event popstate for https://auditoria.cgu.gov.br/?draw=2&colunaOrdenacao=dataPublicacao&direcaoOrdenacao=DESC&tamanhoPagina=15&offset=0&titulo=&l ... 1&ate=31%2F12%2F2012&orgaos=&ujtcus=&estados=&municipios=410180%2C412250%2C411820%2C290240%2C290115&fefs=&palavraChave=#lista
+1579453423668	Marionette	DEBUG	0 <- [1,55,null,{"value":null}]
+1579453423881	Marionette	DEBUG	[17] Canceled page load listener because no navigation has been detected
+1579453425678	Marionette	DEBUG	0 -> [0,56,"WebDriver:FindElement",{"using":"css selector","value":"[id=\"btnSelectAll\"]"}]
+1579453425681	Marionette	DEBUG	0 <- [1,56,null,{"value":{"element-6066-11e4-a52e-4f735466cecf":"64291ade-2799-e541-9ee4-213ec7eeec1b"}}]
+1579453425686	Marionette	DEBUG	0 -> [0,57,"WebDriver:ElementClick",{"id":"64291ade-2799-e541-9ee4-213ec7eeec1b"}]
+1579453425916	Marionette	DEBUG	[17] Canceled page load listener because no navigation has been detected
+1579453425917	Marionette	DEBUG	0 <- [1,57,null,{"value":null}]
+1579453426927	Marionette	DEBUG	0 -> [0,58,"WebDriver:FindElement",{"using":"css selector","value":"[id=\"btnBaixar\"]"}]
+1579453426930	Marionette	DEBUG	0 <- [1,58,null,{"value":{"element-6066-11e4-a52e-4f735466cecf":"30ac4c91-92b2-f940-bfc3-aa0a881554cc"}}]
+1579453426934	Marionette	DEBUG	0 -> [0,59,"WebDriver:ElementClick",{"id":"30ac4c91-92b2-f940-bfc3-aa0a881554cc"}]
+1579453426947	Marionette	TRACE	[17] Received DOM event beforeunload for https://auditoria.cgu.gov.br/?draw=2&colunaOrdenacao=dataPublicacao&direcaoOrdenacao=DESC&tamanhoPagina=15&offset=0&titulo=&l ... 1&ate=31%2F12%2F2012&orgaos=&ujtcus=&estados=&municipios=410180%2C412250%2C411820%2C290240%2C290115&fefs=&palavraChave=#lista
+1579453432177	Marionette	DEBUG	[17] Canceled page load listener because no navigation has been detected
+1579453432177	Marionette	DEBUG	0 <- [1,59,null,{"value":null}]
+1579453457726	Marionette	TRACE	Received observer notification toplevel-window-ready
+1579453465826	Marionette	DEBUG	Closed connection 0
+1579453465939	Marionette	TRACE	Received observer notification xpcom-will-shutdown
+1579453465939	Marionette	DEBUG	Resetting recommended pref app.update.disabledForTesting
+1579453465939	Marionette	DEBUG	Resetting recommended pref apz.content_response_timeout
+1579453465939	Marionette	DEBUG	Resetting recommended pref browser.contentblocking.introCount
+1579453465939	Marionette	DEBUG	Resetting recommended pref browser.download.panel.shown
+1579453465940	Marionette	DEBUG	Resetting recommended pref browser.pagethumbnails.capturing_disabled
+1579453465940	Marionette	DEBUG	Resetting recommended pref browser.tabs.disableBackgroundZombification
+1579453465940	Marionette	DEBUG	Resetting recommended pref browser.tabs.remote.separatePrivilegedContentProcess
+1579453465940	Marionette	DEBUG	Resetting recommended pref browser.tabs.unloadOnLowMemory
+1579453465940	Marionette	DEBUG	Resetting recommended pref browser.tabs.warnOnCloseOtherTabs
+1579453465940	Marionette	DEBUG	Resetting recommended pref browser.urlbar.suggest.searches
+1579453465941	Marionette	DEBUG	Resetting recommended pref datareporting.policy.dataSubmissionPolicyAccepted
+1579453465941	Marionette	DEBUG	Resetting recommended pref dom.disable_beforeunload
+1579453465941	Marionette	DEBUG	Resetting recommended pref dom.file.createInChild
+1579453465941	Marionette	DEBUG	Resetting recommended pref dom.push.connection.enabled
+1579453465941	Marionette	DEBUG	Resetting recommended pref extensions.getAddons.cache.enabled
+1579453465941	Marionette	DEBUG	Resetting recommended pref extensions.webservice.discoverURL
+1579453465941	Marionette	DEBUG	Resetting recommended pref network.http.prompt-temp-redirect
+1579453465941	Marionette	DEBUG	Resetting recommended pref network.http.speculative-parallel-limit
+1579453465941	Marionette	DEBUG	Resetting recommended pref privacy.trackingprotection.enabled
+1579453465941	Marionette	DEBUG	Resetting recommended pref security.certerrors.mitm.priming.enabled
+1579453465942	Marionette	DEBUG	Resetting recommended pref security.notification_enable_delay
+1579453465942	Marionette	DEBUG	Resetting recommended pref signon.autofillForms
+1579453465942	Marionette	DEBUG	Resetting recommended pref toolkit.cosmeticAnimations.enabled
+1579453465942	Marionette	INFO	Stopped listening on port 59616
+1579453465942	Marionette	DEBUG	Marionette stopped listening
+1579453611288	geckodriver	INFO	geckodriver 0.21.0
+1579453611299	geckodriver	INFO	Listening on 127.0.0.1:59739
+1579453612320	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/hg/xj9zzkvn5t1g_2zhm18v70cr0000gn/T/rust_mozprofile.aGfPpkh8OAKO"
+1579453613089	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
+1579453613128	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1579453613128	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1579453613128	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1579453613129	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1579453613283	Marionette	TRACE	Received observer notification profile-after-change
+1579453613426	Marionette	TRACE	Received observer notification command-line-startup
+1579453613427	Marionette	DEBUG	Init aborted (running=false, enabled=true, finalUIStartup=false)
+1579453613645	Marionette	TRACE	Received observer notification toplevel-window-ready
+1579453615560	Marionette	TRACE	Received observer notification marionette-startup-requested
+1579453615561	Marionette	TRACE	Waiting until startup recorder finished recording startup scripts...
+1579453615626	Marionette	TRACE	All scripts recorded.
+1579453615626	Marionette	DEBUG	Setting recommended pref app.update.disabledForTesting to true
+1579453615626	Marionette	DEBUG	Setting recommended pref apz.content_response_timeout to 60000
+1579453615627	Marionette	DEBUG	Setting recommended pref browser.contentblocking.introCount to 99
+1579453615627	Marionette	DEBUG	Setting recommended pref browser.download.panel.shown to true
+1579453615628	Marionette	DEBUG	Setting recommended pref browser.pagethumbnails.capturing_disabled to true
+1579453615629	Marionette	DEBUG	Setting recommended pref browser.tabs.disableBackgroundZombification to false
+1579453615631	Marionette	DEBUG	Setting recommended pref browser.tabs.remote.separatePrivilegedContentProcess to false
+1579453615631	Marionette	DEBUG	Setting recommended pref browser.tabs.unloadOnLowMemory to false
+1579453615632	Marionette	DEBUG	Setting recommended pref browser.tabs.warnOnCloseOtherTabs to false
+1579453615632	Marionette	DEBUG	Setting recommended pref browser.urlbar.suggest.searches to false
+1579453615634	Marionette	DEBUG	Setting recommended pref datareporting.policy.dataSubmissionPolicyAccepted to false
+1579453615634	Marionette	DEBUG	Setting recommended pref dom.disable_beforeunload to true
+1579453615634	Marionette	DEBUG	Setting recommended pref dom.file.createInChild to true
+1579453615635	Marionette	DEBUG	Setting recommended pref dom.push.connection.enabled to false
+1579453615635	Marionette	DEBUG	Setting recommended pref extensions.getAddons.cache.enabled to false
+1579453615636	Marionette	DEBUG	Setting recommended pref extensions.webservice.discoverURL to http://%(server)s/dummy/discoveryURL
+1579453615636	Marionette	DEBUG	Setting recommended pref network.http.prompt-temp-redirect to false
+1579453615636	Marionette	DEBUG	Setting recommended pref network.http.speculative-parallel-limit to 0
+1579453615637	Marionette	DEBUG	Setting recommended pref privacy.trackingprotection.enabled to false
+1579453615637	Marionette	DEBUG	Setting recommended pref security.certerrors.mitm.priming.enabled to false
+1579453615637	Marionette	DEBUG	Setting recommended pref security.notification_enable_delay to 0
+1579453615638	Marionette	DEBUG	Setting recommended pref signon.autofillForms to false
+1579453615638	Marionette	DEBUG	Setting recommended pref toolkit.cosmeticAnimations.enabled to false
+1579453615710	Marionette	INFO	Listening on port 59750
+1579453615710	Marionette	DEBUG	Marionette is listening
+1579453615738	Marionette	DEBUG	Accepted connection 0 from 127.0.0.1:59793
+1579453615740	Marionette	DEBUG	0 -> [0,1,"WebDriver:NewSession",{"acceptInsecureCerts":true,"browserName":"firefox","capabilities":{"desiredCapabilities":{"acceptInsecureCerts":true,"browserName":"firefox"}}}]
+1579453615741	Marionette	WARN	TLS certificate errors will be ignored for this session
+1579453615789	Marionette	TRACE	[17] Frame script loaded
+1579453615791	Marionette	TRACE	[17] Frame script registered
+1579453615800	Marionette	DEBUG	0 <- [1,1,null,{"sessionId":"3e9210c4-e8fe-6246-8bdb-9f355d274ab8","capabilities":{"browserName":"firefox","browserVersion":"72.0. ... alse,"moz:webdriverClick":true,"capabilities":{"desiredCapabilities":{"acceptInsecureCerts":true,"browserName":"firefox"}}}}]
+1579453615807	Marionette	DEBUG	0 -> [0,2,"WebDriver:MaximizeWindow",{}]
+1579453616293	Marionette	DEBUG	0 <- [1,2,null,{"x":0,"y":23,"width":1440,"height":877}]
+1579453616298	Marionette	DEBUG	0 -> [0,3,"WebDriver:Navigate",{"url":"https://auditoria.cgu.gov.br/"}]
+1579453616314	Marionette	TRACE	[17] Received DOM event beforeunload for about:blank
+1579453617422	Marionette	TRACE	[17] Received DOM event pagehide for about:blank
+1579453622973	Marionette	TRACE	[17] Received DOM event DOMContentLoaded for https://auditoria.cgu.gov.br/
+JavaScript warning: https://vlibras.gov.br/app/vlibras-plugin.js, line 81: unreachable code after return statement
+1579453624692	Marionette	TRACE	[17] Received DOM event pageshow for https://auditoria.cgu.gov.br/
+1579453624696	Marionette	DEBUG	0 <- [1,3,null,{"value":null}]
+1579453624705	Marionette	DEBUG	0 -> [0,4,"WebDriver:FindElement",{"using":"css selector","value":"[id=\"linhaAtuacao\"]"}]
+1579453624710	Marionette	DEBUG	0 <- [1,4,null,{"value":{"element-6066-11e4-a52e-4f735466cecf":"5d0969e2-bd05-944c-b290-9e5f07979c7c"}}]
+1579453624725	Marionette	DEBUG	0 -> [0,5,"WebDriver:GetElementTagName",{"id":"5d0969e2-bd05-944c-b290-9e5f07979c7c"}]
+1579453624728	Marionette	DEBUG	0 <- [1,5,null,{"value":"select"}]
+1579453624735	Marionette	DEBUG	0 -> [0,6,"WebDriver:ExecuteScript",{"args":[{"ELEMENT":"5d0969e2-bd05-944c-b290-9e5f07979c7c","element-6066-11e4-a52e-4f735466cec ... dow!='undefined'?window.document:null}, arguments);}\n).apply(null, arguments);","scriptTimeout":null,"specialPowers":false}]
+1579453624747	Marionette	DEBUG	0 <- [1,6,null,{"value":null}]
+1579453624750	Marionette	DEBUG	0 -> [0,7,"WebDriver:FindElements",{"element":"5d0969e2-bd05-944c-b290-9e5f07979c7c","using":"xpath","value":".//option[normalize-space(.) = \"Fiscalização em Entes Federativos - Municípios\"]"}]
+1579453624755	Marionette	DEBUG	0 <- [1,7,null,[{"element-6066-11e4-a52e-4f735466cecf":"107e401f-91bf-4d41-bd8b-9fb65d80a50c"}]]
+1579453624758	Marionette	DEBUG	0 -> [0,8,"WebDriver:IsElementSelected",{"id":"107e401f-91bf-4d41-bd8b-9fb65d80a50c"}]
+1579453624762	Marionette	DEBUG	0 <- [1,8,null,{"value":false}]
+1579453624766	Marionette	DEBUG	0 -> [0,9,"WebDriver:ElementClick",{"id":"107e401f-91bf-4d41-bd8b-9fb65d80a50c"}]
+1579453625001	Marionette	DEBUG	[17] Canceled page load listener because no navigation has been detected
+1579453625002	Marionette	DEBUG	0 <- [1,9,null,{"value":null}]
+1579453625006	Marionette	DEBUG	0 -> [0,10,"WebDriver:FindElement",{"using":"css selector","value":"[id=\"de\"]"}]
+1579453625008	Marionette	DEBUG	0 <- [1,10,null,{"value":{"element-6066-11e4-a52e-4f735466cecf":"36bfe02b-5666-7f4a-a95b-ee748ba6c0c0"}}]
+1579453625012	Marionette	DEBUG	0 -> [0,11,"WebDriver:ElementSendKeys",{"id":"36bfe02b-5666-7f4a-a95b-ee748ba6c0c0","text":"01/01/2011","value":["0","1","/","0","1","/","2","0","1","1",""]}]
+1579453625190	Marionette	DEBUG	0 <- [1,11,null,{"value":null}]
+1579453625193	Marionette	DEBUG	0 -> [0,12,"WebDriver:FindElement",{"using":"css selector","value":"[id=\"ate\"]"}]
+1579453625196	Marionette	DEBUG	0 <- [1,12,null,{"value":{"element-6066-11e4-a52e-4f735466cecf":"b4ec76ce-644d-614a-8a28-77c2ee2ed410"}}]
+1579453625200	Marionette	DEBUG	0 -> [0,13,"WebDriver:ElementSendKeys",{"id":"b4ec76ce-644d-614a-8a28-77c2ee2ed410","text":"31/12/2012\r","value":["3","1","/","1","2","/","2","0","1","2","\r",""]}]
+1579453625367	Marionette	DEBUG	0 <- [1,13,null,{"value":null}]
+1579453625371	Marionette	DEBUG	0 -> [0,14,"WebDriver:FindElement",{"using":"css selector","value":"[id=\"palavraChave\"]"}]
+1579453625373	Marionette	DEBUG	0 <- [1,14,null,{"value":{"element-6066-11e4-a52e-4f735466cecf":"98f0e072-2b59-ff4c-a409-92e97c87acc2"}}]
+1579453625376	Marionette	DEBUG	0 -> [0,15,"WebDriver:ElementSendKeys",{"id":"98f0e072-2b59-ff4c-a409-92e97c87acc2","text":"Araucáriaa","value":["A","r","a","u","c","á","r","i","a","","a"]}]
+1579453625406	Marionette	DEBUG	0 <- [1,15,null,{"value":null}]
+1579453625409	Marionette	DEBUG	0 -> [0,16,"WebDriver:FindElement",{"using":"css selector","value":"[id=\"palavraChave\"]"}]
+1579453625412	Marionette	DEBUG	0 <- [1,16,null,{"value":{"element-6066-11e4-a52e-4f735466cecf":"98f0e072-2b59-ff4c-a409-92e97c87acc2"}}]
+1579453625415	Marionette	DEBUG	0 -> [0,17,"WebDriver:ElementSendKeys",{"id":"98f0e072-2b59-ff4c-a409-92e97c87acc2","text":"x","value":["","x"]}]
+1579453625426	Marionette	DEBUG	0 <- [1,17,null,{"value":null}]
+1579453625429	Marionette	DEBUG	0 -> [0,18,"WebDriver:FindElement",{"using":"css selector","value":"[id=\"token-input-municipios\"]"}]
+1579453625431	Marionette	DEBUG	0 <- [1,18,null,{"value":{"element-6066-11e4-a52e-4f735466cecf":"750e171c-0966-8541-86f4-67a7c9bd484e"}}]
+1579453625434	Marionette	DEBUG	0 -> [0,19,"WebDriver:ElementSendKeys",{"id":"750e171c-0966-8541-86f4-67a7c9bd484e","text":"v","value":["","v"]}]
+1579453625459	Marionette	DEBUG	0 <- [1,19,null,{"value":null}]
+1579453627468	Marionette	DEBUG	0 -> [0,20,"WebDriver:FindElement",{"using":"css selector","value":"[id=\"token-input-municipios\"]"}]
+1579453627475	Marionette	DEBUG	0 <- [1,20,null,{"value":{"element-6066-11e4-a52e-4f735466cecf":"750e171c-0966-8541-86f4-67a7c9bd484e"}}]
+1579453627479	Marionette	DEBUG	0 -> [0,21,"WebDriver:ElementSendKeys",{"id":"750e171c-0966-8541-86f4-67a7c9bd484e","text":"","value":[""]}]
+1579453627501	Marionette	DEBUG	0 <- [1,21,null,{"value":null}]
+1579453628509	Marionette	DEBUG	0 -> [0,22,"WebDriver:FindElement",{"using":"css selector","value":"[id=\"palavraChave\"]"}]
+1579453628512	Marionette	DEBUG	0 <- [1,22,null,{"value":{"element-6066-11e4-a52e-4f735466cecf":"98f0e072-2b59-ff4c-a409-92e97c87acc2"}}]
+1579453628516	Marionette	DEBUG	0 -> [0,23,"WebDriver:ElementSendKeys",{"id":"98f0e072-2b59-ff4c-a409-92e97c87acc2","text":"Roncadora","value":["R","o","n","c","a","d","o","r","","a"]}]
+1579453628549	Marionette	DEBUG	0 <- [1,23,null,{"value":null}]
+1579453628553	Marionette	DEBUG	0 -> [0,24,"WebDriver:FindElement",{"using":"css selector","value":"[id=\"palavraChave\"]"}]
+1579453628556	Marionette	DEBUG	0 <- [1,24,null,{"value":{"element-6066-11e4-a52e-4f735466cecf":"98f0e072-2b59-ff4c-a409-92e97c87acc2"}}]
+1579453628561	Marionette	DEBUG	0 -> [0,25,"WebDriver:ElementSendKeys",{"id":"98f0e072-2b59-ff4c-a409-92e97c87acc2","text":"x","value":["","x"]}]
+1579453628574	Marionette	DEBUG	0 <- [1,25,null,{"value":null}]
+1579453628577	Marionette	DEBUG	0 -> [0,26,"WebDriver:FindElement",{"using":"css selector","value":"[id=\"token-input-municipios\"]"}]
+1579453628579	Marionette	DEBUG	0 <- [1,26,null,{"value":{"element-6066-11e4-a52e-4f735466cecf":"750e171c-0966-8541-86f4-67a7c9bd484e"}}]
+1579453628583	Marionette	DEBUG	0 -> [0,27,"WebDriver:ElementSendKeys",{"id":"750e171c-0966-8541-86f4-67a7c9bd484e","text":"v","value":["","v"]}]
+1579453628605	Marionette	DEBUG	0 <- [1,27,null,{"value":null}]
+1579453630610	Marionette	DEBUG	0 -> [0,28,"WebDriver:FindElement",{"using":"css selector","value":"[id=\"token-input-municipios\"]"}]
+1579453630615	Marionette	DEBUG	0 <- [1,28,null,{"value":{"element-6066-11e4-a52e-4f735466cecf":"750e171c-0966-8541-86f4-67a7c9bd484e"}}]
+1579453630620	Marionette	DEBUG	0 -> [0,29,"WebDriver:ElementSendKeys",{"id":"750e171c-0966-8541-86f4-67a7c9bd484e","text":"","value":[""]}]
+1579453630640	Marionette	DEBUG	0 <- [1,29,null,{"value":null}]
+1579453631651	Marionette	DEBUG	0 -> [0,30,"WebDriver:FindElement",{"using":"css selector","value":"[id=\"palavraChave\"]"}]
+1579453631659	Marionette	DEBUG	0 <- [1,30,null,{"value":{"element-6066-11e4-a52e-4f735466cecf":"98f0e072-2b59-ff4c-a409-92e97c87acc2"}}]
+1579453631663	Marionette	DEBUG	0 -> [0,31,"WebDriver:ElementSendKeys",{"id":"98f0e072-2b59-ff4c-a409-92e97c87acc2","text":"Paranaguáa","value":["P","a","r","a","n","a","g","u","á","","a"]}]
+1579453631702	Marionette	DEBUG	0 <- [1,31,null,{"value":null}]
+1579453631706	Marionette	DEBUG	0 -> [0,32,"WebDriver:FindElement",{"using":"css selector","value":"[id=\"palavraChave\"]"}]
+1579453631710	Marionette	DEBUG	0 <- [1,32,null,{"value":{"element-6066-11e4-a52e-4f735466cecf":"98f0e072-2b59-ff4c-a409-92e97c87acc2"}}]
+1579453631713	Marionette	DEBUG	0 -> [0,33,"WebDriver:ElementSendKeys",{"id":"98f0e072-2b59-ff4c-a409-92e97c87acc2","text":"x","value":["","x"]}]
+1579453631725	Marionette	DEBUG	0 <- [1,33,null,{"value":null}]
+1579453631728	Marionette	DEBUG	0 -> [0,34,"WebDriver:FindElement",{"using":"css selector","value":"[id=\"token-input-municipios\"]"}]
+1579453631732	Marionette	DEBUG	0 <- [1,34,null,{"value":{"element-6066-11e4-a52e-4f735466cecf":"750e171c-0966-8541-86f4-67a7c9bd484e"}}]
+1579453631734	Marionette	DEBUG	0 -> [0,35,"WebDriver:ElementSendKeys",{"id":"750e171c-0966-8541-86f4-67a7c9bd484e","text":"v","value":["","v"]}]
+1579453631757	Marionette	DEBUG	0 <- [1,35,null,{"value":null}]
+1579453633767	Marionette	DEBUG	0 -> [0,36,"WebDriver:FindElement",{"using":"css selector","value":"[id=\"token-input-municipios\"]"}]
+1579453633773	Marionette	DEBUG	0 <- [1,36,null,{"value":{"element-6066-11e4-a52e-4f735466cecf":"750e171c-0966-8541-86f4-67a7c9bd484e"}}]
+1579453633777	Marionette	DEBUG	0 -> [0,37,"WebDriver:ElementSendKeys",{"id":"750e171c-0966-8541-86f4-67a7c9bd484e","text":"","value":[""]}]
+1579453633800	Marionette	DEBUG	0 <- [1,37,null,{"value":null}]
+1579453634805	Marionette	DEBUG	0 -> [0,38,"WebDriver:FindElement",{"using":"css selector","value":"[id=\"palavraChave\"]"}]
+1579453634809	Marionette	DEBUG	0 <- [1,38,null,{"value":{"element-6066-11e4-a52e-4f735466cecf":"98f0e072-2b59-ff4c-a409-92e97c87acc2"}}]
+1579453634815	Marionette	DEBUG	0 -> [0,39,"WebDriver:ElementSendKeys",{"id":"98f0e072-2b59-ff4c-a409-92e97c87acc2","text":"Aurelino Leala","value":["A","u","r","e","l","i","n","o"," ","L","e","a","l","","a"]}]
+1579453634856	Marionette	DEBUG	0 <- [1,39,null,{"value":null}]
+1579453634858	Marionette	DEBUG	0 -> [0,40,"WebDriver:FindElement",{"using":"css selector","value":"[id=\"palavraChave\"]"}]
+1579453634862	Marionette	DEBUG	0 <- [1,40,null,{"value":{"element-6066-11e4-a52e-4f735466cecf":"98f0e072-2b59-ff4c-a409-92e97c87acc2"}}]
+1579453634865	Marionette	DEBUG	0 -> [0,41,"WebDriver:ElementSendKeys",{"id":"98f0e072-2b59-ff4c-a409-92e97c87acc2","text":"x","value":["","x"]}]
+1579453634875	Marionette	DEBUG	0 <- [1,41,null,{"value":null}]
+1579453634877	Marionette	DEBUG	0 -> [0,42,"WebDriver:FindElement",{"using":"css selector","value":"[id=\"token-input-municipios\"]"}]
+1579453634881	Marionette	DEBUG	0 <- [1,42,null,{"value":{"element-6066-11e4-a52e-4f735466cecf":"750e171c-0966-8541-86f4-67a7c9bd484e"}}]
+1579453634884	Marionette	DEBUG	0 -> [0,43,"WebDriver:ElementSendKeys",{"id":"750e171c-0966-8541-86f4-67a7c9bd484e","text":"v","value":["","v"]}]
+1579453634905	Marionette	DEBUG	0 <- [1,43,null,{"value":null}]
+1579453636922	Marionette	DEBUG	0 -> [0,44,"WebDriver:FindElement",{"using":"css selector","value":"[id=\"token-input-municipios\"]"}]
+1579453636924	Marionette	DEBUG	0 <- [1,44,null,{"value":{"element-6066-11e4-a52e-4f735466cecf":"750e171c-0966-8541-86f4-67a7c9bd484e"}}]
+1579453636927	Marionette	DEBUG	0 -> [0,45,"WebDriver:ElementSendKeys",{"id":"750e171c-0966-8541-86f4-67a7c9bd484e","text":"","value":[""]}]
+1579453636940	Marionette	DEBUG	0 <- [1,45,null,{"value":null}]
+1579453637950	Marionette	DEBUG	0 -> [0,46,"WebDriver:FindElement",{"using":"css selector","value":"[id=\"palavraChave\"]"}]
+1579453637954	Marionette	DEBUG	0 <- [1,46,null,{"value":{"element-6066-11e4-a52e-4f735466cecf":"98f0e072-2b59-ff4c-a409-92e97c87acc2"}}]
+1579453637961	Marionette	DEBUG	0 -> [0,47,"WebDriver:ElementSendKeys",{"id":"98f0e072-2b59-ff4c-a409-92e97c87acc2","text":"América Douradaa","value":["A","m","é","r","i","c","a"," ","D","o","u","r","a","d","a","","a"]}]
+1579453637996	Marionette	DEBUG	0 <- [1,47,null,{"value":null}]
+1579453638000	Marionette	DEBUG	0 -> [0,48,"WebDriver:FindElement",{"using":"css selector","value":"[id=\"palavraChave\"]"}]
+1579453638006	Marionette	DEBUG	0 <- [1,48,null,{"value":{"element-6066-11e4-a52e-4f735466cecf":"98f0e072-2b59-ff4c-a409-92e97c87acc2"}}]
+1579453638008	Marionette	DEBUG	0 -> [0,49,"WebDriver:ElementSendKeys",{"id":"98f0e072-2b59-ff4c-a409-92e97c87acc2","text":"x","value":["","x"]}]
+1579453638019	Marionette	DEBUG	0 <- [1,49,null,{"value":null}]
+1579453638023	Marionette	DEBUG	0 -> [0,50,"WebDriver:FindElement",{"using":"css selector","value":"[id=\"token-input-municipios\"]"}]
+1579453638025	Marionette	DEBUG	0 <- [1,50,null,{"value":{"element-6066-11e4-a52e-4f735466cecf":"750e171c-0966-8541-86f4-67a7c9bd484e"}}]
+1579453638029	Marionette	DEBUG	0 -> [0,51,"WebDriver:ElementSendKeys",{"id":"750e171c-0966-8541-86f4-67a7c9bd484e","text":"v","value":["","v"]}]
+1579453638046	Marionette	DEBUG	0 <- [1,51,null,{"value":null}]
+1579453640055	Marionette	DEBUG	0 -> [0,52,"WebDriver:FindElement",{"using":"css selector","value":"[id=\"token-input-municipios\"]"}]
+1579453640058	Marionette	DEBUG	0 <- [1,52,null,{"value":{"element-6066-11e4-a52e-4f735466cecf":"750e171c-0966-8541-86f4-67a7c9bd484e"}}]
+1579453640063	Marionette	DEBUG	0 -> [0,53,"WebDriver:ElementSendKeys",{"id":"750e171c-0966-8541-86f4-67a7c9bd484e","text":"","value":[""]}]
+1579453640076	Marionette	DEBUG	0 <- [1,53,null,{"value":null}]
+1579453641084	Marionette	DEBUG	0 -> [0,54,"WebDriver:FindElement",{"using":"css selector","value":"[id=\"btnPesquisar\"]"}]
+1579453641087	Marionette	DEBUG	0 <- [1,54,null,{"value":{"element-6066-11e4-a52e-4f735466cecf":"5bcb7713-26f7-c748-826a-119c12afa043"}}]
+1579453641092	Marionette	DEBUG	0 -> [0,55,"WebDriver:ElementClick",{"id":"5bcb7713-26f7-c748-826a-119c12afa043"}]
+1579453641125	Marionette	TRACE	[17] Received DOM event popstate for https://auditoria.cgu.gov.br/?draw=2&colunaOrdenacao=dataPublicacao&direcaoOrdenacao=DESC&tamanhoPagina=15&offset=0&titulo=&l ... 1&ate=31%2F12%2F2012&orgaos=&ujtcus=&estados=&municipios=410180%2C412250%2C411820%2C290240%2C290115&fefs=&palavraChave=#lista
+1579453641143	Marionette	DEBUG	0 <- [1,55,null,{"value":null}]
+1579453641357	Marionette	DEBUG	[17] Canceled page load listener because no navigation has been detected
+1579453643167	Marionette	DEBUG	0 -> [0,56,"WebDriver:FindElement",{"using":"css selector","value":"[id=\"btnSelectAll\"]"}]
+1579453643170	Marionette	DEBUG	0 <- [1,56,null,{"value":{"element-6066-11e4-a52e-4f735466cecf":"710afab6-8cc0-154e-ae13-9f1129df1ffa"}}]
+1579453643175	Marionette	DEBUG	0 -> [0,57,"WebDriver:ElementClick",{"id":"710afab6-8cc0-154e-ae13-9f1129df1ffa"}]
+1579453643409	Marionette	DEBUG	[17] Canceled page load listener because no navigation has been detected
+1579453643410	Marionette	DEBUG	0 <- [1,57,null,{"value":null}]
+1579453644416	Marionette	DEBUG	0 -> [0,58,"WebDriver:FindElement",{"using":"css selector","value":"[id=\"btnBaixar\"]"}]
+1579453644420	Marionette	DEBUG	0 <- [1,58,null,{"value":{"element-6066-11e4-a52e-4f735466cecf":"3322115e-c795-af4c-88ef-e52f58f77d7c"}}]
+1579453644425	Marionette	DEBUG	0 -> [0,59,"WebDriver:ElementClick",{"id":"3322115e-c795-af4c-88ef-e52f58f77d7c"}]
+1579453644440	Marionette	TRACE	[17] Received DOM event beforeunload for https://auditoria.cgu.gov.br/?draw=2&colunaOrdenacao=dataPublicacao&direcaoOrdenacao=DESC&tamanhoPagina=15&offset=0&titulo=&l ... 1&ate=31%2F12%2F2012&orgaos=&ujtcus=&estados=&municipios=410180%2C412250%2C411820%2C290240%2C290115&fefs=&palavraChave=#lista
+1579453649652	Marionette	DEBUG	[17] Canceled page load listener because no navigation has been detected
+1579453649653	Marionette	DEBUG	0 <- [1,59,null,{"value":null}]
+1579453778868	Marionette	DEBUG	Closed connection 0
+1579453778969	Marionette	TRACE	Received observer notification xpcom-will-shutdown
+1579453778969	Marionette	DEBUG	Resetting recommended pref app.update.disabledForTesting
+1579453778970	Marionette	DEBUG	Resetting recommended pref apz.content_response_timeout
+1579453778970	Marionette	DEBUG	Resetting recommended pref browser.contentblocking.introCount
+1579453778970	Marionette	DEBUG	Resetting recommended pref browser.download.panel.shown
+1579453778970	Marionette	DEBUG	Resetting recommended pref browser.pagethumbnails.capturing_disabled
+1579453778970	Marionette	DEBUG	Resetting recommended pref browser.tabs.disableBackgroundZombification
+1579453778970	Marionette	DEBUG	Resetting recommended pref browser.tabs.remote.separatePrivilegedContentProcess
+1579453778970	Marionette	DEBUG	Resetting recommended pref browser.tabs.unloadOnLowMemory
+1579453778970	Marionette	DEBUG	Resetting recommended pref browser.tabs.warnOnCloseOtherTabs
+1579453778971	Marionette	DEBUG	Resetting recommended pref browser.urlbar.suggest.searches
+1579453778971	Marionette	DEBUG	Resetting recommended pref datareporting.policy.dataSubmissionPolicyAccepted
+1579453778971	Marionette	DEBUG	Resetting recommended pref dom.disable_beforeunload
+1579453778971	Marionette	DEBUG	Resetting recommended pref dom.file.createInChild
+1579453778971	Marionette	DEBUG	Resetting recommended pref dom.push.connection.enabled
+1579453778971	Marionette	DEBUG	Resetting recommended pref extensions.getAddons.cache.enabled
+1579453778971	Marionette	DEBUG	Resetting recommended pref extensions.webservice.discoverURL
+1579453778972	Marionette	DEBUG	Resetting recommended pref network.http.prompt-temp-redirect
+1579453778972	Marionette	DEBUG	Resetting recommended pref network.http.speculative-parallel-limit
+1579453778972	Marionette	DEBUG	Resetting recommended pref privacy.trackingprotection.enabled
+1579453778972	Marionette	DEBUG	Resetting recommended pref security.certerrors.mitm.priming.enabled
+1579453778972	Marionette	DEBUG	Resetting recommended pref security.notification_enable_delay
+1579453778972	Marionette	DEBUG	Resetting recommended pref signon.autofillForms
+1579453778972	Marionette	DEBUG	Resetting recommended pref toolkit.cosmeticAnimations.enabled
+1579453778973	Marionette	INFO	Stopped listening on port 59750
+1579453778973	Marionette	DEBUG	Marionette stopped listening
+1579453791138	geckodriver	INFO	geckodriver 0.21.0
+1579453791147	geckodriver	INFO	Listening on 127.0.0.1:59829
+1579453792167	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/hg/xj9zzkvn5t1g_2zhm18v70cr0000gn/T/rust_mozprofile.bKfwt3lKtUgh"
+1579453792958	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
+1579453793010	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1579453793010	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1579453793010	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1579453793010	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1579453793170	Marionette	TRACE	Received observer notification profile-after-change
+1579453793323	Marionette	TRACE	Received observer notification command-line-startup
+1579453793324	Marionette	DEBUG	Init aborted (running=false, enabled=true, finalUIStartup=false)
+1579453793490	Marionette	TRACE	Received observer notification toplevel-window-ready
+1579453795679	Marionette	TRACE	Received observer notification marionette-startup-requested
+1579453795680	Marionette	TRACE	Waiting until startup recorder finished recording startup scripts...
+1579453795785	Marionette	TRACE	All scripts recorded.
+1579453795786	Marionette	DEBUG	Setting recommended pref app.update.disabledForTesting to true
+1579453795786	Marionette	DEBUG	Setting recommended pref apz.content_response_timeout to 60000
+1579453795787	Marionette	DEBUG	Setting recommended pref browser.contentblocking.introCount to 99
+1579453795787	Marionette	DEBUG	Setting recommended pref browser.download.panel.shown to true
+1579453795787	Marionette	DEBUG	Setting recommended pref browser.pagethumbnails.capturing_disabled to true
+1579453795788	Marionette	DEBUG	Setting recommended pref browser.tabs.disableBackgroundZombification to false
+1579453795788	Marionette	DEBUG	Setting recommended pref browser.tabs.remote.separatePrivilegedContentProcess to false
+1579453795789	Marionette	DEBUG	Setting recommended pref browser.tabs.unloadOnLowMemory to false
+1579453795789	Marionette	DEBUG	Setting recommended pref browser.tabs.warnOnCloseOtherTabs to false
+1579453795789	Marionette	DEBUG	Setting recommended pref browser.urlbar.suggest.searches to false
+1579453795791	Marionette	DEBUG	Setting recommended pref datareporting.policy.dataSubmissionPolicyAccepted to false
+1579453795791	Marionette	DEBUG	Setting recommended pref dom.disable_beforeunload to true
+1579453795791	Marionette	DEBUG	Setting recommended pref dom.file.createInChild to true
+1579453795792	Marionette	DEBUG	Setting recommended pref dom.push.connection.enabled to false
+1579453795792	Marionette	DEBUG	Setting recommended pref extensions.getAddons.cache.enabled to false
+1579453795792	Marionette	DEBUG	Setting recommended pref extensions.webservice.discoverURL to http://%(server)s/dummy/discoveryURL
+1579453795792	Marionette	DEBUG	Setting recommended pref network.http.prompt-temp-redirect to false
+1579453795792	Marionette	DEBUG	Setting recommended pref network.http.speculative-parallel-limit to 0
+1579453795793	Marionette	DEBUG	Setting recommended pref privacy.trackingprotection.enabled to false
+1579453795793	Marionette	DEBUG	Setting recommended pref security.certerrors.mitm.priming.enabled to false
+1579453795793	Marionette	DEBUG	Setting recommended pref security.notification_enable_delay to 0
+1579453795793	Marionette	DEBUG	Setting recommended pref signon.autofillForms to false
+1579453795793	Marionette	DEBUG	Setting recommended pref toolkit.cosmeticAnimations.enabled to false
+1579453795887	Marionette	INFO	Listening on port 59840
+1579453795887	Marionette	DEBUG	Marionette is listening
+1579453795966	Marionette	DEBUG	Accepted connection 0 from 127.0.0.1:59886
+1579453795970	Marionette	DEBUG	0 -> [0,1,"WebDriver:NewSession",{"acceptInsecureCerts":true,"browserName":"firefox","capabilities":{"desiredCapabilities":{"acceptInsecureCerts":true,"browserName":"firefox"}}}]
+1579453795970	Marionette	WARN	TLS certificate errors will be ignored for this session
+1579453796006	Marionette	TRACE	[17] Frame script loaded
+1579453796007	Marionette	TRACE	[17] Frame script registered
+1579453796015	Marionette	DEBUG	0 <- [1,1,null,{"sessionId":"0669004c-484f-ce44-b077-b010cf02908f","capabilities":{"browserName":"firefox","browserVersion":"72.0. ... alse,"moz:webdriverClick":true,"capabilities":{"desiredCapabilities":{"acceptInsecureCerts":true,"browserName":"firefox"}}}}]
+1579453796022	Marionette	DEBUG	0 -> [0,2,"WebDriver:MaximizeWindow",{}]
+1579453796510	Marionette	DEBUG	0 <- [1,2,null,{"x":0,"y":23,"width":1440,"height":877}]
+1579453796516	Marionette	DEBUG	0 -> [0,3,"WebDriver:Navigate",{"url":"https://auditoria.cgu.gov.br/"}]
+1579453796531	Marionette	TRACE	[17] Received DOM event beforeunload for about:blank
+1579453797706	Marionette	TRACE	[17] Received DOM event pagehide for about:blank
+1579453855860	Marionette	TRACE	Received DOM event unload for [object HTMLDocument]
+1579453855865	Marionette	TRACE	Received observer notification message-manager-disconnect
+1579453855867	Marionette	TRACE	[17] Received DOM event unload for https://auditoria.cgu.gov.br/
+1579453855869	Marionette	DEBUG	0 <- [1,3,null,{"value":null}]
+1579453855873	Marionette	TRACE	[17] Received observer notification outer-window-destroyed
+1579453855893	Marionette	DEBUG	0 -> [0,4,"WebDriver:FindElement",{"using":"css selector","value":"[id=\"linhaAtuacao\"]"}]
+1579453855894	Marionette	DEBUG	0 <- [1,4,{"error":"no such window","message":"Browsing context has been discarded","stacktrace":"WebDriverError@chrome://marionet ... t@chrome://marionette/content/server.js:249:9\n_onJSONObjectReady/<@chrome://marionette/content/transport.js:501:20\n"},null]
+JavaScript error: https://auditoria.cgu.gov.br/static/libs/jquery/jquery-1.12.0.min.js, line 4: TypeError: c is undefined
+1579453855917	Marionette	DEBUG	Closed connection 0
+1579453856072	Marionette	TRACE	Received observer notification xpcom-will-shutdown
+1579453856072	Marionette	DEBUG	Resetting recommended pref app.update.disabledForTesting
+1579453856072	Marionette	DEBUG	Resetting recommended pref apz.content_response_timeout
+1579453856072	Marionette	DEBUG	Resetting recommended pref browser.contentblocking.introCount
+1579453856072	Marionette	DEBUG	Resetting recommended pref browser.download.panel.shown
+1579453856072	Marionette	DEBUG	Resetting recommended pref browser.pagethumbnails.capturing_disabled
+1579453856072	Marionette	DEBUG	Resetting recommended pref browser.tabs.disableBackgroundZombification
+1579453856072	Marionette	DEBUG	Resetting recommended pref browser.tabs.remote.separatePrivilegedContentProcess
+1579453856072	Marionette	DEBUG	Resetting recommended pref browser.tabs.unloadOnLowMemory
+1579453856073	Marionette	DEBUG	Resetting recommended pref browser.tabs.warnOnCloseOtherTabs
+1579453856073	Marionette	DEBUG	Resetting recommended pref browser.urlbar.suggest.searches
+1579453856073	Marionette	DEBUG	Resetting recommended pref datareporting.policy.dataSubmissionPolicyAccepted
+1579453856074	Marionette	DEBUG	Resetting recommended pref dom.disable_beforeunload
+1579453856074	Marionette	DEBUG	Resetting recommended pref dom.file.createInChild
+1579453856074	Marionette	DEBUG	Resetting recommended pref dom.push.connection.enabled
+1579453856074	Marionette	DEBUG	Resetting recommended pref extensions.getAddons.cache.enabled
+1579453856074	Marionette	DEBUG	Resetting recommended pref extensions.webservice.discoverURL
+1579453856074	Marionette	DEBUG	Resetting recommended pref network.http.prompt-temp-redirect
+1579453856074	Marionette	DEBUG	Resetting recommended pref network.http.speculative-parallel-limit
+1579453856075	Marionette	DEBUG	Resetting recommended pref privacy.trackingprotection.enabled
+1579453856075	Marionette	DEBUG	Resetting recommended pref security.certerrors.mitm.priming.enabled
+1579453856075	Marionette	DEBUG	Resetting recommended pref security.notification_enable_delay
+1579453856075	Marionette	DEBUG	Resetting recommended pref signon.autofillForms
+1579453856075	Marionette	DEBUG	Resetting recommended pref toolkit.cosmeticAnimations.enabled
+1579453856075	Marionette	INFO	Stopped listening on port 59840
+1579453856075	Marionette	DEBUG	Marionette stopped listening
+1579453902143	geckodriver	INFO	geckodriver 0.21.0
+1579453902153	geckodriver	INFO	Listening on 127.0.0.1:59926
+1579453903179	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/hg/xj9zzkvn5t1g_2zhm18v70cr0000gn/T/rust_mozprofile.25ZuzqDkJK8b"
+1579453903807	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
+1579453903847	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1579453903847	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1579453903848	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1579453903848	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1579453903990	Marionette	TRACE	Received observer notification profile-after-change
+1579453904129	Marionette	TRACE	Received observer notification command-line-startup
+1579453904129	Marionette	DEBUG	Init aborted (running=false, enabled=true, finalUIStartup=false)
+1579453904335	Marionette	TRACE	Received observer notification toplevel-window-ready
+1579453906206	Marionette	TRACE	Received observer notification marionette-startup-requested
+1579453906206	Marionette	TRACE	Waiting until startup recorder finished recording startup scripts...
+1579453906264	Marionette	TRACE	All scripts recorded.
+1579453906265	Marionette	DEBUG	Setting recommended pref app.update.disabledForTesting to true
+1579453906266	Marionette	DEBUG	Setting recommended pref apz.content_response_timeout to 60000
+1579453906266	Marionette	DEBUG	Setting recommended pref browser.contentblocking.introCount to 99
+1579453906267	Marionette	DEBUG	Setting recommended pref browser.download.panel.shown to true
+1579453906267	Marionette	DEBUG	Setting recommended pref browser.pagethumbnails.capturing_disabled to true
+1579453906268	Marionette	DEBUG	Setting recommended pref browser.tabs.disableBackgroundZombification to false
+1579453906268	Marionette	DEBUG	Setting recommended pref browser.tabs.remote.separatePrivilegedContentProcess to false
+1579453906268	Marionette	DEBUG	Setting recommended pref browser.tabs.unloadOnLowMemory to false
+1579453906269	Marionette	DEBUG	Setting recommended pref browser.tabs.warnOnCloseOtherTabs to false
+1579453906269	Marionette	DEBUG	Setting recommended pref browser.urlbar.suggest.searches to false
+1579453906271	Marionette	DEBUG	Setting recommended pref datareporting.policy.dataSubmissionPolicyAccepted to false
+1579453906271	Marionette	DEBUG	Setting recommended pref dom.disable_beforeunload to true
+1579453906272	Marionette	DEBUG	Setting recommended pref dom.file.createInChild to true
+1579453906272	Marionette	DEBUG	Setting recommended pref dom.push.connection.enabled to false
+1579453906272	Marionette	DEBUG	Setting recommended pref extensions.getAddons.cache.enabled to false
+1579453906272	Marionette	DEBUG	Setting recommended pref extensions.webservice.discoverURL to http://%(server)s/dummy/discoveryURL
+1579453906273	Marionette	DEBUG	Setting recommended pref network.http.prompt-temp-redirect to false
+1579453906273	Marionette	DEBUG	Setting recommended pref network.http.speculative-parallel-limit to 0
+1579453906273	Marionette	DEBUG	Setting recommended pref privacy.trackingprotection.enabled to false
+1579453906273	Marionette	DEBUG	Setting recommended pref security.certerrors.mitm.priming.enabled to false
+1579453906273	Marionette	DEBUG	Setting recommended pref security.notification_enable_delay to 0
+1579453906273	Marionette	DEBUG	Setting recommended pref signon.autofillForms to false
+1579453906274	Marionette	DEBUG	Setting recommended pref toolkit.cosmeticAnimations.enabled to false
+1579453906346	Marionette	INFO	Listening on port 59937
+1579453906346	Marionette	DEBUG	Marionette is listening
+1579453906355	Marionette	DEBUG	Accepted connection 0 from 127.0.0.1:59976
+1579453906371	Marionette	DEBUG	0 -> [0,1,"WebDriver:NewSession",{"acceptInsecureCerts":true,"browserName":"firefox","capabilities":{"desiredCapabilities":{"acceptInsecureCerts":true,"browserName":"firefox"}}}]
+1579453906372	Marionette	WARN	TLS certificate errors will be ignored for this session
+1579453906419	Marionette	TRACE	[17] Frame script loaded
+1579453906421	Marionette	TRACE	[17] Frame script registered
+1579453906429	Marionette	DEBUG	0 <- [1,1,null,{"sessionId":"d3a4ca15-8558-8948-b876-ce0e6798d49e","capabilities":{"browserName":"firefox","browserVersion":"72.0. ... alse,"moz:webdriverClick":true,"capabilities":{"desiredCapabilities":{"acceptInsecureCerts":true,"browserName":"firefox"}}}}]
+1579453906435	Marionette	DEBUG	0 -> [0,2,"WebDriver:MaximizeWindow",{}]
+1579453906905	Marionette	DEBUG	0 <- [1,2,null,{"x":0,"y":23,"width":1440,"height":877}]
+1579453906911	Marionette	DEBUG	0 -> [0,3,"WebDriver:Navigate",{"url":"https://auditoria.cgu.gov.br/"}]
+1579453906923	Marionette	TRACE	[17] Received DOM event beforeunload for about:blank
+1579453908206	Marionette	TRACE	[17] Received DOM event pagehide for about:blank
+1579453915518	Marionette	TRACE	[17] Received DOM event DOMContentLoaded for https://auditoria.cgu.gov.br/
+JavaScript warning: https://vlibras.gov.br/app/vlibras-plugin.js, line 81: unreachable code after return statement
+1579453920385	Marionette	TRACE	[17] Received DOM event pageshow for https://auditoria.cgu.gov.br/
+1579453920388	Marionette	DEBUG	0 <- [1,3,null,{"value":null}]
+1579453920396	Marionette	DEBUG	0 -> [0,4,"WebDriver:FindElement",{"using":"css selector","value":"[id=\"linhaAtuacao\"]"}]
+1579453920402	Marionette	DEBUG	0 <- [1,4,null,{"value":{"element-6066-11e4-a52e-4f735466cecf":"83a9d341-0ad6-374c-8395-c892adfad979"}}]
+1579453920414	Marionette	DEBUG	0 -> [0,5,"WebDriver:GetElementTagName",{"id":"83a9d341-0ad6-374c-8395-c892adfad979"}]
+1579453920418	Marionette	DEBUG	0 <- [1,5,null,{"value":"select"}]
+1579453920422	Marionette	DEBUG	0 -> [0,6,"WebDriver:ExecuteScript",{"args":[{"ELEMENT":"83a9d341-0ad6-374c-8395-c892adfad979","element-6066-11e4-a52e-4f735466cec ... dow!='undefined'?window.document:null}, arguments);}\n).apply(null, arguments);","scriptTimeout":null,"specialPowers":false}]
+1579453920432	Marionette	DEBUG	0 <- [1,6,null,{"value":null}]
+1579453920436	Marionette	DEBUG	0 -> [0,7,"WebDriver:FindElements",{"element":"83a9d341-0ad6-374c-8395-c892adfad979","using":"xpath","value":".//option[normalize-space(.) = \"Fiscalização em Entes Federativos - Municípios\"]"}]
+1579453920440	Marionette	DEBUG	0 <- [1,7,null,[{"element-6066-11e4-a52e-4f735466cecf":"5c7cdfc3-08da-404c-a2ec-a10818dd3a30"}]]
+1579453920443	Marionette	DEBUG	0 -> [0,8,"WebDriver:IsElementSelected",{"id":"5c7cdfc3-08da-404c-a2ec-a10818dd3a30"}]
+1579453920449	Marionette	DEBUG	0 <- [1,8,null,{"value":false}]
+1579453920452	Marionette	DEBUG	0 -> [0,9,"WebDriver:ElementClick",{"id":"5c7cdfc3-08da-404c-a2ec-a10818dd3a30"}]
+1579453920683	Marionette	DEBUG	[17] Canceled page load listener because no navigation has been detected
+1579453920685	Marionette	DEBUG	0 <- [1,9,null,{"value":null}]
+1579453920690	Marionette	DEBUG	0 -> [0,10,"WebDriver:FindElement",{"using":"css selector","value":"[id=\"de\"]"}]
+1579453920696	Marionette	DEBUG	0 <- [1,10,null,{"value":{"element-6066-11e4-a52e-4f735466cecf":"a20c3977-a8bd-d840-a9c2-9985979926af"}}]
+1579453920702	Marionette	DEBUG	0 -> [0,11,"WebDriver:ElementSendKeys",{"id":"a20c3977-a8bd-d840-a9c2-9985979926af","text":"01/01/2011","value":["0","1","/","0","1","/","2","0","1","1",""]}]
+1579453920882	Marionette	DEBUG	0 <- [1,11,null,{"value":null}]
+1579453920886	Marionette	DEBUG	0 -> [0,12,"WebDriver:FindElement",{"using":"css selector","value":"[id=\"ate\"]"}]
+1579453920890	Marionette	DEBUG	0 <- [1,12,null,{"value":{"element-6066-11e4-a52e-4f735466cecf":"749b28bd-bf7a-3b48-b310-d4b6e5a42125"}}]
+1579453920893	Marionette	DEBUG	0 -> [0,13,"WebDriver:ElementSendKeys",{"id":"749b28bd-bf7a-3b48-b310-d4b6e5a42125","text":"31/12/2012\r","value":["3","1","/","1","2","/","2","0","1","2","\r",""]}]
+1579453921017	Marionette	DEBUG	0 <- [1,13,null,{"value":null}]
+1579453921020	Marionette	DEBUG	0 -> [0,14,"WebDriver:FindElement",{"using":"css selector","value":"[id=\"palavraChave\"]"}]
+1579453921023	Marionette	DEBUG	0 <- [1,14,null,{"value":{"element-6066-11e4-a52e-4f735466cecf":"8e5b2e84-1ae2-5f45-9d2e-1a0a3a5708e1"}}]
+1579453921027	Marionette	DEBUG	0 -> [0,15,"WebDriver:ElementSendKeys",{"id":"8e5b2e84-1ae2-5f45-9d2e-1a0a3a5708e1","text":"Araucáriaa","value":["A","r","a","u","c","á","r","i","a","","a"]}]
+1579453921053	Marionette	DEBUG	0 <- [1,15,null,{"value":null}]
+1579453921057	Marionette	DEBUG	0 -> [0,16,"WebDriver:FindElement",{"using":"css selector","value":"[id=\"palavraChave\"]"}]
+1579453921059	Marionette	DEBUG	0 <- [1,16,null,{"value":{"element-6066-11e4-a52e-4f735466cecf":"8e5b2e84-1ae2-5f45-9d2e-1a0a3a5708e1"}}]
+1579453921062	Marionette	DEBUG	0 -> [0,17,"WebDriver:ElementSendKeys",{"id":"8e5b2e84-1ae2-5f45-9d2e-1a0a3a5708e1","text":"x","value":["","x"]}]
+1579453921071	Marionette	DEBUG	0 <- [1,17,null,{"value":null}]
+1579453921077	Marionette	DEBUG	0 -> [0,18,"WebDriver:FindElement",{"using":"css selector","value":"[id=\"token-input-municipios\"]"}]
+1579453921080	Marionette	DEBUG	0 <- [1,18,null,{"value":{"element-6066-11e4-a52e-4f735466cecf":"67ea8385-37de-8a47-b1e6-bdaf3af7e59c"}}]
+1579453921084	Marionette	DEBUG	0 -> [0,19,"WebDriver:ElementSendKeys",{"id":"67ea8385-37de-8a47-b1e6-bdaf3af7e59c","text":"v","value":["","v"]}]
+1579453921104	Marionette	DEBUG	0 <- [1,19,null,{"value":null}]
+1579453923113	Marionette	DEBUG	0 -> [0,20,"WebDriver:FindElement",{"using":"css selector","value":"[id=\"token-input-municipios\"]"}]
+1579453923117	Marionette	DEBUG	0 <- [1,20,null,{"value":{"element-6066-11e4-a52e-4f735466cecf":"67ea8385-37de-8a47-b1e6-bdaf3af7e59c"}}]
+1579453923121	Marionette	DEBUG	0 -> [0,21,"WebDriver:ElementSendKeys",{"id":"67ea8385-37de-8a47-b1e6-bdaf3af7e59c","text":"","value":[""]}]
+1579453923144	Marionette	DEBUG	0 <- [1,21,null,{"value":null}]
+1579453924151	Marionette	DEBUG	0 -> [0,22,"WebDriver:FindElement",{"using":"css selector","value":"[id=\"palavraChave\"]"}]
+1579453924155	Marionette	DEBUG	0 <- [1,22,null,{"value":{"element-6066-11e4-a52e-4f735466cecf":"8e5b2e84-1ae2-5f45-9d2e-1a0a3a5708e1"}}]
+1579453924160	Marionette	DEBUG	0 -> [0,23,"WebDriver:ElementSendKeys",{"id":"8e5b2e84-1ae2-5f45-9d2e-1a0a3a5708e1","text":"Roncadora","value":["R","o","n","c","a","d","o","r","","a"]}]
+1579453924201	Marionette	DEBUG	0 <- [1,23,null,{"value":null}]
+1579453924204	Marionette	DEBUG	0 -> [0,24,"WebDriver:FindElement",{"using":"css selector","value":"[id=\"palavraChave\"]"}]
+1579453924207	Marionette	DEBUG	0 <- [1,24,null,{"value":{"element-6066-11e4-a52e-4f735466cecf":"8e5b2e84-1ae2-5f45-9d2e-1a0a3a5708e1"}}]
+1579453924210	Marionette	DEBUG	0 -> [0,25,"WebDriver:ElementSendKeys",{"id":"8e5b2e84-1ae2-5f45-9d2e-1a0a3a5708e1","text":"x","value":["","x"]}]
+1579453924221	Marionette	DEBUG	0 <- [1,25,null,{"value":null}]
+1579453924223	Marionette	DEBUG	0 -> [0,26,"WebDriver:FindElement",{"using":"css selector","value":"[id=\"token-input-municipios\"]"}]
+1579453924226	Marionette	DEBUG	0 <- [1,26,null,{"value":{"element-6066-11e4-a52e-4f735466cecf":"67ea8385-37de-8a47-b1e6-bdaf3af7e59c"}}]
+1579453924229	Marionette	DEBUG	0 -> [0,27,"WebDriver:ElementSendKeys",{"id":"67ea8385-37de-8a47-b1e6-bdaf3af7e59c","text":"v","value":["","v"]}]
+1579453924248	Marionette	DEBUG	0 <- [1,27,null,{"value":null}]
+1579453926257	Marionette	DEBUG	0 -> [0,28,"WebDriver:FindElement",{"using":"css selector","value":"[id=\"token-input-municipios\"]"}]
+1579453926263	Marionette	DEBUG	0 <- [1,28,null,{"value":{"element-6066-11e4-a52e-4f735466cecf":"67ea8385-37de-8a47-b1e6-bdaf3af7e59c"}}]
+1579453926268	Marionette	DEBUG	0 -> [0,29,"WebDriver:ElementSendKeys",{"id":"67ea8385-37de-8a47-b1e6-bdaf3af7e59c","text":"","value":[""]}]
+1579453926300	Marionette	DEBUG	0 <- [1,29,null,{"value":null}]
+1579453927308	Marionette	DEBUG	0 -> [0,30,"WebDriver:FindElement",{"using":"css selector","value":"[id=\"palavraChave\"]"}]
+1579453927315	Marionette	DEBUG	0 <- [1,30,null,{"value":{"element-6066-11e4-a52e-4f735466cecf":"8e5b2e84-1ae2-5f45-9d2e-1a0a3a5708e1"}}]
+1579453927321	Marionette	DEBUG	0 -> [0,31,"WebDriver:ElementSendKeys",{"id":"8e5b2e84-1ae2-5f45-9d2e-1a0a3a5708e1","text":"Paranaguáa","value":["P","a","r","a","n","a","g","u","á","","a"]}]
+1579453927377	Marionette	DEBUG	0 <- [1,31,null,{"value":null}]
+1579453927389	Marionette	DEBUG	0 -> [0,32,"WebDriver:FindElement",{"using":"css selector","value":"[id=\"palavraChave\"]"}]
+1579453927392	Marionette	DEBUG	0 <- [1,32,null,{"value":{"element-6066-11e4-a52e-4f735466cecf":"8e5b2e84-1ae2-5f45-9d2e-1a0a3a5708e1"}}]
+1579453927399	Marionette	DEBUG	0 -> [0,33,"WebDriver:ElementSendKeys",{"id":"8e5b2e84-1ae2-5f45-9d2e-1a0a3a5708e1","text":"x","value":["","x"]}]
+1579453927413	Marionette	DEBUG	0 <- [1,33,null,{"value":null}]
+1579453927417	Marionette	DEBUG	0 -> [0,34,"WebDriver:FindElement",{"using":"css selector","value":"[id=\"token-input-municipios\"]"}]
+1579453927419	Marionette	DEBUG	0 <- [1,34,null,{"value":{"element-6066-11e4-a52e-4f735466cecf":"67ea8385-37de-8a47-b1e6-bdaf3af7e59c"}}]
+1579453927423	Marionette	DEBUG	0 -> [0,35,"WebDriver:ElementSendKeys",{"id":"67ea8385-37de-8a47-b1e6-bdaf3af7e59c","text":"v","value":["","v"]}]
+1579453927453	Marionette	DEBUG	0 <- [1,35,null,{"value":null}]
+1579453929464	Marionette	DEBUG	0 -> [0,36,"WebDriver:FindElement",{"using":"css selector","value":"[id=\"token-input-municipios\"]"}]
+1579453929468	Marionette	DEBUG	0 <- [1,36,null,{"value":{"element-6066-11e4-a52e-4f735466cecf":"67ea8385-37de-8a47-b1e6-bdaf3af7e59c"}}]
+1579453929474	Marionette	DEBUG	0 -> [0,37,"WebDriver:ElementSendKeys",{"id":"67ea8385-37de-8a47-b1e6-bdaf3af7e59c","text":"","value":[""]}]
+1579453929488	Marionette	DEBUG	0 <- [1,37,null,{"value":null}]
+1579453930492	Marionette	DEBUG	0 -> [0,38,"WebDriver:FindElement",{"using":"css selector","value":"[id=\"palavraChave\"]"}]
+1579453930496	Marionette	DEBUG	0 <- [1,38,null,{"value":{"element-6066-11e4-a52e-4f735466cecf":"8e5b2e84-1ae2-5f45-9d2e-1a0a3a5708e1"}}]
+1579453930502	Marionette	DEBUG	0 -> [0,39,"WebDriver:ElementSendKeys",{"id":"8e5b2e84-1ae2-5f45-9d2e-1a0a3a5708e1","text":"Aurelino Leala","value":["A","u","r","e","l","i","n","o"," ","L","e","a","l","","a"]}]
+1579453930537	Marionette	DEBUG	0 <- [1,39,null,{"value":null}]
+1579453930540	Marionette	DEBUG	0 -> [0,40,"WebDriver:FindElement",{"using":"css selector","value":"[id=\"palavraChave\"]"}]
+1579453930544	Marionette	DEBUG	0 <- [1,40,null,{"value":{"element-6066-11e4-a52e-4f735466cecf":"8e5b2e84-1ae2-5f45-9d2e-1a0a3a5708e1"}}]
+1579453930549	Marionette	DEBUG	0 -> [0,41,"WebDriver:ElementSendKeys",{"id":"8e5b2e84-1ae2-5f45-9d2e-1a0a3a5708e1","text":"x","value":["","x"]}]
+1579453930558	Marionette	DEBUG	0 <- [1,41,null,{"value":null}]
+1579453930562	Marionette	DEBUG	0 -> [0,42,"WebDriver:FindElement",{"using":"css selector","value":"[id=\"token-input-municipios\"]"}]
+1579453930564	Marionette	DEBUG	0 <- [1,42,null,{"value":{"element-6066-11e4-a52e-4f735466cecf":"67ea8385-37de-8a47-b1e6-bdaf3af7e59c"}}]
+1579453930567	Marionette	DEBUG	0 -> [0,43,"WebDriver:ElementSendKeys",{"id":"67ea8385-37de-8a47-b1e6-bdaf3af7e59c","text":"v","value":["","v"]}]
+1579453930586	Marionette	DEBUG	0 <- [1,43,null,{"value":null}]
+1579453932596	Marionette	DEBUG	0 -> [0,44,"WebDriver:FindElement",{"using":"css selector","value":"[id=\"token-input-municipios\"]"}]
+1579453932598	Marionette	DEBUG	0 <- [1,44,null,{"value":{"element-6066-11e4-a52e-4f735466cecf":"67ea8385-37de-8a47-b1e6-bdaf3af7e59c"}}]
+1579453932601	Marionette	DEBUG	0 -> [0,45,"WebDriver:ElementSendKeys",{"id":"67ea8385-37de-8a47-b1e6-bdaf3af7e59c","text":"","value":[""]}]
+1579453932611	Marionette	DEBUG	0 <- [1,45,null,{"value":null}]
+1579453933618	Marionette	DEBUG	0 -> [0,46,"WebDriver:FindElement",{"using":"css selector","value":"[id=\"palavraChave\"]"}]
+1579453933621	Marionette	DEBUG	0 <- [1,46,null,{"value":{"element-6066-11e4-a52e-4f735466cecf":"8e5b2e84-1ae2-5f45-9d2e-1a0a3a5708e1"}}]
+1579453933625	Marionette	DEBUG	0 -> [0,47,"WebDriver:ElementSendKeys",{"id":"8e5b2e84-1ae2-5f45-9d2e-1a0a3a5708e1","text":"América Douradaa","value":["A","m","é","r","i","c","a"," ","D","o","u","r","a","d","a","","a"]}]
+1579453933663	Marionette	DEBUG	0 <- [1,47,null,{"value":null}]
+1579453933666	Marionette	DEBUG	0 -> [0,48,"WebDriver:FindElement",{"using":"css selector","value":"[id=\"palavraChave\"]"}]
+1579453933671	Marionette	DEBUG	0 <- [1,48,null,{"value":{"element-6066-11e4-a52e-4f735466cecf":"8e5b2e84-1ae2-5f45-9d2e-1a0a3a5708e1"}}]
+1579453933674	Marionette	DEBUG	0 -> [0,49,"WebDriver:ElementSendKeys",{"id":"8e5b2e84-1ae2-5f45-9d2e-1a0a3a5708e1","text":"x","value":["","x"]}]
+1579453933682	Marionette	DEBUG	0 <- [1,49,null,{"value":null}]
+1579453933686	Marionette	DEBUG	0 -> [0,50,"WebDriver:FindElement",{"using":"css selector","value":"[id=\"token-input-municipios\"]"}]
+1579453933688	Marionette	DEBUG	0 <- [1,50,null,{"value":{"element-6066-11e4-a52e-4f735466cecf":"67ea8385-37de-8a47-b1e6-bdaf3af7e59c"}}]
+1579453933690	Marionette	DEBUG	0 -> [0,51,"WebDriver:ElementSendKeys",{"id":"67ea8385-37de-8a47-b1e6-bdaf3af7e59c","text":"v","value":["","v"]}]
+1579453933706	Marionette	DEBUG	0 <- [1,51,null,{"value":null}]
+1579453935715	Marionette	DEBUG	0 -> [0,52,"WebDriver:FindElement",{"using":"css selector","value":"[id=\"token-input-municipios\"]"}]
+1579453935718	Marionette	DEBUG	0 <- [1,52,null,{"value":{"element-6066-11e4-a52e-4f735466cecf":"67ea8385-37de-8a47-b1e6-bdaf3af7e59c"}}]
+1579453935723	Marionette	DEBUG	0 -> [0,53,"WebDriver:ElementSendKeys",{"id":"67ea8385-37de-8a47-b1e6-bdaf3af7e59c","text":"","value":[""]}]
+1579453935738	Marionette	DEBUG	0 <- [1,53,null,{"value":null}]
+1579453936746	Marionette	DEBUG	0 -> [0,54,"WebDriver:FindElement",{"using":"css selector","value":"[id=\"btnPesquisar\"]"}]
+1579453936749	Marionette	DEBUG	0 <- [1,54,null,{"value":{"element-6066-11e4-a52e-4f735466cecf":"74127811-0c7c-9848-8136-29b71c12f21b"}}]
+1579453936753	Marionette	DEBUG	0 -> [0,55,"WebDriver:ElementClick",{"id":"74127811-0c7c-9848-8136-29b71c12f21b"}]
+1579453936788	Marionette	TRACE	[17] Received DOM event popstate for https://auditoria.cgu.gov.br/?draw=2&colunaOrdenacao=dataPublicacao&direcaoOrdenacao=DESC&tamanhoPagina=15&offset=0&titulo=&l ... 1&ate=31%2F12%2F2012&orgaos=&ujtcus=&estados=&municipios=410180%2C412250%2C411820%2C290240%2C290115&fefs=&palavraChave=#lista
+1579453936816	Marionette	DEBUG	0 <- [1,55,null,{"value":null}]
+1579453937029	Marionette	DEBUG	[17] Canceled page load listener because no navigation has been detected
+1579453938835	Marionette	DEBUG	0 -> [0,56,"WebDriver:FindElement",{"using":"css selector","value":"[id=\"btnSelectAll\"]"}]
+1579453938838	Marionette	DEBUG	0 <- [1,56,null,{"value":{"element-6066-11e4-a52e-4f735466cecf":"689912b9-8e3a-134f-a11f-1ba49212a630"}}]
+1579453938842	Marionette	DEBUG	0 -> [0,57,"WebDriver:ElementClick",{"id":"689912b9-8e3a-134f-a11f-1ba49212a630"}]
+1579453939075	Marionette	DEBUG	[17] Canceled page load listener because no navigation has been detected
+1579453939077	Marionette	DEBUG	0 <- [1,57,null,{"value":null}]
+1579453940085	Marionette	DEBUG	0 -> [0,58,"WebDriver:FindElement",{"using":"css selector","value":"[id=\"btnBaixar\"]"}]
+1579453940089	Marionette	DEBUG	0 <- [1,58,null,{"value":{"element-6066-11e4-a52e-4f735466cecf":"8b555f21-da5e-db44-b2b8-5247706edf60"}}]
+1579453940094	Marionette	DEBUG	0 -> [0,59,"WebDriver:ElementClick",{"id":"8b555f21-da5e-db44-b2b8-5247706edf60"}]
+1579453940111	Marionette	TRACE	[17] Received DOM event beforeunload for https://auditoria.cgu.gov.br/?draw=2&colunaOrdenacao=dataPublicacao&direcaoOrdenacao=DESC&tamanhoPagina=15&offset=0&titulo=&l ... 1&ate=31%2F12%2F2012&orgaos=&ujtcus=&estados=&municipios=410180%2C412250%2C411820%2C290240%2C290115&fefs=&palavraChave=#lista
+1579453945318	Marionette	DEBUG	[17] Canceled page load listener because no navigation has been detected
+1579453945319	Marionette	DEBUG	0 <- [1,59,null,{"value":null}]
+1579454917923	Marionette	DEBUG	Closed connection 0
+1579454918036	Marionette	TRACE	Received observer notification xpcom-will-shutdown
+1579454918036	Marionette	DEBUG	Resetting recommended pref app.update.disabledForTesting
+1579454918036	Marionette	DEBUG	Resetting recommended pref apz.content_response_timeout
+1579454918036	Marionette	DEBUG	Resetting recommended pref browser.contentblocking.introCount
+1579454918037	Marionette	DEBUG	Resetting recommended pref browser.download.panel.shown
+1579454918037	Marionette	DEBUG	Resetting recommended pref browser.pagethumbnails.capturing_disabled
+1579454918037	Marionette	DEBUG	Resetting recommended pref browser.tabs.disableBackgroundZombification
+1579454918037	Marionette	DEBUG	Resetting recommended pref browser.tabs.remote.separatePrivilegedContentProcess
+1579454918037	Marionette	DEBUG	Resetting recommended pref browser.tabs.unloadOnLowMemory
+1579454918037	Marionette	DEBUG	Resetting recommended pref browser.tabs.warnOnCloseOtherTabs
+1579454918037	Marionette	DEBUG	Resetting recommended pref browser.urlbar.suggest.searches
+1579454918038	Marionette	DEBUG	Resetting recommended pref datareporting.policy.dataSubmissionPolicyAccepted
+1579454918038	Marionette	DEBUG	Resetting recommended pref dom.disable_beforeunload
+1579454918038	Marionette	DEBUG	Resetting recommended pref dom.file.createInChild
+1579454918038	Marionette	DEBUG	Resetting recommended pref dom.push.connection.enabled
+1579454918039	Marionette	DEBUG	Resetting recommended pref extensions.getAddons.cache.enabled
+1579454918039	Marionette	DEBUG	Resetting recommended pref extensions.webservice.discoverURL
+1579454918039	Marionette	DEBUG	Resetting recommended pref network.http.prompt-temp-redirect
+1579454918039	Marionette	DEBUG	Resetting recommended pref network.http.speculative-parallel-limit
+1579454918039	Marionette	DEBUG	Resetting recommended pref privacy.trackingprotection.enabled
+1579454918039	Marionette	DEBUG	Resetting recommended pref security.certerrors.mitm.priming.enabled
+1579454918039	Marionette	DEBUG	Resetting recommended pref security.notification_enable_delay
+1579454918039	Marionette	DEBUG	Resetting recommended pref signon.autofillForms
+1579454918040	Marionette	DEBUG	Resetting recommended pref toolkit.cosmeticAnimations.enabled
+1579454918040	Marionette	INFO	Stopped listening on port 59937
+1579454918041	Marionette	DEBUG	Marionette stopped listening
