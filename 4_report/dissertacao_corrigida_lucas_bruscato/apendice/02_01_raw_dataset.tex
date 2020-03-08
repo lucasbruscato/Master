@@ -1,0 +1,241 @@
+
+\label{ape:data_processing_raw_dataset}
+\hypertarget{data-processing-raw-dataset}{%
+\section{Data Processing (raw
+dataset)}\label{data-processing-raw-dataset}}
+
+\begin{lstlisting}[language=Python]
+import pandas as pd
+import os
+\end{lstlisting}
+
+\hypertarget{read-and-handle-target-feature}{%
+\subsubsection{Read and handle target
+feature}\label{read-and-handle-target-feature}}
+
+\begin{lstlisting}[language=Python]
+target_feature = pd.read_csv('../target_feature/01_target_feature.csv',
+                             sep=';')
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python]
+target_feature.head()
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python]
+target_feature['temp'] = target_feature['file_name'].str.replace('[0-9]|.pdf|-', ' ', regex=True)\
+    .str.normalize('NFKD').str.encode('ascii', errors='ignore').str.decode('utf-8').str.lower().str.strip()
+target_feature['city'] = target_feature['temp'].str[:-3]
+target_feature['state'] = target_feature['temp'].str[-2:]
+target_feature['city_state'] = target_feature['city'].map(str) + '_' + target_feature['state']
+
+target_feature = target_feature.drop("temp", axis=1)
+target_feature.head()
+\end{lstlisting}
+
+\hypertarget{read-explanatory-features-education-family-fertility-and-work-2000-and-2010}{%
+\subsubsection{Read explanatory features: education, family, fertility
+and work (2000 and
+2010)}\label{read-explanatory-features-education-family-fertility-and-work-2000-and-2010}}
+
+\begin{lstlisting}[language=Python]
+raw_dataset = target_feature
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python]
+state_name_to_acronym = pd.DataFrame({'full_state_name': 
+                                      ['acre', 
+                                       'alagoas', 
+                                       'amapa', 
+                                       'amazonas', 
+                                       'bahia', 
+                                       'ceara', 
+                                       'distrito_federal', 
+                                       'espirito_santo', 
+                                       'goias', 
+                                       'maranhao', 
+                                       'mato_grosso', 
+                                       'mato_grosso_do_sul', 
+                                       'minas_gerais', 
+                                       'para', 
+                                       'paraiba', 
+                                       'parana', 
+                                       'pernambuco', 
+                                       'piaui', 
+                                       'rio_de_janeiro', 
+                                       'rio_grande_do_norte', 
+                                       'rio_grande_do_sul', 
+                                       'rondonia', 
+                                       'roraima', 
+                                       'santa_catarina', 
+                                       'sao_paulo', 
+                                       'sergipe', 
+                                       'tocantins'],
+                                      'acronym': ['ac',
+                                                  'al',
+                                                  'ap',
+                                                  'am',
+                                                  'ba',
+                                                  'ce',
+                                                  'df',
+                                                  'es',
+                                                  'go',
+                                                  'ma',
+                                                  'mt',
+                                                  'ms',
+                                                  'mg',
+                                                  'pa',
+                                                  'pb',
+                                                  'pr',
+                                                  'pe',
+                                                  'pi',
+                                                  'rj',
+                                                  'rn',
+                                                  'rs',
+                                                  'ro',
+                                                  'rr',
+                                                  'sc',
+                                                  'sp',
+                                                  'se',
+                                                  'to']})
+
+var_list = ['var_01',
+            'var_02',
+            'var_03']
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python]
+paths = ['../ibge_censo/2000/education',
+         '../ibge_censo/2000/family',
+         '../ibge_censo/2000/fertility',
+         '../ibge_censo/2000/work',
+         '../ibge_censo/2010/education',
+         '../ibge_censo/2010/family',
+         '../ibge_censo/2010/fertility',
+         '../ibge_censo/2010/work']
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python]
+for path in paths:
+    
+    for var_name in var_list:
+        full_temp = pd.DataFrame()
+        
+        for state in os.listdir(path):
+            if not state.startswith('.'):
+                state_acronym = state_name_to_acronym.loc[
+                    state_name_to_acronym.full_state_name == state]['acronym'].values[0]
+        
+                for filename in os.listdir(path + '/' + state):
+                    if not filename.startswith('.') and filename.endswith(var_name + '.csv'):
+        
+                        temp = pd.read_csv(path + '/' + state + '/' + filename)
+                        temp['city_state'] = temp['city'].map(str) + '_' + state_acronym
+                        
+                        full_temp = pd.concat([full_temp, temp])
+        
+        if full_temp.shape[0] != 0:
+            full_temp = full_temp.add_prefix(path.split("/")[2] + '_' + path.split("/")[3] + '_' + var_name + '_')
+            column_to_join = path.split("/")[2] + '_' + path.split("/")[3] + '_' + var_name + '_city_state'
+            
+            raw_dataset = pd.merge(raw_dataset,
+                                   full_temp.iloc[:,1:],
+                                   left_on="city_state",
+                                   right_on=column_to_join,
+                                   how="left")
+            
+            raw_dataset = raw_dataset.drop(column_to_join, axis=1)
+            
+            print(path + ' [' + var_name + '] ')
+        
+\end{lstlisting}
+
+\hypertarget{read-explanatory-feature-social-indicator-different-pattern}{%
+\subsubsection{Read explanatory feature: social indicator (different
+pattern)}\label{read-explanatory-feature-social-indicator-different-pattern}}
+
+\begin{lstlisting}[language=Python]
+paths = ['../ibge_censo/2010/social_indicator']
+\end{lstlisting}
+
+\hypertarget{changing-city-name-due-to-city-being-known-by-two-different-names}{%
+\subsubsection{Changing city name due to city being known by two
+different
+names}\label{changing-city-name-due-to-city-being-known-by-two-different-names}}
+
+\begin{lstlisting}[language=Python]
+raw_dataset.loc[raw_dataset.file_name=='3238-São Valério da Natividade-TO.pdf', 'city_state'] = 'sao valerio_to'
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python]
+for path in paths:
+    
+    for var_name in var_list:
+        full_temp = pd.DataFrame()
+        
+        for state in os.listdir(path):
+            if not state.startswith('.'):
+                state_acronym = state_name_to_acronym.loc[
+                    state_name_to_acronym.full_state_name == state]['acronym'].values[0]
+                
+                for filename in os.listdir(path + '/' + state):
+                    if not filename.startswith('.') and filename.endswith(var_name + '.csv'):
+                        
+                        temp = pd.read_csv(path + '/' + state + '/' + filename)
+                        temp['city_state'] = temp['city'].map(str) + '_' + state_acronym
+                        
+                        full_temp = pd.concat([full_temp, temp])
+                        
+        if full_temp.shape[0] != 0:
+            full_temp = full_temp.add_prefix(path.split("/")[3] + '_' + var_name + '_')
+            column_to_join = path.split("/")[3] + '_' + var_name + '_city_state'
+            
+            raw_dataset = pd.merge(raw_dataset,
+                                   full_temp.iloc[:,1:],
+                                   left_on="city_state",
+                                   right_on=column_to_join,
+                                   how="left")
+            
+            raw_dataset = raw_dataset.drop(column_to_join, axis=1)
+            
+            print(path + ' [' + var_name + '] ')
+\end{lstlisting}
+
+\hypertarget{read-explanatory-feature-enem-score-different-pattern}{%
+\subsubsection{Read explanatory feature: enem score (different
+pattern)}\label{read-explanatory-feature-enem-score-different-pattern}}
+
+\begin{lstlisting}[language=Python]
+paths = ['../enem/2000/2000_enem_score_var_01.csv',
+         '../enem/2010/2010_enem_score_var_01.csv']
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python]
+for path in paths:
+    temp = pd.read_csv(path, sep=';')
+    temp = temp.iloc[1:,:]
+    temp = temp.add_prefix(path.split("/")[2] + '_enem_var_01_')
+    column_to_join = path.split("/")[2] + '_enem_var_01_city_state'
+
+    raw_dataset = pd.merge(raw_dataset,
+                           temp,
+                           left_on="city_state",
+                           right_on=column_to_join,
+                           how="left")
+    
+    raw_dataset = raw_dataset.drop(column_to_join, axis=1)
+    
+raw_dataset.iloc[:, 88:95] = raw_dataset.iloc[:, 88:95].fillna(0)
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python]
+for column in raw_dataset.columns:
+    print(column)
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python]
+raw_dataset.to_csv('02_01_raw_dataset.csv',
+                   sep=';',
+                   index=False)
+\end{lstlisting}
+

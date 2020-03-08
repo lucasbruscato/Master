@@ -1,0 +1,47 @@
+
+\label{ape:data_processing_training_validation_dataset}
+\hypertarget{data-processing-training-and-validation-dataset}{%
+\section{Data Processing (training and validation
+dataset)}\label{data-processing-training-and-validation-dataset}}
+
+\begin{lstlisting}[language=Python]
+import pandas as pd
+\end{lstlisting}
+
+\hypertarget{splitting-the-datasets-training-and-validation}{%
+\subsubsection{Splitting the datasets (training and
+validation)}\label{splitting-the-datasets-training-and-validation}}
+
+\begin{lstlisting}[language=Python]
+modeling_dataset = pd.read_csv('02_02_modeling_dataset.csv',
+                               sep=';')
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python]
+training_dataset = modeling_dataset.sample(frac=0.75,
+                                           random_state=7)
+validation_dataset = modeling_dataset.drop(training_dataset.index)
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python]
+print('=== Number of rows === \n' +
+      'Training: ' + str(len(training_dataset)) + '\n' +
+      'Validation: ' + str(len(validation_dataset)))
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python]
+training_dataset.head()
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python]
+training_dataset.to_csv('02_03_training_dataset.csv',
+                        sep=';',
+                        index=False)
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python]
+validation_dataset.to_csv('02_03_validation_dataset.csv',
+                          sep=';',
+                          index=False)
+\end{lstlisting}
+

@@ -18,7 +18,7 @@ data para defesa: terça-feira, 14h, 18 de Fevereiro de 2020 (lembrete: na sexta
 * xgboost: separar teoria de resultados + adicionar mais teoria [FEITO]
 * tabela B.10: adicionar fonte [FEITO]
 * extrair todos os códigos python de novo e atualizar os arquivos dos apendices [FEITO]
-* enviar versão final da dissertação 16 de Janeiro de 2020 [EM ANDAMENTO]
+* enviar versão final da dissertação 16 de Janeiro de 2020 [FEITO]
 
 === aux ===
 

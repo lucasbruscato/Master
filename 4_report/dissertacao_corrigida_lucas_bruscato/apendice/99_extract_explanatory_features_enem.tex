@@ -1,0 +1,96 @@
+
+\label{ape:extract_explanatory_features_enem}
+\hypertarget{extract-explanatory-features}{%
+\section{Extract Explanatory
+Features Enem}\label{extract-explanatory-features}}
+
+\begin{lstlisting}[language=Python]
+import os
+import shutil
+import pandas as pd
+\end{lstlisting}
+
+\hypertarget{extract-features-from-enem-2000}{%
+\subsubsection{Extract features from enem
+2000}\label{extract-features-from-enem-2000}}
+
+\begin{lstlisting}[language=Python]
+columns_to_select = ['NO_MUNICIPIO_RESIDENCIA',
+                     'SG_UF_RESIDENCIA',
+                     'TP_PRESENCA',
+                     'TP_STATUS_REDACAO',
+                     'NU_NOTA_OBJETIVA',
+                     'NU_NOTA_REDACAO']
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python]
+df = pd.read_csv('2000/Dados/MICRODADOS_ENEM_2000.csv',
+                 sep=';',
+                 usecols=columns_to_select)
+
+df = df.query('TP_PRESENCA == 1 and TP_STATUS_REDACAO == "P"')
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python]
+df['city_state'] = (df.NO_MUNICIPIO_RESIDENCIA + '_' + df.SG_UF_RESIDENCIA).str.normalize('NFKD')\
+                    .str.encode('ascii', errors='ignore')\
+                    .str.decode('utf-8').str.lower()
+
+df['enem_score'] = (df['NU_NOTA_OBJETIVA']+df['NU_NOTA_REDACAO'])/2
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python]
+df_grouped = df[['city_state', 'enem_score']].groupby('city_state').agg(['mean', 'std', 'median'])
+
+df_grouped.columns = ['enem_score_mean', 'enem_score_std', 'enem_score_median']
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python]
+df_grouped.to_csv('2000/2000_enem_score_var_01.csv', sep=';')
+\end{lstlisting}
+
+\hypertarget{extract-features-from-enem-2010}{%
+\subsubsection{Extract features from enem
+2010}\label{extract-features-from-enem-2010}}
+
+\begin{lstlisting}[language=Python]
+columns_to_select = ['NO_MUNICIPIO_RESIDENCIA',
+                     'SG_UF_RESIDENCIA',
+                     'TP_PRESENCA_CN',
+                     'TP_PRESENCA_CH',
+                     'TP_PRESENCA_LC',
+                     'TP_PRESENCA_MT',
+                     'NU_NOTA_CN',
+                     'NU_NOTA_CH',
+                     'NU_NOTA_LC',
+                     'NU_NOTA_MT',
+                     'TP_STATUS_REDACAO',
+                     'NU_NOTA_REDACAO']
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python]
+df = pd.read_csv('2010/Dados/MICRODADOS_ENEM_2010.csv',
+                 sep=';',
+                 usecols=columns_to_select)
+
+df = df.query('TP_PRESENCA_CN == 1 and TP_PRESENCA_CH == 1 and TP_PRESENCA_LC == 1 and TP_PRESENCA_MT == 1 and TP_STATUS_REDACAO == "P"')
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python]
+df['city_state'] = (df.NO_MUNICIPIO_RESIDENCIA + '_' + df.SG_UF_RESIDENCIA).str.normalize('NFKD')\
+                    .str.encode('ascii', errors='ignore')\
+                    .str.decode('utf-8').str.lower()
+
+df['enem_score'] = (df['NU_NOTA_CN']+df['NU_NOTA_CH']+df['NU_NOTA_LC']+df['NU_NOTA_MT']+df['NU_NOTA_REDACAO'])/5
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python]
+df_grouped = df[['city_state', 'enem_score']].groupby('city_state').agg(['mean', 'std', 'median'])
+
+df_grouped.columns = ['enem_score_mean', 'enem_score_std', 'enem_score_median']
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python]
+df_grouped.to_csv('2010/2010_enem_score_var_01.csv', sep=';')
+\end{lstlisting}
+

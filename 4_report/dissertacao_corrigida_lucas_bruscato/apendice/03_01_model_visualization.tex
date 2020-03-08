@@ -1,0 +1,43 @@
+
+\label{ape:model_visualization}
+\hypertarget{model-visualization}{%
+\section{Model Visualization}\label{model-visualization}}
+
+\begin{lstlisting}[language=Python]
+import pandas as pd
+import matplotlib.pyplot as plt
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python]
+training_dataset = pd.read_csv('../2_database/data_processing/02_03_training_dataset.csv',
+                               sep=';')
+
+validation_dataset = pd.read_csv('../2_database/data_processing/02_03_validation_dataset.csv',
+                                 sep=';')
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python]
+df = pd.concat([training_dataset, validation_dataset])
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python]
+df.head()
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python]
+for col in df.columns:
+    print(col)
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python]
+for i in range(0, len(df.columns)):
+    plt.scatter(df.iloc[:, 0], df.iloc[:, i])
+    
+    plt.title(df.columns[i])
+    plt.xlabel(df.columns[0])
+    
+    plt.savefig("img/two_by_two_scatter_plot/" + 
+                str(i).rjust(2, '0') + "_" + df.columns[i] + ".png")
+    plt.show()
+\end{lstlisting}
+
